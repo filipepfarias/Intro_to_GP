@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b347c6-317b-489e-9a7e-2364d249f2df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bayesian_linear_regression/dataset_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bayesian_linear_regression/linear_basis_function_model_v2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/bayesian_linear_regression/linear_basis_function_model_v2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayesian_linear_regression/dataset_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/bayesian_linear_regression/dataset_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayesian_linear_regression/re-visited_curve_fitting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/bayesian_linear_regression/re-visited_curve_fitting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayesian_linear_regression/training_and_validation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/bayesian_linear_regression/training_and_validation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linear_regression/M_tests.png" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression/M_tests.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linear_regression/regression_v5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression/regression_v5.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +19,9 @@
     <session id="-1485595674">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -34,26 +38,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="569" />
+          <entry key="py" value="630" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="569" />
+          <entry key="Python" value="630" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bayesian_linear_regression/dataset_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+            <state relative-caret-position="357">
+              <caret line="21" column="7" selection-start-line="16" selection-start-column="2" selection-end-line="36" selection-end-column="21" />
               <folding>
-                <marker date="1536243545137" expanded="true" signature="163:168" ph="..." />
-                <marker date="1536243545137" expanded="true" signature="417:422" ph="..." />
+                <marker date="1536264338562" expanded="true" signature="163:168" ph="..." />
+                <marker date="1536264338562" expanded="true" signature="419:426" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -94,6 +98,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,7 +115,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,16 +146,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -159,11 +159,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -179,11 +183,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bayesian_linear_regression/dataset_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        <state relative-caret-position="357">
+          <caret line="21" column="7" selection-start-line="16" selection-start-column="2" selection-end-line="36" selection-end-column="21" />
           <folding>
-            <marker date="1536243545137" expanded="true" signature="163:168" ph="..." />
-            <marker date="1536243545137" expanded="true" signature="417:422" ph="..." />
+            <marker date="1536264338562" expanded="true" signature="163:168" ph="..." />
+            <marker date="1536264338562" expanded="true" signature="419:426" ph="..." />
           </folding>
         </state>
       </provider>
