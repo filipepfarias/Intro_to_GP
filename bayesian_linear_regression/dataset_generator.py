@@ -14,24 +14,20 @@ def dataset_generator(init, end, sample, mean, var, function):
 
     return x,y,t,e
 
-# def linear_regressor(x,t,function,m):
-#     """
-#     Return the model trained
-#     """
-#     m += m
-#     import numpy as np
-#     phi = np.zeros((len(x),m))
-#
-#     for i in range(len(x)):
-#         for j in range(m):
-#             #print(j)
-#             phi[i][j] = function(x[i],j)
-#         #print("\n")
-#         #print("Line")
-#         #print(i)
-#
-#     w = ((np.linalg.inv(phi.T@phi))@phi.T)@t
-#
-#     y_pred = w.T@phi.T
-#
-#     return y_pred,w
+def linear_regressor(x,t,function,m):
+    """
+    Return the model trained
+    """
+    m += m
+    import numpy as np
+    phi = np.zeros((len(x),m))
+
+    for i in range(len(x)):
+        for j in range(m):
+            phi[i][j] = function(x[i],j)
+
+    w = ((np.linalg.inv(phi.T@phi))@phi.T)@t
+
+    y_pred = w.T@phi.T
+
+    return y_pred,w

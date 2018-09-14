@@ -1,35 +1,37 @@
-clear all, close all
+clear; close; 
 
-no =1e3;
-X = linspace(0,1,no);
-X = X';
-Y = sin(2*pi*X) + (0.0)*exp(X.^0.75) + 0*X;
-e = 0.1.*randn(1,no);
-e = e';
-t = Y + e;
+no=100; nb = 100;  
 
-m = 3;
-mu = [0:m];
+f = @(x)sin(2*pi*x); 
+n = 1e-1*randn(no,1);
 
-mu = mu';
+for io = 1:no
 
-for i=1:numel(mu); f(:,i) = f_phi(X,mu(i)); mu(i); end
+ x = linspace(0+eps,1-eps,io)'; 
+ t = f(x) + n(1:io); 
 
-rank(f'*f)
+for ibb = 1:nb
+ clear X   
+ for ib=0:ibb-1; 
+  X(1:io,ib+1) = (x.^ib); 
+ end
 
-w = t\f;
+ wh_m(1:ibb,io,ibb) = X\(t(1:io));
+ wh_i(1:ibb,io,ibb) = inv(X'*X)*X'*t(1:io);
+ wh_p(1:ibb,io,ibb) = pinv(X)*t(1:io);
 
-%w = inv(f'*f)*f'*t;
+ yh_m(1:io,io,ibb) = X*wh_m(1:ibb,io,ibb); 
+ yh_i(1:io,io,ibb) = X*wh_i(1:ibb,io,ibb);
+ yh_p(1:io,io,ibb) = X*wh_p(1:ibb,io,ibb);
 
-y_hat = w*f';
+ e_m(io,ibb) = sqrt(mean((squeeze(yh_m(1:io,io,ibb))-t(1:io)).^2));
+ e_i(io,ibb) = sqrt(mean((squeeze(yh_i(1:io,io,ibb))-t(1:io)).^2));
+ e_p(io,ibb) = sqrt(mean((squeeze(yh_p(1:io,io,ibb))-t(1:io)).^2));
 
-plot(X,y_hat)
-hold on
-plot(X,t)
-hold on
-plot(X,Y)
-legend('Prediction','Function','Data')
-
-figure();
-plot(X,f)
-
+ subplot(3,1,1); fplot(f,[0 1]); hold; plot(x,yh_p(1:io,io,ibb),'.'); plot(x,t,'o'); hold
+ subplot(3,1,2); fplot(f,[0 1]); hold; plot(x,yh_m(1:io,io,ibb),'.'); plot(x,t,'o'); hold
+ subplot(3,1,3); fplot(f,[0 1]); hold; plot(x,yh_i(1:io,io,ibb),'.'); plot(x,t,'o'); hold
+ drawnow
+ [io ibb];
+end
+end
