@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.8)  9 OCT 2018 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.8)  10 OCT 2018 19:44
 entering extended mode
 **./main.tex
 (main.tex
@@ -1244,13 +1244,15 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 
 
 ]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 14.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 8.
+on input line 14.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 8--8
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 14--14
 [][]  
  []
 
@@ -1260,10 +1262,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 8--8
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 26.
+on input line 32.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 26--26
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 32--32
 [][]  
  []
 
@@ -1276,10 +1278,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 26--26
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 49.
+on input line 55.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 49--49
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 55--55
 [][]  
  []
 
@@ -1307,20 +1309,22 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26684 strings out of 492970
- 515639 string characters out of 3135829
- 953523 words of memory out of 3000000
- 30005 multiletter control sequences out of 15000+200000
- 22709 words of font info for 37 fonts, out of 3000000 for 9000
+ 26698 strings out of 492970
+ 515879 string characters out of 3135829
+ 954523 words of memory out of 3000000
+ 30015 multiletter control sequences out of 15000+200000
+ 25858 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,71p,800b,742s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/lm/lmvtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/upl
-b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (7 pages, 140472 bytes).
+b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (7 pages, 163371 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
  64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
