@@ -36,8 +36,46 @@
 \headcommand {\slideentry {1}{1}{4}{7/7}{Basic Concepts of Probability Theory}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@partpages {1}{7}}
-\headcommand {\beamer@subsectionpages {4}{7}}
+\defcounter {refsection}{0}\relax 
 \headcommand {\beamer@sectionpages {4}{7}}
-\headcommand {\beamer@documentpages {7}}
-\headcommand {\gdef \inserttotalframenumber {7}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {4}{7}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {2}{Linear Regression}{8}{Linear Regression}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{1}{8/8}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {8}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {8}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{1}{9}{Basic Concepts of Curve Fitting}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {9}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{2}{9}{Bayesian Curve Fitting}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{1}{9/10}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {9}{10}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{2}{11/14}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {11}{14}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{3}{15/17}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {15}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{4}{18/18}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {18}{18}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{5}{19/20}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {19}{20}}
+\headcommand {\beamer@partpages {1}{20}}
+\headcommand {\beamer@subsectionpages {9}{20}}
+\headcommand {\beamer@sectionpages {8}{20}}
+\headcommand {\beamer@documentpages {20}}
+\headcommand {\gdef \inserttotalframenumber {13}}

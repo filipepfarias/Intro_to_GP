@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.8)  10 OCT 2018 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.8)  11 OCT 2018 19:41
 entering extended mode
 **./main.tex
 (main.tex
@@ -736,22 +736,62 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen199
 \SOUL@ulht=\dimen256
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count164
+\calc@Bcount=\count165
+\calc@Adimen=\dimen257
+\calc@Bdimen=\dimen258
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count166
+\calc@Cskip=\skip60
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count167
+\l_MT_multwidth_dim=\dimen259
+\origjot=\skip61
+\l_MT_shortvdotswithinadjustabove_dim=\dimen260
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen261
+\l_MT_above_intertext_sep=\dimen262
+\l_MT_below_intertext_sep=\dimen263
+\l_MT_above_shortintertext_sep=\dimen264
+\l_MT_below_shortintertext_sep=\dimen265
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grffile.sty"
+Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\textpos\textpos.sty"
 Package: textpos 2016/06/07 v1.8
 
 Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
 \TP@textbox=\box58
 \TP@holdbox=\box59
-\TPHorizModule=\dimen257
-\TPVertModule=\dimen258
-\TP@margin=\dimen259
-\TP@absmargin=\dimen260
+\TPHorizModule=\dimen266
+\TPVertModule=\dimen267
+\TP@margin=\dimen268
+\TP@absmargin=\dimen269
 Grid set 16 x 16 = 28.45274pt x 16.00467pt
-\TPboxrulesize=\dimen261
-\TP@ox=\dimen262
-\TP@oy=\dimen263
+\TPboxrulesize=\dimen270
+\TP@ox=\dimen271
+\TP@oy=\dimen272
 \TP@tbargs=\toks54
-\TP@prevdepth=\dimen264
+\TP@prevdepth=\dimen273
 TextBlockOrigin set to 0pt x 0pt
 ) (beamerinnerthemeuniud.sty) (beamerouterthemeuniud.sty)
 (beamercolorthemeuniud.sty) (beamerfontthemeuniud.sty
@@ -768,7 +808,7 @@ Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count164
+\lrq@indent=\count168
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -779,62 +819,62 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write5
-\integerpart=\count165
-\decimalpart=\count166
+\integerpart=\count169
+\decimalpart=\count170
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count167
-\c@listtotal=\count168
-\c@listcount=\count169
-\c@liststart=\count170
-\c@liststop=\count171
-\c@citecount=\count172
-\c@citetotal=\count173
-\c@multicitecount=\count174
-\c@multicitetotal=\count175
-\c@instcount=\count176
-\c@maxnames=\count177
-\c@minnames=\count178
-\c@maxitems=\count179
-\c@minitems=\count180
-\c@citecounter=\count181
-\c@savedcitecounter=\count182
-\c@uniquelist=\count183
-\c@uniquename=\count184
-\c@refsection=\count185
-\c@refsegment=\count186
-\c@maxextratitle=\count187
-\c@maxextratitleyear=\count188
-\c@maxextradate=\count189
-\c@maxextraalpha=\count190
-\c@abbrvpenalty=\count191
-\c@highnamepenalty=\count192
-\c@lownamepenalty=\count193
-\c@maxparens=\count194
-\c@parenlevel=\count195
-\blx@tempcnta=\count196
-\blx@tempcntb=\count197
-\blx@tempcntc=\count198
-\blx@maxsection=\count199
-\blx@maxsegment@0=\count266
-\blx@notetype=\count267
-\blx@parenlevel@text=\count268
-\blx@parenlevel@foot=\count269
-\blx@sectionciteorder@0=\count270
-\labelnumberwidth=\skip58
-\labelalphawidth=\skip59
-\biblabelsep=\skip60
-\bibitemsep=\skip61
-\bibnamesep=\skip62
-\bibinitsep=\skip63
-\bibparsep=\skip64
-\bibhang=\skip65
+\c@tabx@nest=\count171
+\c@listtotal=\count172
+\c@listcount=\count173
+\c@liststart=\count174
+\c@liststop=\count175
+\c@citecount=\count176
+\c@citetotal=\count177
+\c@multicitecount=\count178
+\c@multicitetotal=\count179
+\c@instcount=\count180
+\c@maxnames=\count181
+\c@minnames=\count182
+\c@maxitems=\count183
+\c@minitems=\count184
+\c@citecounter=\count185
+\c@savedcitecounter=\count186
+\c@uniquelist=\count187
+\c@uniquename=\count188
+\c@refsection=\count189
+\c@refsegment=\count190
+\c@maxextratitle=\count191
+\c@maxextratitleyear=\count192
+\c@maxextradate=\count193
+\c@maxextraalpha=\count194
+\c@abbrvpenalty=\count195
+\c@highnamepenalty=\count196
+\c@lownamepenalty=\count197
+\c@maxparens=\count198
+\c@parenlevel=\count199
+\blx@tempcnta=\count266
+\blx@tempcntb=\count267
+\blx@tempcntc=\count268
+\blx@maxsection=\count269
+\blx@maxsegment@0=\count270
+\blx@notetype=\count271
+\blx@parenlevel@text=\count272
+\blx@parenlevel@foot=\count273
+\blx@sectionciteorder@0=\count274
+\labelnumberwidth=\skip62
+\labelalphawidth=\skip63
+\biblabelsep=\skip64
+\bibitemsep=\skip65
+\bibnamesep=\skip66
+\bibinitsep=\skip67
+\bibparsep=\skip68
+\bibhang=\skip69
 \blx@bcfin=\read3
 \blx@bcfout=\write6
-\c@mincomprange=\count271
-\c@maxcomprange=\count272
-\c@mincompwidth=\count273
+\c@mincomprange=\count275
+\c@maxcomprange=\count276
+\c@mincompwidth=\count277
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -845,88 +885,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count274
-\c@savedafterword=\count275
-\c@annotator=\count276
-\c@savedannotator=\count277
-\c@author=\count278
-\c@savedauthor=\count279
-\c@bookauthor=\count280
-\c@savedbookauthor=\count281
-\c@commentator=\count282
-\c@savedcommentator=\count283
-\c@editor=\count284
-\c@savededitor=\count285
-\c@editora=\count286
-\c@savededitora=\count287
-\c@editorb=\count288
-\c@savededitorb=\count289
-\c@editorc=\count290
-\c@savededitorc=\count291
-\c@foreword=\count292
-\c@savedforeword=\count293
-\c@holder=\count294
-\c@savedholder=\count295
-\c@introduction=\count296
-\c@savedintroduction=\count297
-\c@namea=\count298
-\c@savednamea=\count299
-\c@nameb=\count300
-\c@savednameb=\count301
-\c@namec=\count302
-\c@savednamec=\count303
-\c@translator=\count304
-\c@savedtranslator=\count305
-\c@shortauthor=\count306
-\c@savedshortauthor=\count307
-\c@shorteditor=\count308
-\c@savedshorteditor=\count309
-\c@labelname=\count310
-\c@savedlabelname=\count311
-\c@institution=\count312
-\c@savedinstitution=\count313
-\c@lista=\count314
-\c@savedlista=\count315
-\c@listb=\count316
-\c@savedlistb=\count317
-\c@listc=\count318
-\c@savedlistc=\count319
-\c@listd=\count320
-\c@savedlistd=\count321
-\c@liste=\count322
-\c@savedliste=\count323
-\c@listf=\count324
-\c@savedlistf=\count325
-\c@location=\count326
-\c@savedlocation=\count327
-\c@organization=\count328
-\c@savedorganization=\count329
-\c@origlocation=\count330
-\c@savedoriglocation=\count331
-\c@origpublisher=\count332
-\c@savedorigpublisher=\count333
-\c@publisher=\count334
-\c@savedpublisher=\count335
-\c@language=\count336
-\c@savedlanguage=\count337
-\c@origlanguage=\count338
-\c@savedoriglanguage=\count339
-\c@pageref=\count340
-\c@savedpageref=\count341
-\shorthandwidth=\skip66
-\shortjournalwidth=\skip67
-\shortserieswidth=\skip68
-\shorttitlewidth=\skip69
-\shortauthorwidth=\skip70
-\shorteditorwidth=\skip71
-\locallabelnumberwidth=\skip72
-\locallabelalphawidth=\skip73
-\localshorthandwidth=\skip74
-\localshortjournalwidth=\skip75
-\localshortserieswidth=\skip76
-\localshorttitlewidth=\skip77
-\localshortauthorwidth=\skip78
-\localshorteditorwidth=\skip79
+\c@afterword=\count278
+\c@savedafterword=\count279
+\c@annotator=\count280
+\c@savedannotator=\count281
+\c@author=\count282
+\c@savedauthor=\count283
+\c@bookauthor=\count284
+\c@savedbookauthor=\count285
+\c@commentator=\count286
+\c@savedcommentator=\count287
+\c@editor=\count288
+\c@savededitor=\count289
+\c@editora=\count290
+\c@savededitora=\count291
+\c@editorb=\count292
+\c@savededitorb=\count293
+\c@editorc=\count294
+\c@savededitorc=\count295
+\c@foreword=\count296
+\c@savedforeword=\count297
+\c@holder=\count298
+\c@savedholder=\count299
+\c@introduction=\count300
+\c@savedintroduction=\count301
+\c@namea=\count302
+\c@savednamea=\count303
+\c@nameb=\count304
+\c@savednameb=\count305
+\c@namec=\count306
+\c@savednamec=\count307
+\c@translator=\count308
+\c@savedtranslator=\count309
+\c@shortauthor=\count310
+\c@savedshortauthor=\count311
+\c@shorteditor=\count312
+\c@savedshorteditor=\count313
+\c@labelname=\count314
+\c@savedlabelname=\count315
+\c@institution=\count316
+\c@savedinstitution=\count317
+\c@lista=\count318
+\c@savedlista=\count319
+\c@listb=\count320
+\c@savedlistb=\count321
+\c@listc=\count322
+\c@savedlistc=\count323
+\c@listd=\count324
+\c@savedlistd=\count325
+\c@liste=\count326
+\c@savedliste=\count327
+\c@listf=\count328
+\c@savedlistf=\count329
+\c@location=\count330
+\c@savedlocation=\count331
+\c@organization=\count332
+\c@savedorganization=\count333
+\c@origlocation=\count334
+\c@savedoriglocation=\count335
+\c@origpublisher=\count336
+\c@savedorigpublisher=\count337
+\c@publisher=\count338
+\c@savedpublisher=\count339
+\c@language=\count340
+\c@savedlanguage=\count341
+\c@origlanguage=\count342
+\c@savedoriglanguage=\count343
+\c@pageref=\count344
+\c@savedpageref=\count345
+\shorthandwidth=\skip70
+\shortjournalwidth=\skip71
+\shortserieswidth=\skip72
+\shorttitlewidth=\skip73
+\shortauthorwidth=\skip74
+\shorteditorwidth=\skip75
+\locallabelnumberwidth=\skip76
+\locallabelalphawidth=\skip77
+\localshorthandwidth=\skip78
+\localshortjournalwidth=\skip79
+\localshortserieswidth=\skip80
+\localshorttitlewidth=\skip81
+\localshortauthorwidth=\skip82
+\localshorteditorwidth=\skip83
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -938,13 +978,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count342
-\c@textcitetotal=\count343
-\c@textcitemaxnames=\count344
-\c@biburlnumpenalty=\count345
-\c@biburlucpenalty=\count346
-\c@biburllcpenalty=\count347
-\c@smartand=\count348
+\c@textcitecount=\count346
+\c@textcitetotal=\count347
+\c@textcitemaxnames=\count348
+\c@biburlnumpenalty=\count349
+\c@biburlucpenalty=\count350
+\c@biburllcpenalty=\count351
+\c@smartand=\count352
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
@@ -956,8 +996,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count349
-\c@bbx:relatedtotal=\count350
+\c@bbx:relatedcount=\count353
+\c@bbx:relatedtotal=\count354
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
@@ -981,23 +1021,23 @@ File: biblatex.cfg
 ("C:\Program Files\MiKTeX 2.9\tex\latex\silence\silence.sty"
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
 sages
-\sl@Save=\count351
-\sl@StateNumber=\count352
-\sl@MessageCount=\count353
-\sl@Casualties=\count354
+\sl@Save=\count355
+\sl@StateNumber=\count356
+\sl@MessageCount=\count357
+\sl@Casualties=\count358
 \sl@Filter=\toks55
 \sl@Message=\toks56
 \sl@UnexpandedMessage=\toks57
 \sl@Mess@ge=\toks58
-\sl@WarningCount=\count355
-\sl@WarningNumber=\count356
-\sl@WarningCasualties=\count357
+\sl@WarningCount=\count359
+\sl@WarningNumber=\count360
+\sl@WarningCasualties=\count361
 \sl@TempBOW=\toks59
 \sl@BankOfWarnings=\toks60
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count358
-\sl@ErrorNumber=\count359
-\sl@ErrorCasualties=\count360
+\sl@ErrorCount=\count362
+\sl@ErrorNumber=\count363
+\sl@ErrorCasualties=\count364
 \sl@TempBOE=\toks61
 \sl@BankOfErrors=\toks62
 LaTeX Info: Redefining \GenericError on input line 601.
@@ -1008,27 +1048,27 @@ Package biblatex Info: ... file 'english.lbx' found.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
-\@quotelevel=\count361
-\@quotereset=\count362
+\@quotelevel=\count365
+\@quotereset=\count366
  (main.aux
-(preamble.aux) (section-1.aux))
+(preamble.aux) (section-1.aux) (section-2.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -1069,16 +1109,16 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count363
-\scratchdimen=\dimen265
+\scratchcounter=\count367
+\scratchdimen=\dimen274
 \scratchbox=\box60
-\nofMPsegments=\count364
-\nofMParguments=\count365
+\nofMPsegments=\count368
+\nofMParguments=\count369
 \everyMPshowfont=\toks63
-\MPscratchCnt=\count366
-\MPscratchDim=\dimen266
-\MPnumerator=\count367
-\makeMPintoPDFobject=\count368
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen275
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
 \everyMPtoPDFconversion=\toks64
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1095,7 +1135,7 @@ G,.JBIG2,.JB2,.eps]
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1103,11 +1143,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count369
+\c@section@level=\count373
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 
 (main.out) (main.out)
 \@outlinefile=\write7
@@ -1116,41 +1156,41 @@ LaTeX Info: Redefining \nameref on input line 55.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> T1/ppl/m/n on input line 55.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 55.
+(Font)                  OT1/cmr/m/n --> T1/ppl/m/n on input line 56.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/ppl/bx/n on input line 55.
+(Font)                  OT1/cmr/bx/n --> T1/ppl/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/ppl/bx/n on input line 55.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 55.
+(Font)                  OT1/cmr/bx/n --> T1/ppl/bx/n on input line 56.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 55.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 55.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 55.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 56.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/ppl/m/it on input line 55.
+(Font)                  OT1/cmr/m/it --> T1/ppl/m/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/ppl/m/it on input line 55.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 55.
+(Font)                  OT1/cmr/bx/it --> T1/ppl/m/it on input line 56.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/lmvtt/m/n on input line 55.
+(Font)                  OT1/cmtt/m/n --> T1/lmvtt/m/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/lmvtt/m/n on input line 55.
+(Font)                  OT1/cmtt/m/n --> T1/lmvtt/m/n on input line 56.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/ppl/m/n --> T1/ppl/bx/n on input line 55.
+(Font)                  T1/ppl/m/n --> T1/ppl/bx/n on input line 56.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/ppl/m/it --> T1/ppl/bx/it on input line 55.
+(Font)                  T1/ppl/m/it --> T1/ppl/bx/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/ppl/bx/n on input line 55.
+(Font)                  OT1/cmr/bx/n --> T1/ppl/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/ppl/bx/n --> T1/ppl/bx/n on input line 55.
+(Font)                  T1/ppl/bx/n --> T1/ppl/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 55.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/ppl/m/it --> T1/ppl/bx/it on input line 55.
+(Font)                  T1/ppl/m/it --> T1/ppl/bx/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmvtt/m/n --> T1/lmvtt/bx/n on input line 55.
+(Font)                  T1/lmvtt/m/n --> T1/lmvtt/bx/n on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-
 English.dict"
@@ -1185,10 +1225,10 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 55.
-Package biblatex Info: Reference segment=0 on input line 55.
+Package biblatex Info: Reference section=0 on input line 56.
+Package biblatex Info: Reference segment=0 on input line 56.
 (main.nav)
-LaTeX Font Info:    Try loading font information for T1+lmvtt on input line 58.
+LaTeX Font Info:    Try loading font information for T1+lmvtt on input line 59.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmvtt.fd"
 File: t1lmvtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1205,7 +1245,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 pdfTeX warning: pdflatex.exe (file ./graphics/brasao1_horizontal_monocromatico-
 b.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
 ed
-<graphics/brasao1_horizontal_monocromatico-b.pdf, id=28, 358.87466pt x 605.8445
+<graphics/brasao1_horizontal_monocromatico-b.pdf, id=40, 358.87466pt x 605.8445
 4pt>
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
@@ -1224,10 +1264,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 5--5
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 64.
+on input line 65.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 64--64
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 65--65
 [][]  
  []
 
@@ -1288,6 +1328,197 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 55--55
 [7
 
 ])
+\openout2 = `section-2.aux'.
+
+ (section-2.tex [8
+
+
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 16.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
+[][]  
+ []
+
+[9
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 16.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
+[][]  
+ []
+
+[10
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <6> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 31.
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 31.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
+[][]  
+ []
+
+[11
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 31.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
+[][]  
+ []
+
+[12
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 31.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
+[][]  
+ []
+
+[13
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 31.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
+[][]  
+ []
+
+[14
+
+]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <8> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <6> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 37.
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 37.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+[][]  
+ []
+
+[15
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 37.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+[][]  
+ []
+
+[16
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 37.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+[][]  
+ []
+
+[17
+
+]
+<graphics/prml/Figure1c16.pdf, id=163, 238.83278pt x 151.58241pt>
+File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
+<use graphics/prml/Figure1c16.pdf>
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 46.
+(pdftex.def)             Requested size: 238.3074pt x 151.24641pt.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <7> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <5> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 46.
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 46.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 46--46
+[][]  
+ []
+
+[18
+
+ <./graphics/prml/Figure1c16.pdf>]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 62.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 62--62
+[][]  
+ []
+
+[19
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
+on input line 62.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 62--62
+[][]  
+ []
+
+[20
+
+])
 \tf@nav=\write8
 \openout8 = `main.nav'.
 
@@ -1299,32 +1530,40 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 55--55
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
- (main.aux (preamble.aux) (section-1.aux))
+ (main.aux (preamble.aux) (section-1.aux) (section-2.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E4FA6FCDB5C17F15570020EFAFE8229D;166.
+(rerunfilecheck)             Checksum: D7104718C6FD8A4E1DEACAFF1F4F3FBC;372.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26698 strings out of 492970
- 515879 string characters out of 3135829
- 954523 words of memory out of 3000000
- 30015 multiletter control sequences out of 15000+200000
- 25858 words of font info for 41 fonts, out of 3000000 for 9000
+ 27495 strings out of 492970
+ 529942 string characters out of 3135829
+ 971830 words of memory out of 3000000
+ 30730 multiletter control sequences out of 15000+200000
+ 50595 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,71p,800b,742s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,13n,71p,800b,742s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/lm/lmvtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/upl
-b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (7 pages, 163371 bytes).
+public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmvtt10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatin
+o/uplri8a.pfb>
+Output written on main.pdf (20 pages, 247600 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 64 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

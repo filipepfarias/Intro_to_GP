@@ -3,3 +3,9 @@
 \beamer@sectionintoc {1}{Probability and Random Process Theory Review}{4}{0}{1}
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {1}{1}{Basic Concepts of Probability Theory}{4}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Linear Regression}{8}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{1}{Basic Concepts of Curve Fitting}{9}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{2}{Bayesian Curve Fitting}{9}{0}{2}
