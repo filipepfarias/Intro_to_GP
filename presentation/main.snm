@@ -1,4 +1,10 @@
 \defcounter {refsection}{0}\relax 
-\beamer@slide {bayes_theorem}{11}
+\beamer@slide {eq:gaussian-distribution}{6}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {schematic-gaussian-distribution}{18}
+\beamer@slide {linear-resression}{12}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {bayesian-curve-fitting}{13}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {bayes_theorem}{15}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {fig:schematic-gaussian-distribution}{22}

@@ -1,6 +1,6 @@
 \section{Probability and Random Process Theory Review}
-\subsection{Basic Concepts of Probability Theory}
 \framecard{\insertsection}
+\subsection{Basic Concepts of Probability Theory}
 
 
 \begin{frame}{Specifying Random Experiments}
@@ -13,43 +13,70 @@ Let's start with the sentence
 
 \end{frame}
 
-
-
-\begin{frame}{Overleaf users}
-
-\begin{alertblock}{Warning}
-You can ignore this slide if you're \textbf{not} working with Overleaf.
-\end{alertblock}
-
-\vskip 0.5cm
-
-Overleaf, Beamer and Biber do not always get along well together. For this reason, if you make a mistake while writing this presentation, in the drop-down error message you'll \textbf{always} get Biber-related error messages.
-
-\vskip 0.5cm
-
-Luckily, you just have to click on ``\texttt{go to first error/warning}'' and the UI will scroll to the line containing your mistake.
-
+\subsection{The Gaussian distribution}
+\begin{frame}{\insertsubsection}
+The \textbf{Gaussian distribution} is defined as
+	\begin{equation}\label{eq:gaussian-distribution}
+	\mathcal{N}(x|\mu,\sigma^2) = \frac{1}{(2\pi\sigma^2)^{1/2}}\exp\left\{-\frac{1}{2\sigma^2}(x-\mu)^2\right\}
+	\end{equation}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{Compiling}
 
-\begin{alertblock}{Warning}
-You can ignore this slide if you're working with Overleaf.
-\end{alertblock}
-
-To compile this deck you'll need the \texttt{biber} package. Probably your \TeX editor already supports it; if not, you will easily find online the instructions to install it.
-
-\vskip 0.5cm
-
-If you're not using an editor, you can compile this presentation using the command line by running:
-
-\begin{verbatim}
-$ pdflatex main.tex
-$ biber main.bcf
-$ pdflatex main.tex
-$ pdflatex main.tex
-\end{verbatim}
-
-
+\subsection{Independency of two random variables}
+\begin{frame}{\insertsubsection}
+\visible<2->{
+\begin{block}{Sentence}
+\textbf{X and Y are independent random variables} if \textit{any} event $A_1$ defined in terms of $X$ is independent of \textit{any} event $A_2$ defined in terms of Y
+\end{block}
+}
+\visible<3->{
+The sentence above is equivalent to say mathematically that
+}
+\visible<4->{
+	\begin{equation}
+	P[X \text{ in } A_1, Y \text{ in } A_2]=P[X \text{ in } A_1]P[ Y \text{ in } A_2]
+	\end{equation}
+}
+\visible<5->{
+that means in other words that \textit{if $X$ and $Y$ are independent discrete random variables, then the \textbf{joint probability mass function (pmf)} is equal to the product of the marginal pmf's.}
+}
 \end{frame}
+
+%\begin{frame}{Overleaf users}
+%
+%\begin{alertblock}{Warning}
+%You can ignore this slide if you're \textbf{not} working with Overleaf.
+%\end{alertblock}
+%
+%\vskip 0.5cm
+%
+%Overleaf, Beamer and Biber do not always get along well together. For this reason, if you make a mistake while writing this presentation, in the drop-down error message you'll \textbf{always} get Biber-related error messages.
+%
+%\vskip 0.5cm
+%
+%Luckily, you just have to click on ``\texttt{go to first error/warning}'' and the UI will scroll to the line containing your mistake.
+%
+%\end{frame}
+%
+%\begin{frame}[fragile]
+%\frametitle{Compiling}
+%
+%\begin{alertblock}{Warning}
+%You can ignore this slide if you're working with Overleaf.
+%\end{alertblock}
+%
+%To compile this deck you'll need the \texttt{biber} package. Probably your \TeX editor already supports it; if not, you will easily find online the instructions to install it.
+%
+%\vskip 0.5cm
+%
+%If you're not using an editor, you can compile this presentation using the command line by running:
+%
+%\begin{verbatim}
+%$ pdflatex main.tex
+%$ biber main.bcf
+%$ pdflatex main.tex
+%$ pdflatex main.tex
+%\end{verbatim}
+%
+%
+%\end{frame}

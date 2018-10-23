@@ -23,6 +23,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{mathtools}
 \RequirePackage{grffile}
+\RequirePackage{chngcntr}
 
 % in debug mode, show the boxes around the text
 \ifdefined\DEBUG
@@ -41,6 +42,9 @@
 \setbeamertemplate{navigation symbols}{}
 % Squared blocks
 \setbeamertemplate{blocks}[rounded=false] 
+% Section number
+\counterwithin{figure}{section}
+\counterwithin{figure}{subsection}
 
 % Table of contents (outline) styling
 \setbeamertemplate{section in toc}[ball numbered]

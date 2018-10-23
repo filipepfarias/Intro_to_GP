@@ -17,65 +17,81 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\sectionentry {1}{Probability and Random Process Theory Review}{4}{Probability and Random Process Theory Review}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {4}{3}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Basic Concepts of Probability Theory}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{1}{4/4}{Basic Concepts of Probability Theory}{0}}
+\headcommand {\slideentry {1}{0}{1}{4/4}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {4}{4}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{2}{5/5}{Basic Concepts of Probability Theory}{0}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{1}{5}{Basic Concepts of Probability Theory}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{1}{1}{5/5}{Basic Concepts of Probability Theory}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {5}{5}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{3}{6/6}{Basic Concepts of Probability Theory}{0}}
+\headcommand {\beamer@subsectionpages {5}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{2}{6}{The Gaussian distribution}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{1}{6/6}{The Gaussian distribution}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {6}{6}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{4}{7/7}{Basic Concepts of Probability Theory}{0}}
+\headcommand {\beamer@subsectionpages {6}{6}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{7}{Independency of two random variables}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {4}{7}}
+\headcommand {\slideentry {1}{3}{1}{7/11}{Independency of two random variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {4}{7}}
+\headcommand {\beamer@framepages {7}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {2}{Linear Regression}{8}{Linear Regression}{0}}
+\headcommand {\beamer@sectionpages {4}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{0}{1}{8/8}{}{0}}
+\headcommand {\beamer@subsectionpages {7}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\sectionentry {2}{Linear Regression}{12}{Linear Regression}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\slideentry {2}{0}{1}{12/12}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{2}{1}{9}{Basic Concepts of Curve Fitting}}
+\headcommand {\beamer@framepages {12}{12}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {9}{8}}
+\headcommand {\beamer@subsectionpages {12}{12}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{2}{2}{9}{Bayesian Curve Fitting}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{Basic Concepts of Curve Fitting}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{1}{9/10}{Bayesian Curve Fitting}{0}}
+\headcommand {\beamer@subsectionpages {13}{12}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {9}{10}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{13}{Bayesian Curve Fitting}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{2}{11/14}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{1}{13/14}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {11}{14}}
+\headcommand {\beamer@framepages {13}{14}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{3}{15/17}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{2}{15/18}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\beamer@framepages {15}{18}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{4}{18/18}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{3}{19/21}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\beamer@framepages {19}{21}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{5}{19/20}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{4}{22/22}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {19}{20}}
-\headcommand {\beamer@partpages {1}{20}}
-\headcommand {\beamer@subsectionpages {9}{20}}
-\headcommand {\beamer@sectionpages {8}{20}}
-\headcommand {\beamer@documentpages {20}}
-\headcommand {\gdef \inserttotalframenumber {13}}
+\headcommand {\beamer@framepages {22}{22}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{5}{23/26}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{26}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{6}{27/29}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {27}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{7}{30/33}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {30}{33}}
+\headcommand {\beamer@partpages {1}{33}}
+\headcommand {\beamer@subsectionpages {13}{33}}
+\headcommand {\beamer@sectionpages {12}{33}}
+\headcommand {\beamer@documentpages {33}}
+\headcommand {\gdef \inserttotalframenumber {15}}
