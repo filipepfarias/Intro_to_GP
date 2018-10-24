@@ -5,7 +5,7 @@
 
 \begin{frame}{\insertsubsection}
 
-A key concept in the field of pattern recognition is that of \textbf{uncertainty}, that arises from both through noise on measurements, as well as through the finite size of data sets. Let's begin from a simple example.
+A key concept in the field of pattern recognition is that of \textbf{uncertainty}, that arises from both through noise on measurements, as well as through the finite size of data sets. To find this uncertainty we'll talk about a little of the \textbf{Probability Theory}. Let's begin from a simple example.
 
 \end{frame}
 
@@ -58,13 +58,53 @@ Here, we could see some properties that we call \textbf{The Rules of Probability
 
 And by the \textbf{Product Rule} we prove that
 
-\begin{block}{Bayes' Rule}
-\begin{equation}
+\begin{block}{Bayes' Theorem}
+\begin{equation}\label{eq:bayes-rule}
 	p(X,Y) = p(Y|X)p(X) = p(X|Y)p(Y) \Rightarrow p(Y|X) = \frac{p(X|Y)p(Y)}{p(X)}
 \end{equation}
 \end{block}
 
 \end{frame}
+
+\begin{frame}{\insertsubsection}
+
+So, from \textbf{The Rules of Probability}, we could show that too 
+
+\begin{block}{Total Probability Theorem}
+\begin{equation}\label{eq:total-probability}
+	p(X) = \sum_Y p(Y|X)p(X)
+\end{equation}
+\end{block}
+
+%Remaind of insert the general proof on the appendix
+
+%And so we could derive another formula
+
+%\begin{equation}
+%	p(Y|X) = \frac{p(X|Y)p(Y)}{\sum_Y p(Y|X)p(X)}
+%\end{equation}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+An important propriety of probability is the \textbf{Independence of events}. So, let's say that two events occurs without that one has occurred, so by the \textbf{Bayes' Theorem} we make
+
+\begin{equation}
+p(X|Y) = p(X) \text{ and } p(Y|X) = p(Y) \Rightarrow p(X,Y) = p(X)p(Y)
+\end{equation}
+
+\end{frame}
+
+\subsection{Random Variables}
+
+\begin{frame}{\insertsubsection}
+
+Simplifying, the \textbf{Random Variables} will treat the probability defined before in the \textit{continuous domain}. So we define a random variable $X$ as a function that assigns a real number, $X(\zeta)$, to each outcome $\zeta$, so $X(\zeta) =  x$.
+
+\end{frame}
+
+
 
 \subsection{The Gaussian distribution}
 \begin{frame}{\insertsubsection}

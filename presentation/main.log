@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6840 64-bit)  (format=lualatex 2018.10.24)  24 OCT 2018 17:12
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6840 64-bit)  (format=lualatex 2018.10.24)  24 OCT 2018 18:37
  restricted system commands enabled.
 **./main.tex
 (./main.tex
@@ -32,7 +32,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.589 seconds ("C:/Program File
+luaotfload | main : initialization completed in 0.631 seconds ("C:/Program File
 s/MiKTeX 2.9/tex/latex/beamer/beamer.cls"
 Document Class: beamer 2018/09/20 v3.54 A class for typesetting presentations
 ("C:/Program Files/MiKTeX 2.9/tex/latex/beamer/beamerbasemodes.sty"
@@ -1286,7 +1286,7 @@ File: t1lmvtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (./preamble.tex
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 5.
-<graphics/brasao1_horizontal_monocromatico-b.pdf, id=48, 358.87466pt x 605.84454
+<graphics/brasao1_horizontal_monocromatico-b.pdf, id=52, 358.87466pt x 605.84454
 pt>
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
@@ -1346,7 +1346,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 ("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<graphics/prml/Figure1c10.pdf, id=93, 149.05647pt x 97.30173pt>
+<graphics/prml/Figure1c10.pdf, id=99, 149.05647pt x 97.30173pt>
 File: graphics/prml/Figure1c10.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c10.pdf>
 Package luatex.def Info: graphics/prml/Figure1c10.pdf  used on input line 36.
@@ -1483,25 +1483,23 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 67--67
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 75.
+n input line 87.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 75--75
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 87--87
 [][]  
  []
 
 [15
 
 ]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 96.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 96.
+n input line 97.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 96--96
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 97--97
 [][]  
  []
 
@@ -1511,10 +1509,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 96--96
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 96.
+n input line 105.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 96--96
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 105--105
 [][]  
  []
 
@@ -1524,42 +1522,51 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 96--96
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 96.
+n input line 115.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 96--96
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 115--115
 [][]  
  []
 
 [18
 
 ]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 136.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 96.
+n input line 136.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 96--96
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 136--136
 [][]  
  []
 
 [19
 
-])
-\openout2 = section-2.aux
- (./section-2.tex [20
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 136.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 136--136
+[][]  
+ []
 
+[20
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 16.
+n input line 136.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 136--136
 [][]  
  []
 
@@ -1569,6 +1576,25 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 136.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 136--136
+[][]  
+ []
+
+[22
+
+])
+\openout2 = section-2.aux
+ (./section-2.tex [23
+
+
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
 n input line 16.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
@@ -1576,7 +1602,20 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
 [][]  
  []
 
-[22
+[24
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 16.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
+[][]  
+ []
+
+[25
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
@@ -1593,55 +1632,16 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][]  
  []
 
-[23
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 31.
-(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
-[][]  
- []
-
-[24
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 31.
-(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
-[][]  
- []
-
-[25
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 31.
-(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
-[][]  
- []
-
 [26
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 37.
+n input line 31.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][]  
  []
 
@@ -1651,14 +1651,27 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 37.
+n input line 31.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][]  
  []
 
 [28
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 31.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
+[][]  
+ []
+
+[29
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -1671,10 +1684,36 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
 [][]  
  []
 
-[29
+[30
 
 ]
-<graphics/prml/Figure1c16.pdf, id=313, 238.83278pt x 151.58241pt>
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 37.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+[][]  
+ []
+
+[31
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 37.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
+[][]  
+ []
+
+[32
+
+]
+<graphics/prml/Figure1c16.pdf, id=345, 238.83278pt x 151.58241pt>
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
 Package luatex.def Info: graphics/prml/Figure1c16.pdf  used on input line 46.
@@ -1695,48 +1734,9 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 46--46
 [][]  
  []
 
-[30
-
-<./graphics/prml/Figure1c16.pdf>]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 63.
-(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
-[][]  
- []
-
-[31
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 63.
-(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
-[][]  
- []
-
-[32
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 63.
-(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
-[][]  
- []
-
 [33
 
-]
+<./graphics/prml/Figure1c16.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
@@ -1753,10 +1753,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 77.
+n input line 63.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
 [][]  
  []
 
@@ -1766,10 +1766,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 77.
+n input line 63.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
 [][]  
  []
 
@@ -1779,10 +1779,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 77.
+n input line 63.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 63--63
 [][]  
  []
 
@@ -1792,10 +1792,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 93.
+n input line 77.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
 [][]  
  []
 
@@ -1805,10 +1805,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 93.
+n input line 77.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
 [][]  
  []
 
@@ -1818,10 +1818,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
-n input line 93.
+n input line 77.
 (luatex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 77--77
 [][]  
  []
 
@@ -1840,6 +1840,45 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
 
 [41
 
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 93.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
+[][]  
+ []
+
+[42
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 93.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
+[][]  
+ []
+
+[43
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package luatex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
+n input line 93.
+(luatex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 93--93
+[][]  
+ []
+
+[44
+
 ])
 \tf@nav=\write8
 
@@ -1856,22 +1895,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 095604F316D0C0E834A91E88FAAE3BF2;537.
+(rerunfilecheck)             Checksum: 5C3CF155FE80D5FD473869842D9741C8;604.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 28722 strings out of 494407
+ 28751 strings out of 494407
  100000,1144653 words of node,token memory allocated
- 7109 words of node memory still in use:
-   202 hlist, 21 vlist, 15 rule, 10 disc, 4 local_par, 16 math, 145 glue, 83 ker
-n, 16 penalty, 181 glyph, 319 attribute, 67 glue_spec, 319 attribute_list, 4 wri
+ 7143 words of node memory still in use:
+   202 hlist, 21 vlist, 15 rule, 10 disc, 4 local_par, 16 math, 145 glue, 85 ker
+n, 16 penalty, 181 glyph, 325 attribute, 67 glue_spec, 325 attribute_list, 4 wri
 te, 85 pdf_literal, 1 pdf_action, 8 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save,
  1 pdf_restore nodes
-   avail lists: 1:2,2:465,3:376,4:125,5:98,6:24,7:1344,8:85,9:421,10:18,11:90
- 31300 multiletter control sequences out of 65536+200000
+   avail lists: 1:2,2:465,3:376,4:133,5:98,6:27,7:1344,8:85,9:421,10:18,11:94
+ 31311 multiletter control sequences out of 65536+200000
  106 fonts using 7442247 bytes
  60i,13n,71p,799b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTe
@@ -1886,9 +1925,9 @@ s/type1/public/lm/lmvtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palat
 ino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (41 pages, 349624 bytes).
+Output written on main.pdf (44 pages, 357756 bytes).
 
-PDF statistics: 493 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 131072)
- 72 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 524 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 131072)
+ 80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
