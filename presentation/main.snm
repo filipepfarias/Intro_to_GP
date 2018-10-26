@@ -11,10 +11,12 @@
 \defcounter {refsection}{0}\relax 
 \beamer@slide {eq:gaussian-distribution}{18}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {linear-resression}{23}
+\beamer@slide {sec:linear-regression}{23}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {bayesian-curve-fitting}{24}
+\beamer@slide {fig:plot-fitting-example}{27}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {bayes_theorem}{26}
+\beamer@slide {bayesian-curve-fitting}{35}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {fig:schematic-gaussian-distribution}{33}
+\beamer@slide {bayes_theorem}{37}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {fig:schematic-gaussian-distribution}{44}

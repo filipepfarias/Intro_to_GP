@@ -1,6 +1,99 @@
-\section{Linear Regression}\label{linear-resression}
+\section{Linear Regression}\label{sec:linear-regression}
 \framecard{\insertsection}
-\subsection{Basic Concepts of Curve Fitting}
+\subsection{Curve Fitting}
+
+\begin{frame}{\insertsubsection}
+
+\visible<1->{If we have a data set of points in the space that comes from observations of an experiment, may we want to predict other points in unknown parameters. This could be done with \textbf{\textcolor{UniGold}{ curve fitting }}. So the given points.}
+
+\vspace{0.5em}
+
+
+\visible<2->{We're supposing that our experiment could be modeled somehow, i.e it don't be totally random. So we could define some strategy to find our model.}
+
+\visible<3->{
+	\begin{block}{Strategy}
+	\begin{itemize}
+		\item[1] Purpose a model, e.g. functions like exponential, polynomial and others.
+		\item[2] Train our model with the training data set, finding the unknown parameters.
+	\end{itemize}
+	\end{block}
+}
+
+\end{frame}
+
+
+\begin{frame}{\insertsubsection}
+
+Let's fit the example by polynomial curve fitting
+
+	\begin{exampleblock}{Example}
+	\begin{figure}
+	\label{fig:plot-fitting-example}
+		\includegraphics[totalheight=0.5\textheight]{Figure1c2.pdf}
+		\end{figure}
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+Be the model chosen 
+\visible<2->{
+	\begin{align}
+		y(x,\mathbf{w}) &= w_0 + w_1x + w_2x^2  + ... + w_Mx^M \nonumber \\
+					& = \sum^M_{j=0} w_j x^j
+	\end{align}
+}
+\visible<3->{
+
+So we'll try to minimize the mean squared error between the model and the training data set. So, if the MSE is defined as
+}
+\visible<4->{
+\begin{align}
+	E(\mathbf{w}) \triangleq \frac{1}{2} \sum_{n=1}^N \left\{ \hat{y}_n -  y_n \right\}^2
+\end{align}
+
+where $\hat{y}$ is our predict.
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\begin{figure}
+		\includegraphics[totalheight=0.7\textheight]{Figure1c3.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+So, we evaluate the error between our model and the target $\mathbf{t}$, that is our training data.
+\begin{align}
+	E(\mathbf{w}) =& \frac{1}{2} \sum_{n=1}^N \left\{ y_n(x,\mathbf{w}) -  t_n \right\}^2
+\end{align}
+
+And try to minimize it by
+
+\begin{align}
+	\frac{\partial}{\partial \mathbf{w}} E(\mathbf{w}) &= 0 \nonumber \\
+	\sum_{n=1}^N \frac{\partial}{\partial \mathbf{w}} y(x,\mathbf{w}) \left\{  y_n(x,\mathbf{w}) -  t_n \right\} &= 0
+\end{align}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+\begin{equation}
+\begin{bmatrix}
+
+\frac{\partial}{\partial w_1} y(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
+\frac{\partial}{\partial w_2} y(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
+... \\
+\frac{\partial}{\partial w_M} y(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
+
+\end{bmatrix} = 
+\end{equation}
+
+\end{frame}
+
 
 %
 %
