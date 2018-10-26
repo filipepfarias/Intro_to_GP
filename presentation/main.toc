@@ -14,4 +14,4 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {2}{1}{Curve Fitting}{24}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{Bayesian Curve Fitting}{35}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bayesian Curve Fitting}{36}{0}{2}

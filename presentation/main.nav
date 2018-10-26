@@ -111,39 +111,43 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {34}{34}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {24}{34}}
+\headcommand {\slideentry {2}{1}{7}{35/35}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{2}{2}{35}{Bayesian Curve Fitting}}
+\headcommand {\beamer@framepages {35}{35}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{1}{35/36}{Bayesian Curve Fitting}{0}}
+\headcommand {\beamer@subsectionpages {24}{35}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {35}{36}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{36}{Bayesian Curve Fitting}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{2}{37/40}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{1}{36/37}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {37}{40}}
+\headcommand {\beamer@framepages {36}{37}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{3}{41/43}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{2}{38/41}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {41}{43}}
+\headcommand {\beamer@framepages {38}{41}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{4}{44/44}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{3}{42/44}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\beamer@framepages {42}{44}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{5}{45/48}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{4}{45/45}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {45}{48}}
+\headcommand {\beamer@framepages {45}{45}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{6}{49/51}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{5}{46/49}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {49}{51}}
+\headcommand {\beamer@framepages {46}{49}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{7}{52/55}{Bayesian Curve Fitting}{0}}
+\headcommand {\slideentry {2}{2}{6}{50/52}{Bayesian Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {52}{55}}
-\headcommand {\beamer@partpages {1}{55}}
-\headcommand {\beamer@subsectionpages {35}{55}}
-\headcommand {\beamer@sectionpages {23}{55}}
-\headcommand {\beamer@documentpages {55}}
-\headcommand {\gdef \inserttotalframenumber {27}}
+\headcommand {\beamer@framepages {50}{52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{7}{53/56}{Bayesian Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {53}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {36}{56}}
+\headcommand {\beamer@sectionpages {23}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\gdef \inserttotalframenumber {28}}

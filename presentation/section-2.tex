@@ -41,8 +41,8 @@ Let's fit the example by polynomial curve fitting
 Be the model chosen 
 \visible<2->{
 	\begin{align}
-		y(x,\mathbf{w}) &= w_0 + w_1x + w_2x^2  + ... + w_Mx^M \nonumber \\
-					& = \sum^M_{j=0} w_j x^j
+		y_i(x_i,\mathbf{w}) &= w_0x^0_i + w_1x_i + w_2x^2_i  + ... + w_Mx^M_i \nonumber \\
+					& = \sum^M_{j=0} w_j x^j_i
 	\end{align}
 }
 \visible<3->{
@@ -67,14 +67,43 @@ where $\hat{y}$ is our predict.
 \begin{frame}{\insertsubsection}
 So, we evaluate the error between our model and the target $\mathbf{t}$, that is our training data.
 \begin{align}
-	E(\mathbf{w}) =& \frac{1}{2} \sum_{n=1}^N \left\{ y_n(x,\mathbf{w}) -  t_n \right\}^2
+	E(\mathbf{w}) =& \frac{1}{2} \sum_{n=1}^N \left\{ y_n(x_i,\mathbf{w}) -  t_n \right\}^2
+\end{align}
+%
+We could make this evaluation in the matrix form. So
+%
+\begin{align}
+E(\mathbf{w}) =& \frac{1}{2} \left( \mathbf{y} - \mathbf{t} \right)^T\left( \mathbf{y} - \mathbf{t} \right)
+\end{align}
+where $\mathbf{y} = \mathbf{x}\mathbf{w}$. This represents the system
+\begin{equation}
+\begin{bmatrix}
+y_1 \\ y_2 \\  \vdots \\ y_N
+\end{bmatrix} = 
+\begin{bmatrix}
+x_1^1 & x_1^2 & ... & x_1^M   \\ 
+x_2^1 & x_2^2 & ... & x_2^M   \\ 
+\vdots & \vdots & \ddots & \vdots \\
+x_N^1 & x_N^2 & ... & x_N^M   
+\end{bmatrix}
+\begin{bmatrix}
+w_1 \\ w_2 \\  \vdots \\ w_N
+\end{bmatrix}
+\end{equation}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+\begin{align}
+	E(\mathbf{w}) =& \frac{1}{2} \sum_{n=1}^N \left\{ y_n(x_i,\mathbf{w}) -  t_n \right\}^2
 \end{align}
 
 And try to minimize it by
 
 \begin{align}
-	\frac{\partial}{\partial \mathbf{w}} E(\mathbf{w}) &= 0 \nonumber \\
-	\sum_{n=1}^N \frac{\partial}{\partial \mathbf{w}} y(x,\mathbf{w}) \left\{  y_n(x,\mathbf{w}) -  t_n \right\} &= 0
+	0 =& \frac{\partial}{\partial \mathbf{w}} E(\mathbf{w})\nonumber \\
+	0 =& \sum_{n=1}^N \frac{\partial}{\partial \mathbf{w}} y_n(x_n,\mathbf{w}) \left\{  y_n(x_n,\mathbf{w}) -  t_n \right\}
 \end{align}
 
 \end{frame}
@@ -84,7 +113,7 @@ And try to minimize it by
 \begin{equation}
 \begin{bmatrix}
 
-\frac{\partial}{\partial w_1} y(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
+\frac{\partial}{\partial w_1} y_(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
 \frac{\partial}{\partial w_2} y(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
 ... \\
 \frac{\partial}{\partial w_M} y(x,\mathbf{w}) \left\{  y(x,\mathbf{w}) -  t_n \right\} \\
