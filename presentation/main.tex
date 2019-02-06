@@ -35,7 +35,7 @@
 %%% Suppress biblatex annoying warning
 \usepackage{silence}
 \WarningFilter{biblatex}{Patching footnotes failed}
-\graphicspath{{graphics/}{graphics/prml/}}
+\graphicspath{{graphics/}{graphics/prml/}{implementations/}}
 
 %%% Some useful commands
 % pdf-friendly newline in links
@@ -45,7 +45,7 @@
 
 
 \title[Introduction to Gaussian Processes]{Introduction to \\ Gaussian Processes}
-\date[May 1977]{\today}
+\date[]{\today}
 \author[Filipe P. de Farias]{
   Filipe P. de Farias, IC
   \pdfnewline
@@ -58,14 +58,25 @@
 \titlepage
 \end{frame}
 
-\include{preamble}
+%\include{preamble}
 
 \begin{frame}{Outline}
 \tableofcontents
 \end{frame}
 
-\include{section-1}
+%\include{probability-review}
 
-\include{section-2}
+\include{linear-regression}
+
+\include{bayesian-linear-regression}
+
+\include{gaussian-processes}
+
+\include{appendix}
+
+\begin{frame}[allowframebreaks]{Bibliography}
+\nocite{*}
+\printbibliography
+\end{frame}
 
 \end{document}

@@ -1,0 +1,72 @@
+close all; clear all;
+N = 10;
+x = linspace(0,1,N).';
+a1 = 0.5; a2 = 0.8;
+y = a2*x+a1;
+ns = normrnd(0,0.02,size(x));
+t = y + ns;
+
+show = 10;
+M = 2;
+phi = @(x,i) (x^i);
+alpha = 100;
+
+n=1;
+P = [];
+for i = 1:M
+    Paux = arrayfun(@(x) phi(x,i),x(n));
+    P = [P,Paux];
+end
+
+mu0 = zeros([M,1]);
+Sigma0 = (alpha)^(-1)*eye(M);
+
+w = mvnrnd(mu0.',Sigma0,show);
+
+[W1,W2] = meshgrid(min(w,[],'all')*1.05:0.01:max(w,[],'all')*1.05);
+
+F = mvnpdf([W1(:) W2(:)],mu0.',Sigma0);
+F = reshape(F,length(W1),length(W2));
+
+colormap(jet);
+
+subplot(N,2,1);
+contourf(W1,W2,F,3,'edgecolor','none'); hold on;
+plot(w(:,1),w(:,2),'+'); hold on;
+plot(a1,a2,'ro'); axis('square','equal'); hold off;
+
+xx = linspace(0,1,100);
+yt = w(:,2)*xx + w(:,1);
+
+subplot(N,2,2);
+plot(xx,yt); axis('square');
+
+for n = 2:N
+    Wml = pinv(P)*t(n);
+    beta = sum(((P*Wml)-t(n))^2)^(-1);
+    
+    SigmaN = inv(Sigma0 + beta*(P.'*P));
+    muN = SigmaN*(Sigma0*mu0 + beta*P.'*t(n));
+            
+    w = mvnrnd(muN,SigmaN,show);
+
+    [W1,W2] = meshgrid(min(w,[],'all')*1.05:0.01:max(w,[],'all')*1.05);
+
+    F = mvnpdf([W1(:) W2(:)],mu0.',Sigma0);
+    F = reshape(F,length(W1),length(W2));
+
+    colormap(jet);
+
+    subplot(N,2,2*n-1);
+    contourf(W1,W2,F,3,'edgecolor','none'); hold on;
+    plot(w(:,1),w(:,2),'+'); hold on;
+    plot(a1,a2,'ro'); axis('square','equal'); hold off;
+
+    xx = linspace(0,1,100);
+    yt = w(:,2)*xx + w(:,1);
+
+    subplot(N,2,2*n);
+    plot(xx,yt); axis('square');
+    break
+end
+       

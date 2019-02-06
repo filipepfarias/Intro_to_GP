@@ -1,0 +1,1 @@
+[X,Y,Z] = meshgrid(linspace(-1,1,100));

@@ -1,6 +1,5 @@
 \mode<presentation>
 
-
 % Frame title
 \defbeamertemplate*{frametitle}{uniud}[1][]
 {
@@ -14,9 +13,8 @@
  \fill[color=UniBrown] (1,0) rectangle(\the\paperwidth,1);
  
  % Logo in the orange box
- \node[inner sep=0pt] (logo) at (-0.5,0.5){\includegraphics[width=0.50cm]{graphics/brasao1_horizontal_monocromatico-b}};
+ \node[inner sep=0pt] (logo) at (-0.5,0.5){\includegraphics[width=0.5cm]{graphics/brasao1_horizontal_monocromatico-b}};
 \end{tikzpicture}
-
 
 % If we don't have a subtitle, put the title
 % at the center of the header
@@ -54,16 +52,16 @@
 
 \end{tikzpicture}
 
-\begin{textblock*}{0.9cm}(0cm,8.67cm)
+\begin{textblock*}{0.9cm}(0.1cm,8.7cm)
 \raggedleft
 {\usebeamercolor[fg]{title in head/foot}\usebeamerfont{title in head/foot}\insertframenumber/\inserttotalframenumber}
 \end{textblock*}
 
-\begin{textblock*}{3cm}(2cm,8.675cm)
+\begin{textblock*}{3cm}(2cm,8.7cm)
 {\usebeamercolor[fg]{author in head/foot}\usebeamerfont{author in head/foot}\insertshortauthor}
 \end{textblock*}
 
-\begin{textblock*}{7cm}(\dimexpr\the\paperwidth-7.8cm,8.67cm) 
+\begin{textblock*}{7cm}(\dimexpr\the\paperwidth-7.8cm,8.7cm) 
 \raggedleft
 {\usebeamercolor[fg]{title in head/foot}\usebeamerfont{title in head/foot}\insertshorttitle}
 \end{textblock*}

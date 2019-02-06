@@ -1,0 +1,247 @@
+\section{Bayesian Linear Regression}
+\framecard{\insertsection}
+
+\subsection{The D-dimensional Gaussian Distribution}
+
+\begin{frame}{\insertsubsection}
+
+Remember the One-dimensional Gaussian distribution
+\begin{block}{One-dimensional Gaussian distribution}
+\begin{equation*}
+	\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\} > 0
+\end{equation*}
+where $\mu$ is the mean and $\sigma^2$ the variance.
+\end{block}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	To more than one dimensions, we'll consider the points ($x$) distance for the mean of the distribution, as we done in the one dimensional case, by adding a term to prioritize some dimension distribution in particular. Then
+	\begin{equation*}
+		\Delta^2 = (\mathbf{x} - \boldsymbol{\mu}) \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu}) 
+	\end{equation*}
+called \textit{Mahalanobis distance}. And it's becomes the \textit{Euclidean distance}, when $\boldsymbol{\Sigma}$ is the indentity matrix. This means that the all the distances are equally normalized. The matrix $\boldsymbol{\Sigma}$ is the covariance matrix of the distributions, by definition.
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+And then
+\begin{block}{D-dimensional Gaussian distribution}
+\begin{equation*}
+	\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi )^{D/2}} \frac{1}{|\boldsymbol{\Sigma}|^{1/2}} \exp \left\{ -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu}) \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu})  \right\} 
+\end{equation*}
+where $\boldsymbol{\mu}$ is the D-dimensional mean vector, $\boldsymbol{\Sigma}$ the D$\times$D-dimensional variance matrix and $|\boldsymbol{\Sigma}|$ its determinant.
+\end{block}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+\begin{block}{Partitioned Gaussians}
+Given a joint Gaussian distribution $\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma})$ with $\boldsymbol{\Lambda} \equiv \boldsymbol{\Sigma}^{-1}$ and
+\begin{equation*}
+	\mathbf{x} = 
+	 \begin{pmatrix}
+		\mathbf{x} _{a} \\
+		\mathbf{x} _{b}
+	\end{pmatrix} , 
+	\boldsymbol{\mu} = 
+	 \begin{pmatrix}
+		\boldsymbol{\mu}_{a} \\
+		\boldsymbol{\mu}_{b}
+	\end{pmatrix} , 
+	 \boldsymbol{\Sigma} = 
+	 \begin{pmatrix}
+		\boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\
+		\boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
+	\end{pmatrix} ,  \boldsymbol{\Lambda} = 
+	 \begin{pmatrix}
+		\boldsymbol{\Lambda}_{aa} & \boldsymbol{\Lambda}_{ab} \\
+		\boldsymbol{\Lambda}_{ba} & \boldsymbol{\Lambda}_{bb} 
+	\end{pmatrix}.
+\end{equation*}
+Will give us \\
+\begin{itemize}
+\item \textcolor{UniGold}{Conditional distribution:}
+\begin{equation*}
+p\left( \mathbf{x}_a | \mathbf{x}_b \right) = \mathcal{N}\left( \mathbf{x}_a| \boldsymbol{\mu}_{a|b}, \boldsymbol{\Lambda}^{-1}_{aa} \right), \  \boldsymbol{\mu}_{a|b} =  \boldsymbol{\mu}_a - \boldsymbol{\Lambda}^{-1}_{aa}\boldsymbol{\Lambda}_{ab} \left( \mathbf{x}_b - \boldsymbol{\mu}_b \right)
+\end{equation*}
+
+\item \textcolor{UniGold}{Marginal distribution:}
+\begin{equation*}
+p\left( \mathbf{x}_a \right) = \mathcal{N} \left( \mathbf{x}_a | \boldsymbol{\mu}_a,\boldsymbol{\Sigma}_{aa} \right)
+\end{equation*}
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bayes' theorem for Gaussian variables}
+
+\begin{frame}{\insertsubsection}
+
+We stated before that the Bayes' theorem could be used to \textbf{adjust} our model parameters as we obtain evidences. Let's partitionate our distribution $\mathbf{z}$ as 
+\begin{equation*}
+\mathbf{z} = \begin{pmatrix}
+\mathbf{x} \\
+\mathbf{y}
+\end{pmatrix}
+\end{equation*}
+The strategy here is to make predictions for $\mathbf{y}$. We do this evaluating the probabilities for the whole distribution $\mathbf{z}$. And the key idea is, being $\mathbf{y}$ part of $\mathbf{z}$, we can evaluate its probabilities from $\mathbf{x}$, assuming that the partionated distributions remains Gaussian.
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	In other words, we're trying to find the parginal distribution $p\left( \mathbf{y} \right)$ and the conditional distribution $p\left( \mathbf{x} | \mathbf{y} \right)$, then given
+	\begin{align*}
+	p\left( \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Lambda}^{-1} \right) \\
+	p\left( \mathbf{y} | \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{y}|\mathbf{Ax}+\mathbf{b}, \mathbf{L}^{-1} \right)
+	\end{align*}
+}
+\visible<2->{
+So, applying the joint distribution and the its $\ln$ after
+	\begin{align*}
+	p\left( \mathbf{z} \right) =& \ p\left(  \mathbf{x}, \mathbf{y} \right) = p\left(  \mathbf{y} | \mathbf{x} \right) p\left( \mathbf{x} \right) \\
+	\ln p\left( \mathbf{z} \right) =& \ln p\left(  \mathbf{y} | \mathbf{x} \right) + \ln p\left( \mathbf{x} \right)  \\
+					   =&  -\frac{1}{2}\left( \mathbf{x} - \boldsymbol{\mu} \right)^T\boldsymbol{\Lambda}\left( \mathbf{x} - \boldsymbol{\mu} \right) \\ & -\frac{1}{2} \left( \mathbf{y} - \mathbf{Ax} - \mathbf{b} \right)^T \mathbf{L} \left( \mathbf{y} - \mathbf{Ax} - \mathbf{b} \right)+ \text{const}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	In other words, we're trying to find the parginal distribution $p\left( \mathbf{y} \right)$ and the conditional distribution $p\left( \mathbf{x} | \mathbf{y} \right)$, then given
+	\begin{align*}
+	p\left( \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Lambda}^{-1} \right) \\
+	p\left( \mathbf{y} | \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{y}|\mathbf{Ax}+\mathbf{b}, \mathbf{L}^{-1} \right)
+	\end{align*}
+}
+\visible<2->{
+So, applying the joint distribution and the its $\ln$ after
+	\begin{align*}
+	p\left( \mathbf{z} \right) =& \ p\left(  \mathbf{x}, \mathbf{y} \right) = p\left(  \mathbf{y} | \mathbf{x} \right) p\left( \mathbf{x} \right) \\
+	\ln p\left( \mathbf{z} \right) =& \ln p\left(  \mathbf{y} | \mathbf{x} \right) + \ln p\left( \mathbf{x} \right)  \\
+					   =&  -\frac{1}{2}\left( \mathbf{x} - \boldsymbol{\mu} \right)^T\boldsymbol{\Lambda}\left( \mathbf{x} - \boldsymbol{\mu} \right) \\ & -\frac{1}{2} \left( \mathbf{y} - \mathbf{Ax} - \mathbf{b} \right)^T \mathbf{L} \left( \mathbf{y} - \mathbf{Ax} - \mathbf{b} \right)+ \text{const}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	The "const" is the term independent of $\mathbf{x}$ and $\mathbf{y}$. Then, expanding the quadratic form
+	\begin{align*}
+	\ln p\left( \mathbf{z} \right) =&  -\frac{1}{2} \mathbf{x}^T \left( \boldsymbol{\Lambda} + \mathbf{A}^T \mathbf{L} \mathbf{A} \right) \mathbf{x} - \frac{1}{2} \mathbf{y}^T \mathbf{Ly} + \frac{1}{2} \mathbf{y}^T \mathbf{LAx} + \frac{1}{2} \mathbf{x}^T \mathbf{A}^T \mathbf{Ly} \\ 
+					   =& - \frac{1}{2} \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix}^T \begin{pmatrix} \boldsymbol{\Lambda} + \mathbf{A}^T \mathbf{LA} & -\mathbf{A}^T \mathbf{L} \\ -\mathbf{LA} & \mathbf{L} \end{pmatrix}  \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix} = - \frac{1}{2} \mathbf{z}^T \mathbf{Rz}
+	\end{align*}
+}
+\visible<2->{
+	We'll apply the partitioned matrices inversion to obtain $\mathbf{R}^{-1}$
+	\begin{align*}
+	\mathbf{R}^{-1} =& \begin{pmatrix} \boldsymbol{\Lambda}^{-1} & \boldsymbol{\Lambda}^{-1}\mathbf{A}^T \\ \mathbf{A}\boldsymbol{\Lambda}^{-1} & \mathbf{L}^{-1} + \mathbf{A}\boldsymbol{\Lambda}^{-1}\mathbf{A}^T \end{pmatrix}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	The expanded form of $\ln p\left( \mathbf{z} \right)$ give us the mean too by the linear terms, then
+	\begin{align*}
+	\mathbf{x}^T \boldsymbol{\Lambda \mu}  -\mathbf{x}^T \mathbf{A}^T \mathbf{Lb} + \mathbf{y}^T \mathbf{Lb} = \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix}^T \begin{pmatrix} \boldsymbol{\Lambda \mu} - \mathbf{A}^T \mathbf{Lb} \\ \mathbf{Lb}  \end{pmatrix}
+	\end{align*}
+}
+\visible<2->{
+	By inspection of the linear terms
+	\begin{align*}
+	\mathbb{E}[\mathbf{z}] = \mathbf{R}^{-1} \begin{pmatrix} \boldsymbol{\Lambda \mu} - \mathbf{A}^T \mathbf{Lb} \\ \mathbf{Lb}  \end{pmatrix}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	The expanded form of $\ln p\left( \mathbf{z} \right)$ give us the mean too by the linear terms, then
+	\begin{align*}
+	\mathbf{x}^T \boldsymbol{\Lambda \mu}  -\mathbf{x}^T \mathbf{A}^T \mathbf{Lb} + \mathbf{y}^T \mathbf{Lb} = \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix}^T \begin{pmatrix} \boldsymbol{\Lambda \mu} - \mathbf{A}^T \mathbf{Lb} \\ \mathbf{Lb}  \end{pmatrix}
+	\end{align*}
+}
+\visible<2->{
+	By inspection of the linear terms
+	\begin{align*}
+	\mathbb{E}[\mathbf{z}] = \mathbf{R}^{-1} \begin{pmatrix} \boldsymbol{\Lambda \mu} - \mathbf{A}^T \mathbf{Lb} \\ \mathbf{Lb}  \end{pmatrix} =  \begin{pmatrix} \boldsymbol{\mu}  \\  \mathbf{A}\boldsymbol{\mu} + \mathbf{b}  \end{pmatrix}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+And then we we'll have that
+\visible<1->{
+	\begin{align*}
+	\mathbb{E}[\mathbf{y}] =& \ \mathbf{A}\boldsymbol{\mu} + \mathbf{b} \\
+	\text{cov}[\mathbf{y}] =& \ \mathbf{L}^{-1} + \mathbf{A}\boldsymbol{\Lambda}^{-1}\mathbf{A}^T
+	\end{align*}
+}
+\visible<2->{
+	\begin{align*}
+	\mathbb{E}[\mathbf{x}|\mathbf{y}] =& \ \left(  \boldsymbol{\Lambda} + \mathbf{A}^T \mathbf{LA} \right)^{-1} \left\{ \mathbf{A}^T \mathbf{L}(\mathbf{y}- \mathbf{b}) + \boldsymbol{\Lambda \mu} \right\} \\
+	\text{cov}[\mathbf{x}|\mathbf{y}] =& \ \left(  \boldsymbol{\Lambda} + \mathbf{A}^T \mathbf{LA} \right)^{-1}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+\begin{block}{Marginal and Conditioned Gaussians}
+From the results above, we'll have
+ \\
+\begin{itemize}
+\item \textcolor{UniGold}{For $\mathbf{y}$ given $\mathbf{x}$:}
+\begin{align*}
+p\left( \mathbf{y} | \mathbf{x} \right) =& \ \mathcal{N}\left( \mathbf{x}| \boldsymbol{\mu}, \boldsymbol{\Lambda}^{-1} \right) \\
+p\left( \mathbf{x} \right) =& \ \mathcal{N}\left( \mathbf{y}| \mathbf{Ax}+\mathbf{b}, \mathbf{L}^{-1} \right)
+\end{align*}
+
+\item \textcolor{UniGold}{For $\mathbf{x}$ given $\mathbf{y}$:}
+\begin{align*}
+p\left( \mathbf{x} | \mathbf{y} \right) =& \ \mathcal{N}\left( \mathbf{y}| ,  \boldsymbol{\Sigma} \left\{ \mathbf{A}^T \mathbf{L}(\mathbf{y}-\mathbf{b} + \boldsymbol{\Sigma \mu}) \right\}, \boldsymbol{\Sigma} \right) \\
+p\left( \mathbf{y} \right) =& \ \mathcal{N}\left( \mathbf{y}|\mathbf{A} \boldsymbol{\mu} + \mathbf{b}, \mathbf{L}^{-1} + \mathbf{A}\boldsymbol{\Lambda}^{-1}\mathbf{A}^T \right) \text{, where } \boldsymbol{\Sigma} = \left(  \boldsymbol{\Lambda} + \mathbf{A}^T \mathbf{LA} \right)^{-1}
+\end{align*}
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

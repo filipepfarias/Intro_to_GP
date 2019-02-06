@@ -1,0 +1,19 @@
+% data ge
+ns = 100;
+mu = 0;
+sigma = 0.05;
+N = 10;
+
+
+
+[x,y] = meshgrid(linspace(0,1,ns));
+z = sin(2*pi.*x)+sin(2*pi.*y);
+e = normrnd(mu,sigma,size(x));
+t = z + e;
+
+MuN = [0.0 0.0]';
+Sigma0 = (1/alpha)*eye(N); Sigma0i = inv(Sigma0);
+SigmaNi = Sigma0i;
+
+% Kernel function
+phi = @(x,i) x^(i-1);

@@ -1,0 +1,46 @@
+close all; clear all;
+N = 10;
+x = linspace(0,1,N).';
+a0 = 0.5; a1 = 0.8;
+y = a1*x+a0;
+ns = normrnd(0,0.02,size(x));
+t = y + ns;
+
+phi = @(x,i) (x^i);
+
+    M = 2;
+    P = [];
+    for i = 1:M
+        Paux = arrayfun(@(x) phi(x,i),x(n));
+        P = [P,Paux];
+    end
+
+    [W1,W2] = meshgrid(min(w,[],'all')*1.05:0.01:max(w,[],'all')*1.05);
+    F = mvnpdf([W1(:) W2(:)],mu0.',Sigma0);
+    F = reshape(F,length(W1),length(W2));
+    colormap(jet);
+    contourf(W1,W2,F,100,'edgecolor','none'); hold on;
+    
+    Wml = pinv(P)*t(n);
+
+    beta = sum(((P*Wml)-t(n))^2)^(-1);
+    alpha = 1;
+    
+    Paux = P.'*P;
+    Sinv = alpha*eye(size(Paux)) + beta*Paux;
+    m = beta*(Sinv\P.'*t(n));
+
+    mu0 = zeros([M,1]);
+    Sigma0 = (alpha)^(-1)*eye(M);
+    w = mvnrnd(mu0.',Sigma0,10);
+
+    %subplot(N,2,n)
+
+    plot(w(:,1),w(:,2),'+'); axis equal; hold on;
+    plot(a0,a1,'ro'); hold off;
+    
+    %subplot(N,2,n+1)
+    xx = linspace(0,1,100);
+    yt = w(:,2)*xx + w(:,1);
+    scatter(x(1),t(1));hold on;
+    plot(xx,yt);
