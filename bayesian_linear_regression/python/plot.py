@@ -4,6 +4,7 @@ import numpy as np
 
 from generator import gen3D
 
+
 X1, X2, Z, T = gen3D()
 
 #Plot
@@ -15,3 +16,4 @@ ax = fig.gca(projection='3d')
 surf = ax.plot_surface(X1, X2, T)
 
 plt.show()
+
