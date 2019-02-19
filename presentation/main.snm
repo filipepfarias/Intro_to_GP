@@ -3,4 +3,12 @@
 \defcounter {refsection}{0}\relax 
 \beamer@slide {fig:plot-fitting-example}{7}
 \defcounter {refsection}{0}\relax 
-\beamer@slide {sec:appendix}{67}
+\beamer@slide {bayesian-curve-fitting}{24}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {fig:schematic-gaussian-distribution}{27}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {bayes_theorem}{32}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {bayes_theorem}{34}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {sec:appendix}{53}

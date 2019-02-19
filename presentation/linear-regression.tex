@@ -323,9 +323,7 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \begin{column}{0.45\textwidth}
 
 	\visible<1->{The \textbf{\textcolor{UniGold}{Gaussian distribution}} comes from many different contexts, as the one that maximize the entropy among of all ones with fixed variance and from the sum of multiple random variables with finite variance. \\ }
-	\visible<2->{\vspace{1em}
-			First we'll consider a geometrical approach by the quadratic distance $(x -  \mu)^2$ normalized by the variance $\sigma^2$. This comprehension will help us with the D-dimensional case.
-   		     	}
+	
 \end{column}
 \begin{column}{0.475\textwidth}  %%<--- here
     \begin{center}
@@ -370,13 +368,19 @@ we can state a Gaussian distribution for each target and then
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-
-And then
+\visible<1->{
+And then, from the \textit{joint probability} of the Gaussians distributions
 
 \begin{equation*}
 		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (x_n -  y(x_n, \mathbf{w}))^2
 \end{equation*}
-
+}
+\visible<2->{From this, we could obtain the \textbf{maximum likelihood}, taking the derivatives of the log probability to zero, according to the terms $\beta$ and $\mathbf{w}$, our model parameters. We'll obtain
+\begin{equation*}
+\frac{1}{\beta_{ML}} = \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}_{ML}) - t_n \right\}^2
+\end{equation*}
+remembering that $\mathbf{w}_{ML}$ is already known from the regular linear regression.
+}
 %Maximizing with respect to $\beta$, we'll have 
 
 %\begin{equation*}
@@ -387,13 +391,13 @@ And then
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-We could observe that taking the derivative with respect to $\mathbf{w}$, our expression becomes closer to the \textit{error function} presented previously, added some dependency of $\beta$
+We could observe that taking the derivative with respect to $\mathbf{w}$, our expression becomes closer to the \textit{error function} presented previously, added the dependency of $\beta$
 
 \begin{align*}
 	E(\mathbf{w}) \triangleq \frac{1}{2} \sum_{n=1}^N \left\{ y_n -  t_n \right\}^2
 \end{align*}
 
-Then some behaviors could be expected, as the \textbf{over-fitting}. But there's a difference between the equations by the term $\beta$.
+Then some behaviors could be expected, as the \textbf{over-fitting}.
 
 %Maximizing with respect to $\beta$, we'll have 
 
@@ -406,7 +410,42 @@ Then some behaviors could be expected, as the \textbf{over-fitting}. But there's
 
 \begin{frame}{\insertsubsection}
 
-So, here our objective is to find the parameters to minimize the error and maximize the log probability. But it's reasonable to think that we'll face the same \textbf{over-fitting} problem presented before. Added to the fact that we don't apply yet a fully \textit{bayesian} treatment of regression, let's introduce some machinery 
+At this point, we have a probabilistic model and we may want to predict values for $x$. Then, we need a \textit{predictive distribution}. \\
+\vspace{1em}
+Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Theorem}, to convert a \textit{prior} probability in a \textit{posterior} probability. \\
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+Mathematically, by Bayes' Theorem and the \textbf{Product Rule}, we could infer
+\visible<2->{
+\begin{equation*}
+p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right) \propto p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)  p\left( \mathbf{w} | \alpha \right)
+\end{equation*}
+}
+\visible<3->{
+and by simplicity, consider
+\begin{equation*}
+p \left( \mathbf{w} | \alpha \right) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{0}, \alpha^{-1} \mathbf{I} \right) = \left(  \frac{\alpha}{2 \pi}\right) ^{(M+1)/2} \exp \left\{ - \frac{\alpha}{2} \mathbf{w}^T \mathbf{w} \right\}
+\end{equation*}
+where $\alpha$ is the precision of the distribution ans $M+1$ is the dimension of $\mathbf{w}$, for a polynomial of $M^{th}$ order.
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that wll lead us to a term
+
+\begin{equation*}
+\sum^N_{n=1} \left\{ y(x_n, \mathbf{w}) - t_n \right\}^2 + \frac{\alpha}{2} \mathbf{w}^T\mathbf{w}
+\end{equation*}
+
+Note that if we consider $\lambda = \alpha / \beta$, this will back to the regularized form of \textit{least squares}.
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+So, observe that, even making some probabilistic assumptions, we don't have yet a fully bayesian model, given that finding the \textit{maximum likelihood}, we're finding only one model such that maximize our targets probabilities. Furthermore, even with some probabilistic assumptions, our model still have a \textbf{over-fitting} problem, given that we obtained the same expressions.\\
+\vspace{1em}
+The next step is put some \textbf{uncertainty in predictive model}, and makes adjustments in the light of our new evidences. By that we could obtain a "more Bayesian" model, let's call this a \textcolor{UniGold}{\textbf{Bayesian Linear Regression}}.
 
 \end{frame}
 

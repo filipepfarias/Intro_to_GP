@@ -12,12 +12,15 @@ Remember the One-dimensional Gaussian distribution
 \end{equation*}
 where $\mu$ is the mean and $\sigma^2$ the variance.
 \end{block}
+\visible<2->{\vspace{1em}
+			First we'll consider a geometrical approach by the quadratic distance $(x -  \mu)^2$ normalized by the variance $\sigma^2$. This comprehension will help us with the D-dimensional case.
+   		     	}
 \end{frame}
 
 \begin{frame}{\insertsubsection}
 	To more than one dimensions, we'll consider the points ($x$) distance for the mean of the distribution, as we done in the one dimensional case, by adding a term to prioritize some dimension distribution in particular. Then
 	\begin{equation*}
-		\Delta^2 = (\mathbf{x} - \boldsymbol{\mu}) \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu}) 
+		\Delta^2 = (\mathbf{x} - \boldsymbol{\mu})^T \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu}) 
 	\end{equation*}
 called \textit{Mahalanobis distance}. And it's becomes the \textit{Euclidean distance}, when $\boldsymbol{\Sigma}$ is the indentity matrix. This means that the all the distances are equally normalized. The matrix $\boldsymbol{\Sigma}$ is the covariance matrix of the distributions, by definition.
 \end{frame}
@@ -26,7 +29,7 @@ called \textit{Mahalanobis distance}. And it's becomes the \textit{Euclidean dis
 And then
 \begin{block}{D-dimensional Gaussian distribution}
 \begin{equation*}
-	\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi )^{D/2}} \frac{1}{|\boldsymbol{\Sigma}|^{1/2}} \exp \left\{ -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu}) \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu})  \right\} 
+	\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi )^{D/2}} \frac{1}{|\boldsymbol{\Sigma}|^{1/2}} \exp \left\{ -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^T \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu})  \right\} 
 \end{equation*}
 where $\boldsymbol{\mu}$ is the D-dimensional mean vector, $\boldsymbol{\Sigma}$ the D$\times$D-dimensional variance matrix and $|\boldsymbol{\Sigma}|$ its determinant.
 \end{block}
