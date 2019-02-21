@@ -34,4 +34,6 @@ def gen3D(**kwargs):
 
     E = np.random.normal(mean,sigma,Z.shape)
     T = Z + E
-    return X1, X2, Z, T
+
+    x = np.array( [X1.ravel(),X2.ravel()] )
+    return X1, X2, x, Z, T

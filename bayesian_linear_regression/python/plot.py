@@ -3,6 +3,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
 from generator import gen3D
+from bayesian_regressor import kernel, design_matrix
 
 
 X1, X2, Z, T = gen3D()
@@ -16,4 +17,5 @@ ax = fig.gca(projection='3d')
 surf = ax.plot_surface(X1, X2, T)
 
 plt.show()
+
 
