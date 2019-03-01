@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Bayesian Linear Regression}{51}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{52}{0}{2}
+\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{53}{0}{2}
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {2}{2}{Bayes' theorem for Gaussian variables}{58}{0}{2}
 \defcounter {refsection}{0}\relax 
