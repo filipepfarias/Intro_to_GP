@@ -212,6 +212,37 @@
       \verb https://books.google.com.br/books?id=BV3CAAAACAAJ
       \endverb
     \endentry
+    \entry{thomas2011}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c74b7c1d815dc861532f386ead4180e5}{%
+           family={Schön},
+           familyi={S\bibinitperiod},
+           given={T.B.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c74b7c1d815dc861532f386ead4180e5}
+      \strng{fullhash}{c74b7c1d815dc861532f386ead4180e5}
+      \strng{bibnamehash}{c74b7c1d815dc861532f386ead4180e5}
+      \strng{authorbibnamehash}{c74b7c1d815dc861532f386ead4180e5}
+      \strng{authornamehash}{c74b7c1d815dc861532f386ead4180e5}
+      \strng{authorfullhash}{c74b7c1d815dc861532f386ead4180e5}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Manipulating the Multivariate Gaussian Density}
+      \field{year}{2011}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://user.it.uu.se/~thosc112/pubpdf/schonl2011.pdf
+      \endverb
+      \verb{url}
+      \verb http://user.it.uu.se/~thosc112/pubpdf/schonl2011.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

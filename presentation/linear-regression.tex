@@ -73,15 +73,15 @@ For simplicity, we'll carry this notation along.
 \end{columns}
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{\insertsubsection}
 
+%\textcolor{red}{Insert some \textit{Minkowski} loss.}
+
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\insertsubsection}
-
-\textcolor{red}{Insert some \textit{Minkowski} loss.}
-
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-Remembering that
+\visible<2->{Remembering that
 \begin{align*}
 	y_n(x_n,\mathbf{w}) &= w_0 \phi_0(x_n) +w_1 \phi_1(x_n) +w_2 \phi_2(x_n)  + ... + w_{M-1} \phi_{M-1}(x_n)
 \end{align*}
@@ -97,7 +97,7 @@ y_n
 \begin{bmatrix}
 w_0 \\ w_1 \\  \vdots \\ w_{M-1}
 \end{bmatrix}
-\end{equation*}
+\end{equation*}}
 \end{frame}
 
 \begin{frame}{\insertsubsection}
@@ -198,10 +198,14 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \begin{columns}
 \begin{column}{0.45\textwidth}
 	\visible<1->{A visible effect of the \textit{increase of the complexity} of the model, represented here by $M$, is the \textit{increase of the weights}. We call it \textbf{over-fitting}.}
+	
+	\vspace{1em}
+	\visible<2->{This phenomenon illustrate a method of ever search for the \textit{best estimation for the parameters}.}
+	
+	\vspace{1em}
+	\visible<3->{It's reasonable to see that our model start's to differ from the $y$ and starts to interpolate the noise.}
 
-	\visible<2->{It's reasonable to see that our model start's to differ from the $y$ and starts to interpolate the noise.}
-
-	\visible<3->{Last, a basic concept it's that larger weights could imply in massive system inputs, and this sometimes it's wanted to be avoided.}
+	
 \end{column}
 \begin{column}{0.475\textwidth}  %%<--- here
     \begin{center}
@@ -375,7 +379,7 @@ And then, from the \textit{joint probability} of the Gaussians distributions
 		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (x_n -  y(x_n, \mathbf{w}))^2
 \end{equation*}
 }
-\visible<2->{From this, we could obtain the \textbf{maximum likelihood}, taking the derivatives of the log probability to zero, according to the terms $\beta$ and $\mathbf{w}$, our model parameters. We'll obtain
+\visible<2->{From this, we could obtain the \textbf{maximum likelihood}, or the \textit{best estimation for the parameters}, taking the derivatives of the log probability to zero, according to the terms $\beta$ and $\mathbf{w}$, our model parameters. We'll obtain
 \begin{equation*}
 \frac{1}{\beta_{ML}} = \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}_{ML}) - t_n \right\}^2
 \end{equation*}
@@ -443,9 +447,9 @@ Note that if we consider $\lambda = \alpha / \beta$, this will back to the regul
 
 \begin{frame}{\insertsubsection}
 
-So, observe that, even making some probabilistic assumptions, we don't have yet a fully bayesian model, given that finding the \textit{maximum likelihood}, we're finding only one model such that maximize our targets probabilities. Furthermore, even with some probabilistic assumptions, our model still have a \textbf{over-fitting} problem, given that we obtained the same expressions.\\
+So, observe that, even making some probabilistic assumptions, we don't have yet a fully bayesian model, given that finding the \textit{maximum likelihood}, we're finding only the parameters given one model such that maximize our targets probabilities. Furthermore, even with some probabilistic assumptions, our model still have a \textbf{over-fitting} problem, given that we obtained the same expressions.\\
 \vspace{1em}
-The next step is put some \textbf{uncertainty in predictive model}, and makes adjustments in the light of our new evidences. By that we could obtain a "more Bayesian" model, let's call this a \textcolor{UniGold}{\textbf{Bayesian Linear Regression}}.
+The next step is put some \textbf{uncertainty in predictive model}, and makes adjustments in the light of our new evidences. By that we could obtain a "more Bayesian" model, in other words, a \textcolor{UniGold}{\textbf{Bayesian Linear Regression}}.
 
 \end{frame}
 
