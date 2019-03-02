@@ -1,12 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.1)  1 MAR 2019 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.2)  2 MAR 2019 08:17
 entering extended mode
-**/home/ffarias/Documents/pibic/presentation/main.tex
-(/home/ffarias/Documents/pibic/presentation/main.tex
+**/home/danielrdesousa/Documents/pibic/presentation/main.tex
+(/home/danielrdesousa/Documents/pibic/presentation/main.tex
 LaTeX2e <2018-12-01>
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamer.cls
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamer.cls
 Document Class: beamer 2018/12/02 v3.55 A class for typesetting presentations
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasemodes.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasemodes.s
+ty (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count80
 )
@@ -14,14 +15,15 @@ Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \beamer@tempcount=\count81
 \c@beamerpauses=\count82
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasedecode.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasedecode.
+sty
 \beamer@slideinframe=\count83
 \beamer@minimum=\count84
 )
 \beamer@commentbox=\box28
 \beamer@modecount=\count85
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 \headdp=\dimen102
@@ -67,22 +69,20 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 \beamer@sectionadjust=\count103
 \beamer@tocsectionnumber=\count104
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoptions.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoptions
+.sty (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 ))
 \beamer@paperwidth=\skip42
 \beamer@paperheight=\skip43
-
-(/home/ffarias/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+ (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/ifvtex.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/ifxetex/ifxetex.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
@@ -98,62 +98,66 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks15
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/base/size11.clo
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/base/size11.clo
 File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.s
+ty (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cf
+g
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.
-tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.s
+ty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-
+common.tex
 \pgfutil@everybye=\toks16
 \pgfutil@tempdima=\dimen128
 \pgfutil@tempdimb=\dimen129
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common-
-lists.tex))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.d
-ef
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-
+common-lists.tex))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-
+latex.def
 \pgfutil@abb=\box35
- (/home/ffarias/.miktex/texmfs/install/tex/latex/ms/everyshi.sty
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.c
+ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.t
-ex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys
+.code.tex
 Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.te
-x
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.
+code.tex
 \pgfkeys@pathtoks=\toks17
 \pgfkeys@temptoks=\toks18
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeysfiltered
-.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeysf
+iltered.code.tex
 \pgfkeys@tmptoks=\toks19
 ))
 \pgf@x=\dimen130
@@ -175,32 +179,34 @@ x
 \t@pgf@tokc=\toks22
 \pgf@sys@id@count=\count112
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cf
+g
 File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex
-.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys
+-pdftex.def
 File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common
--pdf.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys
+-common-pdf.def
 File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
 )))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpat
-h.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys
+softpath.code.tex
 File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfsyssoftpath@smallbuffer@items=\count113
 \pgfsyssoftpath@bigbuffer@items=\count114
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotoco
-l.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys
+protocol.code.tex
 File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -214,19 +220,21 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/dvipsnam.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.t
-ex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+.code.tex
 Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex
-)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.t
-ex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.
+tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.c
+ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.c
+ode.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser
+.code.tex
 \pgfmath@dimen=\dimen138
 \pgfmath@count=\count115
 \pgfmath@box=\box36
@@ -234,30 +242,30 @@ ex
 \pgfmath@stack@operand=\toks24
 \pgfmath@stack@operation=\toks25
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.cod
-e.tex
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.bas
-ic.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.tri
-gonometric.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.ran
-dom.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.com
-parison.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.bas
-e.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.rou
-nd.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.mis
-c.code.tex)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.int
-egerarithmetics.code.tex)))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.te
-x
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.basic.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.trigonometric.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.random.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.comparison.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.base.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.round.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.misc.code.tex)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfuncti
+ons.integerarithmetics.code.tex)))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.
+code.tex
 \c@pgfmathroundto@lastzeros=\count116
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.
-code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+points.code.tex
 File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@picminx=\dimen139
 \pgf@picmaxx=\dimen140
@@ -274,108 +282,109 @@ File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@zx=\dimen151
 \pgf@zy=\dimen152
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathcon
-struct.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+pathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@path@lastx=\dimen153
 \pgf@path@lasty=\dimen154
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusa
-ge.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+pathusage.code.tex
 File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@shorten@end@additional=\dimen155
 \pgf@shorten@start@additional=\dimen156
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.
-code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+scopes.code.tex
 File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfpic=\box37
 \pgf@hbox=\box38
 \pgf@layerbox@main=\box39
 \pgf@picture@serial@count=\count117
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphic
-state.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+graphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgflinewidth=\dimen157
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransfo
-rmations.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+transformations.code.tex
 File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@pt@x=\dimen158
 \pgf@pt@y=\dimen159
 \pgf@pt@temp=\dimen160
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.c
-ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+quick.code.tex
 File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects
-.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+objects.code.tex
 File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathpro
-cessing.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+pathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.
-code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+arrows.code.tex
 File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfarrowsep=\dimen161
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.c
-ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+shade.code.tex
 File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@max=\dimen162
 \pgf@sys@shading@range@num=\count118
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.c
-ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+image.code.tex
 File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexterna
-l.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+external.code.tex
 File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfexternal@startupbox=\box40
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.
-code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+layers.code.tex
 File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretranspa
-rency.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+transparency.code.tex
 File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepattern
-s.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+patterns.code.tex
 File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.cod
-e.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore
+rdf.code.tex
 File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/xxcolor.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/utilities/xxcolor.st
+y
 Package: xxcolor 2003/10/24 ver 0.1
 \XC@nummixins=\count119
 \XC@countmixins=\count120
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/atbegshi.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/infwarerr.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
+) (/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+)) (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/hobsub-hyperref.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/hobsub-hyperr
+ef.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/hobsub-generic.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/hobsub-generi
+c.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -408,24 +417,25 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/auxhook.sty
+)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/kvoptions.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen163
 \Hy@linkcounter=\count121
 \Hy@pagecounter=\count122
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count123
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/00miktex/hyperref.cfg
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/00miktex/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4393.
@@ -440,7 +450,7 @@ Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count124
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/url/url.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -465,23 +475,26 @@ Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+ (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count127
 \c@bookmark@seq@number=\count128
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/rerunfilecheck.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/oberdiek/rerunfilecheck.
+sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaserequires.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasecompatibility.
-sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasefont.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaserequire
+s.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasecompati
+bility.sty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasefont.st
+y (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks26
 \symAMSa=\mathgroup4
@@ -489,31 +502,41 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/sansmathaccent/sansmathaccent.s
-ty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/sansmathaccent/sansmatha
+ccent.sty
 Package: sansmathaccent 2013/03/28
- (/home/ffarias/.miktex/texmfs/install/tex/latex/filehook/filehook.sty
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/filehook/filehook.sty
 Package: filehook 2011/10/12 v0.5d Hooks for input files
 )))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetranslator.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasetransla
+tor.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator.st
+y
 Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasemisc.sty)
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetwoscreens.sty
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoverlay.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasemisc.st
+y)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasetwoscre
+ens.sty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoverlay
+.sty
 \beamer@argscount=\count129
 \beamer@lastskipcover=\skip44
 \beamer@trivlistdepth=\count130
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetitle.sty)
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasesection.sty
+)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasetitle.s
+ty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasesection
+.sty
 \c@lecture=\count131
 \c@part=\count132
 \c@section=\count133
 \c@subsection=\count134
 \c@subsubsection=\count135
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframe.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframe.s
+ty
 \beamer@framebox=\box41
 \beamer@frametitlebox=\box42
 \beamer@zoombox=\box43
@@ -529,30 +552,38 @@ Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
 \framewidth=\dimen168
 \c@framenumber=\count139
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseverbatim.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseverbati
+m.sty
 \beamer@verbatimfileout=\write4
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframesize.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframesi
+ze.sty
 \beamer@splitbox=\box44
 \beamer@autobreakcount=\count140
 \beamer@autobreaklastheight=\dimen169
 \beamer@frametitletoks=\toks28
 \beamer@framesubtitletoks=\toks29
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframecomponent
-s.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframeco
+mponents.sty
 \beamer@footins=\box45
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasecolor.sty)
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasenotes.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasecolor.s
+ty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasenotes.s
+ty
 \beamer@frameboxcopy=\box46
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetoc.sty)
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetemplates.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasetoc.sty
+)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasetemplat
+es.sty
 \beamer@sbttoks=\toks30
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseauxtemplates.s
-ty (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseboxes.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseauxtemp
+lates.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaseboxes.s
+ty
 \bmb@box=\box47
 \bmb@colorbox=\box48
 \bmb@boxshadow=\box49
@@ -565,8 +596,9 @@ ty (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseboxes.sty
 )
 \beamer@blockheadheight=\dimen174
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaselocalstructure
-.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/tools/enumerate.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbaselocalst
+ructure.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks31
 )
@@ -575,27 +607,30 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasenavigation.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasenavigat
+ion.sty
 \beamer@section@min@dim=\dimen175
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetheorems.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasetheorem
+s.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
 \ex@=\dimen176
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen177
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count143
@@ -636,7 +671,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amscls/amsthm.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks37
 \thm@bodyfont=\toks38
@@ -650,72 +685,83 @@ Package: amsthm 2017/10/31 v2.20.4
 )
 \c@theorem=\count155
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasethemes.sty))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerthemedefault.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemedefault.s
-ty)
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamercolorthemedefault.
-sty)
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerinnerthemedefault.
-sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerbasethemes.
+sty))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerthemedefaul
+t.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemede
+fault.sty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamercolorthemed
+efault.sty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerinnerthemed
+efault.sty
 \beamer@dima=\dimen185
 \beamer@dimb=\dimen186
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerouterthemedefault.
-sty))) (/home/ffarias/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerouterthemed
+efault.sty)))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks45
 \verbatim@line=\toks46
 \verbatim@in@stream=\read2
 )
-(/home/ffarias/Documents/pibic/presentation/beamerthemeuniud.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
+(/home/danielrdesousa/Documents/pibic/presentation/beamerthemeuniud.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.s
+ty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2019/02/02 v3.1.1 (3.1.1)
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.c
-ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodules
+hapes.code.tex
 File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfnodeparttextbox=\box54
 )
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.cod
-e.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulep
+lot.code.tex
 File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versi
-on-0-65.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcom
+p-version-0-65.sty
 Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
 \pgf@nodesepstart=\dimen187
 \pgf@nodesepend=\dimen188
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-versi
-on-1-18.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcom
+p-version-1-18.sty
 Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.te
-x)) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.st
+y
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.
+code.tex))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.
+tex))
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.c
+ode.tex
 Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex)
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.
+tex)
 \pgffor@iter=\dimen189
 \pgffor@skip=\dimen190
 \pgffor@stack=\toks47
 \pgffor@toks=\toks48
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.c
-ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz
+/tikz.code.tex
 Package: tikz 2019/02/02 v3.1.1 (3.1.1)
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryploth
-andlers.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibra
+ryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@plot@mark@count=\count156
 \pgfplotmarksize=\dimen191
@@ -735,8 +781,8 @@ File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \tikznumberofcurrentchild=\count159
 \tikz@fig@count=\count160
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.c
-ode.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulem
+atrix.code.tex
 File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfmatrixcurrentrow=\count161
 \pgfmatrixcurrentcolumn=\count162
@@ -744,11 +790,11 @@ File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 \tikz@expandcount=\count164
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librar
-ies/tikzlibrarytopaths.code.tex
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/soul/soul.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks49
 \SOUL@lasttoken=\toks50
@@ -760,10 +806,10 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen199
 \SOUL@ulht=\dimen256
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/mathtools/mathtools.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/tools/calc.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count165
 \calc@Bcount=\count166
@@ -776,7 +822,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count167
 \calc@Cskip=\skip60
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/mathtools/mhsetup.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
@@ -793,25 +839,25 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen264
 \l_MT_below_shortintertext_sep=\dimen265
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/grffile.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
 Package grffile Info: Option `multidot' is set to `true'.
 Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/chngcntr/chngcntr.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/caption/caption.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen266
@@ -832,7 +878,7 @@ Package caption Info: Hyperref support is turned off
 \c@subfigure=\count171
 \c@subtable=\count172
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/textpos/textpos.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/textpos/textpos.sty
 Package: textpos 2016/06/07 v1.8
 
 Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
@@ -849,29 +895,30 @@ Grid set 16 x 16 = 28.45274pt x 16.00467pt
 \TP@tbargs=\toks54
 \TP@prevdepth=\dimen280
 TextBlockOrigin set to 0pt x 0pt
-) (/home/ffarias/Documents/pibic/presentation/beamerinnerthemeuniud.sty)
-(/home/ffarias/Documents/pibic/presentation/beamerouterthemeuniud.sty)
-(/home/ffarias/Documents/pibic/presentation/beamercolorthemeuniud.sty)
-(/home/ffarias/Documents/pibic/presentation/beamerfontthemeuniud.sty
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemeserif.sty
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+) (/home/danielrdesousa/Documents/pibic/presentation/beamerinnerthemeuniud.sty)
+(/home/danielrdesousa/Documents/pibic/presentation/beamerouterthemeuniud.sty)
+(/home/danielrdesousa/Documents/pibic/presentation/beamercolorthemeuniud.sty)
+(/home/danielrdesousa/Documents/pibic/presentation/beamerfontthemeuniud.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemese
+rif.sty)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/base/t1enc.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/base/t1enc.def
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count173
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/logreq/logreq.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@tabx@nest=\count174
@@ -931,7 +978,7 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -1023,13 +1070,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 \c@textcitecount=\count352
 \c@textcitetotal=\count353
@@ -1042,12 +1088,14 @@ File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/bbx/authoryear.bbx
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/bbx/authoryear.
+bbx
 File: authoryear.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bbx
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bb
+x
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count359
 \c@bbx:relatedtotal=\count360
@@ -1055,7 +1103,8 @@ File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/cbx/authoryear.cbx
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/cbx/authoryear.
+cbx
 File: authoryear.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -1068,10 +1117,10 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/biblatex.cfg
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-(/home/ffarias/.miktex/texmfs/install/tex/latex/silence/silence.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/silence/silence.sty
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
 sages
 \sl@Save=\count361
@@ -1098,17 +1147,16 @@ LaTeX Info: Redefining \GenericError on input line 601.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/lbx/english.lbx
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 \@quotelevel=\count371
 \@quotereset=\count372
-
-(/home/ffarias/Documents/pibic/presentation/main.aux
-(/home/ffarias/Documents/pibic/presentation/linear-regression.aux)
-(/home/ffarias/Documents/pibic/presentation/bayesian-linear-regression.aux)
-(/home/ffarias/Documents/pibic/presentation/gaussian-processes.aux)
-(/home/ffarias/Documents/pibic/presentation/appendix.aux))
+ (/home/danielrdesousa/Documents/pibic/presentation/main.aux
+(/home/danielrdesousa/Documents/pibic/presentation/linear-regression.aux)
+(/home/danielrdesousa/Documents/pibic/presentation/bayesian-linear-regression.a
+ux) (/home/danielrdesousa/Documents/pibic/presentation/gaussian-processes.aux)
+(/home/danielrdesousa/Documents/pibic/presentation/appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -1127,7 +1175,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 56.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/psnfss/t1ppl.fd
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 *geometry* driver: auto-detecting
@@ -1164,7 +1212,9 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/home/ffarias/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+
+(/home/danielrdesousa/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mki
+i
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count373
 \scratchdimen=\dimen281
@@ -1177,10 +1227,11 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 \MPnumerator=\count377
 \makeMPintoPDFobject=\count378
 \everyMPtoPDFconversion=\toks64
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
+)
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.s
+ty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/grfext.sty
+ (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1189,15 +1240,15 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
-ABD: EveryShipout initializing macros
+) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring OFF on input line 56.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/gettitlestring.sty
+(/home/danielrdesousa/.miktex/texmfs/install/tex/generic/oberdiek/gettitlestrin
+g.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count379
@@ -1205,8 +1256,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 56.
 LaTeX Info: Redefining \pageref on input line 56.
 LaTeX Info: Redefining \nameref on input line 56.
-(/home/ffarias/Documents/pibic/presentation/main.out)
-(/home/ffarias/Documents/pibic/presentation/main.out)
+ (/home/danielrdesousa/Documents/pibic/presentation/main.out)
+(/home/danielrdesousa/Documents/pibic/presentation/main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -1249,28 +1300,28 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  T1/lmvtt/m/n --> T1/lmvtt/bx/n on input line 56.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-basic-dic
-tionary-English.dict
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator-ba
+sic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-bibliogra
-phy-dictionary-English.dict
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator-bi
+bliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-environme
-nt-dictionary-English.dict
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator-en
+vironment-dictionary-English.dict
 Dictionary: translator-environment-dictionary, Language: English 
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-months-di
-ctionary-English.dict
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator-mo
+nths-dictionary-English.dict
 Dictionary: translator-months-dictionary, Language: English 
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-numbers-d
-ictionary-English.dict
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator-nu
+mbers-dictionary-English.dict
 Dictionary: translator-numbers-dictionary, Language: English 
 )
-(/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-theorem-d
-ictionary-English.dict
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/translator/translator-th
+eorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -1282,24 +1333,25 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (/home/ffarias/Documents/pibic/presentation/main.bbl)
+
+(/home/danielrdesousa/Documents/pibic/presentation/main.bbl)
 Package biblatex Info: Reference section=0 on input line 56.
 Package biblatex Info: Reference segment=0 on input line 56.
 
-(/home/ffarias/Documents/pibic/presentation/main.nav)
+(/home/danielrdesousa/Documents/pibic/presentation/main.nav)
 LaTeX Font Info:    Try loading font information for T1+lmvtt on input line 59.
 
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/lm/t1lmvtt.fd
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/lm/t1lmvtt.fd
 File: t1lmvtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
-{/home/ffarias/.miktex/texmfs/data/pdftex/config/pdftex.map}]
-(/home/ffarias/Documents/pibic/presentation/main.toc)
+{/home/danielrdesousa/.miktex/texmfs/data/pdftex/config/pdftex.map}]
+(/home/danielrdesousa/Documents/pibic/presentation/main.toc)
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/graph
-ics/brasao1_horizontal_monocromatico-b.pdf): PDF inclusion: found PDF version <
-1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/graphics/brasao1_horizontal_monocromatico-b.pdf): PDF inclusion: found PDF ve
+rsion <1.7>, but at most version <1.5> allowed
 <graphics/brasao1_horizontal_monocromatico-b.pdf, id=74, 358.87466pt x 605.8445
 4pt>
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -1314,15 +1366,16 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 65--65
 
 [2
 
- </home/ffarias/Documents/pibic/presentation/graphics/brasao1_horizontal_monocr
-omatico-b.pdf>]
+ </home/danielrdesousa/Documents/pibic/presentation/graphics/brasao1_horizontal
+_monocromatico-b.pdf>]
 \openout2 = `linear-regression.aux'.
 
 
-(/home/ffarias/Documents/pibic/presentation/linear-regression.tex
+(/home/danielrdesousa/Documents/pibic/presentation/linear-regression.tex
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
- [3
+
+[3
 
 
 ]
@@ -1368,9 +1421,9 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 22--22
 
 ]
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/graph
-ics/prml/Figure1c2.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
-rsion <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/graphics/prml/Figure1c2.pdf): PDF inclusion: found PDF version <1.7>, but at 
+most version <1.5> allowed
 <graphics/prml/Figure1c2.pdf, id=119, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1c2.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c2.pdf>
@@ -1388,15 +1441,15 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 35--35
 
 [7
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c2.pdf>]
+ </home/danielrdesousa/Documents/pibic/presentation/graphics/prml/Figure1c2.pdf
+>]
 LaTeX Font Info:    Try loading font information for U+msa on input line 52.
-
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
+ (/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 52.
 
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
+(/home/danielrdesousa/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
@@ -1472,7 +1525,8 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 75--75
 
 [12
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c3.pdf>]
+ </home/danielrdesousa/Documents/pibic/presentation/graphics/prml/Figure1c3.pdf
+>]
 File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c3.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 75.
@@ -1574,11 +1628,11 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 163--163
 ]
 Package epstopdf Info: Source file: <implementations/"linear_regression_M1".eps
 >
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 88865 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M1"-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 34179 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M1"-eps-converted-to.pdf implementations/"linear_regression_M1".eps>
@@ -1586,9 +1640,9 @@ ression_M1"-eps-converted-to.pdf implementations/"linear_regression_M1".eps>
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/imple
-mentations/linear_regression_M1-eps-converted-to.pdf): PDF inclusion: found PDF
- version <1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/implementations/linear_regression_M1-eps-converted-to.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
 <implementations/"linear_regression_M1"-eps-converted-to.pdf, id=267, 364.36125
 pt x 301.125pt>
 File: implementations/"linear_regression_M1"-eps-converted-to.pdf Graphic file 
@@ -1599,11 +1653,11 @@ o.pdf  used on input line 194.
 (pdftex.def)             Requested size: 119.50279pt x 98.76044pt.
 Package epstopdf Info: Source file: <implementations/"linear_regression_M2".eps
 >
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89753 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M2"-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 35267 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M2"-eps-converted-to.pdf implementations/"linear_regression_M2".eps>
@@ -1611,9 +1665,9 @@ ression_M2"-eps-converted-to.pdf implementations/"linear_regression_M2".eps>
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/imple
-mentations/linear_regression_M2-eps-converted-to.pdf): PDF inclusion: found PDF
- version <1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/implementations/linear_regression_M2-eps-converted-to.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
 <implementations/"linear_regression_M2"-eps-converted-to.pdf, id=268, 364.36125
 pt x 301.125pt>
 File: implementations/"linear_regression_M2"-eps-converted-to.pdf Graphic file 
@@ -1624,11 +1678,11 @@ o.pdf  used on input line 194.
 (pdftex.def)             Requested size: 119.50279pt x 98.76044pt.
 Package epstopdf Info: Source file: <implementations/"linear_regression_M5".eps
 >
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89883 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M5"-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 35283 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M5"-eps-converted-to.pdf implementations/"linear_regression_M5".eps>
@@ -1636,9 +1690,9 @@ ression_M5"-eps-converted-to.pdf implementations/"linear_regression_M5".eps>
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/imple
-mentations/linear_regression_M5-eps-converted-to.pdf): PDF inclusion: found PDF
- version <1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/implementations/linear_regression_M5-eps-converted-to.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
 <implementations/"linear_regression_M5"-eps-converted-to.pdf, id=269, 364.36125
 pt x 301.125pt>
 File: implementations/"linear_regression_M5"-eps-converted-to.pdf Graphic file 
@@ -1649,11 +1703,11 @@ o.pdf  used on input line 194.
 (pdftex.def)             Requested size: 119.50279pt x 98.76044pt.
 Package epstopdf Info: Source file: <implementations/"linear_regression_M10".ep
 s>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89075 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M10"-ep
 s-converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 34844 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M10"-eps-converted-to.pdf implementations/"linear_regression_M10".eps>
@@ -1661,9 +1715,9 @@ ression_M10"-eps-converted-to.pdf implementations/"linear_regression_M10".eps>
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/imple
-mentations/linear_regression_M10-eps-converted-to.pdf): PDF inclusion: found PD
-F version <1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/implementations/linear_regression_M10-eps-converted-to.pdf): PDF inclusion: f
+ound PDF version <1.7>, but at most version <1.5> allowed
 <implementations/"linear_regression_M10"-eps-converted-to.pdf, id=270, 364.3612
 5pt x 301.125pt>
 File: implementations/"linear_regression_M10"-eps-converted-to.pdf Graphic file
@@ -1674,11 +1728,11 @@ to.pdf  used on input line 194.
 (pdftex.def)             Requested size: 119.50279pt x 98.76044pt.
 Package epstopdf Info: Source file: <implementations/"linear_regression_M50".ep
 s>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89300 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M50"-ep
 s-converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 34954 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M50"-eps-converted-to.pdf implementations/"linear_regression_M50".eps>
@@ -1686,9 +1740,9 @@ ression_M50"-eps-converted-to.pdf implementations/"linear_regression_M50".eps>
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/imple
-mentations/linear_regression_M50-eps-converted-to.pdf): PDF inclusion: found PD
-F version <1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/implementations/linear_regression_M50-eps-converted-to.pdf): PDF inclusion: f
+ound PDF version <1.7>, but at most version <1.5> allowed
 <implementations/"linear_regression_M50"-eps-converted-to.pdf, id=271, 364.3612
 5pt x 301.125pt>
 File: implementations/"linear_regression_M50"-eps-converted-to.pdf Graphic file
@@ -1699,11 +1753,11 @@ to.pdf  used on input line 194.
 (pdftex.def)             Requested size: 119.50279pt x 98.76044pt.
 Package epstopdf Info: Source file: <implementations/"linear_regression_M100".e
 ps>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 91222 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M100"-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 35640 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M100"-eps-converted-to.pdf implementations/"linear_regression_M100".eps
@@ -1712,9 +1766,9 @@ ression_M100"-eps-converted-to.pdf implementations/"linear_regression_M100".eps
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/imple
-mentations/linear_regression_M100-eps-converted-to.pdf): PDF inclusion: found P
-DF version <1.7>, but at most version <1.5> allowed
+pdfTeX warning: pdflatex (file /home/danielrdesousa/Documents/pibic/presentatio
+n/implementations/linear_regression_M100-eps-converted-to.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
 <implementations/"linear_regression_M100"-eps-converted-to.pdf, id=272, 364.361
 25pt x 301.125pt>
 File: implementations/"linear_regression_M100"-eps-converted-to.pdf Graphic fil
@@ -1735,21 +1789,22 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 194--194
 
 [20
 
- </home/ffarias/Documents/pibic/presentation/implementations/linear_regression_
-M1-eps-converted-to.pdf> </home/ffarias/Documents/pibic/presentation/implementa
-tions/linear_regression_M2-eps-converted-to.pdf> </home/ffarias/Documents/pibic
-/presentation/implementations/linear_regression_M5-eps-converted-to.pdf> </home
-/ffarias/Documents/pibic/presentation/implementations/linear_regression_M10-eps
--converted-to.pdf> </home/ffarias/Documents/pibic/presentation/implementations/
-linear_regression_M50-eps-converted-to.pdf> </home/ffarias/Documents/pibic/pres
-entation/implementations/linear_regression_M100-eps-converted-to.pdf>]
+ </home/danielrdesousa/Documents/pibic/presentation/implementations/linear_regr
+ession_M1-eps-converted-to.pdf> </home/danielrdesousa/Documents/pibic/presentat
+ion/implementations/linear_regression_M2-eps-converted-to.pdf> </home/danielrde
+sousa/Documents/pibic/presentation/implementations/linear_regression_M5-eps-con
+verted-to.pdf> </home/danielrdesousa/Documents/pibic/presentation/implementatio
+ns/linear_regression_M10-eps-converted-to.pdf> </home/danielrdesousa/Documents/
+pibic/presentation/implementations/linear_regression_M50-eps-converted-to.pdf> 
+</home/danielrdesousa/Documents/pibic/presentation/implementations/linear_regre
+ssion_M100-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <implementations/"linear_regression_M50".ep
 s>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89300 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M50"-ep
 s-converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 34954 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M50"-eps-converted-to.pdf implementations/"linear_regression_M50".eps>
@@ -1776,11 +1831,11 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 218--218
 ]
 Package epstopdf Info: Source file: <implementations/"linear_regression_M50".ep
 s>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89300 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M50"-ep
 s-converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 34954 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M50"-eps-converted-to.pdf implementations/"linear_regression_M50".eps>
@@ -1807,11 +1862,11 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 218--218
 ]
 Package epstopdf Info: Source file: <implementations/"linear_regression_M50".ep
 s>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 89300 bytes
 (epstopdf)             Output file: <implementations/"linear_regression_M50"-ep
 s-converted-to.pdf>
-(epstopdf)                    date: 2019-02-25 19:16:54
+(epstopdf)                    date: 2019-03-02 07:53:08
 (epstopdf)                    size: 34954 bytes
 (epstopdf)             Command: <epstopdf --outfile=implementations/"linear_reg
 ression_M50"-eps-converted-to.pdf implementations/"linear_regression_M50".eps>
@@ -1886,7 +1941,8 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 260--260
 
 [26
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c16.pdf>]
+ </home/danielrdesousa/Documents/pibic/presentation/graphics/prml/Figure1c16.pd
+f>]
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 260.
@@ -2098,7 +2154,8 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 340--340
 
 [37
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.13.pdf>]
+ </home/danielrdesousa/Documents/pibic/presentation/graphics/prml/Figure1.13.pd
+f>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
@@ -2275,8 +2332,8 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 454--454
 \openout2 = `bayesian-linear-regression.aux'.
 
 
-(/home/ffarias/Documents/pibic/presentation/bayesian-linear-regression.tex
-[51
+(/home/danielrdesousa/Documents/pibic/presentation/bayesian-linear-regression.t
+ex [51
 
 
 
@@ -2284,10 +2341,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 454--454
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 10.
+on input line 11.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 10--10
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 11--11
 [][]  
  []
 
@@ -2297,10 +2354,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 10--10
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 26.
+on input line 27.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 26--26
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 27--27
 [][]  
  []
 
@@ -2310,10 +2367,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 26--26
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 26.
+on input line 27.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 26--26
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 27--27
 [][]  
  []
 
@@ -2323,10 +2380,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 26--26
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 34.
+on input line 35.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 34--34
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 35--35
 [][]  
  []
 
@@ -2336,10 +2393,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 34--34
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 44.
+on input line 45.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 44--44
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 45--45
 [][]  
  []
 
@@ -2349,10 +2406,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 44--44
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 85.
+on input line 86.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 85--85
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 86--86
 [][]  
  []
 
@@ -2362,10 +2419,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 85--85
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 102.
+on input line 103.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 102--102
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 103--103
 [][]  
  []
 
@@ -2375,10 +2432,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 102--102
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 120.
+on input line 121.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 120--120
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 121--121
 [][]  
  []
 
@@ -2388,10 +2445,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 120--120
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 120.
+on input line 121.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 120--120
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 121--121
 [][]  
  []
 
@@ -2401,10 +2458,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 120--120
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 138.
+on input line 139.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 138--138
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 139--139
 [][]  
  []
 
@@ -2414,10 +2471,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 138--138
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 138.
+on input line 139.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 138--138
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 139--139
 [][]  
  []
 
@@ -2427,10 +2484,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 138--138
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 154.
+on input line 155.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 154--154
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 155--155
 [][]  
  []
 
@@ -2440,10 +2497,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 154--154
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 154.
+on input line 155.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 154--154
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 155--155
 [][]  
  []
 
@@ -2453,10 +2510,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 154--154
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 169.
+on input line 170.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 169--169
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 170--170
 [][]  
  []
 
@@ -2466,10 +2523,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 169--169
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 169.
+on input line 170.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 169--169
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 170--170
 [][]  
  []
 
@@ -2479,10 +2536,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 169--169
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 184.
+on input line 185.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 184--184
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 185--185
 [][]  
  []
 
@@ -2492,10 +2549,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 184--184
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 184.
+on input line 185.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 184--184
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 185--185
 [][]  
  []
 
@@ -2505,10 +2562,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 184--184
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 200.
+on input line 201.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 200--200
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 201--201
 [][]  
  []
 
@@ -2518,10 +2575,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 200--200
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 200.
+on input line 201.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 200--200
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 201--201
 [][]  
  []
 
@@ -2531,10 +2588,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 200--200
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 222.
+on input line 223.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 222--222
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 223--223
 [][]  
  []
 
@@ -2544,10 +2601,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 222--222
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used 
-on input line 235.
+on input line 236.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 235--235
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 236--236
 [][]  
  []
 
@@ -2556,8 +2613,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 235--235
 ])
 \openout2 = `gaussian-processes.aux'.
 
- (/home/ffarias/Documents/pibic/presentation/gaussian-processes.tex
-[73
+ (/home/danielrdesousa/Documents/pibic/presentation/gaussian-processes.tex [73
 
 
 
@@ -2577,7 +2633,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 11--11
 ])
 \openout2 = `appendix.aux'.
 
- (/home/ffarias/Documents/pibic/presentation/appendix.tex [75
+ (/home/danielrdesousa/Documents/pibic/presentation/appendix.tex [75
 
 
 
@@ -2678,11 +2734,11 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 80--80
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
- (/home/ffarias/Documents/pibic/presentation/main.aux
-(/home/ffarias/Documents/pibic/presentation/linear-regression.aux)
-(/home/ffarias/Documents/pibic/presentation/bayesian-linear-regression.aux)
-(/home/ffarias/Documents/pibic/presentation/gaussian-processes.aux)
-(/home/ffarias/Documents/pibic/presentation/appendix.aux))
+ (/home/danielrdesousa/Documents/pibic/presentation/main.aux
+(/home/danielrdesousa/Documents/pibic/presentation/linear-regression.aux)
+(/home/danielrdesousa/Documents/pibic/presentation/bayesian-linear-regression.a
+ux) (/home/danielrdesousa/Documents/pibic/presentation/gaussian-processes.aux)
+(/home/danielrdesousa/Documents/pibic/presentation/appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -2693,32 +2749,34 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  29302 strings out of 494865
- 571299 string characters out of 3178198
+ 574575 string characters out of 3177778
  998560 words of memory out of 3000000
  32162 multiletter control sequences out of 15000+200000
  43417 words of font info for 79 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 60i,19n,65p,841b,1396s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/ffarias/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}{/home/ffar
-ias/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/ffarias/.miktex/
-texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/ffarias/.miktex
-/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/ffarias/.mikte
-x/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/ffarias/.mikt
-ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/ffarias/.mikt
-ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/ffarias/.mi
-ktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/ffarias/.mi
-ktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/ffarias/.mik
-tex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/ffarias/.mi
-ktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/ffarias/.mi
-ktex/texmfs/install/fonts/type1/public/lm/lmvtt10.pfb></home/ffarias/.miktex/te
-xmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/ffarias/.mik
-tex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/ffaria
-s/.miktex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/ffarias/.mi
-ktex/texmfs/install/fonts/type1/urw/palatino/uplbi8a.pfb></home/ffarias/.miktex
-/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/ffarias/.miktex/texm
-fs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/ffarias/Documents/pibic/presentation/main.pdf (81 pages
-, 785513 bytes).
+ 60i,19n,65p,848b,1396s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/home/danielrdesousa/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}{/ho
+me/danielrdesousa/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/da
+nielrdesousa/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/home/danielrdesousa/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb></home/danielrdesousa/.miktex/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></home/danielrdesousa/.miktex/texmfs/inst
+all/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/danielrdesousa/.miktex/texmf
+s/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/danielrdesousa/.mikt
+ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/danielrdesous
+a/.miktex/texmfs/install/fonts/type1/public/lm/lmvtt10.pfb></home/danielrdesous
+a/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/
+danielrdesousa/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/urw/palatino/upl
+b8a.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/urw/palatino/u
+plbi8a.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/urw/palatin
+o/uplr8a.pfb></home/danielrdesousa/.miktex/texmfs/install/fonts/type1/urw/palat
+ino/uplri8a.pfb>
+Output written on /home/danielrdesousa/Documents/pibic/presentation/main.pdf (8
+1 pages, 785622 bytes).
 PDF statistics:
  880 PDF objects out of 1000 (max. 8388607)
  183 named destinations out of 1000 (max. 500000)
