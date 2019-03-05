@@ -237,7 +237,25 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \subsection{A probabilistic perspective}
+\begin{frame}{\insertsubsection}
+	\begin{tikzpicture}[thick]
 
+		% Define nodes
+		\node[obs]                               (y) 
+			[label=north east:$y$] {};
+		\node[latent, above=of y, xshift=-1.2cm,draw=blue!80, thick] (w) {$\mathbf{w}$};
+		\node[latent, above=of y, xshift=1.2cm]  (x) {$\mathbf{x}$};
+		\node[latent, right=2cm of y]            (t) {$\tau$};
+	
+		% Connect the nodes
+		\edge {x,w,t} {y} ; %
+	
+		% Plates
+		\plate {yx} {(x)(y)} {$N$} ;
+		\plate {} {(w)(y)(yx.north west)(yx.south west)} {$M$} ;
+	
+	\end{tikzpicture}	
+\end{frame}
 
 \begin{frame}{\insertsubsection}
 \begin{columns}
@@ -268,7 +286,7 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \end{column}
 \begin{column}{0.475\textwidth}  %%<--- here
     \begin{center}
-		\visible<3->{
+		\visible<1->{
 		\includegraphics[totalheight=0.5\textheight]{Figure1c16.pdf}
 		}
      \end{center}
@@ -427,7 +445,7 @@ p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right) \propto p\lef
 \end{equation*}
 }
 \visible<3->{
-and by simplicity, consider
+and for simplicity, consider
 \begin{equation*}
 p \left( \mathbf{w} | \alpha \right) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{0}, \alpha^{-1} \mathbf{I} \right) = \left(  \frac{\alpha}{2 \pi}\right) ^{(M+1)/2} \exp \left\{ - \frac{\alpha}{2} \mathbf{w}^T \mathbf{w} \right\}
 \end{equation*}

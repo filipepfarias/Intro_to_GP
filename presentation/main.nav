@@ -69,59 +69,63 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@subsectionentry {0}{1}{2}{26}{A probabilistic perspective}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{1}{26/29}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{1}{26/26}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {26}{29}}
+\headcommand {\beamer@framepages {26}{26}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{2}{30/32}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{2}{27/30}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {30}{32}}
+\headcommand {\beamer@framepages {27}{30}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{3}{33/34}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{3}{31/32}{A probabilistic perspective}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {31}{32}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{4}{33/34}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {33}{34}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{4}{35/35}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{5}{35/35}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {35}{35}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{5}{36/36}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{6}{36/36}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {36}{36}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{6}{37/37}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{7}{37/37}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {37}{37}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{7}{38/38}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{8}{38/38}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {38}{38}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{8}{39/41}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{9}{39/41}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {39}{41}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{9}{42/43}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{10}{42/43}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {42}{43}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{10}{44/44}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{11}{44/44}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {44}{44}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{11}{45/45}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{12}{45/45}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {45}{45}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{12}{46/48}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{13}{46/48}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {46}{48}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{13}{49/49}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{14}{49/49}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {49}{49}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{14}{50/50}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{2}{15}{50/50}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {50}{50}}
 \defcounter {refsection}{0}\relax 
@@ -264,4 +268,4 @@
 \headcommand {\beamer@subsectionpages {76}{81}}
 \headcommand {\beamer@sectionpages {75}{81}}
 \headcommand {\beamer@documentpages {81}}
-\headcommand {\gdef \inserttotalframenumber {52}}
+\headcommand {\gdef \inserttotalframenumber {53}}
