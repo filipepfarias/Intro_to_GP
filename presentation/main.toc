@@ -6,16 +6,16 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {1}{2}{A probabilistic perspective}{26}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Bayesian Linear Regression}{51}{0}{2}
+\beamer@sectionintoc {2}{Bayesian Linear Regression}{50}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{53}{0}{2}
+\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{52}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{Bayes' theorem for Gaussian variables}{58}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bayes' theorem for Gaussian variables}{57}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Gaussian Processes}{73}{0}{3}
+\beamer@sectionintoc {3}{Gaussian Processes}{72}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Linear regression revisited}{74}{0}{3}
+\beamer@subsectionintoc {3}{1}{Linear regression revisited}{73}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Appendix}{75}{0}{4}
+\beamer@sectionintoc {4}{Appendix}{74}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{1}{Appendix A - Matrix Calculus}{76}{0}{4}
+\beamer@subsectionintoc {4}{1}{Appendix A - Matrix Calculus}{75}{0}{4}

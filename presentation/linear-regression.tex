@@ -237,25 +237,23 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \subsection{A probabilistic perspective}
-\begin{frame}{\insertsubsection}
-	\begin{tikzpicture}[thick]
+% \begin{frame}{\insertsubsection}
+% 	\begin{tikzpicture}[thick]
 
-		% Define nodes
-		\node[obs]                               (y) 
-			[label=north east:$y$] {};
-		\node[latent, above=of y, xshift=-1.2cm,draw=blue!80, thick] (w) {$\mathbf{w}$};
-		\node[latent, above=of y, xshift=1.2cm]  (x) {$\mathbf{x}$};
-		\node[latent, right=2cm of y]            (t) {$\tau$};
+% 		% Define nodes
+% 		\node[latent]                               (t) 
+% 			[label=north east:$t_n$] {};
+% 		\node[latent, right=of t,draw=red!80, thick] (w) 
+% 			[label=north east:$\mathbf{w}$]{};
 	
-		% Connect the nodes
-		\edge {x,w,t} {y} ; %
+% 		% Connect the nodes
+% 		\edge [draw=red!80] {w} {t} ; %
 	
-		% Plates
-		\plate {yx} {(x)(y)} {$N$} ;
-		\plate {} {(w)(y)(yx.north west)(yx.south west)} {$M$} ;
+% 		% Plates
+% 		\plate [draw=blue!80, inner sep=10pt] {} {(t)} {$N$} ;
 	
-	\end{tikzpicture}	
-\end{frame}
+% 	\end{tikzpicture}	
+% \end{frame}
 
 \begin{frame}{\insertsubsection}
 \begin{columns}
