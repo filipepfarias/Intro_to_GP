@@ -1,6 +1,13 @@
 \section{Bayesian Linear Regression}
 \framecard{\insertsection}
 
+\begin{frame}{\insertsection}
+	Seeking a Bayesian approach, the next steps consists to apply the \textbf{sum} and \textbf{product} rules of probability which allow the predictive distribution to be written as
+
+	\begin{equation*}
+		p(t|x,\mathbf{x},\mathbf{t}) = \int p(t|x,\mathbf{w}) p(\mathbf{w}|\mathbf{x},\mathbf{t}) d\mathbf{w}
+	\end{equation*}
+\end{frame}
 
 \begin{frame}{\insertsection}
 In the next step, we'll assume a \textbf{prior distribution over parameters}, $p(\mathbf{w})$, and define it as a Gaussian distribution, then
