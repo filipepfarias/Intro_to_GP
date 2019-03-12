@@ -2,10 +2,17 @@
 \framecard{\insertsection}
 
 \begin{frame}{\insertsection}
-	Seeking a Bayesian approach, the next steps consists to apply the \textbf{sum} and \textbf{product} rules of probability which allow the predictive distribution to be written as
+	Seeking a Bayesian approach, the next steps consists to apply the \textbf{sum} and \textbf{product} rules of probability to evaluate the predictive distribution $p \left( t|x,\mathbf{x},\mathbf{t} \right)$. By now we assume that the hyperparameters are fixed, but they could assume a distribution too. \\
+\end{frame}
 
+\begin{frame}{\insertsection}
+	We saw that the posterior distribution for $\mathbf{w}$ could be given by
 	\begin{equation*}
-		p(t|x,\mathbf{x},\mathbf{t}) = \int p(t|x,\mathbf{w}) p(\mathbf{w}|\mathbf{x},\mathbf{t}) d\mathbf{w}
+		\underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t} \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x} \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} \right)}_{\text{prior}}
+	\end{equation*}
+	To reach the equalty
+	\begin{equation*}
+		p\left( \mathbf{w} | \mathbf{x}, \mathbf{t} \right) = \frac{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x} \right) p\left( \mathbf{w} \right)}{p}
 	\end{equation*}
 \end{frame}
 

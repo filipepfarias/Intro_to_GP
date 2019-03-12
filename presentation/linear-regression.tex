@@ -295,7 +295,7 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \begin{frame}{\insertsubsection}	
 	\visible<1->{So, if we consider that our conditions are such that being the random variables independent and identically distributed, we can say that our \textit{joint probability} is given by
 	\begin{equation*}
-		p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) = \prod_{n=1}^N p \left( t_n | x_n, \mathbf{w}, \beta \right)
+		p(t | x, \mathbf{w}, \beta) \Rightarrow p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) = \prod_{n=1}^N p \left( t_n | x_n, \mathbf{w}, \beta \right)
 	\end{equation*}
 	}
 	\visible<2->{Let's assume we have a distribution such that $p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta)$. Our goal is, given the \textit{parameters}, maximize the \textit{probability} of the \textit{targets} given the \textit{parameters}. An approach to do this use the fact that
@@ -436,10 +436,10 @@ Let's say we have the probabilities of some idea we desire to update it in the l
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-Mathematically, by Bayes' Theorem and the \textbf{Product Rule}, we could infer
+Mathematically, by Bayes' Theorem, we could infer
 \visible<2->{
 \begin{equation*}
-p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right) \propto p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)  p\left( \mathbf{w} | \alpha \right)
+\underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} | \alpha \right)}_{\text{prior}}
 \end{equation*}
 }
 \visible<3->{
@@ -457,7 +457,7 @@ By this, we can find a distribution and its maximum, or most probable value of $
 \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}) - t_n \right\}^2 + \frac{\alpha}{2} \mathbf{w}^T\mathbf{w} + \text{const.}
 \end{equation*}
 
-Note that if we consider $\lambda = \alpha / \beta$, this will back to the regularized form of \textit{least squares}.
+Note that if we consider $\lambda = \alpha / \beta$, this will back to the regularized form of \textit{least squares}. This technique is called \textit{maximum posterior} (MAP).
 \end{frame}
 
 \begin{frame}{\insertsubsection}
