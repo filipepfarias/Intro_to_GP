@@ -19,3 +19,5 @@
 \beamer@sectionintoc {4}{Appendix}{76}{0}{4}
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {4}{1}{Appendix A - Matrix Calculus}{77}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {4}{2}{Appendix B - Bayes' Rule}{81}{0}{4}

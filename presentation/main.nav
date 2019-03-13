@@ -255,21 +255,29 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {80}{80}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {76}{80}}
-\defcounter {refsection}{0}\relax 
 \headcommand {\beamer@subsectionpages {77}{80}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{References}{81}{References}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{81}{Appendix B - Bayes' Rule}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{0}{81/81}{Appendix A - Matrix Calculus}{0}}
+\headcommand {\slideentry {4}{2}{1}{81/81}{Appendix B - Bayes' Rule}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {81}{81}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{0}{81/82}{Appendix A - Matrix Calculus}{0}}
+\headcommand {\beamer@sectionpages {76}{81}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {81}{82}}
-\headcommand {\beamer@partpages {1}{82}}
-\headcommand {\beamer@subsectionpages {77}{82}}
-\headcommand {\beamer@sectionpages {76}{82}}
-\headcommand {\beamer@documentpages {82}}
-\headcommand {\gdef \inserttotalframenumber {54}}
+\headcommand {\beamer@subsectionpages {81}{81}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {5}{References}{82}{References}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{0}{82/82}{Appendix B - Bayes' Rule}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {82}{82}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{0}{82/83}{Appendix B - Bayes' Rule}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {82}{83}}
+\headcommand {\beamer@partpages {1}{83}}
+\headcommand {\beamer@subsectionpages {81}{83}}
+\headcommand {\beamer@sectionpages {76}{83}}
+\headcommand {\beamer@documentpages {83}}
+\headcommand {\gdef \inserttotalframenumber {55}}
