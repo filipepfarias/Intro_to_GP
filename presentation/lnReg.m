@@ -1,6 +1,6 @@
-clear; close all; warning('off','all');
+clear; close all;
 
-n = 10; 
+n = 10;
 x = linspace(0,1,n)';
 y = sin(2*pi*x);
 e = .2*randn(size(x));
@@ -15,9 +15,10 @@ for M = 1:20
     W = ((phix'*phix)\phix')*t;
     
     hold on;
-    Xp = linspace(x(1),x(end),200)';
+    Xp = linspace(x(1),x(end),300)';
     phiXp = phi(Xp); Tp = phiXp*W;
-    plot(Xp,Tp); axis([0 1 min(t) max(t)]);
-    hold off; pause(0.5);
+    plot(Xp,Tp);axis([0 1 -1 1]);
+    hold off;
+    pause(0.5);
 end
-warning('on','all')
+
