@@ -81,7 +81,30 @@ For simplicity, we'll carry this notation along.
 %\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\insertsubsection}
-\visible<2->{Remembering that
+	\begin{figure}
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[height=1.4in]{"Figure1.29a".eps}
+    \end{subfigure}%
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[height=1.4in]{"Figure1.29b".eps}
+		\end{subfigure}
+		\\
+		\begin{subfigure}[t]{0.4\textwidth}
+			\centering
+			\includegraphics[height=1.4in]{"Figure1.29c".eps}
+		\end{subfigure}%
+		\begin{subfigure}[t]{0.4\textwidth}
+				\centering
+				\includegraphics[height=1.4in]{"Figure1.29d".eps}
+		\end{subfigure}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{Remembering that
 \begin{align*}
 	y_n(x_n,\mathbf{w}) &= w_0 \phi_0(x_n) +w_1 \phi_1(x_n) +w_2 \phi_2(x_n)  + ... + w_{M-1} \phi_{M-1}(x_n)
 \end{align*}
@@ -162,34 +185,7 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 
 \end{frame}
 
-\begin{frame}{\insertsubsection}
-
-\begin{figure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{"linear_regression_M1".eps}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{"linear_regression_M2".eps}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{"linear_regression_M5".eps}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{"linear_regression_M10".eps}
-\end{subfigure}%
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{"linear_regression_M50".eps}
-\end{subfigure}
-\begin{subfigure}{.3\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{"linear_regression_M100".eps}
-\end{subfigure}
-\end{figure}
+\begin{frame}
 
 \end{frame}
 

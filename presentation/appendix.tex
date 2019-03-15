@@ -66,13 +66,21 @@ Given $\mathbf{A}$ being $m \times n$ and $\mathbf{B}$ being $p \times q$
 \begin{frame}{\insertsubsection}
 
 \begin{definition}[Bayes' Rule]
-Given a dataset $\mathcal{D} := \{ \mathbf{x},\mathbf{t} \}$ and $\mathbf{w}$ being $p \times q$
+Given a dataset $\mathcal{D} := \{ \mathbf{x},\mathbf{t} \}$ and $\mathbf{w}$ being the parameters, we have
 \begin{equation*}
-\mathbf{A}\mathbf{B} = \left[ \sum^n_{s=1} a_{is}b_{sj} \right] \text{, with } n = p 
-\end{equation*}
-\begin{equation*}
-\mathbf{B}\mathbf{A} = \left[ \sum^r_{k=1} b_{ik}a_{kj} \right] \text{, with } m = q
+p(\mathbf{w}| \mathcal{D}) = \frac{p(\mathcal{D}|\mathbf{w}) p(\mathbf{w})}{p(\mathcal{D})}
 \end{equation*}
 \end{definition}
 
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+    To obtain the posterior distribution, being $\mathcal{D} = \{ \mathbf{x}, \mathbf{t} \}$, we do
+    \begin{align*}
+        p(\mathbf{w}|\mathbf{x},\mathbf{t}) = \frac{p( \mathbf{x}, \mathbf{t} | \mathbf{w}) p(\mathbf{w})}{p(\mathbf{x},\mathbf{t})}
+    \end{align*}
+    But if $p(\mathbf{x},\mathbf{t}) = p(\mathbf{t}|\mathbf{x}) p(\mathbf{x}) $ and $ p(\mathbf{x},\mathbf{t}|\mathbf{w}) = p(\mathbf{t}|\mathbf{w},\mathbf{x}) p(\mathbf{x}) $, the we have
+    \begin{align*}
+        p(\mathbf{w}|\mathbf{x},\mathbf{t}) = \frac{p( \mathbf{t}, \mathbf{w} | \mathbf{x}) p(\mathbf{w})}{p(\mathbf{t}|\mathbf{x})}
+    \end{align*}
 \end{frame}

@@ -26,6 +26,7 @@
 \RequirePackage{chngcntr}
 \RequirePackage{graphicx}
 \RequirePackage{subcaption}
+\RequirePackage{listings}
 
 % in debug mode, show the boxes around the text
 \ifdefined\DEBUG
@@ -57,6 +58,14 @@
 
 % Bibliography styling
 \setbeamertemplate{bibliography item}[text]
+
+% Listings settings
+\lstset{
+    backgroundcolor=\color[rgb]{0.86,0.88,0.93},
+    language=Matlab, keywordstyle=\color[rgb]{0,0,1},
+    basicstyle=\footnotesize \ttfamily,breaklines=true,
+    escapeinside={\%*}{*)}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%										%%%%%

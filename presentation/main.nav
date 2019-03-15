@@ -37,31 +37,35 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {12}{14}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{5}{15/16}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{5}{15/15}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {15}{16}}
+\headcommand {\beamer@framepages {15}{15}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{6}{17/17}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{6}{16/16}{Curve Fitting}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {16}{16}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{1}{7}{17/17}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {17}{17}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{7}{18/18}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{8}{18/18}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {18}{18}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{8}{19/19}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{9}{19/19}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {19}{19}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{9}{20/20}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{10}{20/20}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {20}{20}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{10}{21/23}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{11}{21/23}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {21}{23}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{11}{24/25}{Curve Fitting}{0}}
+\headcommand {\slideentry {1}{1}{12}{24/25}{Curve Fitting}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {24}{25}}
 \defcounter {refsection}{0}\relax 
@@ -263,21 +267,25 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {81}{81}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {76}{81}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {81}{81}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{References}{82}{References}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{0}{82/82}{Appendix B - Bayes' Rule}{0}}
+\headcommand {\slideentry {4}{2}{2}{82/82}{Appendix B - Bayes' Rule}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {82}{82}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{0}{0}{82/83}{Appendix B - Bayes' Rule}{0}}
+\headcommand {\beamer@sectionpages {76}{82}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {82}{83}}
-\headcommand {\beamer@partpages {1}{83}}
-\headcommand {\beamer@subsectionpages {81}{83}}
-\headcommand {\beamer@sectionpages {76}{83}}
-\headcommand {\beamer@documentpages {83}}
-\headcommand {\gdef \inserttotalframenumber {55}}
+\headcommand {\beamer@subsectionpages {81}{82}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {5}{References}{83}{References}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{0}{83/83}{Appendix B - Bayes' Rule}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {83}{83}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{0}{0}{83/84}{Appendix B - Bayes' Rule}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {83}{84}}
+\headcommand {\beamer@partpages {1}{84}}
+\headcommand {\beamer@subsectionpages {81}{84}}
+\headcommand {\beamer@sectionpages {76}{84}}
+\headcommand {\beamer@documentpages {84}}
+\headcommand {\gdef \inserttotalframenumber {57}}
