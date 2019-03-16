@@ -215,6 +215,16 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \end{frame}
 
 \begin{frame}{\insertsubsection}
+	
+		\begin{figure}
+		\label{fig:Erms}
+			\includegraphics[totalheight=0.75\textheight]{"Figure1.5".eps}
+		\end{figure}
+	
+	
+	\end{frame}
+
+\begin{frame}{\insertsubsection}
 
 \visible<1->{ To control the over-fitting, we try to \textit{regularize} the weights by adding a penalty term ($\lambda$) to error function, by this we force the coefficients to not reach high values.}
 
@@ -230,11 +240,21 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 
 \end{frame}
 
+
 \begin{frame}
 	% \vspace{1em}
 	\lstinputlisting[linerange={3-7,12-16,18-18,24-24}]{codes/lnRegRegulated.m}
 \end{frame}
 
+\begin{frame}{\insertsubsection}
+	
+	\begin{figure}
+	\label{fig:Erms}
+		\includegraphics[totalheight=0.75\textheight]{"Figure1.8".eps}
+	\end{figure}
+
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \subsection{A probabilistic perspective}
@@ -259,8 +279,8 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \begin{frame}{\insertsubsection}
 \begin{columns}
 \begin{column}{0.45\textwidth}
-	\visible<2->{So, we'll start to look the regression with a statistical approach. To encourage you, let's take the sentence.}
-	\visible<3->{\vspace{1.5em}
+	\visible<1->{So, we'll start to look the regression with a statistical approach. To encourage you, let's take the sentence.}
+	\visible<2->{\vspace{1.5em}
 		\begin{block}{Sentence}
 		\textit{Having an \textbf{\textcolor{red}{uncertainty}} in the measured value, we could represent it with a  \textbf{\textcolor{red}{probability distribuition}}}.
 		\end{block}
@@ -268,7 +288,7 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \end{column}
 \begin{column}{0.475\textwidth}  %%<--- here
     \begin{center}
-		\visible<4->{
+		\visible<3->{
 		\includegraphics[totalheight=0.5\textheight]{Figure1c16.pdf}
 		}
      \end{center}
