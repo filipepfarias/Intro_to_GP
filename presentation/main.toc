@@ -4,20 +4,20 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {1}{1}{Curve Fitting}{4}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {1}{2}{A probabilistic perspective}{26}{0}{1}
+\beamer@subsectionintoc {1}{2}{A probabilistic perspective}{27}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Bayesian Linear Regression}{50}{0}{2}
+\beamer@sectionintoc {2}{Bayesian Linear Regression}{51}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{54}{0}{2}
+\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{55}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{Bayes' theorem for Gaussian variables}{59}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bayes' theorem for Gaussian variables}{60}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Gaussian Processes}{74}{0}{3}
+\beamer@sectionintoc {3}{Gaussian Processes}{75}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Linear regression revisited}{75}{0}{3}
+\beamer@subsectionintoc {3}{1}{Linear regression revisited}{76}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Appendix}{76}{0}{4}
+\beamer@sectionintoc {4}{Appendix}{78}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{1}{Appendix A - Matrix Calculus}{77}{0}{4}
+\beamer@subsectionintoc {4}{1}{Appendix A - Matrix Calculus}{79}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{2}{Appendix B - Bayes' Rule}{81}{0}{4}
+\beamer@subsectionintoc {4}{2}{Appendix B - Bayes' Rule}{83}{0}{4}

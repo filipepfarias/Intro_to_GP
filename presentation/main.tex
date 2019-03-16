@@ -35,7 +35,7 @@
 %%% Suppress biblatex annoying warning
 \usepackage{silence}
 \WarningFilter{biblatex}{Patching footnotes failed}
-\graphicspath{{graphics/}{graphics/prml/}{implementations/}}
+\graphicspath{{codes/}{graphics/}{graphics/prml/}{implementations/}}
 
 %%% Some useful commands
 % pdf-friendly newline in links
@@ -72,6 +72,10 @@
 
 \include{gaussian-processes}
 
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[plain]{}
+\end{frame}
+\setbeamercolor{background canvas}{bg=white}
 \include{appendix}
 
 \begin{frame}[allowframebreaks]{Bibliography}
