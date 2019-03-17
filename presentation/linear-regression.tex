@@ -279,7 +279,7 @@ Here, we've obtained $\mathbf{w}$ for the curve fitting.
 \begin{frame}{\insertsubsection}
 \begin{columns}
 \begin{column}{0.45\textwidth}
-	\visible<1->{So, we'll start to look the regression with a statistical approach. To encourage you, let's take the sentence.}
+	\visible<1->{So, we'll start to look the regression with a probabilistic approach. To encourage you, let's take the sentence.}
 	\visible<2->{\vspace{1.5em}
 		\begin{block}{Sentence}
 		\textit{Having an \textbf{\textcolor{red}{uncertainty}} in the measured value, we could represent it with a  \textbf{\textcolor{red}{probability distribuition}}}.
@@ -415,12 +415,8 @@ And then, from the \textit{joint probability} of the Gaussians distributions
 \begin{equation*}
 		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (x_n -  y(x_n, \mathbf{w}))^2
 \end{equation*}
-}
-\visible<2->{From this, we could obtain the \textbf{maximum likelihood}, or the \textit{best estimation for the parameters}, taking the derivatives of the log probability to zero, according to the terms $\beta$ and $\mathbf{w}$, our model parameters. We'll obtain
-\begin{equation*}
-\frac{1}{\beta_{ML}} = \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}_{ML}) - t_n \right\}^2
-\end{equation*}
-remembering that $\mathbf{w}_{ML}$ is already known from the regular linear regression.
+
+From this, we could obtain the \textbf{maximum likelihood}, or the \textit{best estimation for the parameters}, taking the derivatives of the log probability to zero, according to the terms $\beta$ and $\mathbf{w}$, our model parameters.
 }
 %Maximizing with respect to $\beta$, we'll have 
 
@@ -433,15 +429,11 @@ remembering that $\mathbf{w}_{ML}$ is already known from the regular linear regr
 
 \begin{frame}{\insertsubsection}
 We could observe that taking the derivative with respect to $\mathbf{w}$, our expression becomes closer to the \textit{error function} presented previously, added the dependency of $\beta$
-
 \begin{align*}
 	E(\mathbf{w}) \triangleq \frac{1}{2} \sum_{n=1}^N \left\{ y_n -  t_n \right\}^2
 \end{align*}
-
 Then some behaviors could be expected, as the \textbf{over-fitting}.
-
 %Maximizing with respect to $\beta$, we'll have 
-
 %\begin{equation*}
 %		\frac{1}{\beta_{ML}} = \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}_{ML}) - t_n \right\}^2
 %\end{equation*}
@@ -450,10 +442,18 @@ Then some behaviors could be expected, as the \textbf{over-fitting}.
 \end{frame}
 
 \begin{frame}{\insertsubsection}
+	We'll obtain the best $\beta$ by
+	\begin{equation*}
+	\frac{1}{\beta_{ML}} = \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}_{ML}) - t_n \right\}^2
+	\end{equation*}
+	remembering that $\mathbf{w}_{ML}$ is already known from the regular linear regression.	
+\end{frame}
+
+\begin{frame}{\insertsubsection}
 
 At this point, we have a probabilistic model and we may want to predict values for $x$. Then, we need a \textit{predictive distribution}. \\
 \vspace{1em}
-Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Theorem}, to convert a \textit{prior} probability in a \textit{posterior} probability. \\
+Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Theorem}, to convert a \textit{prior} probability in a \textit{posterior} probability and put some uncertainty in the parameters too. \\
 \end{frame}
 
 \begin{frame}{\insertsubsection}

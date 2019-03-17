@@ -15,9 +15,3 @@
 \beamer@sectionintoc {3}{Gaussian Processes}{76}{0}{3}
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {3}{1}{Linear regression revisited}{77}{0}{3}
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Appendix}{79}{0}{4}
-\defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{1}{Appendix A - Matrix Calculus}{80}{0}{4}
-\defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{2}{Appendix B - Bayes' Rule}{84}{0}{4}
