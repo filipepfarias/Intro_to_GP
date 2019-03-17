@@ -453,11 +453,11 @@ Then some behaviors could be expected, as the \textbf{over-fitting}.
 
 At this point, we have a probabilistic model and we may want to predict values for $x$. Then, we need a \textit{predictive distribution}. \\
 \vspace{1em}
-Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Theorem}, to convert a \textit{prior} probability in a \textit{posterior} probability and put some uncertainty in the parameters too. \\
+Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Rule}, to convert a \textit{prior} probability in a \textit{posterior} probability and put some uncertainty in the parameters too. \\
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-Mathematically, by Bayes' Theorem, we could infer
+Mathematically, by Bayes' Rule, we could infer
 \visible<2->{
 \begin{equation*}
 \underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} | \alpha \right)}_{\text{prior}}
