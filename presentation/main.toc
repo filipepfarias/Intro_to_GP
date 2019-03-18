@@ -8,10 +8,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{Bayesian Linear Regression}{52}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{1}{Bayes' rule for Gaussian variables}{54}{0}{2}
+\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{54}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{The D-dimensional Gaussian Distribution}{68}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bayes' rule for Gaussian variables}{58}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Gaussian Processes}{75}{0}{3}
-\defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Linear regression revisited}{76}{0}{3}
+\beamer@sectionintoc {3}{Gaussian Processes}{72}{0}{3}
