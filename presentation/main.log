@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.7)  18 MAR 2019 00:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.7)  18 MAR 2019 01:31
 entering extended mode
 **/home/filipepfarias/Documents/pibic/presentation/main.tex
 (/home/filipepfarias/Documents/pibic/presentation/main.tex
@@ -2239,17 +2239,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33957 strings out of 494865
- 674365 string characters out of 3177838
- 1189468 words of memory out of 3000000
- 36754 multiletter control sequences out of 15000+200000
+ 33964 strings out of 494865
+ 674543 string characters out of 3177838
+ 1189501 words of memory out of 3000000
+ 36760 multiletter control sequences out of 15000+200000
  46399 words of font info for 80 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  60i,19n,90p,847b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/filipepfarias/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}{/home/filipepfarias/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/lm/lmvtt10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplbi8a.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (75 pages, 683619 bytes).
+Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (75 pages, 684412 bytes).
 PDF statistics:
- 895 PDF objects out of 1000 (max. 8388607)
- 168 named destinations out of 1000 (max. 500000)
+ 897 PDF objects out of 1000 (max. 8388607)
+ 169 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

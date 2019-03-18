@@ -1,4 +1,4 @@
-%clear; close all; warning('off','all');
+clear; close all; warning('off','all');
 
 n = 20; 
 x = linspace(0,1,n)';
@@ -21,4 +21,4 @@ for M = 1:20
     plot(Xp,Tp); axis([0 1 -1.5 1.5]); xlabel('x','Interpreter','latex'); ylabel('y','Interpreter','latex');
     legend('Deterministic', 'Data', 'Predicted'); hold off; pause(0.5);
 end
-%warning('on','all'); print(mfilename,'-depsc');
+warning('on','all'); print(mfilename,'-depsc');

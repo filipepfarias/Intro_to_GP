@@ -212,6 +212,40 @@
       \verb https://books.google.com.br/books?id=BV3CAAAACAAJ
       \endverb
     \endentry
+    \entry{hennig-tr-is-8}{report}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=0fc3fa397d36e1fb833fdafa98a2b96f}{%
+           family={Hennig},
+           familyi={H\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Max Planck Institute for Intelligent Systems}%
+      }
+      \list{location}{1}{%
+        {Spemannstra{ß}e, 72076 T{ü}bingen, Germany}%
+      }
+      \strng{namehash}{0fc3fa397d36e1fb833fdafa98a2b96f}
+      \strng{fullhash}{0fc3fa397d36e1fb833fdafa98a2b96f}
+      \strng{bibnamehash}{0fc3fa397d36e1fb833fdafa98a2b96f}
+      \strng{authorbibnamehash}{0fc3fa397d36e1fb833fdafa98a2b96f}
+      \strng{authornamehash}{0fc3fa397d36e1fb833fdafa98a2b96f}
+      \strng{authorfullhash}{0fc3fa397d36e1fb833fdafa98a2b96f}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{number}{8}
+      \field{title}{Animating Samples from Gaussian Distributions}
+      \field{type}{Technical Report}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
     \entry{thomas2011}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=c74b7c1d815dc861532f386ead4180e5}{%
