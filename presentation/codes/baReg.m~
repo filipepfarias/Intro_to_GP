@@ -1,21 +1,40 @@
+clear;
 %% dataset
 ns = 20; 
 x = linspace(0,1,ns)';
-y = @(x) sin(2*pi*x);
+%y = @(x) sin(2*pi*x);
+w2 = 0.5; w1 = 0.8;
+y = @(x) w2*x + w1;
 e = .2*randn(size(x));
 t = y(x) + e;
 
 %% prior
 M = 2;
-Mu0 = zeros(1,M); Sigma0 = eye(M); beta = 1;
+MuPrior = zeros(1,M)'; SigmaPrior = eye(M); beta = 100;
 
 phi = @(x)(bsxfun(@power,x,0:M-1)); % Phi function
 phix = phi(x); % design matrix
 
-W = (phix'*phix)\phix;
 
-SigmaP = phix'*W;
+for i=1:length(t)
+%     SigmaPost = inv(SigmaPrior) + beta*(phix'*phix);
+%     MuPost = SigmaPost\(SigmaPrior\MuPrior + beta*phix'*t(i)); 
+    
+    SigmaPost = SigmaPrior + beta*(phix(1:i,:)'*phix(1:i,:));
+    MuPost = SigmaPost\(SigmaPrior\MuPrior + beta*phix(1:i,:)'*t(1:i));
+    MuPrior = MuPost;
 
-SigmaNiPrior = SigmaNi;
-SigmaNi = SigmaNiPrior + beta*(P'*P);
-MuPost = SigmaNi\(SigmaNiPrior*MuN + beta*P'*t(n));
+    W = mvnrnd(MuPost',inv(SigmaPost),10);
+    
+    xx = linspace(0,1,100);
+    yt = W(:,2)*xx + W(:,1);
+    f1 = figure; f2 = figure;
+    figure(f1); clf;
+    plot(xx,yt); hold on; plot(x(1:i),t(1:i),'o'); xlim([0 1]); ylim([0 2]);pause(0.5);
+    
+    x1 = -3:.2:3; x2 = -3:.2:3;
+    [X1,X2] = meshgrid(x1,x2);
+    F = mvnpdf([X1(:) X2(:)],MuP,Sigma);
+    F = reshape(F,length(x2),length(x1));
+    figure(f2); clf; contour(F);
+end
