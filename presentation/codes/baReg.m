@@ -15,7 +15,7 @@ MuPrior = zeros(1,M)'; SigmaPrior = eye(M); beta = 100;
 phi = @(x)(bsxfun(@power,x,0:M-1)); % Phi function
 phix = phi(x); % design matrix
 f1 = figure('Position',[0 100 500 400]); f2 = figure('Position',[501 100 500 400]);
-%f3 = figure;
+f3 = figure;
 
 
 for i=1:length(t)
@@ -24,7 +24,7 @@ for i=1:length(t)
         [X1,X2] = meshgrid(x1,x2);
         F = mvnpdf([X1(:) X2(:)],MuPrior',inv(SigmaPrior));
         F = reshape(F,length(x2),length(x1));
-        figure(f2); clf; imagesc(x1,x2,F);set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5); 
+        figure(f2); clf; imagesc(x1,x2,F);set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
     end
     
     SigmaPost = SigmaPrior + beta*(phix(1:i,:)'*phix(1:i,:));
