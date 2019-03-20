@@ -1,0 +1,21 @@
+%% dataset
+ns = 20; 
+x = linspace(0,1,ns)';
+y = @(x) sin(2*pi*x);
+e = .2*randn(size(x));
+t = y(x) + e;
+
+%% prior
+M = 2;
+Mu0 = zeros(1,M); Sigma0 = eye(M); beta = 1;
+
+phi = @(x)(bsxfun(@power,x,0:M-1)); % Phi function
+phix = phi(x); % design matrix
+
+W = (phix'*phix)\phix;
+
+SigmaP = phix'*W;
+
+SigmaNiPrior = SigmaNi;
+SigmaNi = SigmaNiPrior + beta*(P'*P);
+MuPost = SigmaNi\(SigmaNiPrior*MuN + beta*P'*t(n));
