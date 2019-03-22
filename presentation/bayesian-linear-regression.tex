@@ -46,6 +46,47 @@ where $\boldsymbol{\mu}$ is the D-dimensional mean vector, $\boldsymbol{\Sigma}$
 \end{block}
 \end{frame}
 
+ \begin{frame}{\insertsubsection}
+ 
+ \begin{block}{Partitioned Gaussians}
+ Given a joint Gaussian distribution $\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma})$ with $\boldsymbol{\Lambda} \equiv \boldsymbol{\Sigma}^{-1}$ and
+ \begin{equation*}
+ 	\mathbf{x} = 
+ 	 \begin{pmatrix}
+ 		\mathbf{x} _{a} \\
+ 		\mathbf{x} _{b}
+ 	\end{pmatrix} , 
+ 	\boldsymbol{\mu} = 
+ 	 \begin{pmatrix}
+ 		\boldsymbol{\mu}_{a} \\
+ 		\boldsymbol{\mu}_{b}
+ 	\end{pmatrix} , 
+ 	 \boldsymbol{\Sigma} = 
+ 	 \begin{pmatrix}
+ 		\boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\
+ 		\boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
+ 	\end{pmatrix} ,  \boldsymbol{\Lambda} = 
+ 	 \begin{pmatrix}
+ 		\boldsymbol{\Lambda}_{aa} & \boldsymbol{\Lambda}_{ab} \\
+ 		\boldsymbol{\Lambda}_{ba} & \boldsymbol{\Lambda}_{bb} 
+ 	\end{pmatrix}.
+ \end{equation*}
+ Will give us \\
+ \begin{itemize}
+ \item \textcolor{UniGold}{Conditional distribution:}
+ \begin{equation*}
+ p\left( \mathbf{x}_a | \mathbf{x}_b \right) = \mathcal{N}\left( \mathbf{x}_a| \boldsymbol{\mu}_{a|b}, \boldsymbol{\Lambda}^{-1}_{aa} \right), \  \boldsymbol{\mu}_{a|b} =  \boldsymbol{\mu}_a - \boldsymbol{\Lambda}^{-1}_{aa}\boldsymbol{\Lambda}_{ab} \left( \mathbf{x}_b - \boldsymbol{\mu}_b \right)
+ \end{equation*}
+
+ \item \textcolor{UniGold}{Marginal distribution:}
+ \begin{equation*}
+ p\left( \mathbf{x}_a \right) = \mathcal{N} \left( \mathbf{x}_a | \boldsymbol{\mu}_a,\boldsymbol{\Sigma}_{aa} \right)
+ \end{equation*}
+ \end{itemize}
+
+ \end{block}
+ \end{frame}
+
 
 \subsection{Bayes' rule for Gaussian variables}
 
@@ -147,46 +188,6 @@ In the next step, we'll assume a \textbf{prior distribution over parameters}, $p
 with mean $\mathbf{m}_0$ and variance $\mathbf{S}_0$.
 \end{frame}
 
-% \begin{frame}{\insertsubsection}
-% 
-% \begin{block}{Partitioned Gaussians}
-% Given a joint Gaussian distribution $\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma})$ with $\boldsymbol{\Lambda} \equiv \boldsymbol{\Sigma}^{-1}$ and
-% \begin{equation*}
-% 	\mathbf{x} = 
-% 	 \begin{pmatrix}
-% 		\mathbf{x} _{a} \\
-% 		\mathbf{x} _{b}
-% 	\end{pmatrix} , 
-% 	\boldsymbol{\mu} = 
-% 	 \begin{pmatrix}
-% 		\boldsymbol{\mu}_{a} \\
-% 		\boldsymbol{\mu}_{b}
-% 	\end{pmatrix} , 
-% 	 \boldsymbol{\Sigma} = 
-% 	 \begin{pmatrix}
-% 		\boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\
-% 		\boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
-% 	\end{pmatrix} ,  \boldsymbol{\Lambda} = 
-% 	 \begin{pmatrix}
-% 		\boldsymbol{\Lambda}_{aa} & \boldsymbol{\Lambda}_{ab} \\
-% 		\boldsymbol{\Lambda}_{ba} & \boldsymbol{\Lambda}_{bb} 
-% 	\end{pmatrix}.
-% \end{equation*}
-% Will give us \\
-% \begin{itemize}
-% \item \textcolor{UniGold}{Conditional distribution:}
-% \begin{equation*}
-% p\left( \mathbf{x}_a | \mathbf{x}_b \right) = \mathcal{N}\left( \mathbf{x}_a| \boldsymbol{\mu}_{a|b}, \boldsymbol{\Lambda}^{-1}_{aa} \right), \  \boldsymbol{\mu}_{a|b} =  \boldsymbol{\mu}_a - \boldsymbol{\Lambda}^{-1}_{aa}\boldsymbol{\Lambda}_{ab} \left( \mathbf{x}_b - \boldsymbol{\mu}_b \right)
-% \end{equation*}
-
-% \item \textcolor{UniGold}{Marginal distribution:}
-% \begin{equation*}
-% p\left( \mathbf{x}_a \right) = \mathcal{N} \left( \mathbf{x}_a | \boldsymbol{\mu}_a,\boldsymbol{\Sigma}_{aa} \right)
-% \end{equation*}
-% \end{itemize}
-
-% \end{block}
-% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
