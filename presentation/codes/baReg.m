@@ -10,7 +10,10 @@ t = y(x) + e;
 
 %% prior
 M = 2;
-MuPrior = zeros(1,M)'; SigmaPrior = eye(M); beta = 100;
+alpha = .1;
+beta = 1/.01;
+
+MuPrior = zeros(1,M)'; SigmaPrior = alpha\eye(M);
 
 phi = @(x)(bsxfun(@power,x,0:M-1)); % Phi function
 phix = phi(x); % design matrix
@@ -33,7 +36,7 @@ for i=1:length(t)
         xx = linspace(0,1,100);
         yt = W(:,2)*xx + W(:,1);
         %figure(f1); clf;
-        subplot(1,3,1); plot(xx,yt); title('Predicted'); xlim([0 1]); ylim([0 2]);
+        subplot(1,3,1); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
         pbaspect([1 1 1]); pause;
     end
     
@@ -46,7 +49,7 @@ for i=1:length(t)
     xx = linspace(0,1,100);
     yt = W(:,2)*xx + W(:,1);
     %figure(f1); clf;
-    subplot(1,3,1); plot(xx,yt); hold on; plot(x(1:i),t(1:i),'o'); xlim([0 1]); ylim([0 2]);
+    subplot(1,3,1); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); hold on; plot(x(1:i),t(1:i),'o'); xlim([0 1]); ylim([0 2]);
     pbaspect([1 1 1]); title('Predicted');
     
     F = mvnpdf([X1(:) X2(:)],MuPost',inv(SigmaPost));
@@ -60,4 +63,8 @@ for i=1:length(t)
     lkhd = reshape(lkhd,length(x2),length(x1));
     subplot(1,3,3); imagesc(x1,x2,lkhd); set(gca,'YDir','normal'); hold on; plot(w1,w2,'r+','LineWidth',1.5);
     pbaspect([1 1 1]); title('Likelihood'); pause(0.5);
+    
+    if i == 1
+        pause;
+    end
 end
