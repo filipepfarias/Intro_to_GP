@@ -237,21 +237,29 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {74}{74}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{2}{75/75}{Recap}{0}}
+\headcommand {\beamer@subsectionpages {74}{74}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{2}{75}{Recap}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{2}{1}{75/75}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {75}{75}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {73}{75}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {74}{75}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{References}{76}{References}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{0}{76/76}{Recap}{0}}
+\headcommand {\slideentry {3}{2}{2}{76/76}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {76}{76}}
-\headcommand {\beamer@partpages {1}{76}}
-\headcommand {\beamer@subsectionpages {74}{76}}
+\defcounter {refsection}{0}\relax 
 \headcommand {\beamer@sectionpages {73}{76}}
-\headcommand {\beamer@documentpages {76}}
-\headcommand {\gdef \inserttotalframenumber {52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {75}{76}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {4}{References}{77}{References}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{0}{77/77}{Recap}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\beamer@partpages {1}{77}}
+\headcommand {\beamer@subsectionpages {75}{77}}
+\headcommand {\beamer@sectionpages {73}{77}}
+\headcommand {\beamer@documentpages {77}}
+\headcommand {\gdef \inserttotalframenumber {53}}

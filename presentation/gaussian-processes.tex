@@ -5,11 +5,26 @@
 \begin{frame}{\insertsubsection}
     \framesubtitle{Linear Regression} 
 
-    What was done until here?
+    \textcolor{UniGold}{\textbf{What was done until here?}}
     \begin{itemize}
-        \item We assumed that our targets $t$ were \textcolor{UniOrange}{\textbf{i.i.d.}} and given by $t = y(\mathbf{x}) + \varepsilon$, where $\varepsilon \sim \mathcal{N}(0,\sigma^2)$
-        \item Our model is given by $\mathbf{y}(\mathbf{x}) = \boldsymbol{\Phi}^T \mathbf{w}$, where $\boldsymbol{\Phi}$ is the \textcolor{UniOrange}{\textbf{design matrix}}.
+        \item We assumed that our targets $t$ were \textcolor{UniOrange}{\textbf{i.i.d.}} and given by $t = y(\mathbf{x}) + \varepsilon$, where $\varepsilon \sim \mathcal{N}(0,\sigma^2)$.
+        \item Our model is given by $\mathbf{y}(\mathbf{x}) = \boldsymbol{\Phi}^T \mathbf{w}$, where $\boldsymbol{\Phi}$ is the \textcolor{UniOrange}{\textbf{design matrix}}, and this caracterize our model as \textcolor{UniOrange}{\textbf{linear in parameters}}.
+        \item The \textcolor{UniOrange}{\textbf{design matrix}} was defined as $ \phi_{i,j} = \phi_i(x_j)$.
+        \item The \textcolor{UniOrange}{\textbf{parameters}} were given by $\mathbf{w} = \left( \Phi^T \Phi \right)^{-1}\Phi^T \mathbf{t} $
     \end{itemize}
 
+\end{frame}
+
+\subsection{Recap}
+\begin{frame}{\insertsubsection}
+    \framesubtitle{Bayesian Linear Regression} 
+
+    \textcolor{UniGold}{\textbf{What was done until here?}}
+    \begin{itemize}
+        \item We put an \textcolor{UniOrange}{\textbf{uncertainty}} over the targets $t$.
+        \item We assumed that targets being \textcolor{UniOrange}{\textbf{distributed}} as $p( t| \mathbf{x}, \mathbf{w}, \beta) = \mathcal{N} ( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1})$.
+        \item This allowed to make an \textcolor{UniOrange}{\textbf{inference}} to obtain a \textcolor{UniOrange}{\textbf{prediction}} of the parameters.
+        \item By Bayes' Rule we obtained that $p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right) \propto p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right) p\left( \mathbf{w} | \alpha \right)$
+    \end{itemize}
 
 \end{frame}
