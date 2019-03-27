@@ -1,15 +1,15 @@
 close all; clear;
 N = 4; % number of components
-ns = 20; % number of samples
+ns = 25; % number of samples
 nf = 101;
 alpha = 0.001; beta = 1000;
 
 x = linspace(-1+eps,1-eps,ns)';
 a1 = 0.5; a2 = -0.8; a3 = 0.8; a4 = -0.2;
-y = a4*x.^3+a3*x.^2+a2*x+a1;
+y = @(x) (a4*x.^3+a3*x.^2+a2*x+a1);
 mu = 0;    
 e = normrnd(mu,0.02,size(x));
-t = y + e;
+t = y(x) + e;
 
 % figure(1);
 % leg1 = ['y = ',num2str(a1),'x + ',num2str(a2)];
@@ -32,13 +32,15 @@ phi = @(x,i) x^(i-1);
 
 xx = linspace(-1,1,100);
 k = 2;
+figure('units','normalized','outerposition',[0 0 1 1]);
 for n = 1:k:ns
-    w = mvnrnd(MuN',inv(SigmaNi),nf); pause(0.05);
+    w = mvnrnd(MuN',inv(SigmaNi),nf); pause(0.1);
     
     yt = w(:,4)*xx.^3 +  w(:,3)*xx.^2 + w(:,2)*xx + w(:,1);
 
 %     subplot(1,2,1)
-    plot(xx,yt); hold on; plot(x(1:k:n),t(1:k:n),'o'); axis square;
+    plot(xx,yt); hold on; plot(x(1:k:n),t(1:k:n),'+','LineWidth',1.5); hold on;
+    fplot(y,[xx(1) xx(end)],'w--','LineWidth',1.5); axis square;
     hold off;
 %     
 %     subplot(1,2,2)
