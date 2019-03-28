@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.7)  27 MAR 2019 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.7)  28 MAR 2019 00:03
 entering extended mode
 **/home/filipepfarias/Documents/pibic/presentation/main.tex
 (/home/filipepfarias/Documents/pibic/presentation/main.tex
@@ -2230,28 +2230,47 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 226--226
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 16.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 17.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 16--16
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 17--17
 [][]  
  []
 
 [74
 
 ]
+Package epstopdf Info: Source file: <codes/"baReg".eps>
+(epstopdf)                    date: 2019-03-27 23:56:16
+(epstopdf)                    size: 99028 bytes
+(epstopdf)             Output file: <codes/"baReg"-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-27 23:59:25
+(epstopdf)                    size: 67798 bytes
+(epstopdf)             Command: <epstopdf --outfile=codes/"baReg"-eps-converted-to.pdf codes/"baReg".eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+<codes/"baReg"-eps-converted-to.pdf, id=794, 938.50626pt x 201.75375pt>
+File: codes/"baReg"-eps-converted-to.pdf Graphic file (type pdf)
+<use codes/"baReg"-eps-converted-to.pdf>
+Package pdftex.def Info: codes/"baReg"-eps-converted-to.pdf  used on input line 35.
+(pdftex.def)             Requested size: 375.59634pt x 80.7448pt.
+
+Overfull \hbox (28.4728pt too wide) in paragraph at lines 35--35
+ | [] 
+ []
+
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 29.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 35.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 29--29
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 35--35
 [][]  
  []
 
 [75
 
-]) [76
+ </home/filipepfarias/Documents/pibic/presentation/codes/baReg-eps-converted-to.pdf>]) [76
 
 
 ]
@@ -2297,17 +2316,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33979 strings out of 494865
- 674718 string characters out of 3177838
- 1189524 words of memory out of 3000000
- 36768 multiletter control sequences out of 15000+200000
+ 33985 strings out of 494865
+ 674921 string characters out of 3177838
+ 1189580 words of memory out of 3000000
+ 36773 multiletter control sequences out of 15000+200000
  44797 words of font info for 76 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  60i,19n,90p,847b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/filipepfarias/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}{/home/filipepfarias/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/lm/lmvtt10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplbi8a.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/filipepfarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (77 pages, 715055 bytes).
+Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (77 pages, 781387 bytes).
 PDF statistics:
- 923 PDF objects out of 1000 (max. 8388607)
- 174 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 937 PDF objects out of 1000 (max. 8388607)
+ 175 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

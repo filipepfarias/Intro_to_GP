@@ -12,6 +12,7 @@
         \item The \textcolor{UniOrange}{\textbf{design matrix}} was defined as $ \phi_{i,j} = \phi_i(\mathbf{x}_j)$.
         \item The \textcolor{UniOrange}{\textbf{parameters}} were given by $\mathbf{w} = \left( \Phi^T \Phi \right)^{-1}\Phi^T \mathbf{t} $
     \end{itemize}
+    
 
 \end{frame}
 
@@ -25,5 +26,10 @@
         \item This allowed to make an \textcolor{UniOrange}{\textbf{inference}} to obtain a \textcolor{UniOrange}{\textbf{prediction}} of the parameters.
         \item By Bayes' Rule we obtained that $p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right) \propto p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right) p\left( \mathbf{w} | \alpha \right)$
     \end{itemize}
+
+    \begin{figure}
+		\label{fig:baReg}
+        \hspace*{-1.4cm}\includegraphics[totalheight=0.3\textheight]{"baReg".eps}
+		\end{figure}
 
 \end{frame}
