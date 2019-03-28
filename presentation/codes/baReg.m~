@@ -7,7 +7,7 @@ w2 = 0.5; w1 = 0.8;
 y = @(x) w2*x + w1;
 e = .2*randn(size(x));
 t = y(x) + e;
-gaussmf = @(x,params) (exp(-(x-params(2)).^2/(2*params(1))));
+gaussmf = @(y,params) (exp(-(x)));
 
 %% prior
 M = 2;
