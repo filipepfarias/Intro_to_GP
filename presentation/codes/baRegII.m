@@ -1,65 +1,79 @@
-close all; clear;
-N = 4; % number of components
-ns = 25; % number of samples
-nf = 101;
-alpha = 0.001; beta = 1000;
-
-x = linspace(-1+eps,1-eps,ns)';
-a1 = 0.5; a2 = -0.8; a3 = 0.8; a4 = -0.2;
-y = @(x) (a4*x.^3+a3*x.^2+a2*x+a1);
-mu = 0;    
-e = normrnd(mu,0.02,size(x));
+clear; close all;
+%% dataset
+ns = 20; 
+x = linspace(0,1,ns)';
+%y = @(x) sin(2*pi*x);
+w1 = 0.2 ;w2 = 0.8; w3 = 1.2;
+y = @(x) w3*x.^2 + w2*x + w1;
+e = .05*randn(size(x));
 t = y(x) + e;
 
-% figure(1);
-% leg1 = ['y = ',num2str(a1),'x + ',num2str(a2)];
-% plot(x,y);
-% hold on;
-% leg2 = ['Data : $\mathcal{N}$(',num2str(mu),', ',num2str(1/beta),')'];
-% scatter(x,t);
-% legend(leg1,leg2,'Interpreter','latex');
-% hold off;
+%% prior
+M = 3;
+alpha = .1;
+beta = 1/.01;
 
-% legend
+MuPrior = zeros(1,M)'; SigmaPrior = alpha\eye(M);
 
-% Initial iteration: N = 0
-MuN = zeros([N,1]);
-Sigma0 = (1/alpha)*eye(N); Sigma0i = inv(Sigma0);
-SigmaNi = Sigma0i;
+phi = @(x)(bsxfun(@power,x,0:M-1)); % Phi function
+phix = phi(x); % design matrix
+f1 = figure('units','normalized','outerposition',[0 0 1 1]);% f2 = figure('Position',[501 100 500 400]);
+pbaspect([1 1 1]);
+%f3 = figure;
 
-% Kernel function
-phi = @(x,i) x^(i-1);
 
-xx = linspace(-1,1,100);
-k = 2;
-figure('units','normalized','outerposition',[0 0 1 1]);
-for n = 1:k:ns
-    w = mvnrnd(MuN',inv(SigmaNi),nf); pause(0.1);
+for i=1:length(t)
+    clf;
+    if i == 1
+        x1 = w1-1:.02:w1+1; x2 = w2-1:.02:w2+1; x3 = w3-1:.02:w3+1;
+        [X1,X2,X3] = meshgrid(x1,x2,x3);
+        F = mvnpdf([X1(:) X2(:) X3(:)],MuPrior',inv(SigmaPrior));
+        F = reshape(F,length(x3),length(x2),length(x1));
+        %figure(f2); clf;
+        subplot(2,3,1);sl = slice(X1,X2,X3,F,w1,w2,w3); set(sl,'Edgecolor','none'); set(sl,'Edgecolor','none'); view([1 1 -1]);set(gca,'YDir','normal','ZDir','normal'); hold on; plot3(w1,w2,w3,'w+','LineWidth',1.5);
+        W = mvnrnd(MuPrior',inv(SigmaPrior),10); pbaspect([1 1 1]); title('Prior'); 
+        
+        xx = linspace(0,1,100);
+        yt = W(:,2)*xx + W(:,1);
+        %figure(f1); clf;
+        subplot(2,3,6); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
+        pbaspect([1 1 1]); pause;
+    end
     
-    yt = w(:,4)*xx.^3 +  w(:,3)*xx.^2 + w(:,2)*xx + w(:,1);
+    if i ~= 1
+        F = mvnpdf([X1(:) X2(:) X3(:)],MuPost',inv(SigmaPost));
+        F = reshape(F,length(x3),length(x2),length(x1));
+        %figure(f2); clf;
+        subplot(2,3,1); sl1 = slice(X1,X2,X3,F,w1,w2,w3); set(sl1,'Edgecolor','none'); view([1 1 -1]); set(gca,'YDir','normal','ZDir','normal'); hold on; plot3(w1,w2,w3,'w+','LineWidth',1.5);
+        pbaspect([1 1 1]);title('Prior');
+        %figure(f3); clf;
+    end
+    
+    SigmaPost = SigmaPrior + beta*(phix(1:i,:)'*phix(1:i,:));
+    MuPost = SigmaPost\(SigmaPrior\MuPrior + beta*phix(1:i,:)'*t(1:i));
+    MuPrior = MuPost;
 
-%     subplot(1,2,1)
-    plot(xx,yt); hold on; plot(x(1:k:n),t(1:k:n),'+','LineWidth',1.5); hold on;
-    fplot(y,[xx(1) xx(end)],'w--','LineWidth',1.5); axis square;
-    hold off;
-%     
-%     subplot(1,2,2)
-%     int = -100:10:100;
-%     [W1,W2] = meshgrid(int);
-%     F = mvnpdf([W1(:) W2(:)],MuN.',SigmaNi);
-%     F = reshape(F,length(int),length(int));
-% 
-%     colormap(jet);
-%     contourf(int,int,F,100,'edgecolor','none'); hold on;
-%     axis('square')
-%     xlabel('w_1'); ylabel('w_2'); 
-% 
-%     plot(w(:,1),w(:,2),'+'); axis square; % xlim([0 1]); ylim([0 1]);
-%     hold off;
+    W = mvnrnd(MuPost',inv(SigmaPost),10);
     
-    P = 1:N; P = arrayfun(@(i) phi(x(n),i),P);
+    xx = linspace(0,1,100);
+    yt = W(:,3)*xx.^2 + W(:,2)*xx + W(:,1);
+    %figure(f1); clf;
+    subplot(2,3,6); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); hold on; plot(x(1:i),t(1:i),'o'); xlim([0 1]); ylim([0 2]);
+    pbaspect([1 1 1]); title('Predicted');
     
-    SigmaNiPrior = SigmaNi;
-    SigmaNi = SigmaNiPrior + beta*(P'*P);
-    MuN = SigmaNi\(SigmaNiPrior*MuN + beta*P'*t(n));
+    F = mvnpdf([X1(:) X2(:) X3(:)],MuPost',inv(SigmaPost));
+    F = reshape(F,length(x3),length(x2),length(x1));
+    %figure(f2); clf;
+    subplot(2,3,5); sl2 = slice(X1,X2,X3,F,w1,w2,w3); set(sl2,'Edgecolor','none'); view([1 1 -1]); set(gca,'YDir','normal','ZDir','normal'); hold on; plot3(w1,w2,w3,'w+','LineWidth',1.5); 
+    pbaspect([1 1 1]);title('Posterior');
+    %figure(f3); clf; 
+    
+    lkhd = [X1(:) X2(:) X3(:)]*phix(i,:)'; lkhd = (sqrt(2*pi)*beta)\gaussmf(lkhd(:),[1 t(i)]);
+    lkhd = reshape(lkhd,length(x3),length(x2),length(x1));
+    subplot(2,3,4); sl3 = slice(X1,X2,X3,lkhd,w1,w2,w3); set(sl3,'Edgecolor','none'); view([1 1 -1]); set(gca,'YDir','normal','ZDir','normal'); hold on; plot3(w1,w2,w3,'r+','LineWidth',1.5);
+    pbaspect([1 1 1]); title('Likelihood'); pause(0.5);
+    
+    if i == 1
+        pause;
+    end
 end
