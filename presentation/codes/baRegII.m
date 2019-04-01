@@ -21,7 +21,6 @@ f1 = figure('units','normalized','outerposition',[0 0 1 1]);% f2 = figure('Posit
 pbaspect([1 1 1]);
 %f3 = figure;
 
-
 for i=1:length(t)
     clf;
     if i == 1
