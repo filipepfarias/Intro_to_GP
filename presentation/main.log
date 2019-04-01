@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.1)  28 MAR 2019 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.1)  1 APR 2019 10:40
 entering extended mode
 **/home/ffarias/Documents/pibic/presentation/main.tex
 (/home/ffarias/Documents/pibic/presentation/main.tex
@@ -2139,10 +2139,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 150--150
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 165.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 166.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 165--165
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 166--166
 [][]  
  []
 
@@ -2151,10 +2151,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 165--165
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 165.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 166.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 165--165
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 166--166
 [][]  
  []
 
@@ -2163,10 +2163,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 165--165
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 181.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 174.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 181--181
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 174--174
 [][]  
  []
 
@@ -2175,10 +2175,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 181--181
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 181.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 198.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 181--181
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 198--198
 [][]  
  []
 
@@ -2187,43 +2187,19 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 181--181
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 189.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 211.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 189--189
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 211--211
 [][]  
  []
 
 [70
 
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 213.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 213--213
-[][]  
- []
-
-[71
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 226.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 226--226
-[][]  
- []
-
-[72
-
 ])
 \openout2 = `gaussian-processes.aux'.
 
- (/home/ffarias/Documents/pibic/presentation/gaussian-processes.tex [73
+ (/home/ffarias/Documents/pibic/presentation/gaussian-processes.tex [71
 
 
 
@@ -2254,7 +2230,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][]  
  []
 
-[74
+[72
 
 ]
 Package epstopdf Info: Source file: <codes/"baReg".eps>
@@ -2264,42 +2240,42 @@ Package epstopdf Info: Source file: <codes/"baReg".eps>
 (epstopdf)                    date: 2019-03-28 11:58:25
 (epstopdf)                    size: 67798 bytes
 (epstopdf)             Command: <epstopdf --outfile=codes/"baReg"-eps-converted-to.pdf codes/"baReg".eps>
-(epstopdf)             \includegraphics on input line 48.
+(epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
-<codes/"baReg"-eps-converted-to.pdf, id=800, 938.50626pt x 201.75375pt>
+<codes/"baReg"-eps-converted-to.pdf, id=785, 938.50626pt x 201.75375pt>
 File: codes/"baReg"-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/"baReg"-eps-converted-to.pdf>
-Package pdftex.def Info: codes/"baReg"-eps-converted-to.pdf  used on input line 48.
+Package pdftex.def Info: codes/"baReg"-eps-converted-to.pdf  used on input line 49.
 (pdftex.def)             Requested size: 375.59634pt x 80.7448pt.
 
-Overfull \hbox (28.4728pt too wide) in paragraph at lines 48--48
+Overfull \hbox (28.4728pt too wide) in paragraph at lines 49--49
  | [] 
  []
 
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 48.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 49.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 48--48
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 49--49
 [][]  
  []
 
-[75
+[73
 
  </home/ffarias/Documents/pibic/presentation/codes/baReg-eps-converted-to.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 54.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 55.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 54--54
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 55--55
 [][]  
  []
 
-[76
+[74
 
-]) [77
+]) [75
 
 
 ]
@@ -2317,7 +2293,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 84--84
 [][]  
  []
 
-[78
+[76
 
 ]
 \tf@nav=\write7
@@ -2335,7 +2311,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 062F26D28BF1421C07EE7F7D51ECE7F3;636.
+(rerunfilecheck)             Checksum: 23CE3C902307FC74D806B787DD0B1017;636.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2345,17 +2321,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33993 strings out of 494865
- 671906 string characters out of 3178198
+ 33987 strings out of 494865
+ 671850 string characters out of 3178198
  1189583 words of memory out of 3000000
- 36778 multiletter control sequences out of 15000+200000
+ 36776 multiletter control sequences out of 15000+200000
  44797 words of font info for 76 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  60i,19n,90p,841b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/home/ffarias/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}{/home/ffarias/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/lm/lmvtt10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplbi8a.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/ffarias/Documents/pibic/presentation/main.pdf (78 pages, 783968 bytes).
+Output written on /home/ffarias/Documents/pibic/presentation/main.pdf (76 pages, 779298 bytes).
 PDF statistics:
- 949 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
+ 934 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

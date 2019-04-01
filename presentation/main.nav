@@ -203,67 +203,63 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {66}{67}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{6}{68/69}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{6}{68/68}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {68}{69}}
+\headcommand {\beamer@framepages {68}{68}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{7}{70/70}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{7}{69/69}{Bayes' rule for Gaussian variables}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {69}{69}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{8}{70/70}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {70}{70}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{8}{71/71}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\beamer@sectionpages {52}{70}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {59}{70}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {3}{Gaussian Processes}{71}{Gaussian Processes}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{1}{71/71}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {71}{71}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{9}{72/72}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\beamer@subsectionpages {71}{71}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{1}{72}{Recap}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{1}{1}{72/72}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {72}{72}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {52}{72}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {59}{72}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {3}{Gaussian Processes}{73}{Gaussian Processes}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{1}{73/73}{}{0}}
+\headcommand {\slideentry {3}{1}{2}{73/73}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {73}{73}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {73}{73}}
+\headcommand {\beamer@subsectionpages {72}{73}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{1}{74}{Recap}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{74}{Kernels}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{1}{74/74}{Recap}{0}}
+\headcommand {\slideentry {3}{2}{1}{74/74}{Kernels}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {74}{74}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{2}{75/75}{Recap}{0}}
+\headcommand {\slideentry {3}{2}{2}{75/75}{Kernels}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {75}{75}}
 \defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {71}{75}}
+\defcounter {refsection}{0}\relax 
 \headcommand {\beamer@subsectionpages {74}{75}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{2}{76}{Kernels}}
+\headcommand {\sectionentry {4}{References}{76}{References}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{1}{76/76}{Kernels}{0}}
+\headcommand {\slideentry {4}{0}{0}{76/76}{Kernels}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {76}{76}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{2}{77/77}{Kernels}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {77}{77}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {73}{77}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {76}{77}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{References}{78}{References}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{0}{78/78}{Kernels}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {78}{78}}
-\headcommand {\beamer@partpages {1}{78}}
-\headcommand {\beamer@subsectionpages {76}{78}}
-\headcommand {\beamer@sectionpages {73}{78}}
-\headcommand {\beamer@documentpages {78}}
-\headcommand {\gdef \inserttotalframenumber {54}}
+\headcommand {\beamer@partpages {1}{76}}
+\headcommand {\beamer@subsectionpages {74}{76}}
+\headcommand {\beamer@sectionpages {71}{76}}
+\headcommand {\beamer@documentpages {76}}
+\headcommand {\gdef \inserttotalframenumber {53}}
