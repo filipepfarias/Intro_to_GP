@@ -1,25 +1,29 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6980) (preloaded format=pdflatex 2019.3.1)  1 APR 2019 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2019.4.3)  4 APR 2019 15:57
 entering extended mode
-**/home/ffarias/Documents/pibic/presentation/main.tex
-(/home/ffarias/Documents/pibic/presentation/main.tex
-LaTeX2e <2018-12-01>
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamer.cls
-Document Class: beamer 2018/12/02 v3.55 A class for typesetting presentations
-(/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasemodes.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/filipepfarias/Documents/pibic/presentation/main.tex
+(/home/filipepfarias/Documents/pibic/presentation/main.tex
+LaTeX2e <2018-04-01> patch level 4
+Babel <3.20> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count80
 )
-\beamer@tempbox=\box27
+\beamer@tempbox=\box26
 \beamer@tempcount=\count81
 \c@beamerpauses=\count82
- (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasedecode.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
 \beamer@slideinframe=\count83
 \beamer@minimum=\count84
 )
-\beamer@commentbox=\box28
+\beamer@commentbox=\box27
 \beamer@modecount=\count85
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 \headdp=\dimen102
 \footheight=\dimen103
@@ -38,12 +42,12 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 \beamer@descdefault=\dimen116
 \beamer@descriptionwidth=\dimen117
 \beamer@lastskip=\skip41
-\beamer@areabox=\box29
-\beamer@animcurrent=\box30
-\beamer@animshowbox=\box31
-\beamer@sectionbox=\box32
-\beamer@logobox=\box33
-\beamer@linebox=\box34
+\beamer@areabox=\box28
+\beamer@animcurrent=\box29
+\beamer@animshowbox=\box30
+\beamer@sectionbox=\box31
+\beamer@logobox=\box32
+\beamer@linebox=\box33
 \beamer@sectioncount=\count86
 \beamer@subsubsectionmax=\count87
 \beamer@subsectionmax=\count88
@@ -63,18 +67,18 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 \beamer@coveringdepth=\count102
 \beamer@sectionadjust=\count103
 \beamer@tocsectionnumber=\count104
- (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoptions.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 ))
 \beamer@paperwidth=\skip42
 \beamer@paperheight=\skip43
- (/home/ffarias/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
-Package: geometry 2018/04/16 v5.8 Page Geometry
- (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/ifvtex.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/ifxetex/ifxetex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count105
@@ -89,39 +93,39 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen124
 \Gm@layoutvoffset=\dimen125
 \Gm@dimlist=\toks15
- (/home/ffarias/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/ffarias/.miktex/texmfs/install/tex/latex/extsizes/size8.clo
+) (/usr/share/texlive/texmf-dist/tex/latex/extsizes/size8.clo
 File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.tex
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks16
 \pgfutil@tempdima=\dimen128
 \pgfutil@tempdimb=\dimen129
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box35
- (/home/ffarias/.miktex/texmfs/install/tex/latex/ms/everyshi.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box34
+ (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks17
 \pgfkeys@temptoks=\toks18
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks19
 ))
 \pgf@x=\dimen130
@@ -141,24 +145,23 @@ Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 \t@pgf@toka=\toks20
 \t@pgf@tokb=\toks21
 \t@pgf@tokc=\toks22
-\pgf@sys@id@count=\count112
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
-))) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfsyssoftpath@smallbuffer@items=\count113
-\pgfsyssoftpath@bigbuffer@items=\count114
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count112
+\pgfsyssoftpath@bigbuffer@items=\count113
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -171,21 +174,21 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/graphics/dvipsnam.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen138
-\pgfmath@count=\count115
-\pgfmath@box=\box36
+\pgfmath@count=\count114
+\pgfmath@box=\box35
 \pgfmath@toks=\toks23
 \pgfmath@stack@operand=\toks24
 \pgfmath@stack@operation=\toks25
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code.tex (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count116
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count115
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen139
 \pgf@picmaxx=\dimen140
 \pgf@picminy=\dimen141
@@ -200,69 +203,67 @@ File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@yy=\dimen150
 \pgf@zx=\dimen151
 \pgf@zy=\dimen152
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen153
 \pgf@path@lasty=\dimen154
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen155
 \pgf@shorten@start@additional=\dimen156
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfpic=\box37
-\pgf@hbox=\box38
-\pgf@layerbox@main=\box39
-\pgf@picture@serial@count=\count117
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count116
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen157
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen158
 \pgf@pt@y=\dimen159
 \pgf@pt@temp=\dimen160
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen161
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen162
-\pgf@sys@shading@range@num=\count118
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfexternal@startupbox=\box40
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/xxcolor.sty
+\pgf@sys@shading@range@num=\count117
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box39
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
 Package: xxcolor 2003/10/24 ver 0.1
-\XC@nummixins=\count119
-\XC@countmixins=\count120
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/atbegshi.sty
+\XC@nummixins=\count118
+\XC@countmixins=\count119
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/infwarerr.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
- (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/hobsub-hyperref.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/hobsub-generic.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -273,9 +274,13 @@ Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -293,197 +298,201 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/auxhook.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/kvoptions.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen163
-\Hy@linkcounter=\count121
-\Hy@pagecounter=\count122
- (/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+\Hy@linkcounter=\count120
+\Hy@pagecounter=\count121
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count123
- (/home/ffarias/.miktex/texmfs/install/tex/latex/00miktex/hyperref.cfg
+\Hy@SavedSpaceFactor=\count122
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `bookmarks' set `true' on input line 4393.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4393.
-Package hyperref Info: Option `implicit' set `false' on input line 4393.
-Package hyperref Info: Hyper figures OFF on input line 4519.
-Package hyperref Info: Link nesting OFF on input line 4524.
-Package hyperref Info: Hyper index ON on input line 4527.
-Package hyperref Info: Plain pages OFF on input line 4534.
-Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4383.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4383.
+Package hyperref Info: Option `implicit' set `false' on input line 4383.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
-Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count124
- (/home/ffarias/.miktex/texmfs/install/tex/latex/url/url.sty
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count123
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5125.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen164
-\Fld@menulength=\count125
+\Fld@menulength=\count124
 \Field@Width=\dimen165
 \Fld@charsize=\dimen166
-Package hyperref Info: Hyper figures OFF on input line 6380.
-Package hyperref Info: Link nesting OFF on input line 6385.
-Package hyperref Info: Hyper index ON on input line 6388.
-Package hyperref Info: backreferencing OFF on input line 6395.
-Package hyperref Info: Link coloring OFF on input line 6400.
-Package hyperref Info: Link coloring with OCG OFF on input line 6405.
-Package hyperref Info: PDF/A mode OFF on input line 6410.
-LaTeX Info: Redefining \ref on input line 6450.
-LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count126
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count125
 
 
 Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count127
-\c@bookmark@seq@number=\count128
- (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/rerunfilecheck.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count126
+\c@bookmark@seq@number=\count127
+ (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaserequires.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasecompatibility.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasefont.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks26
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/sansmathaccent/sansmathaccent.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
 Package: sansmathaccent 2013/03/28
- (/home/ffarias/.miktex/texmfs/install/tex/latex/filehook/filehook.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
 Package: filehook 2011/10/12 v0.5d Hooks for input files
-))) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetranslator.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty (/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasemisc.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetwoscreens.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoverlay.sty
-\beamer@argscount=\count129
+)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count128
 \beamer@lastskipcover=\skip44
-\beamer@trivlistdepth=\count130
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetitle.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasesection.sty
-\c@lecture=\count131
-\c@part=\count132
-\c@section=\count133
-\c@subsection=\count134
-\c@subsubsection=\count135
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframe.sty
-\beamer@framebox=\box41
-\beamer@frametitlebox=\box42
-\beamer@zoombox=\box43
-\beamer@zoomcount=\count136
-\beamer@zoomframecount=\count137
+\beamer@trivlistdepth=\count129
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count130
+\c@part=\count131
+\c@section=\count132
+\c@subsection=\count133
+\c@subsubsection=\count134
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box40
+\beamer@frametitlebox=\box41
+\beamer@zoombox=\box42
+\beamer@zoomcount=\count135
+\beamer@zoomframecount=\count136
 \beamer@frametextheight=\dimen167
-\c@subsectionslide=\count138
+\c@subsectionslide=\count137
 \beamer@frametopskip=\skip45
 \beamer@framebottomskip=\skip46
 \beamer@frametopskipautobreak=\skip47
 \beamer@framebottomskipautobreak=\skip48
 \beamer@envbody=\toks27
 \framewidth=\dimen168
-\c@framenumber=\count139
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseverbatim.sty
+\c@framenumber=\count138
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 \beamer@verbatimfileout=\write4
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframesize.sty
-\beamer@splitbox=\box44
-\beamer@autobreakcount=\count140
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+\beamer@splitbox=\box43
+\beamer@autobreakcount=\count139
 \beamer@autobreaklastheight=\dimen169
 \beamer@frametitletoks=\toks28
 \beamer@framesubtitletoks=\toks29
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframecomponents.sty
-\beamer@footins=\box45
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasecolor.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasenotes.sty
-\beamer@frameboxcopy=\box46
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetoc.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetemplates.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+\beamer@footins=\box44
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
+\beamer@bg@ht=\dimen170
+\beamer@bg@wd=\dimen171
+\beamer@bg@dp=\dimen172
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box45
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
 \beamer@sbttoks=\toks30
- (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseauxtemplates.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaseboxes.sty
-\bmb@box=\box47
-\bmb@colorbox=\box48
-\bmb@boxshadow=\box49
-\bmb@boxshadowball=\box50
-\bmb@boxshadowballlarge=\box51
-\bmb@temp=\dimen170
-\bmb@dima=\dimen171
-\bmb@dimb=\dimen172
-\bmb@prevheight=\dimen173
+ (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box46
+\bmb@colorbox=\box47
+\bmb@boxshadow=\box48
+\bmb@boxshadowball=\box49
+\bmb@boxshadowballlarge=\box50
+\bmb@temp=\dimen173
+\bmb@dima=\dimen174
+\bmb@dimb=\dimen175
+\bmb@prevheight=\dimen176
 )
-\beamer@blockheadheight=\dimen174
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbaselocalstructure.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/tools/enumerate.sty
+\beamer@blockheadheight=\dimen177
+)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks31
 )
-\c@figure=\count141
-\c@table=\count142
+\c@figure=\count140
+\c@table=\count141
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasenavigation.sty
-\beamer@section@min@dim=\dimen175
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasetheorems.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2018/12/01 v2.17b AMS math features
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+\beamer@section@min@dim=\dimen178
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
-\ex@=\dimen176
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+\ex@=\dimen179
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen177
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen180
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count143
-LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count144
-\leftroot@=\count145
-LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count146
-\DOTSCASE@=\count147
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
-\big@size=\dimen178
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count148
-\c@MaxMatrixCols=\count149
+\inf@bad=\count142
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count143
+\leftroot@=\count144
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count145
+\DOTSCASE@=\count146
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen181
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count147
+\c@MaxMatrixCols=\count148
 \dotsspace@=\muskip11
-\c@parentequation=\count150
-\dspbrk@lvl=\count151
+\c@parentequation=\count149
+\dspbrk@lvl=\count150
 \tag@help=\toks33
-\row@=\count152
-\column@=\count153
-\maxfields@=\count154
+\row@=\count151
+\column@=\count152
+\maxfields@=\count153
 \andhelp@=\toks34
-\eqnshift@=\dimen179
-\alignsep@=\dimen180
-\tagshift@=\dimen181
-\tagwidth@=\dimen182
-\totwidth@=\dimen183
-\lineht@=\dimen184
+\eqnshift@=\dimen182
+\alignsep@=\dimen183
+\tagshift@=\dimen184
+\tagwidth@=\dimen185
+\totwidth@=\dimen186
+\lineht@=\dimen187
 \@envbody=\toks35
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks36
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/amscls/amsthm.sty
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks37
 \thm@bodyfont=\toks38
@@ -495,70 +504,70 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip56
 \dth@everypar=\toks42
 )
-\c@theorem=\count155
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerbasethemes.sty)) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerthemedefault.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemedefault.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamercolorthemedefault.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerinnerthemedefault.sty
-\beamer@dima=\dimen185
-\beamer@dimb=\dimen186
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerouterthemedefault.sty))) (/home/ffarias/.miktex/texmfs/install/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+\c@theorem=\count154
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemedefault.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
+\beamer@dima=\dimen188
+\beamer@dimb=\dimen189
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks45
 \verbatim@line=\toks46
 \verbatim@in@stream=\read2
-) (/home/ffarias/Documents/pibic/presentation/beamerthemeuniud.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfnodeparttextbox=\box54
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
-\pgf@nodesepstart=\dimen187
-\pgf@nodesepend=\dimen188
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/home/ffarias/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen189
-\pgffor@skip=\dimen190
+) (/home/filipepfarias/Documents/pibic/presentation/beamerthemeuniud.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box53
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen190
+\pgf@nodesepend=\dimen191
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen192
+\pgffor@skip=\dimen193
 \pgffor@stack=\toks47
 \pgffor@toks=\toks48
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@plot@mark@count=\count156
-\pgfplotmarksize=\dimen191
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count155
+\pgfplotmarksize=\dimen194
 )
-\tikz@lastx=\dimen192
-\tikz@lasty=\dimen193
-\tikz@lastxsaved=\dimen194
-\tikz@lastysaved=\dimen195
-\tikzleveldistance=\dimen196
-\tikzsiblingdistance=\dimen197
-\tikz@figbox=\box55
-\tikz@figbox@bg=\box56
-\tikz@tempbox=\box57
-\tikz@tempbox@bg=\box58
-\tikztreelevel=\count157
-\tikznumberofchildren=\count158
-\tikznumberofcurrentchild=\count159
-\tikz@fig@count=\count160
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfmatrixcurrentrow=\count161
-\pgfmatrixcurrentcolumn=\count162
-\pgf@matrix@numberofcolumns=\count163
+\tikz@lastx=\dimen195
+\tikz@lasty=\dimen196
+\tikz@lastxsaved=\dimen197
+\tikz@lastysaved=\dimen198
+\tikzleveldistance=\dimen199
+\tikzsiblingdistance=\dimen256
+\tikz@figbox=\box54
+\tikz@figbox@bg=\box55
+\tikz@tempbox=\box56
+\tikz@tempbox@bg=\box57
+\tikztreelevel=\count156
+\tikznumberofchildren=\count157
+\tikznumberofcurrentchild=\count158
+\tikz@fig@count=\count159
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count160
+\pgfmatrixcurrentcolumn=\count161
+\pgf@matrix@numberofcolumns=\count162
 )
-\tikz@expandcount=\count164
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) (/home/ffarias/.miktex/texmfs/install/tex/latex/soul/soul.sty
+\tikz@expandcount=\count163
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+))) (/usr/share/texlive/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks49
 \SOUL@lasttoken=\toks50
@@ -566,181 +575,186 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@buffer=\toks52
 \SOUL@token=\toks53
 \SOUL@spaceskip=\skip57
-\SOUL@ttwidth=\dimen198
-\SOUL@uldp=\dimen199
-\SOUL@ulht=\dimen256
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/mathtools/mathtools.sty
+\SOUL@ttwidth=\dimen257
+\SOUL@uldp=\dimen258
+\SOUL@ulht=\dimen259
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
- (/home/ffarias/.miktex/texmfs/install/tex/latex/tools/calc.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count165
-\calc@Bcount=\count166
-\calc@Adimen=\dimen257
-\calc@Bdimen=\dimen258
+\calc@Acount=\count164
+\calc@Bcount=\count165
+\calc@Adimen=\dimen260
+\calc@Bdimen=\dimen261
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count167
+\calc@Ccount=\count166
 \calc@Cskip=\skip60
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/mathtools/mhsetup.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count168
-\l_MT_multwidth_dim=\dimen259
+\g_MT_multlinerow_int=\count167
+\l_MT_multwidth_dim=\dimen262
 \origjot=\skip61
-\l_MT_shortvdotswithinadjustabove_dim=\dimen260
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen261
-\l_MT_above_intertext_sep=\dimen262
-\l_MT_below_intertext_sep=\dimen263
-\l_MT_above_shortintertext_sep=\dimen264
-\l_MT_below_shortintertext_sep=\dimen265
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/grffile.sty
+\l_MT_shortvdotswithinadjustabove_dim=\dimen263
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen264
+\l_MT_above_intertext_sep=\dimen265
+\l_MT_below_intertext_sep=\dimen266
+\l_MT_above_shortintertext_sep=\dimen267
+\l_MT_below_shortintertext_sep=\dimen268
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
 Package grffile Info: Option `multidot' is set to `true'.
 Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/chngcntr/chngcntr.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
-Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/caption/caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/caption/caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2017/03/19 v3.3-145 Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/04/15 v1.7-167 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen266
-\captionmargin@=\dimen267
-\captionwidth=\dimen268
-\caption@tempdima=\dimen269
-\caption@indent=\dimen270
-\caption@parindent=\dimen271
-\caption@hangindent=\dimen272
+\captionmargin=\dimen269
+\captionmargin@=\dimen270
+\captionwidth=\dimen271
+\caption@tempdima=\dimen272
+\caption@indent=\dimen273
+\caption@parindent=\dimen274
+\caption@hangindent=\dimen275
 )
-\c@caption@flags=\count169
-\c@ContinuedFloat=\count170
+\c@ContinuedFloat=\count168
 Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 )
-\c@subfigure=\count171
-\c@subtable=\count172
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/listings/listings.sty
-\lst@mode=\count173
-\lst@gtempboxa=\box59
+\c@subfigure=\count169
+\c@subtable=\count170
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count171
+\lst@gtempboxa=\box58
 \lst@token=\toks54
-\lst@length=\count174
-\lst@currlwidth=\dimen273
-\lst@column=\count175
-\lst@pos=\count176
-\lst@lostspace=\dimen274
-\lst@width=\dimen275
-\lst@newlines=\count177
-\lst@lineno=\count178
-\lst@maxwidth=\dimen276
- (/home/ffarias/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count179
-\lst@skipnumbers=\count180
-\lst@framebox=\box60
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/listings/listings.cfg
-File: listings.cfg 2019/02/27 1.8b listings configuration
+\lst@length=\count172
+\lst@currlwidth=\dimen276
+\lst@column=\count173
+\lst@pos=\count174
+\lst@lostspace=\dimen277
+\lst@width=\dimen278
+\lst@newlines=\count175
+\lst@lineno=\count176
+\lst@maxwidth=\dimen279
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count177
+\lst@skipnumbers=\count178
+\lst@framebox=\box59
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2019/02/27 1.8b (Carsten Heinz)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/textpos/textpos.sty
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2016/06/07 v1.8
 
 Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
-\TP@textbox=\box61
-\TP@holdbox=\box62
-\TPHorizModule=\dimen277
-\TPVertModule=\dimen278
-\TP@margin=\dimen279
-\TP@absmargin=\dimen280
+\TP@textbox=\box60
+\TP@holdbox=\box61
+\TPHorizModule=\dimen280
+\TPVertModule=\dimen281
+\TP@margin=\dimen282
+\TP@absmargin=\dimen283
 Grid set 16 x 16 = 22.7622pt x 17.07166pt
-\TPboxrulesize=\dimen281
-\TP@ox=\dimen282
-\TP@oy=\dimen283
+\TPboxrulesize=\dimen284
+\TP@ox=\dimen285
+\TP@oy=\dimen286
 \TP@tbargs=\toks55
-\TP@prevdepth=\dimen284
+\TP@prevdepth=\dimen287
 TextBlockOrigin set to 0pt x 0pt
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/tikz-bayesnet/tikzlibrarybayesnet.code.tex (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfnodepartlowerbox=\box63
-\pgfnodeparttwobox=\box64
-\pgfnodepartthreebox=\box65
-\pgfnodepartfourbox=\box66
-\pgfnodeparttwentybox=\box67
-\pgfnodepartnineteenbox=\box68
-\pgfnodeparteighteenbox=\box69
-\pgfnodepartseventeenbox=\box70
-\pgfnodepartsixteenbox=\box71
-\pgfnodepartfifteenbox=\box72
-\pgfnodepartfourteenbox=\box73
-\pgfnodepartthirteenbox=\box74
-\pgfnodeparttwelvebox=\box75
-\pgfnodepartelevenbox=\box76
-\pgfnodeparttenbox=\box77
-\pgfnodepartninebox=\box78
-\pgfnodeparteightbox=\box79
-\pgfnodepartsevenbox=\box80
-\pgfnodepartsixbox=\box81
-\pgfnodepartfivebox=\box82
-))) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
-File: tikzlibrarychains.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/home/ffarias/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\arrowsize=\dimen285
-))) (/home/ffarias/Documents/pibic/presentation/beamerinnerthemeuniud.sty) (/home/ffarias/Documents/pibic/presentation/beamerouterthemeuniud.sty) (/home/ffarias/Documents/pibic/presentation/beamercolorthemeuniud.sty) (/home/ffarias/Documents/pibic/presentation/beamerfontthemeuniud.sty (/home/ffarias/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemeserif.sty) (/home/ffarias/.miktex/texmfs/install/tex/latex/base/fontenc.sty
-Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- (/home/ffarias/.miktex/texmfs/install/tex/latex/base/t1enc.def
-File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+) (/usr/share/texlive/texmf-dist/tex/latex/tikz-bayesnet/tikzlibrarybayesnet.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.5)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
+\pgfnodepartlowerbox=\box62
+\pgfnodeparttwobox=\box63
+\pgfnodepartthreebox=\box64
+\pgfnodepartfourbox=\box65
+\pgfnodeparttwentybox=\box66
+\pgfnodepartnineteenbox=\box67
+\pgfnodeparteighteenbox=\box68
+\pgfnodepartseventeenbox=\box69
+\pgfnodepartsixteenbox=\box70
+\pgfnodepartfifteenbox=\box71
+\pgfnodepartfourteenbox=\box72
+\pgfnodepartthirteenbox=\box73
+\pgfnodeparttwelvebox=\box74
+\pgfnodepartelevenbox=\box75
+\pgfnodeparttenbox=\box76
+\pgfnodepartninebox=\box77
+\pgfnodeparteightbox=\box78
+\pgfnodepartsevenbox=\box79
+\pgfnodepartsixbox=\box80
+\pgfnodepartfivebox=\box81
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.5)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
+File: tikzlibrarychains.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.6)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen288
+))) (/home/filipepfarias/Documents/pibic/presentation/beamerinnerthemeuniud.sty) (/home/filipepfarias/Documents/pibic/presentation/beamerouterthemeuniud.sty) (/home/filipepfarias/Documents/pibic/presentation/beamercolorthemeuniud.sty) (/home/filipepfarias/Documents/pibic/presentation/beamerfontthemeuniud.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))) (/home/ffarias/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/02/27 1.8b listings language file
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
- (/home/ffarias/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count181
- (/home/ffarias/.miktex/texmfs/install/tex/latex/logreq/logreq.def
+\lrq@indent=\count179
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write5
+\integerpart=\count180
+\decimalpart=\count181
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \c@tabx@nest=\count182
 \c@listtotal=\count183
@@ -757,32 +771,29 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \c@maxitems=\count194
 \c@minitems=\count195
 \c@citecounter=\count196
-\c@maxcitecounter=\count197
-\c@savedcitecounter=\count198
-\c@uniquelist=\count199
-\c@uniquename=\count266
-\c@refsection=\count267
-\c@refsegment=\count268
-\c@maxextratitle=\count269
-\c@maxextratitleyear=\count270
-\c@maxextraname=\count271
-\c@maxextradate=\count272
-\c@maxextraalpha=\count273
-\c@abbrvpenalty=\count274
-\c@highnamepenalty=\count275
-\c@lownamepenalty=\count276
-\c@maxparens=\count277
-\c@parenlevel=\count278
-\blx@tempcnta=\count279
-\blx@tempcntb=\count280
-\blx@tempcntc=\count281
-\blx@maxsection=\count282
-\blx@maxsegment@0=\count283
-\blx@notetype=\count284
-\blx@parenlevel@text=\count285
-\blx@parenlevel@foot=\count286
-\blx@sectionciteorder@0=\count287
-\blx@entrysetcounter=\count288
+\c@savedcitecounter=\count197
+\c@uniquelist=\count198
+\c@uniquename=\count199
+\c@refsection=\count266
+\c@refsegment=\count267
+\c@maxextratitle=\count268
+\c@maxextratitleyear=\count269
+\c@maxextradate=\count270
+\c@maxextraalpha=\count271
+\c@abbrvpenalty=\count272
+\c@highnamepenalty=\count273
+\c@lownamepenalty=\count274
+\c@maxparens=\count275
+\c@parenlevel=\count276
+\blx@tempcnta=\count277
+\blx@tempcntb=\count278
+\blx@tempcntc=\count279
+\blx@maxsection=\count280
+\blx@maxsegment@0=\count281
+\blx@notetype=\count282
+\blx@parenlevel@text=\count283
+\blx@parenlevel@foot=\count284
+\blx@sectionciteorder@0=\count285
 \labelnumberwidth=\skip62
 \labelalphawidth=\skip63
 \biblabelsep=\skip64
@@ -792,87 +803,87 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \bibparsep=\skip68
 \bibhang=\skip69
 \blx@bcfin=\read3
-\blx@bcfout=\write5
-\c@mincomprange=\count289
-\c@maxcomprange=\count290
-\c@mincompwidth=\count291
+\blx@bcfout=\write6
+\c@mincomprange=\count286
+\c@maxcomprange=\count287
+\c@mincompwidth=\count288
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count292
-\c@savedafterword=\count293
-\c@annotator=\count294
-\c@savedannotator=\count295
-\c@author=\count296
-\c@savedauthor=\count297
-\c@bookauthor=\count298
-\c@savedbookauthor=\count299
-\c@commentator=\count300
-\c@savedcommentator=\count301
-\c@editor=\count302
-\c@savededitor=\count303
-\c@editora=\count304
-\c@savededitora=\count305
-\c@editorb=\count306
-\c@savededitorb=\count307
-\c@editorc=\count308
-\c@savededitorc=\count309
-\c@foreword=\count310
-\c@savedforeword=\count311
-\c@holder=\count312
-\c@savedholder=\count313
-\c@introduction=\count314
-\c@savedintroduction=\count315
-\c@namea=\count316
-\c@savednamea=\count317
-\c@nameb=\count318
-\c@savednameb=\count319
-\c@namec=\count320
-\c@savednamec=\count321
-\c@translator=\count322
-\c@savedtranslator=\count323
-\c@shortauthor=\count324
-\c@savedshortauthor=\count325
-\c@shorteditor=\count326
-\c@savedshorteditor=\count327
-\c@labelname=\count328
-\c@savedlabelname=\count329
-\c@institution=\count330
-\c@savedinstitution=\count331
-\c@lista=\count332
-\c@savedlista=\count333
-\c@listb=\count334
-\c@savedlistb=\count335
-\c@listc=\count336
-\c@savedlistc=\count337
-\c@listd=\count338
-\c@savedlistd=\count339
-\c@liste=\count340
-\c@savedliste=\count341
-\c@listf=\count342
-\c@savedlistf=\count343
-\c@location=\count344
-\c@savedlocation=\count345
-\c@organization=\count346
-\c@savedorganization=\count347
-\c@origlocation=\count348
-\c@savedoriglocation=\count349
-\c@origpublisher=\count350
-\c@savedorigpublisher=\count351
-\c@publisher=\count352
-\c@savedpublisher=\count353
-\c@language=\count354
-\c@savedlanguage=\count355
-\c@origlanguage=\count356
-\c@savedoriglanguage=\count357
-\c@pageref=\count358
-\c@savedpageref=\count359
+\c@afterword=\count289
+\c@savedafterword=\count290
+\c@annotator=\count291
+\c@savedannotator=\count292
+\c@author=\count293
+\c@savedauthor=\count294
+\c@bookauthor=\count295
+\c@savedbookauthor=\count296
+\c@commentator=\count297
+\c@savedcommentator=\count298
+\c@editor=\count299
+\c@savededitor=\count300
+\c@editora=\count301
+\c@savededitora=\count302
+\c@editorb=\count303
+\c@savededitorb=\count304
+\c@editorc=\count305
+\c@savededitorc=\count306
+\c@foreword=\count307
+\c@savedforeword=\count308
+\c@holder=\count309
+\c@savedholder=\count310
+\c@introduction=\count311
+\c@savedintroduction=\count312
+\c@namea=\count313
+\c@savednamea=\count314
+\c@nameb=\count315
+\c@savednameb=\count316
+\c@namec=\count317
+\c@savednamec=\count318
+\c@translator=\count319
+\c@savedtranslator=\count320
+\c@shortauthor=\count321
+\c@savedshortauthor=\count322
+\c@shorteditor=\count323
+\c@savedshorteditor=\count324
+\c@labelname=\count325
+\c@savedlabelname=\count326
+\c@institution=\count327
+\c@savedinstitution=\count328
+\c@lista=\count329
+\c@savedlista=\count330
+\c@listb=\count331
+\c@savedlistb=\count332
+\c@listc=\count333
+\c@savedlistc=\count334
+\c@listd=\count335
+\c@savedlistd=\count336
+\c@liste=\count337
+\c@savedliste=\count338
+\c@listf=\count339
+\c@savedlistf=\count340
+\c@location=\count341
+\c@savedlocation=\count342
+\c@organization=\count343
+\c@savedorganization=\count344
+\c@origlocation=\count345
+\c@savedoriglocation=\count346
+\c@origpublisher=\count347
+\c@savedorigpublisher=\count348
+\c@publisher=\count349
+\c@savedpublisher=\count350
+\c@language=\count351
+\c@savedlanguage=\count352
+\c@origlanguage=\count353
+\c@savedoriglanguage=\count354
+\c@pageref=\count355
+\c@savedpageref=\count356
 \shorthandwidth=\skip70
 \shortjournalwidth=\skip71
 \shortserieswidth=\skip72
@@ -889,36 +900,36 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip83
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count360
-\c@textcitetotal=\count361
-\c@textcitemaxnames=\count362
-\c@biburlnumpenalty=\count363
-\c@biburlucpenalty=\count364
-\c@biburllcpenalty=\count365
-\c@smartand=\count366
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
+\c@textcitecount=\count357
+\c@textcitetotal=\count358
+\c@textcitemaxnames=\count359
+\c@biburlnumpenalty=\count360
+\c@biburlucpenalty=\count361
+\c@biburllcpenalty=\count362
+\c@smartand=\count363
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count367
-\c@bbx:relatedtotal=\count368
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count364
+\c@bbx:relatedtotal=\count365
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/cbx/authoryear.cbx
-File: authoryear.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -929,43 +940,43 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/biblatex.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)) (/home/ffarias/.miktex/texmfs/install/tex/latex/silence/silence.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/silence/silence.sty
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error messages
-\sl@Save=\count369
-\sl@StateNumber=\count370
-\sl@MessageCount=\count371
-\sl@Casualties=\count372
+\sl@Save=\count366
+\sl@StateNumber=\count367
+\sl@MessageCount=\count368
+\sl@Casualties=\count369
 \sl@Filter=\toks56
 \sl@Message=\toks57
 \sl@UnexpandedMessage=\toks58
 \sl@Mess@ge=\toks59
-\sl@WarningCount=\count373
-\sl@WarningNumber=\count374
-\sl@WarningCasualties=\count375
+\sl@WarningCount=\count370
+\sl@WarningNumber=\count371
+\sl@WarningCasualties=\count372
 \sl@TempBOW=\toks60
 \sl@BankOfWarnings=\toks61
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count376
-\sl@ErrorNumber=\count377
-\sl@ErrorCasualties=\count378
+\sl@ErrorCount=\count373
+\sl@ErrorNumber=\count374
+\sl@ErrorCasualties=\count375
 \sl@TempBOE=\toks62
 \sl@BankOfErrors=\toks63
 LaTeX Info: Redefining \GenericError on input line 601.
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 )
-\@quotelevel=\count379
-\@quotereset=\count380
- (/home/ffarias/Documents/pibic/presentation/main.aux (/home/ffarias/Documents/pibic/presentation/linear-regression.aux
+\@quotelevel=\count376
+\@quotereset=\count377
+ (/home/filipepfarias/Documents/pibic/presentation/main.aux (/home/filipepfarias/Documents/pibic/presentation/linear-regression.aux
 
 LaTeX Warning: Label `fig:Erms' multiply defined.
 
-) (/home/ffarias/Documents/pibic/presentation/bayesian-linear-regression.aux) (/home/ffarias/Documents/pibic/presentation/gaussian-processes.aux))
+) (/home/filipepfarias/Documents/pibic/presentation/bayesian-linear-regression.aux) (/home/filipepfarias/Documents/pibic/presentation/gaussian-processes.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -983,7 +994,7 @@ LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 56.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/psnfss/t1ppl.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 *geometry* driver: auto-detecting
@@ -1020,44 +1031,46 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/home/ffarias/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count381
-\scratchdimen=\dimen286
-\scratchbox=\box83
-\nofMPsegments=\count382
-\nofMParguments=\count383
+\scratchcounter=\count378
+\scratchdimen=\dimen289
+\scratchbox=\box82
+\nofMPsegments=\count379
+\nofMParguments=\count380
 \everyMPshowfont=\toks64
-\MPscratchCnt=\count384
-\MPscratchDim=\dimen287
-\MPnumerator=\count385
-\makeMPintoPDFobject=\count386
+\MPscratchCnt=\count381
+\MPscratchDim=\dimen290
+\MPnumerator=\count382
+\makeMPintoPDFobject=\count383
 \everyMPtoPDFconversion=\toks65
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/home/ffarias/.miktex/texmfs/install/tex/latex/oberdiek/grfext.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box84
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box83
 Package hyperref Info: Link coloring OFF on input line 56.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
- (/home/ffarias/.miktex/texmfs/install/tex/generic/oberdiek/gettitlestring.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count387
+\c@section@level=\count384
 )
 LaTeX Info: Redefining \ref on input line 56.
 LaTeX Info: Redefining \pageref on input line 56.
 LaTeX Info: Redefining \nameref on input line 56.
- (/home/ffarias/Documents/pibic/presentation/main.out) (/home/ffarias/Documents/pibic/presentation/main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
+ (/home/filipepfarias/Documents/pibic/presentation/main.out) (/home/filipepfarias/Documents/pibic/presentation/main.out)
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
@@ -1097,43 +1110,43 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  T1/ppl/m/it --> T1/ppl/bx/it on input line 56.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  T1/lmvtt/m/n --> T1/lmvtt/bx/n on input line 56.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-basic-dictionary-English.dict
+ (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-bibliography-dictionary-English.dict
+) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-environment-dictionary-English.dict
+) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-environment-dictionary-English.dict
 Dictionary: translator-environment-dictionary, Language: English 
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-months-dictionary-English.dict
+) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-months-dictionary-English.dict
 Dictionary: translator-months-dictionary, Language: English 
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-numbers-dictionary-English.dict
+) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-numbers-dictionary-English.dict
 Dictionary: translator-numbers-dictionary, Language: English 
-) (/home/ffarias/.miktex/texmfs/install/tex/latex/translator/translator-theorem-dictionary-English.dict
+) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count388
+\c@lstlisting=\count385
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `main.bcf'.
+\openout6 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (/home/ffarias/Documents/pibic/presentation/main.bbl)
+ (/home/filipepfarias/Documents/pibic/presentation/main.bbl)
 Package biblatex Info: Reference section=0 on input line 56.
 Package biblatex Info: Reference segment=0 on input line 56.
- (/home/ffarias/Documents/pibic/presentation/main.nav)
+ (/home/filipepfarias/Documents/pibic/presentation/main.nav)
 LaTeX Font Info:    Try loading font information for T1+lmvtt on input line 59.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/lm/t1lmvtt.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmvtt.fd
 File: t1lmvtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
-{/home/ffarias/.miktex/texmfs/data/pdftex/config/pdftex.map}] (/home/ffarias/Documents/pibic/presentation/main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/filipepfarias/Documents/pibic/presentation/main.toc)
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/graphics/brasao1_horizontal_monocromatico-b.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<graphics/brasao1_horizontal_monocromatico-b.pdf, id=69, 358.87466pt x 605.84454pt>
+pdfTeX warning: pdflatex (file /home/filipepfarias/Documents/pibic/presentation/graphics/brasao1_horizontal_monocromatico-b.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<graphics/brasao1_horizontal_monocromatico-b.pdf, id=70, 358.87466pt x 605.84454pt>
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 65.
@@ -1145,10 +1158,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 65--65
 
 [2
 
- </home/ffarias/Documents/pibic/presentation/graphics/brasao1_horizontal_monocromatico-b.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/brasao1_horizontal_monocromatico-b.pdf>]
 \openout2 = `linear-regression.aux'.
 
- (/home/ffarias/Documents/pibic/presentation/linear-regression.tex
+ (/home/filipepfarias/Documents/pibic/presentation/linear-regression.tex
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
  [3
@@ -1194,8 +1207,8 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 22--22
 
 ]
 
-pdfTeX warning: pdflatex (file /home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<graphics/prml/Figure1c2.pdf, id=113, 213.79875pt x 159.59625pt>
+pdfTeX warning: pdflatex (file /home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<graphics/prml/Figure1c2.pdf, id=114, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1c2.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c2.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c2.pdf  used on input line 35.
@@ -1211,13 +1224,13 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 35--35
 
 [7
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c2.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c2.pdf>]
 LaTeX Font Info:    Try loading font information for U+msa on input line 52.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 52.
- (/home/ffarias/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <6> not available
@@ -1272,7 +1285,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 52--52
 [11
 
 ]
-<graphics/prml/Figure1c3.pdf, id=181, 206.29341pt x 154.42793pt>
+<graphics/prml/Figure1c3.pdf, id=183, 206.29341pt x 154.42793pt>
 File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c3.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 75.
@@ -1293,7 +1306,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 75--75
 
 [12
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c3.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c3.pdf>]
 File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c3.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 75.
@@ -1337,15 +1350,15 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 75--75
 
 ]
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29a".eps>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 289638 bytes
 (epstopdf)             Output file: <graphics/prml/"Figure1.29a"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 16658 bytes
-(epstopdf)             Command: <epstopdf --outfile=graphics/prml/"Figure1.29a"-eps-converted-to.pdf graphics/prml/"Figure1.29a".eps>
+(epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29a"-eps-converted-to.pdf graphics/prml/"Figure1.29a".eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29a"-eps-converted-to.pdf, id=225, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29a"-eps-converted-to.pdf, id=227, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29a"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29a"-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.29a"-eps-converted-to.pdf  used on input line 104.
@@ -1356,15 +1369,15 @@ Overfull \hbox (13.13408pt too wide) in paragraph at lines 104--104
  []
 
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29b".eps>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 289927 bytes
 (epstopdf)             Output file: <graphics/prml/"Figure1.29b"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 18108 bytes
-(epstopdf)             Command: <epstopdf --outfile=graphics/prml/"Figure1.29b"-eps-converted-to.pdf graphics/prml/"Figure1.29b".eps>
+(epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29b"-eps-converted-to.pdf graphics/prml/"Figure1.29b".eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29b"-eps-converted-to.pdf, id=226, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29b"-eps-converted-to.pdf, id=228, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29b"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29b"-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.29b"-eps-converted-to.pdf  used on input line 104.
@@ -1375,15 +1388,15 @@ Overfull \hbox (13.13408pt too wide) in paragraph at lines 104--104
  []
 
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29c".eps>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 286925 bytes
 (epstopdf)             Output file: <graphics/prml/"Figure1.29c"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 14943 bytes
-(epstopdf)             Command: <epstopdf --outfile=graphics/prml/"Figure1.29c"-eps-converted-to.pdf graphics/prml/"Figure1.29c".eps>
+(epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29c"-eps-converted-to.pdf graphics/prml/"Figure1.29c".eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29c"-eps-converted-to.pdf, id=227, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29c"-eps-converted-to.pdf, id=229, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29c"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29c"-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.29c"-eps-converted-to.pdf  used on input line 104.
@@ -1394,15 +1407,15 @@ Overfull \hbox (13.13408pt too wide) in paragraph at lines 104--104
  []
 
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29d".eps>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 285173 bytes
 (epstopdf)             Output file: <graphics/prml/"Figure1.29d"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 10907 bytes
-(epstopdf)             Command: <epstopdf --outfile=graphics/prml/"Figure1.29d"-eps-converted-to.pdf graphics/prml/"Figure1.29d".eps>
+(epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29d"-eps-converted-to.pdf graphics/prml/"Figure1.29d".eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29d"-eps-converted-to.pdf, id=228, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29d"-eps-converted-to.pdf, id=230, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29d"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29d"-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.29d"-eps-converted-to.pdf  used on input line 104.
@@ -1423,7 +1436,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 104--104
 
 [15
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.29a-eps-converted-to.pdf> </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.29b-eps-converted-to.pdf> </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.29c-eps-converted-to.pdf> </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.29d-eps-converted-to.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29a-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29b-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29c-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29d-eps-converted-to.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 124.
@@ -1471,19 +1484,19 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 186--186
 
 [19
 
-] (/home/ffarias/Documents/pibic/presentation/codes/lnReg.m) [20
+] (/home/filipepfarias/Documents/pibic/presentation/codes/lnReg.m) [20
 
 ]
 Package epstopdf Info: Source file: <codes/lnReg.eps>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 29648 bytes
 (epstopdf)             Output file: <codes/lnReg-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
-(epstopdf)             Command: <epstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
+(epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
 (epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
-<codes/lnReg-eps-converted-to.pdf, id=335, 371.3875pt x 284.06125pt>
+<codes/lnReg-eps-converted-to.pdf, id=338, 371.3875pt x 284.06125pt>
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/lnReg-eps-converted-to.pdf>
 Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 215.
@@ -1499,14 +1512,14 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 215--215
 
 [21
 
- </home/ffarias/Documents/pibic/presentation/codes/lnReg-eps-converted-to.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/codes/lnReg-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <codes/lnReg.eps>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 29648 bytes
 (epstopdf)             Output file: <codes/lnReg-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
-(epstopdf)             Command: <epstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
+(epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
 (epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
@@ -1526,12 +1539,12 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 215--215
 
 ]
 Package epstopdf Info: Source file: <codes/lnReg.eps>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 29648 bytes
 (epstopdf)             Output file: <codes/lnReg-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
-(epstopdf)             Command: <epstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
+(epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
 (epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
@@ -1551,15 +1564,15 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 215--215
 
 ]
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.5".eps>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 164671 bytes
 (epstopdf)             Output file: <graphics/prml/"Figure1.5"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 10027 bytes
-(epstopdf)             Command: <epstopdf --outfile=graphics/prml/"Figure1.5"-eps-converted-to.pdf graphics/prml/"Figure1.5".eps>
+(epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.5"-eps-converted-to.pdf graphics/prml/"Figure1.5".eps>
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.5"-eps-converted-to.pdf, id=362, 206.7725pt x 150.5625pt>
+<graphics/prml/"Figure1.5"-eps-converted-to.pdf, id=365, 206.7725pt x 150.5625pt>
 File: graphics/prml/"Figure1.5"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.5"-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.5"-eps-converted-to.pdf  used on input line 225.
@@ -1575,7 +1588,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 225--225
 
 [24
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.5-eps-converted-to.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.5-eps-converted-to.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 241.
@@ -1599,7 +1612,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 241--241
 
 [26
 
-] (/home/ffarias/Documents/pibic/presentation/codes/lnRegRegulated.m) [27
+] (/home/filipepfarias/Documents/pibic/presentation/codes/lnRegRegulated.m) [27
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{fig:Erms}) has been already used, duplicate ignored
 <to be read again> 
@@ -1607,15 +1620,15 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 241--241
 l.257 \end{frame}
                  
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.8".eps>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 267966 bytes
 (epstopdf)             Output file: <graphics/prml/"Figure1.8"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-18 12:20:51
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 10854 bytes
-(epstopdf)             Command: <epstopdf --outfile=graphics/prml/"Figure1.8"-eps-converted-to.pdf graphics/prml/"Figure1.8".eps>
+(epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.8"-eps-converted-to.pdf graphics/prml/"Figure1.8".eps>
 (epstopdf)             \includegraphics on input line 257.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.8"-eps-converted-to.pdf, id=406, 206.7725pt x 150.5625pt>
+<graphics/prml/"Figure1.8"-eps-converted-to.pdf, id=409, 206.7725pt x 150.5625pt>
 File: graphics/prml/"Figure1.8"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.8"-eps-converted-to.pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.8"-eps-converted-to.pdf  used on input line 257.
@@ -1631,10 +1644,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 257--257
 
 [28
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.8-eps-converted-to.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.8-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <8> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 297.
-<graphics/prml/Figure1c16.pdf, id=429, 238.83278pt x 151.58241pt>
+<graphics/prml/Figure1c16.pdf, id=433, 238.83278pt x 151.58241pt>
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 297.
@@ -1655,7 +1668,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 297--297
 
 [29
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1c16.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c16.pdf>]
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 297.
@@ -1797,7 +1810,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 360--360
 [37
 
 ]
-<graphics/prml/"Figure1.13".pdf, id=518, 215.93623pt x 154.87239pt>
+<graphics/prml/"Figure1.13".pdf, id=522, 215.93623pt x 154.87239pt>
 File: graphics/prml/"Figure1.13".pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.13".pdf>
 Package pdftex.def Info: graphics/prml/"Figure1.13".pdf  used on input line 377.
@@ -1813,7 +1826,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 377--377
 
 [38
 
- </home/ffarias/Documents/pibic/presentation/graphics/prml/Figure1.13.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.13.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 388.
@@ -1976,7 +1989,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 490--490
 ])
 \openout2 = `bayesian-linear-regression.aux'.
 
- (/home/ffarias/Documents/pibic/presentation/bayesian-linear-regression.tex [52
+ (/home/filipepfarias/Documents/pibic/presentation/bayesian-linear-regression.tex [52
 
 
 
@@ -2199,7 +2212,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 211--211
 ])
 \openout2 = `gaussian-processes.aux'.
 
- (/home/ffarias/Documents/pibic/presentation/gaussian-processes.tex [71
+ (/home/filipepfarias/Documents/pibic/presentation/gaussian-processes.tex [71
 
 
 
@@ -2209,12 +2222,12 @@ File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
 Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 31.
 (pdftex.def)             Requested size: 138.2795pt x 103.518pt.
 Package epstopdf Info: Source file: <codes/lnReg.eps>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 29648 bytes
 (epstopdf)             Output file: <codes/lnReg-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-20 10:22:50
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
-(epstopdf)             Command: <epstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
+(epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
@@ -2234,15 +2247,15 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 
 ]
 Package epstopdf Info: Source file: <codes/"baReg".eps>
-(epstopdf)                    date: 2019-03-28 11:58:25
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 99028 bytes
 (epstopdf)             Output file: <codes/"baReg"-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-03-28 11:58:25
+(epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 67798 bytes
-(epstopdf)             Command: <epstopdf --outfile=codes/"baReg"-eps-converted-to.pdf codes/"baReg".eps>
+(epstopdf)             Command: <repstopdf --outfile=codes/"baReg"-eps-converted-to.pdf codes/"baReg".eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
-<codes/"baReg"-eps-converted-to.pdf, id=785, 938.50626pt x 201.75375pt>
+<codes/"baReg"-eps-converted-to.pdf, id=792, 938.50626pt x 201.75375pt>
 File: codes/"baReg"-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/"baReg"-eps-converted-to.pdf>
 Package pdftex.def Info: codes/"baReg"-eps-converted-to.pdf  used on input line 49.
@@ -2263,13 +2276,13 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 49--49
 
 [73
 
- </home/ffarias/Documents/pibic/presentation/codes/baReg-eps-converted-to.pdf>]
+ </home/filipepfarias/Documents/pibic/presentation/codes/baReg-eps-converted-to.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 55.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 69.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 55--55
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 69--69
 [][]  
  []
 
@@ -2279,11 +2292,6 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 55--55
 
 
 ]
-
-Package biblatex Warning: Name format 'first-last' deprecated.
-(biblatex)                Please use 'given-family' instead.
-(biblatex)                Using 'given-family' now.
-
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
 Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 84.
@@ -2296,18 +2304,18 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 84--84
 [76
 
 ]
-\tf@nav=\write7
-\openout7 = `main.nav'.
+\tf@nav=\write8
+\openout8 = `main.nav'.
 
-\tf@toc=\write8
-\openout8 = `main.toc'.
+\tf@toc=\write9
+\openout9 = `main.toc'.
 
-\tf@snm=\write9
-\openout9 = `main.snm'.
+\tf@snm=\write10
+\openout10 = `main.snm'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
- (/home/ffarias/Documents/pibic/presentation/main.aux (/home/ffarias/Documents/pibic/presentation/linear-regression.aux) (/home/ffarias/Documents/pibic/presentation/bayesian-linear-regression.aux) (/home/ffarias/Documents/pibic/presentation/gaussian-processes.aux))
+ (/home/filipepfarias/Documents/pibic/presentation/main.aux (/home/filipepfarias/Documents/pibic/presentation/linear-regression.aux) (/home/filipepfarias/Documents/pibic/presentation/bayesian-linear-regression.aux) (/home/filipepfarias/Documents/pibic/presentation/gaussian-processes.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -2321,17 +2329,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33987 strings out of 494865
- 671850 string characters out of 3178198
- 1189583 words of memory out of 3000000
- 36776 multiletter control sequences out of 15000+200000
- 44797 words of font info for 76 fonts, out of 3000000 for 9000
- 0 hyphenation exceptions out of 8191
- 60i,19n,90p,841b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/home/ffarias/.miktex/texmfs/install/fonts/enc/dvips/base/8r.enc}{/home/ffarias/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}</home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/lm/lmvtt10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplb8a.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplbi8a.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></home/ffarias/.miktex/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/ffarias/Documents/pibic/presentation/main.pdf (76 pages, 779298 bytes).
+ 33750 strings out of 492649
+ 661951 string characters out of 6132032
+ 1183801 words of memory out of 5000000
+ 36772 multiletter control sequences out of 15000+600000
+ 44797 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,19n,90p,847b,1688s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmvtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (76 pages, 638944 bytes).
 PDF statistics:
- 934 PDF objects out of 1000 (max. 8388607)
+ 943 PDF objects out of 1000 (max. 8388607)
+ 779 compressed objects within 8 object streams
  174 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

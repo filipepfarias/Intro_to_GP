@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.0 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -21,7 +21,7 @@
   \datalist[entry]{nyt/global//global/global}
     \entry{bishop2016pattern}{book}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=1926457ebcacd352693574a2d8d484ce}{%
+        {{uniquename=0,uniquepart=base,hash=ad7339d242af22008cd505455c338f98}{%
            family={Bishop},
            familyi={B\bibinitperiod},
            given={C.M.},
@@ -31,12 +31,12 @@
       \list{publisher}{1}{%
         {Springer New York}%
       }
-      \strng{namehash}{1926457ebcacd352693574a2d8d484ce}
-      \strng{fullhash}{1926457ebcacd352693574a2d8d484ce}
-      \strng{bibnamehash}{1926457ebcacd352693574a2d8d484ce}
-      \strng{authorbibnamehash}{1926457ebcacd352693574a2d8d484ce}
-      \strng{authornamehash}{1926457ebcacd352693574a2d8d484ce}
-      \strng{authorfullhash}{1926457ebcacd352693574a2d8d484ce}
+      \strng{namehash}{ad7339d242af22008cd505455c338f98}
+      \strng{fullhash}{ad7339d242af22008cd505455c338f98}
+      \strng{bibnamehash}{ad7339d242af22008cd505455c338f98}
+      \strng{authorbibnamehash}{ad7339d242af22008cd505455c338f98}
+      \strng{authornamehash}{ad7339d242af22008cd505455c338f98}
+      \strng{authorfullhash}{ad7339d242af22008cd505455c338f98}
       \field{sortinit}{B}
       \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{extradatescope}{labelyear}
@@ -47,7 +47,6 @@
       \field{series}{Information Science and Statistics}
       \field{title}{Pattern Recognition and Machine Learning}
       \field{year}{2016}
-      \true{nocite}
       \verb{urlraw}
       \verb https://books.google.com.br/books?id=kOXDtAEACAAJ
       \endverb
@@ -57,13 +56,13 @@
     \endentry
     \entry{crassidis2011optimal}{book}{}
       \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=9c7b72b59cb92614b529ad78eef61822}{%
+        {{uniquename=0,uniquepart=base,hash=30a2c9ba5d52190c26c716620df84f9e}{%
            family={Crassidis},
            familyi={C\bibinitperiod},
            given={J.L.},
            giveni={J\bibinitperiod},
            givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=5f8500e0519e30d47c0814364005bf43}{%
+        {{uniquename=0,uniquepart=base,hash=6bc3a009a24a0d50578a01b77f774cfb}{%
            family={Junkins},
            familyi={J\bibinitperiod},
            given={J.L.},
@@ -73,12 +72,12 @@
       \list{publisher}{1}{%
         {CRC Press}%
       }
-      \strng{namehash}{bc2ac5091e2be7ffae74cd76efb90eb1}
-      \strng{fullhash}{bc2ac5091e2be7ffae74cd76efb90eb1}
-      \strng{bibnamehash}{bc2ac5091e2be7ffae74cd76efb90eb1}
-      \strng{authorbibnamehash}{bc2ac5091e2be7ffae74cd76efb90eb1}
-      \strng{authornamehash}{bc2ac5091e2be7ffae74cd76efb90eb1}
-      \strng{authorfullhash}{bc2ac5091e2be7ffae74cd76efb90eb1}
+      \strng{namehash}{03c37e3eef602727f9de232ec1826200}
+      \strng{fullhash}{03c37e3eef602727f9de232ec1826200}
+      \strng{bibnamehash}{03c37e3eef602727f9de232ec1826200}
+      \strng{authorbibnamehash}{03c37e3eef602727f9de232ec1826200}
+      \strng{authornamehash}{03c37e3eef602727f9de232ec1826200}
+      \strng{authorfullhash}{03c37e3eef602727f9de232ec1826200}
       \field{sortinit}{C}
       \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
       \field{extradatescope}{labelyear}
@@ -89,7 +88,6 @@
       \field{series}{Chapman \& Hall/CRC Applied Mathematics \& Nonlinear Science}
       \field{title}{Optimal Estimation of Dynamic Systems}
       \field{year}{2011}
-      \true{nocite}
       \verb{urlraw}
       \verb https://books.google.com.br/books?id=CmjRBQAAQBAJ
       \endverb
@@ -99,7 +97,7 @@
     \endentry
     \entry{dhrymes2013mathematics}{book}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=6b5a5409437f9926a1d832956acb18c8}{%
+        {{uniquename=0,uniquepart=base,hash=7c61d5fda3ef2539e77b2a8a11d94eb4}{%
            family={Dhrymes},
            familyi={D\bibinitperiod},
            given={P.J.},
@@ -109,12 +107,12 @@
       \list{publisher}{1}{%
         {Springer New York}%
       }
-      \strng{namehash}{6b5a5409437f9926a1d832956acb18c8}
-      \strng{fullhash}{6b5a5409437f9926a1d832956acb18c8}
-      \strng{bibnamehash}{6b5a5409437f9926a1d832956acb18c8}
-      \strng{authorbibnamehash}{6b5a5409437f9926a1d832956acb18c8}
-      \strng{authornamehash}{6b5a5409437f9926a1d832956acb18c8}
-      \strng{authorfullhash}{6b5a5409437f9926a1d832956acb18c8}
+      \strng{namehash}{7c61d5fda3ef2539e77b2a8a11d94eb4}
+      \strng{fullhash}{7c61d5fda3ef2539e77b2a8a11d94eb4}
+      \strng{bibnamehash}{7c61d5fda3ef2539e77b2a8a11d94eb4}
+      \strng{authorbibnamehash}{7c61d5fda3ef2539e77b2a8a11d94eb4}
+      \strng{authornamehash}{7c61d5fda3ef2539e77b2a8a11d94eb4}
+      \strng{authorfullhash}{7c61d5fda3ef2539e77b2a8a11d94eb4}
       \field{sortinit}{D}
       \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
       \field{extradatescope}{labelyear}
@@ -125,7 +123,6 @@
       \field{series}{SpringerLink : B{ü}cher}
       \field{title}{Mathematics for Econometrics}
       \field{year}{2013}
-      \true{nocite}
       \verb{urlraw}
       \verb https://books.google.com.br/books?id=HIK8BAAAQBAJ
       \endverb
@@ -135,7 +132,7 @@
     \endentry
     \entry{doob1944}{article}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=b1f7ca538b74cc0f274fecc6b1699907}{%
+        {{uniquename=0,uniquepart=base,hash=8359f1fa537fe7215e3ed16a42036fbf}{%
            family={Doob},
            familyi={D\bibinitperiod},
            given={J.\bibnamedelimi L.},
@@ -145,12 +142,12 @@
       \list{publisher}{1}{%
         {The Institute of Mathematical Statistics}%
       }
-      \strng{namehash}{b1f7ca538b74cc0f274fecc6b1699907}
-      \strng{fullhash}{b1f7ca538b74cc0f274fecc6b1699907}
-      \strng{bibnamehash}{b1f7ca538b74cc0f274fecc6b1699907}
-      \strng{authorbibnamehash}{b1f7ca538b74cc0f274fecc6b1699907}
-      \strng{authornamehash}{b1f7ca538b74cc0f274fecc6b1699907}
-      \strng{authorfullhash}{b1f7ca538b74cc0f274fecc6b1699907}
+      \strng{namehash}{8359f1fa537fe7215e3ed16a42036fbf}
+      \strng{fullhash}{8359f1fa537fe7215e3ed16a42036fbf}
+      \strng{bibnamehash}{8359f1fa537fe7215e3ed16a42036fbf}
+      \strng{authorbibnamehash}{8359f1fa537fe7215e3ed16a42036fbf}
+      \strng{authornamehash}{8359f1fa537fe7215e3ed16a42036fbf}
+      \strng{authorfullhash}{8359f1fa537fe7215e3ed16a42036fbf}
       \field{sortinit}{D}
       \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
       \field{extradatescope}{labelyear}
@@ -163,7 +160,6 @@
       \field{title}{The Elementary Gaussian Processes}
       \field{volume}{15}
       \field{year}{1944}
-      \true{nocite}
       \field{pages}{229\bibrangedash 282}
       \range{pages}{54}
       \verb{doi}
@@ -178,7 +174,7 @@
     \endentry
     \entry{graybill2001matrices}{book}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=dbae0cae148750808fdf26666e2ce5ed}{%
+        {{uniquename=0,uniquepart=base,hash=5e67dc729bf0b524669c10d0acc6631d}{%
            family={Graybill},
            familyi={G\bibinitperiod},
            given={F.A.},
@@ -188,12 +184,12 @@
       \list{publisher}{1}{%
         {Brooks/Cole}%
       }
-      \strng{namehash}{dbae0cae148750808fdf26666e2ce5ed}
-      \strng{fullhash}{dbae0cae148750808fdf26666e2ce5ed}
-      \strng{bibnamehash}{dbae0cae148750808fdf26666e2ce5ed}
-      \strng{authorbibnamehash}{dbae0cae148750808fdf26666e2ce5ed}
-      \strng{authornamehash}{dbae0cae148750808fdf26666e2ce5ed}
-      \strng{authorfullhash}{dbae0cae148750808fdf26666e2ce5ed}
+      \strng{namehash}{5e67dc729bf0b524669c10d0acc6631d}
+      \strng{fullhash}{5e67dc729bf0b524669c10d0acc6631d}
+      \strng{bibnamehash}{5e67dc729bf0b524669c10d0acc6631d}
+      \strng{authorbibnamehash}{5e67dc729bf0b524669c10d0acc6631d}
+      \strng{authornamehash}{5e67dc729bf0b524669c10d0acc6631d}
+      \strng{authorfullhash}{5e67dc729bf0b524669c10d0acc6631d}
       \field{sortinit}{G}
       \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
       \field{extradatescope}{labelyear}
@@ -204,7 +200,6 @@
       \field{series}{Duxbury Classic Series}
       \field{title}{Matrices with Applications in Statistics}
       \field{year}{2001}
-      \true{nocite}
       \verb{urlraw}
       \verb https://books.google.com.br/books?id=BV3CAAAACAAJ
       \endverb
@@ -244,23 +239,22 @@
       \field{title}{Animating Samples from Gaussian Distributions}
       \field{type}{Technical Report}
       \field{year}{2013}
-      \true{nocite}
     \endentry
     \entry{thomas2011}{book}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=c74b7c1d815dc861532f386ead4180e5}{%
+        {{uniquename=0,uniquepart=base,hash=f76c18537778f410de6a12dbfb957428}{%
            family={Schön},
            familyi={S\bibinitperiod},
            given={T.B.},
            giveni={T\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{c74b7c1d815dc861532f386ead4180e5}
-      \strng{fullhash}{c74b7c1d815dc861532f386ead4180e5}
-      \strng{bibnamehash}{c74b7c1d815dc861532f386ead4180e5}
-      \strng{authorbibnamehash}{c74b7c1d815dc861532f386ead4180e5}
-      \strng{authornamehash}{c74b7c1d815dc861532f386ead4180e5}
-      \strng{authorfullhash}{c74b7c1d815dc861532f386ead4180e5}
+      \strng{namehash}{f76c18537778f410de6a12dbfb957428}
+      \strng{fullhash}{f76c18537778f410de6a12dbfb957428}
+      \strng{bibnamehash}{f76c18537778f410de6a12dbfb957428}
+      \strng{authorbibnamehash}{f76c18537778f410de6a12dbfb957428}
+      \strng{authornamehash}{f76c18537778f410de6a12dbfb957428}
+      \strng{authorfullhash}{f76c18537778f410de6a12dbfb957428}
       \field{sortinit}{S}
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{extradatescope}{labelyear}
@@ -269,7 +263,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Manipulating the Multivariate Gaussian Density}
       \field{year}{2011}
-      \true{nocite}
       \verb{urlraw}
       \verb http://user.it.uu.se/~thosc112/pubpdf/schonl2011.pdf
       \endverb
