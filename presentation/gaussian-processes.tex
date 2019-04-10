@@ -95,12 +95,53 @@
 \begin{frame}{\insertsubsection}
     \framesubtitle{Introducing kernels}
 
-    \textcolor{UniGold}{\textbf{What is kernel}}
+    \textcolor{UniGold}{\textbf{What is kernel?}}
+    \begin{equation*}
+        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{y} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{y}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
+        \end{aligned}
+    \end{equation*}
+
     \begin{itemize}
         \item We could observe the appearance of terms like $\Phi^{\top} \mathbf{S}_0 \Phi, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi, \text { or } \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}$.
         \item The common term between these operations is $k(\mathbf{x},\mathbf{x^{\prime}}) = \boldsymbol{\phi}(\mathbf{x})^{\top} \mathbf{S}_0 \boldsymbol{\phi}\left(\mathbf{x}^{\prime}\right)$
         \item Then we define $k(\cdot,\cdot)$ as \textcolor{UniOrange}{\textbf{kernel function}}
+        \item This technique is particularly valuable in situations where it is more convenient to compute the kernel than the design matrix vectors themselves.
         
     \end{itemize}
     
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Gaussian processes}
+\begin{frame}{\insertsubsection}
+    \framesubtitle{In change of space}
+
+    \begin{itemize}
+        \item Previously we make the inference in the \textcolor{UniOrange}{\textbf{weight-space}} and then we find the function distribution.
+        \item Now we'll make the inference directly on \textcolor{UniOrange}{\textbf{function-space}}.
+        \item Let's define
+    \end{itemize}
+
+    \begin{definition}
+        \textit{
+        A \textcolor{UniGold}{\textbf{Gaussian process}} is a collection of random variables which any finite number of them have a joint Gaussian distribution.}
+    \end{definition}
+\end{frame}
+
+\subsection{Gaussian processes}
+\begin{frame}{\insertsubsection}
+    \framesubtitle{In change of space}
+
+    \textcolor{UniGold}{\textbf{Mean and covariance function}}
+    \begin{itemize}
+        \item As the Gaussian distribution, the $\mathcal{GP}$ is characterized by its \textcolor{UniOrange}{\textbf{mean function}} $m(\mathbf{x})$ and its \textcolor{UniOrange}{\textbf{covariance function}} $k(\mathbf{x,x}^{\prime})$ of a real process $f(\mathbf{x})$.
+    \item For a Gaussian processes
+    \begin{equation*}
+        f(\mathbf{x})  \sim \mathcal{G} \mathcal{P}\left(m(\mathbf{x}), k\left(\mathbf{x}, \mathbf{x}^{\prime}\right)\right)
+    \end{equation*}
+    \item We have
+    \begin{equation*}
+        \begin{aligned} m(\mathbf{x}) &=\mathbb{E}[f(\mathbf{x})] \\ k\left(\mathbf{x}, \mathbf{x}^{\prime}\right) &=\mathbb{E}\left[(f(\mathbf{x})-m(\mathbf{x}))\left(f\left(\mathbf{x}^{\prime}\right)-m\left(\mathbf{x}^{\prime}\right)\right)\right] \end{aligned}        
+    \end{equation*}
+    \end{itemize}
 \end{frame}
