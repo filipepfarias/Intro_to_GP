@@ -29,7 +29,7 @@ load('data.mat');
 N = length(T); % gives T,X,sigma
 
 %% prior on w
-F = 2; % number of features
+F = 7; % number of features
 phi = @(a)(bsxfun(@power,a,0:F-1)); % φ(a) = [1; a]
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
@@ -39,7 +39,7 @@ n = 100; x = linspace(-6,6,n)'; % ‘test’ points
 phix = phi(x); % features of x
 m = phix * mu;
 kxx = phix * Sigma * phix'; % p(fx) = N(m, kxx)
-s = bsxfun(@plus,m,chol(kxx + 1.0e-8 * eye(n))' * randn(n,3)); % samples from prior
+s = bsxfun(@plus,m,chol(kxx + 1.0e-5 * eye(n))' * randn(n,3)); % samples from prior
 stdpi = sqrt(diag(kxx)); % marginal stddev, for plotting prior
 
 %% plot
@@ -50,7 +50,7 @@ s3 = GPanimation(n,fr);
 
 %kxx = k(x,x); % kernel function (enter your favorite here)
 V = kxx;
-L = chol(V + 1.0e-8 * eye(size(V))); % jitter for numerical stability
+L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
 y = linspace(-15,20,250)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
 for f = 1:fr
@@ -78,11 +78,11 @@ kxX = phix * Sigma * phiX'; % cov(fx, fX) = kxX
 A = kxX / R; % pre-compute for re-use
 mpost = m + A * (R' \ (T-M)); % p(fx ∣ T ) = N(m + kxX(kXX + σ²I)^{−1} (T − M),
 vpost = kxx - A * A'; % kxx − kxX(kXX + σ²I)^{−1}kXx)
-%spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-8 * eye(n))' * randn(n,3)); % samples
+%spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-5 * eye(n))' * randn(n,3)); % samples
 stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
 
 close all;
-L = chol(vpost + 1.0e-13 * eye(size(vpost))); % jitter for numerical stability
+L = chol(vpost + 1.0e-5 * eye(size(vpost))); % jitter for numerical stability
 y = linspace(-15,20,250)';
 P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
 for f = 1:fr
@@ -91,7 +91,6 @@ for f = 1:fr
     plot(x,max(min(mpost,20),-15),'-','Color',dre,'LineWidth',0.7); hold on;
     plot(x,max(min(mpost + 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;
     plot(x,max(min(mpost - 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;
-    plot(x,phi(x),'-','Color',0.7*ones(3,1));
     plot(x,mpost + L' * s1(:,f),'--','Color',dre);
     plot(x,mpost + L' * s2(:,f),'--','Color',dre);
     plot(x,mpost + L' * s3(:,f),'--','Color',dre);
