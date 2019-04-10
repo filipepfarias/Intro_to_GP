@@ -48,22 +48,59 @@
 	\end{figure}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \subsection{Change of Space-View}
-% \begin{frame}{\insertsubsection}
-%     \framesubtitle{A briefly change of view point} 
-
-%     \textcolor{UniGold}{\textbf{What will be done now?}}
-%     \begin{itemize}
-%         \item 
-%     \end{itemize}
-
-% \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Kernels}
 \begin{frame}{\insertsubsection}
+    \framesubtitle{A more clear way to se what is happening...} 
+
+    % \textcolor{UniGold}{\textbf{A more clear way to se what is happening...}}
+
+    % \begin{figure}
+	% 	\label{fig:baReg}
+    %     \hspace*{-1.4cm}\includegraphics[totalheight=0.3\textheight]{"baRegInfII".eps}
+	% \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Change of Space}
+\begin{frame}{\insertsubsection}
+    \framesubtitle{A briefly change of view point} 
+
+    \textcolor{UniGold}{\textbf{From Bayesian inference}}
+    \begin{itemize}
+        \item We have $$p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)$$
+        \item We'll change from \textcolor{UniOrange}{\textbf{weight-space}} $$p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{x}, \mathbf{t})=\displaystyle\int p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{w}) p(\mathbf{w} | \mathbf{x}, \mathbf{t}) \mathrm{d} \mathbf{w}$$
+        \item To \textcolor{UniOrange}{\textbf{function-space}}
+    \begin{equation*}
+       \begin{aligned} p\left(f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t}\right) &=\int p\left(f_{*} | \mathbf{x}_{*}, \mathbf{w}\right) p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w}=\int \mathbf{x}_{*}^{\top} \mathbf{w} \ p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w} \\ &=\mathcal{N}\left(\beta \boldsymbol{\phi}(\mathbf{x}_{*})^{\top} \mathbf{S}_N \Phi \mathbf{t}, \boldsymbol{\phi}(\mathbf{x}_{*})^{\top} \mathbf{S}_N^{-1} \boldsymbol{\phi}(\mathbf{x}_{*})\right) \end{aligned} 
+    \end{equation*}
+    where $f_{*} \triangleq f\left(\mathbf{x}_{*}\right) \text { at } \mathbf{x}_{*}$ and $\Phi = \Phi(\mathbf{x})$
+    \end{itemize}
+\end{frame}
+
+\subsection{Change of Space}
+\begin{frame}{\insertsubsection}
+    \framesubtitle{A briefly change of view point} 
+
+    \textcolor{UniGold}{\textbf{Alternative formulation}}
+    
+    \begin{equation*}
+        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{y} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{y}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
+        \end{aligned}
+    \end{equation*}
+    where $K = \Phi^{\top}\mathbf{S}_0\Phi$
+    
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+    \framesubtitle{Introducing kernels}
+
+    \textcolor{UniGold}{\textbf{What is kernel}}
+    \begin{itemize}
+        \item We could observe the appearance of terms like $\Phi^{\top} \mathbf{S}_0 \Phi, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi, \text { or } \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}$.
+        \item The common term between these operations is $k(\mathbf{x},\mathbf{x^{\prime}}) = \boldsymbol{\phi}(\mathbf{x})^{\top} \mathbf{S}_0 \boldsymbol{\phi}\left(\mathbf{x}^{\prime}\right)$
+        \item Then we define $k(\cdot,\cdot)$ as \textcolor{UniOrange}{\textbf{kernel function}}
+        
+    \end{itemize}
     
 \end{frame}

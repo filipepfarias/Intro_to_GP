@@ -237,29 +237,45 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {73}{73}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {72}{73}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{2}{74}{Kernels}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{1}{74/74}{Kernels}{0}}
+\headcommand {\slideentry {3}{1}{3}{74/74}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {74}{74}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{2}{75/75}{Kernels}{0}}
+\headcommand {\beamer@subsectionpages {72}{74}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{2}{75}{Change of Space}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{2}{1}{75/75}{Change of Space}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {75}{75}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {71}{75}}
+\headcommand {\beamer@subsectionpages {75}{75}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {74}{75}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{76}{Change of Space}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{References}{76}{References}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{0}{76/76}{Kernels}{0}}
+\headcommand {\slideentry {3}{3}{1}{76/76}{Change of Space}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {76}{76}}
-\headcommand {\beamer@partpages {1}{76}}
-\headcommand {\beamer@subsectionpages {74}{76}}
-\headcommand {\beamer@sectionpages {71}{76}}
-\headcommand {\beamer@documentpages {76}}
-\headcommand {\gdef \inserttotalframenumber {53}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{3}{2}{77/77}{Change of Space}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {77}{77}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{3}{3}{78/78}{Change of Space}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {78}{78}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {71}{78}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {76}{78}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {4}{References}{79}{References}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{0}{79/79}{Change of Space}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\beamer@partpages {1}{79}}
+\headcommand {\beamer@subsectionpages {76}{79}}
+\headcommand {\beamer@sectionpages {71}{79}}
+\headcommand {\beamer@documentpages {79}}
+\headcommand {\gdef \inserttotalframenumber {56}}
