@@ -49,14 +49,14 @@ for f = 1:fr
             W2 = MuPrior + L'*s2(:,f);
             W3 = MuPrior + L'*s3(:,f);
             
-            subplot(2,2,1); imagesc(x1,x2,F); colormap(dgr2white); set(gca,'YDir','normal'); 
+            subplot(1,3,1); imagesc(x1,x2,F); colormap(dgr2white); set(gca,'YDir','normal'); 
             hold on; plot(w1,w2,'r+','LineWidth',1.5);
             hold on; plot(W1(1,1),W1(2,1),'o','MarkerEdgeColor','none',...
                 'MarkerFaceColor',dgr,'MarkerSize',5); 
             hold on; plot(W2(1,1),W2(2,1),'o','MarkerEdgeColor','none',...
-                'MarkerFaceColor',dgrdgr-[.25 .2 .01]','MarkerSize',5); 
+                'MarkerFaceColor',dgr-[.25, .2, .01],'MarkerSize',5); 
             hold on; plot(W3(1,1),W3(2,1),'o','MarkerEdgeColor','none',...
-                'MarkerFaceColor',dgrdgr-[.5 .3 .015]','MarkerSize',5); 
+                'MarkerFaceColor',dgr-[.5, .3, .015],'MarkerSize',5); 
             title('Prior'); pbaspect([1 1 1]);
             
             xx = linspace(0,1,100);
@@ -65,40 +65,12 @@ for f = 1:fr
             yt3 = W3(1,1)*xx + W3(2,1);
             
             %figure(f1); clf;
-            subplot(2,2,3:4); plot(xx,yt1,'Color',dgr); hold on;
-            plot(xx,yt2,'Color',dgr-[.25 .2 .01]); hold on; 
-            plot(xx,yt3,'Color',dgr-[.5 .3 .015]); hold on; 
+            subplot(1,3,3); plot(xx,yt1,'Color',dgr); hold on;
+            plot(xx,yt2,'Color',dgr-[.25, .2, .01]); hold on; 
+            plot(xx,yt3,'Color',dgr-[.5, .3, .015]); hold on; 
             plot(xx,y(xx),'r--','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
-            %pbaspect([1 1 1]);
+            pbaspect([1 1 1]);
         end
-        
-        %     if i ~= 1
-        %         F = mvnpdf([X1(:) X2(:)],MuPost',inv(SigmaPost));
-        %         F = reshape(F,length(x2),length(x1));
-        %         %figure(f2); clf;
-        %         subplot(1,4,1); imagesc(x1,x2,F); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
-        %         pbaspect([1 1 1]);title('Prior');
-        %         %figure(f3); clf;
-        %     end
-        %
-        %     SigmaPost = SigmaPrior + beta*(phix(1:i,:)'*phix(1:i,:));
-        %     MuPost = SigmaPost\(SigmaPrior\MuPrior + beta*phix(1:i,:)'*t(1:i));
-        %     MuPrior = MuPost;
-        %
-        %     W = mvnrnd(MuPost',inv(SigmaPost),10);
-        %
-        %     xx = linspace(0,1,100);
-        %     yt = W(:,2)*xx + W(:,1);
-        %     %figure(f1); clf;
-        %     subplot(1,4,4); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); hold on; plot(x(1:i),t(1:i),'o'); xlim([0 1]); ylim([0 2]);
-        %     pbaspect([1 1 1]); title('Predicted');
-        %
-        %     F = mvnpdf([X1(:) X2(:)],MuPost',inv(SigmaPost));
-        %     F = reshape(F,length(x2),length(x1));
-        %     %figure(f2); clf;
-        %     subplot(1,4,3); imagesc(x1,x2,F); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
-        %     pbaspect([1 1 1]);title('Posterior');
-        %     %figure(f3); clf;
     end
-    pause(0.05);
+    pause(0.01);
 end
