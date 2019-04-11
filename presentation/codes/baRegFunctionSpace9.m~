@@ -60,17 +60,15 @@ L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
 m3 = reshape(m,size(x1));
 std3 = sqrt(diag(V)); std3 = reshape(std3,size(m3));
 
-close all;
 for f = 1:fr
     clf; hold on
     %imagesc(x,y,P);
     %plot(x,max(min(m,20),-15),'-','Color',dgr,'LineWidth',0.7);
-    %surf(x1,x2,max(min(m3 + 2 * std3,200),-200),'FaceColor',dgr,'FaceAlpha',.3,'EdgeColor','none');
-    %surf(x1,x2,max(min(m3 - 2 * std3,200),-200),'FaceColor',dgr,'FaceAlpha',.3,'EdgeColor','none');
+    surf(x1,x2,max(min(m3 + 2 * std3,200),-200),'FaceAlpha',.5);
+    surf(x1,x2,max(min(m3 - 2 * std3,200),-200),'FaceAlpha',.5);
     %plot(x,phi(x),'-','Color',0.3*ones(3,1));
     ys1 = m + L' * s1(:,f); ys1 = reshape(ys1,size(x1));
-    surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,'EdgeColor',dgr,'EdgeLighting','gouraud');
-    light('Position',[-1 0 400],'Style','infinite'); view(3);
+    surf(x1,x2,ys1,'EdgeColor',dgr); view(3);
     %plot(x,m + L' * s2(:,f),'--','Color',dgr);
     %plot(x,m + L' * s3(:,f),'--','Color',dgr);
     %xlim([-6,6]);
