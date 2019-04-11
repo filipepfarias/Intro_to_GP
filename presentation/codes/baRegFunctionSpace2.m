@@ -3,8 +3,8 @@ clear; close all;
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
-dgr = [0,0.4717,0.4604]; % color [0,125,122]
-dre = [0.4906,0,0]; % color [130,0,0]
+dgr = [239,125,45]/255-20/255; % color [0,125,122]
+dre = [119,154,171]/255-50/255; % color [130,0,0]
 lightdgr = [1,1,1] - 0.5 * ([1,1,1] - dgr);
 lightdre = [1,1,1] - 0.5 * ([1,1,1] - dre);
 dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dgr));
@@ -29,13 +29,13 @@ load('data.mat');
 N = length(T); % gives T,X,sigma
 
 %% prior on w
-F = 7; % number of features
+F = 6; % number of features
 phi = @(a)(bsxfun(@power,a,0:F-1)); % φ(a) = [1; a]
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
 
 %% prior on f(x)
-n = 100; x = linspace(-6,6,n)'; % ‘test’ points
+n = 300; x = linspace(-6,6,n)'; % ‘test’ points
 phix = phi(x); % features of x
 m = phix * mu;
 kxx = phix * Sigma * phix'; % p(fx) = N(m, kxx)
@@ -51,7 +51,7 @@ s3 = GPanimation(n,fr);
 %kxx = k(x,x); % kernel function (enter your favorite here)
 V = kxx;
 L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
-y = linspace(-15,20,250)';
+y = linspace(-15,20,n)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
 for f = 1:fr
     clf; hold on
@@ -59,7 +59,7 @@ for f = 1:fr
     plot(x,max(min(m,20),-15),'-','Color',dgr,'LineWidth',0.7);
     plot(x,max(min(m + 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
     plot(x,max(min(m - 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
-    plot(x,phi(x),'-','Color',0.7*ones(3,1));
+    plot(x,phi(x),'-','Color',0.3*ones(3,1));
     plot(x,m + L' * s1(:,f),'--','Color',dgr);
     plot(x,m + L' * s2(:,f),'--','Color',dgr);
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
@@ -83,7 +83,7 @@ stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
 
 close all;
 L = chol(vpost + 1.0e-5 * eye(size(vpost))); % jitter for numerical stability
-y = linspace(-15,20,250)';
+y = linspace(-15,20,n)';
 P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
 for f = 1:fr
     clf; hold on

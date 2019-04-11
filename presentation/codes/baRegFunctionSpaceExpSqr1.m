@@ -3,8 +3,8 @@ clear; close all;
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
-dgr = [239,125,45]/255-20/255; % color [0,125,122]
-dre = [119,154,171]/255-50/255; % color [130,0,0]
+dgr = [0,0.4717,0.4604]; % color [0,125,122]
+dre = [0.4906,0,0]; % color [130,0,0]
 lightdgr = [1,1,1] - 0.5 * ([1,1,1] - dgr);
 lightdre = [1,1,1] - 0.5 * ([1,1,1] - dre);
 dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dgr));
@@ -29,8 +29,8 @@ load('data.mat');
 N = length(T); % gives T,X,sigma
 
 %% prior on w
-F = 17; % number of features
-phi = @(a)(2 * [cos(bsxfun(@times,a/8,0:8)), sin(bsxfun(@times,a/8,1:8))]); % φ(a) = [1; a]
+F = 10; % number of features
+phi = @(a)(exp(-0.5 * bsxfun(@minus,a,linspace(-6,6,10)).^2 ./ell.^2));
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
 
@@ -59,43 +59,11 @@ for f = 1:fr
     plot(x,max(min(m,20),-15),'-','Color',dgr,'LineWidth',0.7);
     plot(x,max(min(m + 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
     plot(x,max(min(m - 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
-    plot(x,phi(x),'-','Color',0.3*ones(3,1));
+    plot(x,phi(x),'-','Color',0.7*ones(3,1));
     plot(x,m + L' * s1(:,f),'--','Color',dgr);
     plot(x,m + L' * s2(:,f),'--','Color',dgr);
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
     xlim([-6,6]);
-    ylim([-15,20]);
-    drawnow; pause(0.02)
-end
-
-%% prior on Y = fX + e
-phiX = phi(X); % features of data
-M = phiX * mu;
-kXX = phiX * Sigma * phiX'; % p(fX) = N(M, kXX)
-G = kXX + sigma^2 * eye(N); % p(T) = N(M, kXX + σ²I)
-R = chol(G); % most expensive step: O(N³)
-kxX = phix * Sigma * phiX'; % cov(fx, fX) = kxX
-A = kxX / R; % pre-compute for re-use
-mpost = m + A * (R' \ (T-M)); % p(fx ∣ T ) = N(m + kxX(kXX + σ²I)^{−1} (T − M),
-vpost = kxx - A * A'; % kxx − kxX(kXX + σ²I)^{−1}kXx)
-%spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-5 * eye(n))' * randn(n,3)); % samples
-stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
-
-close all;
-L = chol(vpost + 1.0e-5 * eye(size(vpost))); % jitter for numerical stability
-y = linspace(-15,20,n)';
-P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
-for f = 1:fr
-    clf; hold on
-    imagesc(x,y,P);
-    plot(x,max(min(mpost,20),-15),'-','Color',dre,'LineWidth',0.7); hold on;
-    plot(x,max(min(mpost + 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;
-    plot(x,max(min(mpost - 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;
-    plot(x,mpost + L' * s1(:,f),'--','Color',dre);
-    plot(x,mpost + L' * s2(:,f),'--','Color',dre);
-    plot(x,mpost + L' * s3(:,f),'--','Color',dre);
-    plot(X,T,'bo');
-    xlim([-6,6]);
-    ylim([-15,20]);
+    ylim([-4,5]);
     drawnow; pause(0.02)
 end
