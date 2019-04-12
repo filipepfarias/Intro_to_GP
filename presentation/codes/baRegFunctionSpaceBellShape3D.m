@@ -32,8 +32,10 @@ T = T(:);
 N = length(T); % gives T,X,sigma
 
 %% prior on w
-F = 4; % number of features
-phi = @(a)(bsxfun(@power,a(:,1),[0:F-1])+bsxfun(@power,a(:,2),[0:F-1]));
+F = 81; % number of features
+[p1,p2] = meshgrid(linspace(-6,6,sqrt(F)),linspace(-6,6,sqrt(F)));
+p = [p1(:) p2(:)]; % positioning centroids
+phi = @(a)(exp(-.5*(bsxfun(@minus,a(:,1),p(:,1)').^2+bsxfun(@minus,a(:,2),p(:,2)').^2)));
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
 
@@ -70,11 +72,11 @@ for f = 1:fr
     ys1 = m + L' * s1(:,f); ys1 = reshape(ys1,size(x1));
     surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,...
         'EdgeColor',dgr,'EdgeLighting','gouraud','EdgeAlpha',.5);
-    light('Position',[-1 0 400],'Style','infinite'); view(3);
+    light('Position',[-1 0 400],'Style','infinite'); material dull; view(3);
     %plot(x,m + L' * s2(:,f),'--','Color',dgr);
     %plot(x,m + L' * s3(:,f),'--','Color',dgr);
     %xlim([-6,6]);
-    zlim([-80,20]);
+    zlim([-4,4]);
     drawnow; pause(0.02)
 end
 
@@ -110,7 +112,7 @@ for f = 1:fr
     ys1 = m + L' * s1(:,f); ys1 = reshape(ys1,size(x1));
     surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,...
         'EdgeColor',dgr,'EdgeLighting','gouraud','EdgeAlpha',.5);
-    light('Position',[-1 0 400],'Style','infinite'); view(3);
+    light('Position',[-1 0 400],'Style','infinite'); material dull; view(3);
     zlim([-2,2]);
     plot3(X1,X2,Y(X1,X2) + e,'bo');
     drawnow; pause(0.02)

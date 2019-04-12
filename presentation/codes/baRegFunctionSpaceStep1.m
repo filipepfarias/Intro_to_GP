@@ -29,8 +29,8 @@ load('data.mat');
 N = length(T); % gives T,X,sigma
 
 %% prior on w
-F = 16; % number of features
-phi = @(a)(bsxfun(@gt,a,linspace(-6,6,16))); % φ(a) = [1; a]
+F = 12; % number of features
+phi = @(a)(-1 + 2 * bsxfun(@lt,a,linspace(-6,6,12))); % φ(a) = [1; a]
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
 

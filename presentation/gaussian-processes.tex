@@ -8,9 +8,9 @@
     \textcolor{UniGold}{\textbf{What was done until here?}}
     \begin{itemize}
         \item We assumed that our targets $t$ were \textcolor{UniOrange}{\textbf{i.i.d.}} and given by $t = y(\mathbf{x}) + \varepsilon$, where $\varepsilon \sim \mathcal{N}(0,\beta)$.
-        \item Our model is given by $\mathbf{y}(\mathbf{x}) = \Phi^T \mathbf{w}$, where $\Phi$ is the \textcolor{UniOrange}{\textbf{design matrix}}, and this caracterize our model as \textcolor{UniOrange}{\textbf{linear in parameters}}.
+        \item Our model is given by $\mathbf{y}(\mathbf{x}) = \Phi^{\top} \mathbf{w}$, where $\Phi$ is the \textcolor{UniOrange}{\textbf{design matrix}}, and this caracterize our model as \textcolor{UniOrange}{\textbf{linear in parameters}}.
         \item The \textcolor{UniOrange}{\textbf{design matrix}} was defined as $ \phi_{i,j} = \phi_i(\mathbf{x}_j)$.
-        \item The \textcolor{UniOrange}{\textbf{parameters}} were given by $\mathbf{w} = \left( \Phi^T \Phi \right)^{-1}\Phi^T \mathbf{t}$.
+        \item The \textcolor{UniOrange}{\textbf{parameters}} were given by $\mathbf{w} = \left( \Phi^{\top} \Phi \right)^{-1}\Phi^{\top} \mathbf{t}$.
         \item These \textcolor{UniOrange}{\textbf{parameters}} calculated at the minimum of the cost function are called \textcolor{UniOrange}{\textbf{maximum likelihood}}.
     \end{itemize}
     \begin{columns}
@@ -70,7 +70,7 @@
     \begin{itemize}
         \item We have $$p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)$$
         \item We'll change from \textcolor{UniOrange}{\textbf{weight-space}} $$p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{x}, \mathbf{t})=\displaystyle\int p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{w}) p(\mathbf{w} | \mathbf{x}, \mathbf{t}) \mathrm{d} \mathbf{w}$$
-        \item To \textcolor{UniOrange}{\textbf{function-space}}
+        \item To \textcolor{UniOrange}{\textbf{feature-space}}
     \begin{equation*}
        \begin{aligned} p\left(f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t}\right) &=\int p\left(f_{*} | \mathbf{x}_{*}, \mathbf{w}\right) p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w}=\int \mathbf{x}_{*}^{\top} \mathbf{w} \ p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w} \\ &=\mathcal{N}\left(\beta \boldsymbol{\phi}(\mathbf{x}_{*})^{\top} \mathbf{S}_N \Phi \mathbf{t}, \boldsymbol{\phi}(\mathbf{x}_{*})^{\top} \mathbf{S}_N^{-1} \boldsymbol{\phi}(\mathbf{x}_{*})\right) \end{aligned} 
     \end{equation*}
@@ -85,7 +85,7 @@
     \textcolor{UniGold}{\textbf{Alternative formulation}}
     
     \begin{equation*}
-        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{y} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{y}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
+        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{t}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
         \end{aligned}
     \end{equation*}
     where $K = \Phi^{\top}\mathbf{S}_0\Phi$
@@ -97,7 +97,7 @@
 
     \textcolor{UniGold}{\textbf{What is kernel?}}
     \begin{equation*}
-        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{y} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{y}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
+        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{t}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
         \end{aligned}
     \end{equation*}
 
@@ -117,7 +117,7 @@
     \framesubtitle{In change of space}
 
     \begin{itemize}
-        \item Previously we make the inference in the \textcolor{UniOrange}{\textbf{weight-space}} and then we find the function distribution.
+        \item Previously we make the inference in the \textcolor{UniOrange}{\textbf{feature-space}} and then we find the function distribution.
         \item Now we'll make the inference directly on \textcolor{UniOrange}{\textbf{function-space}}.
         \item Let's define
     \end{itemize}
@@ -141,7 +141,7 @@
     \end{equation*}
     \item We have
     \begin{equation*}
-        \begin{aligned} m(\mathbf{x}) &=\mathbb{E}[f(\mathbf{x})] \\ k\left(\mathbf{x}, \mathbf{x}^{\prime}\right) &=\mathbb{E}\left[(f(\mathbf{x})-m(\mathbf{x}))\left(f\left(\mathbf{x}^{\prime}\right)-m\left(\mathbf{x}^{\prime}\right)\right)\right] \end{aligned}        
+    \begin{aligned} m(\mathbf{x}) &=\mathbb{E}[f(\mathbf{x})] \\ k\left(\mathbf{x}, \mathbf{x}^{\prime}\right) &=\mathbb{E}\left[(f(\mathbf{x})-m(\mathbf{x}))\left(f\left(\mathbf{x}^{\prime}\right)-m\left(\mathbf{x}^{\prime}\right)\right)\right] \end{aligned}        
     \end{equation*}
     \end{itemize}
 \end{frame}

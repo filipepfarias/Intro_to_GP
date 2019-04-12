@@ -30,7 +30,7 @@ N = length(T); % gives T,X,sigma
 
 %% prior on w
 F = 16; % number of features
-phi = @(a)(-1 + 2 * bsxfun(@lt,a,linspace(-6,6,16))); % φ(a) = [1; a]
+phi = @(a)(bsxfun(@gt,a,linspace(-6,6,16))); % φ(a) = [1; a]
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
 
@@ -64,7 +64,7 @@ for f = 1:fr
     plot(x,m + L' * s2(:,f),'--','Color',dgr);
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
     xlim([-6,6]);
-    ylim([-15,20]);
+    ylim([-15-1e2*eps,20]);
     drawnow; pause(0.02)
 end
 
@@ -96,6 +96,6 @@ for f = 1:fr
     plot(x,mpost + L' * s3(:,f),'--','Color',dre);
     plot(X,T,'bo');
     xlim([-6,6]);
-    ylim([-15,20]);
+    ylim([-15-1e2*eps,20]);
     drawnow; pause(0.02)
 end
