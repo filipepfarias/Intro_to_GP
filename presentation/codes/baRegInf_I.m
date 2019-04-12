@@ -8,6 +8,9 @@ lightdre = [1,1,1] - 0.5 * ([1,1,1] - dre);
 dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dgr));
 dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dre));
 
+fr = 30;
+mov(fr) = struct('cdata',[],'colormap',[]);
+
 %% dataset
 ns = 20; 
 x = linspace(0,1,ns)';
@@ -31,7 +34,7 @@ phix = phi(x); % design matrix
 f1 = figure;% f2 = figure('Position',[501 100 500 400]);
 pbaspect([1 1 1]);
 %f3 = figure;
-fr = 60;
+
 s1 = .3*GPanimation(2,fr); s2 = .3*GPanimation(2,fr); s3 = .3*GPanimation(2,fr);
 
 for f = 1:fr
@@ -72,5 +75,7 @@ for f = 1:fr
             pbaspect([1 1 1]);
         end
     end
-    pause(0.01);
+    drawnow;
+    mov(f) = getframe(gcf);
 end
+save(mfilename,'mov');

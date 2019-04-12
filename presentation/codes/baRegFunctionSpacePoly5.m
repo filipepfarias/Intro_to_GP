@@ -14,6 +14,7 @@ GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
     bsxfun(@rdivide,bsxfun(@minus,y,m').^2,v'))./sqrt(2*pi),sqrt(v')));
 
 fr = 30; % # frames
+mov(fr) = struct('cdata',[],'colormap',[]);
 
 %% data generation
 % ns = 20; X = linspace(-4,4,ns)';
@@ -66,7 +67,9 @@ for f = 1:fr
     xlim([-6,6]);
     ylim([-15,20]);
     drawnow; pause(0.02)
+    mov(f) = getframe(gcf);
 end
+save([mfilename,'prior'],'mov');
 
 %% prior on Y = fX + e
 phiX = phi(X); % features of data
@@ -98,4 +101,6 @@ for f = 1:fr
     xlim([-6,6]);
     ylim([-15,20]);
     drawnow; pause(0.02)
+    mov(f) = getframe(gcf);
 end
+save([mfilename,'post'],'mov');

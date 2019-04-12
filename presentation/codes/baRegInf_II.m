@@ -96,5 +96,7 @@ for f = 1:fr
         pbaspect([1 1 1]);
         
     end
-    pause(0.001);
+        drawnow;
+    mov(f) = getframe(gcf);
 end
+save(mfilename,'mov');
