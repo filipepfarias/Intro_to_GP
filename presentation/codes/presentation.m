@@ -12,7 +12,15 @@ movie(fig,mov,ex)
 
 %% Example Plots
 
-load baRegFunctionSpaceLinear.mat
+load baRegFunctionSpaceLinearprior.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceLinearpost.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpacePoly5prior.mat
 fig = figure;
 movie(fig,mov,ex)
 
@@ -20,9 +28,34 @@ load baRegFunctionSpacePoly5post.mat
 fig = figure;
 movie(fig,mov,ex)
 
-
-load baRegFunctionSpacePoly5prior.mat
+load baRegFunctionSpaceAbsprior.mat
 fig = figure;
 movie(fig,mov,ex)
 
-run baRegFunctionSpace3.m
+load baRegFunctionSpaceAbspost.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceLegendreprior.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceLegendrepost.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceBellShapeprior.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceBellShapepost.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceBellShapeprior.mat
+fig = figure;
+movie(fig,mov,ex)
+
+load baRegFunctionSpaceBellShapepost.mat
+fig = figure;
+movie(fig,mov,ex)
