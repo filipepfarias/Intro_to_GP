@@ -14,6 +14,8 @@ GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
     bsxfun(@rdivide,bsxfun(@minus,y,m').^2,v'))./sqrt(2*pi),sqrt(v')));
 
 fr = 30; % # frames
+mov(fr) = struct('cdata',[],'colormap',[]);
+figure('units','normalized','outerposition',[0 0 1 1]);
 
 %% data generation
 ns = 50; [X1,X2] = meshgrid(linspace(-4,4,ns),linspace(-4,4,ns));
@@ -58,7 +60,6 @@ L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
 m3 = reshape(m,size(x1));
 std3 = sqrt(diag(V)); std3 = reshape(std3,size(m3));
 
-close all;
 for f = 1:fr
     clf; hold on
     %imagesc(x,y,P);
@@ -78,8 +79,10 @@ for f = 1:fr
     %plot(x,m + L' * s3(:,f),'--','Color',dgr);
     %xlim([-6,6]);
     zlim([-10,10]);
-    drawnow; pause(0.02)
+    drawnow;% pause(0.02)
+    mov(f) = getframe;
 end
+save([mfilename,'prior'],'mov');
 
 %% prior on Y = fX + e
 phiX = phi(X); % features of data
@@ -94,17 +97,15 @@ vpost = kxx - A * A'; % kxx − kxX(kXX + σ²I)^{−1}kXx)
 %spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-5 * eye(n))' * randn(n,3)); % samples
 %stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
 
-close all;
 
 V = vpost; clear kxX vpost kxx;
 L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
 m3 = reshape(mpost,size(x1));
 std3 = sqrt(diag(V)); std3 = reshape(std3,size(m3));
 
-close all;
 for f = 1:fr
     clf; hold on;
-    scatter3(X1,X2,T3,'o','MarkerFaceColor',dgr,'MarkerEdgeColor',...
+    plot3(X1,X2,T3,'o','MarkerFaceColor',dgr-[.2 .2 0],'MarkerEdgeColor',...
         'none','MarkerSize',2);
     surf(x1,x2,max(min(m3 + 2 * std3,200),-200),'FaceLighting',...
         'gouraud','FaceColor',lightdgr,'EdgeColor',dgr,'EdgeLighting',...
@@ -116,6 +117,8 @@ for f = 1:fr
     surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,...
         'EdgeColor',dgr,'EdgeLighting','gouraud','EdgeAlpha',.5);
     light('Position',[-1 0 400],'Style','infinite'); material dull; view(3);
-    zlim([-2,2]);
-    drawnow; pause(0.02)
+    zlim([-2,2]); mov(f) = getframe;
+    drawnow;% pause(0.02)
+    
 end
+save([mfilename,'post'],'mov');

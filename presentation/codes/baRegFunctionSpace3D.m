@@ -16,23 +16,26 @@ GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
 fr = 30; % # frames
 
 %% data generation
-ns = 20; [X1,X2] = meshgrid(linspace(-4,4,ns),linspace(-4,4,ns));
-Y = @(X1,X2) 10*sin(.25*pi*X1).*sin(.25*pi*X2);
+ns = 50; [X1,X2] = meshgrid(linspace(-4,4,ns),linspace(-4,4,ns));
+Y = @(X1,X2) sin(.25*pi*X1).*sin(.25*pi*X2);
 %w2 = 2.5; w1 = 0.8;
 %Y = @(X) w2*X + w1;
 
-sigma = 2.5;
-e = (1/sigma^2)*randn(size(X1));
-T = Y(X1,X2);
+sigma = 2/3;
+e = sigma*randn(size(X1));
+T3 = Y(X1,X2);
 
 X = [X1(:) X2(:)];
-T = T(:);
+T = T3(:);
 
 %load('data.mat');
 N = length(T); % gives T,X,sigma
 
 %% prior on w
 F = 4; % number of features
+lambda = 1.8;
+[p1,p2] = meshgrid(linspace(-6,6,sqrt(F)),linspace(-6,6,sqrt(F)));
+p = [p1(:) p2(:)]; % positioning centroids
 phi = @(a)(bsxfun(@power,a(:,1),[0:F-1])+bsxfun(@power,a(:,2),[0:F-1]));
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
@@ -70,11 +73,11 @@ for f = 1:fr
     ys1 = m + L' * s1(:,f); ys1 = reshape(ys1,size(x1));
     surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,...
         'EdgeColor',dgr,'EdgeLighting','gouraud','EdgeAlpha',.5);
-    light('Position',[-1 0 5],'Style','infinite'); material dull; view(3);
+    light('Position',[-1 0 400],'Style','infinite'); material dull; view(3);
     %plot(x,m + L' * s2(:,f),'--','Color',dgr);
     %plot(x,m + L' * s3(:,f),'--','Color',dgr);
     %xlim([-6,6]);
-    zlim([-10,10]);
+    zlim([-2,2]);
     drawnow; pause(0.02)
 end
 
@@ -101,17 +104,18 @@ std3 = sqrt(diag(V)); std3 = reshape(std3,size(m3));
 close all;
 for f = 1:fr
     clf; hold on;
+    plot3(X1,X2,T3,'o','MarkerFaceColor',dgr,'MarkerEdgeColor',...
+        'none','MarkerSize',2);
     surf(x1,x2,max(min(m3 + 2 * std3,200),-200),'FaceLighting',...
         'gouraud','FaceColor',lightdgr,'EdgeColor',dgr,'EdgeLighting',...
         'gouraud','FaceAlpha',.3,'EdgeColor','none');
     surf(x1,x2,max(min(m3 - 2 * std3,200),-200),'FaceLighting',...
         'gouraud','FaceColor',lightdgr,'EdgeColor',dgr,'EdgeLighting',...
         'gouraud','FaceAlpha',.3,'EdgeColor','none');
-    ys1 =L' * s1(:,f); ys1 =m3 + reshape(ys1,size(x1));
+    ys1 = L' * s1(:,f); ys1 =m3 + reshape(ys1,size(x1));
     surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,...
         'EdgeColor',dgr,'EdgeLighting','gouraud','EdgeAlpha',.5);
-    light('Position',[-1 0 5],'Style','infinite'); material dull; view(3);
+    light('Position',[-1 0 400],'Style','infinite'); material dull; view(3);
     zlim([-2,2]);
-    plot3(X1,X2,Y(X1,X2) + e,'bo');
     drawnow; pause(0.02)
 end
