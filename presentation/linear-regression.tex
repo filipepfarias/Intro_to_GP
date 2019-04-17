@@ -1,58 +1,68 @@
 \section{Linear Regression}\label{sec:linear-regression}
 \framecard{\insertsection}
-\subsection{Curve Fitting}
+\subsection{Defining models}
 
 \begin{frame}{\insertsubsection}
+	\framesubtitle{An initial curve fitting problem}
 
-\visible<1->{If we have a set of points in the space that comes from observations of an experiment and we want to predict other points, this could be done with \textbf{\textcolor{UniGold}{ curve fitting }}.}
+\begin{itemize}
+	\item If we have a set of points in a space that comes from observations of an experiment and we want to predict other points, this could be done with \textbf{\textcolor{UniOrange}{curve fitting}}.
+	\item So we could define some strategy to find our model.
+\end{itemize}
 
-\vspace{0.5em}
-
-\visible<2->{So we could define some strategy to find our model.}
-
-\visible<3->{
-	\begin{block}{Strategy}
+\begin{block}{Strategy}
 	\begin{itemize}
-		\item[1] Purpose a \textbf{model}, e.g. functions like exponential, polynomial and others.
-		\item[2] Train our model with the training data set, finding the \textbf{unknown parameters}.
+		\item[1] Purpose a \textcolor{UniBlue}{\textbf{model}}, e.g. functions like exponential, polynomial and others.
+		\item[2] Train our model with the training data set, finding the \textcolor{UniBlue}{\textbf{unknown parameters}} or \textcolor{UniBlue}{\textbf{weights}}.
 	\end{itemize}
-	\end{block}
-}
-
+\end{block}
 \end{frame}
 
 
 \begin{frame}{\insertsubsection}
-
-Let's fit the points below by polynomial curve fitting
+	\framesubtitle{An initial curve fitting problem}
+	\begin{itemize}
+		\item Let's fit the points below by \textcolor{UniOrange}{\textbf{polynomial curve fitting}}.
+	\end{itemize}
 
 	\begin{figure}
 	\label{fig:plot-fitting-example}
 		\includegraphics[totalheight=0.75\textheight]{Figure1c2.pdf}
 	\end{figure}
-
-
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-Be the model chosen 
-\visible<2->{
-	\begin{align*}
-		y(x,\mathbf{w}) &= w_0x^0 + w_1x^1 + w_2x^2  + ... + w_{M-1}x^{M-1}  = \sum^{M-1}_{j=1} w_j x^j
-	\end{align*}
-}
-\visible<3->{For general, we could write this \textit{weighted sum} with any other function. In other words, we can put this in terms of $\phi_n(x)=x^n$, where $\phi$ could be other \textit{basis function}.
-For simplicity, we'll carry this notation along.
-}
-\visible<4->{
-\begin{align*}
-	y(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) +w_2 \phi_2(x)  + ... + w_{M-1} \phi_{M-1}(x) = \sum^{M-1}_{j=1} w_j \phi_j(x)
-\end{align*}
-}
+	\framesubtitle{Chosing a model}
+	\begin{itemize}
+		\item Be the model chosen a \textcolor{UniOrange}{\textbf{polynomial}}, we'll have
+		\begin{align*}
+			y(x,\mathbf{w}) &= w_0x^0 + w_1x^1 + w_2x^2  + ... + w_{M-1}x^{M-1}  = \sum^{M-1}_{j=1} w_j x^j
+		\end{align*}	
+		\item In general, we could write this \textcolor{UniOrange}{\textbf{weighted sum}} with any other function. In other words, we can put this in terms of $\phi_n(x)=x^n$, where $\phi$ could be other \textcolor{UniOrange}{\textbf{basis function}}.
+		\item e.g. we could have
+		\begin{align*}
+			y(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) +w_2 \phi_2(x)  + ... + w_{M-1} \phi_{M-1}(x) \\
+							&= w_0 \exp\left\{ - \frac{(x-\mu_0)^2}{2\sigma^2}\right\} + w_1  \exp\left\{ - \frac{(x-\mu_1)^2}{2\sigma^2}\right\} + \\ & ... + w_{M-1} \exp\left\{ - \frac{(x-\mu_{M-1})^2}{2\sigma^2}\right\} \\
+							&= w_0 \sin(0 \cdot x) + w_1 \cos(1 \cdot x) + \\ &... + w_{M_2} \sin((M-2) \cdot x) + w_{M-1} \cos((M-1) \cdot x)
+		\end{align*}
+
+\end{itemize}
 \end{frame}
 
 \begin{frame}{\insertsubsection}
+	\framesubtitle{A non-linear model linear in parameters}
+	\begin{itemize}
+		\item For simplicity, we'll carry this notation along.
+		\begin{align*}
+			y(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) +w_2 \phi_2(x)  + ... + w_{M-1} \phi_{M-1}(x) \\
+							&= \sum^{M-1}_{j=1} w_j \phi_j(x)
+		\end{align*}
+		\item We'll evaluate $\phi$ for all $x$, ans then project it in the $w$ vector space, then our model could be formed by \textcolor{UniOrange}{\textbf{non-linear}} functions. But, remaining \textcolor{UniOrange}{\textbf{linear on parameters}}.
+	\end{itemize}
+\end{frame}
 
+
+\begin{frame}{\insertsubsection}
 \begin{columns}
 \begin{column}{0.45\textwidth}
 	\visible<1->{The chosen model will give us some curve that is needed to adjust such that we'll \textit{minimize} his \textbf{distance} to the given points, or \textbf{targets} ($t$).}
