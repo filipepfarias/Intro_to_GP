@@ -37,257 +37,265 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {7}{7}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{5}{8/8}{Defining models}{0}}
+\headcommand {\beamer@subsectionpages {4}{7}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{2}{8}{Optimizing the parameters}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{1}{8/8}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {8}{8}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{6}{9/9}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{2}{9/9}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {9}{9}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{7}{10/10}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{3}{10/10}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {10}{10}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{8}{11/11}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{4}{11/11}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {11}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{9}{12/12}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{5}{12/12}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {12}{12}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{10}{13/13}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{6}{13/13}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {13}{13}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{11}{14/14}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{7}{14/14}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {14}{14}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{12}{15/17}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{8}{15/15}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\beamer@framepages {15}{15}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{13}{18/18}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{9}{16/16}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\beamer@framepages {16}{16}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{14}{19/20}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{10}{17/17}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {19}{20}}
+\headcommand {\beamer@framepages {17}{17}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{15}{21/21}{Defining models}{0}}
+\headcommand {\slideentry {1}{2}{11}{18/19}{Optimizing the parameters}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {18}{19}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{12}{20/20}{Optimizing the parameters}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {20}{20}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{13}{21/21}{Optimizing the parameters}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {21}{21}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{1}{16}{22/22}{Defining models}{0}}
+\headcommand {\beamer@subsectionpages {8}{21}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{22}{A probabilistic perspective}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {4}{22}}
+\headcommand {\slideentry {1}{3}{1}{22/24}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{1}{2}{23}{A probabilistic perspective}}
+\headcommand {\beamer@framepages {22}{24}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{1}{23/25}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{2}{25/26}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {23}{25}}
+\headcommand {\beamer@framepages {25}{26}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{2}{26/27}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{3}{27/28}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {26}{27}}
+\headcommand {\beamer@framepages {27}{28}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{3}{28/29}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{4}{29/29}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {28}{29}}
+\headcommand {\beamer@framepages {29}{29}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{4}{30/30}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{5}{30/30}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {30}{30}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{5}{31/31}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{6}{31/31}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {31}{31}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{6}{32/32}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{7}{32/32}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {32}{32}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{7}{33/33}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{8}{33/35}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@framepages {33}{35}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{8}{34/36}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{9}{36/36}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {34}{36}}
+\headcommand {\beamer@framepages {36}{36}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{9}{37/37}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{10}{37/37}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {37}{37}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{10}{38/38}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{11}{38/38}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {38}{38}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{11}{39/39}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{12}{39/39}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {39}{39}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{12}{40/40}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{13}{40/42}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@framepages {40}{42}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{13}{41/43}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{14}{43/43}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {41}{43}}
+\headcommand {\beamer@framepages {43}{43}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{14}{44/44}{A probabilistic perspective}{0}}
+\headcommand {\slideentry {1}{3}{15}{44/44}{A probabilistic perspective}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {44}{44}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {1}{2}{15}{45/45}{A probabilistic perspective}{0}}
+\headcommand {\beamer@sectionpages {3}{44}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {22}{44}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {2}{Bayesian Linear Regression}{45}{Bayesian Linear Regression}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{1}{45/45}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {45}{45}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {3}{45}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {23}{45}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {2}{Bayesian Linear Regression}{46}{Bayesian Linear Regression}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{0}{1}{46/46}{}{0}}
+\headcommand {\slideentry {2}{0}{2}{46/46}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {46}{46}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{0}{2}{47/47}{}{0}}
+\headcommand {\beamer@subsectionpages {45}{46}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{47}{The D-dimensional Gaussian Distribution}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {46}{47}}
+\headcommand {\slideentry {2}{1}{1}{47/48}{The D-dimensional Gaussian Distribution}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{2}{1}{48}{The D-dimensional Gaussian Distribution}}
+\headcommand {\beamer@framepages {47}{48}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{1}{1}{48/49}{The D-dimensional Gaussian Distribution}{0}}
+\headcommand {\slideentry {2}{1}{2}{49/49}{The D-dimensional Gaussian Distribution}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {48}{49}}
+\headcommand {\beamer@framepages {49}{49}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{1}{2}{50/50}{The D-dimensional Gaussian Distribution}{0}}
+\headcommand {\slideentry {2}{1}{3}{50/50}{The D-dimensional Gaussian Distribution}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {50}{50}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{1}{3}{51/51}{The D-dimensional Gaussian Distribution}{0}}
+\headcommand {\slideentry {2}{1}{4}{51/51}{The D-dimensional Gaussian Distribution}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {51}{51}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{1}{4}{52/52}{The D-dimensional Gaussian Distribution}{0}}
+\headcommand {\beamer@subsectionpages {47}{51}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{2}{52}{Bayes' rule for Gaussian variables}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{1}{52/52}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {52}{52}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {48}{52}}
+\headcommand {\slideentry {2}{2}{2}{53/54}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{2}{2}{53}{Bayes' rule for Gaussian variables}}
+\headcommand {\beamer@framepages {53}{54}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{1}{53/53}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{3}{55/56}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\beamer@framepages {55}{56}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{2}{54/55}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{4}{57/58}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {54}{55}}
+\headcommand {\beamer@framepages {57}{58}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{3}{56/57}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{5}{59/60}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {56}{57}}
+\headcommand {\beamer@framepages {59}{60}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{4}{58/59}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{6}{61/61}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {58}{59}}
+\headcommand {\beamer@framepages {61}{61}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{5}{60/61}{Bayes' rule for Gaussian variables}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {60}{61}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{6}{62/62}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{7}{62/62}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {62}{62}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{7}{63/63}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\slideentry {2}{2}{8}{63/63}{Bayes' rule for Gaussian variables}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {63}{63}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{2}{8}{64/64}{Bayes' rule for Gaussian variables}{0}}
+\headcommand {\beamer@sectionpages {45}{63}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {52}{63}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {3}{Gaussian Processes}{64}{Gaussian Processes}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{1}{64/64}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {64}{64}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {46}{64}}
+\headcommand {\beamer@subsectionpages {64}{64}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {53}{64}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{65}{Recap}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {3}{Gaussian Processes}{65}{Gaussian Processes}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{1}{65/65}{}{0}}
+\headcommand {\slideentry {3}{1}{1}{65/65}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {65}{65}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {65}{65}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{1}{66}{Recap}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{1}{66/66}{Recap}{0}}
+\headcommand {\slideentry {3}{1}{2}{66/66}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {66}{66}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{2}{67/67}{Recap}{0}}
+\headcommand {\slideentry {3}{1}{3}{67/67}{Recap}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {67}{67}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{3}{68/68}{Recap}{0}}
+\headcommand {\beamer@subsectionpages {65}{67}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{2}{68}{Change of Space}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{2}{1}{68/68}{Change of Space}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {68}{68}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {66}{68}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{2}{69}{Change of Space}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{1}{69/69}{Change of Space}{0}}
+\headcommand {\slideentry {3}{2}{2}{69/69}{Change of Space}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {69}{69}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{2}{70/70}{Change of Space}{0}}
+\headcommand {\slideentry {3}{2}{3}{70/70}{Change of Space}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {70}{70}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{3}{71/71}{Change of Space}{0}}
+\headcommand {\beamer@subsectionpages {68}{70}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{3}{71}{Gaussian processes}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{3}{1}{71/71}{Gaussian processes}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {71}{71}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {69}{71}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{3}{72}{Gaussian processes}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{3}{1}{72/72}{Gaussian processes}{0}}
+\headcommand {\slideentry {3}{3}{2}{72/72}{Gaussian processes}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {72}{72}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{3}{2}{73/73}{Gaussian processes}{0}}
+\headcommand {\slideentry {3}{3}{3}{73/73}{Gaussian processes}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {73}{73}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{3}{3}{74/74}{Gaussian processes}{0}}
+\headcommand {\beamer@sectionpages {64}{73}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {71}{73}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {4}{References}{74}{References}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{0}{74/74}{Gaussian processes}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {74}{74}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {65}{74}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {72}{74}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{References}{75}{References}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{0}{75/75}{Gaussian processes}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {75}{75}}
-\headcommand {\beamer@partpages {1}{75}}
-\headcommand {\beamer@subsectionpages {72}{75}}
-\headcommand {\beamer@sectionpages {65}{75}}
-\headcommand {\beamer@documentpages {75}}
-\headcommand {\gdef \inserttotalframenumber {59}}
+\headcommand {\beamer@partpages {1}{74}}
+\headcommand {\beamer@subsectionpages {71}{74}}
+\headcommand {\beamer@sectionpages {64}{74}}
+\headcommand {\beamer@documentpages {74}}
+\headcommand {\gdef \inserttotalframenumber {60}}

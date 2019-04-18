@@ -1,17 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'main.blg'
-[35] biber:313> INFO - === Thu Apr 18, 2019, 09:53:22
-[61] Biber.pm:371> INFO - Reading 'main.bcf'
-[146] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[165] Biber.pm:3976> INFO - Processing section 0
-[178] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[179] bibtex.pm:1489> INFO - LaTeX decoding ...
-[193] bibtex.pm:1305> INFO - Found BibTeX data source 'bibliography.bib'
-[243] Utils.pm:193> WARN - month field 'September' in entry 'hennig-tr-is-8' is not an integer - this will probably not sort properly.
-[271] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[36] biber:313> INFO - === Thu Apr 18, 2019, 16:07:03
+[62] Biber.pm:371> INFO - Reading 'main.bcf'
+[141] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[162] Biber.pm:3976> INFO - Processing section 0
+[175] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[176] bibtex.pm:1489> INFO - LaTeX decoding ...
+[191] bibtex.pm:1305> INFO - Found BibTeX data source 'bibliography.bib'
+[232] Utils.pm:193> WARN - month field 'September' in entry 'hennig-tr-is-8' is not an integer - this will probably not sort properly.
 [271] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[271] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [271] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[272] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[288] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[293] bbl.pm:720> INFO - Output to main.bbl
+[271] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[289] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[294] bbl.pm:720> INFO - Output to main.bbl
 [294] Biber.pm:110> INFO - WARNINGS: 1

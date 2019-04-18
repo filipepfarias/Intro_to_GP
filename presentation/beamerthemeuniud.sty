@@ -27,6 +27,15 @@
 \RequirePackage{graphicx}
 \RequirePackage{subcaption}
 \RequirePackage{listings}
+\RequirePackage{pgfplots} 
+\RequirePackage{pgfgantt}
+\RequirePackage{pdflscape}
+
+
+% set tikz
+\newlength\fwidth
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false}
 
 % in debug mode, show the boxes around the text
 \ifdefined\DEBUG

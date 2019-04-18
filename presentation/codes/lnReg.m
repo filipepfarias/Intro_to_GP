@@ -1,4 +1,4 @@
-%clear; close all; warning('off','all');
+clear; close all; warning('off','all'); Wmod = [];
 
 n = 20; 
 x = linspace(0,1,n)';
@@ -16,9 +16,18 @@ for M = 1:20
     
     W = ((phix'*phix)\phix')*t;
     
-    hold on;
+    hold on; Wmod = [Wmod; log(norm(W))];
     phiXp = phi(Xp); Tp = phiXp*W;
     plot(Xp,Tp); axis([0 1 -1.5 1.5]); xlabel('x','Interpreter','latex'); ylabel('y','Interpreter','latex');
-    legend('Deterministic', 'Data', 'Predicted'); hold off; pause(0.5);
+    legend('Deterministic', 'Data', 'Predicted'); hold off; %pause(0.5);
 end
-%warning('on','all'); print(mfilename,'-depsc');
+warning('on','all'); print(mfilename,'-depsc');
+style = ['scale=\fwidth,'...
+                       'legend style={nodes={scale=0.5, transform shape}},',...
+                       ];
+matlab2tikz([mfilename,'.tex'],'width','\fwidth',...
+    'showInfo', false,'extraaxisoptions', style); close all;
+figure; semilogy([0:M-1]',Wmod); xlabel('M','Interpreter','latex'); ylabel('\bf ||w_{ML}||'); grid on;
+warning('on','all'); print([mfilename,'-Wmod'],'-depsc');
+matlab2tikz([mfilename,'-Wmod','.tex'],'width','\fwidth',...
+    'showInfo',false,'extraaxisoptions',style);
