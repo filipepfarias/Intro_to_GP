@@ -227,18 +227,35 @@
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-	\framesubtitle{The over-fitting phenomenon}
-	\textcolor{UniGold}{\textbf{Could be the over-fitting a problem?}}
+	\framesubtitle{Training and testing}
+	\textcolor{UniGold}{\textbf{Could be over-fitting a problem?}}
 	\begin{columns}
 		\begin{column}{0.45\textwidth}
 			\begin{itemize}	
-			\item A visible effect of the \textcolor{UniOrange}{\textbf{increase of the complexity}} of the model, represented here by the $M$, is the \textcolor{UniOrange}{\textbf{increase of the weights}}.
-			\item This means that the $M$ number of basis functions is increasing too.
-			\item It's easy to see that our model start's to differ from the $y$ and starts to interpolate the noise. We call this of \textcolor{UniOrange}{\textbf{over-fitting}}.
-			\item This phenomenon illustrate a method of always search for the \textcolor{UniOrange}{\textbf{best estimation of the parameters}}.
-			
-			\vspace{1em}
-			
+			\item We could \textcolor{UniOrange}{\textbf{train}} our model, it means evaluate $\mathbf{w}_{ML}$, for only a part of our dataset.
+			\item If the model be a good one, the error must be small when its \textcolor{UniOrange}{\textbf{testing}}.
+			\item It means the error must be small when we evaluate all dataset with the $\mathbf{w}_{ML}$ of the trained part.
+			\item But this does not occur. So the \textcolor{UniOrange}{\textbf{error increases}}.
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.475\textwidth}  %%<--- here
+			\begin{center}
+			\centering
+			\label{fig:Erms}
+			\includegraphics[width=1\linewidth]{"Figure1.5".eps}
+			\end{center}
+		\end{column}
+	\end{columns}		
+	\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\framesubtitle{Regularizing the parameters}
+	\textcolor{UniGold}{\textbf{How to control the over-fitting?}}
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{itemize}	
+			\item With the increase of the model complexity, the value of $\mathbf{w}_{ML}$ increases too.
+			\item A solution could be add a \textcolor{UniOrange}{\textbf{penalty term}} as the norm of the weights increases.
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
@@ -256,60 +273,48 @@
 
 
 \begin{frame}{\insertsubsection}
-	\framesubtitle{training and testing}
-	\begin{columns}
-		\begin{column}{0.45\textwidth}
-			\begin{itemize}	
-			\item A visible effect of the \textcolor{UniOrange}{\textbf{increase of the complexity}} of the model, represented here by the $M$, is the \textcolor{UniOrange}{\textbf{increase of the weights}}.
-			\item This means that the $M$ number of basis functions is increasing too.
-			\item It's easy to see that our model start's to differ from the $y$ and starts to interpolate the noise. We call this of \textcolor{UniOrange}{\textbf{over-fitting}}.
-			\item This phenomenon illustrate a method of always search for the \textcolor{UniOrange}{\textbf{best estimation of the parameters}}.
-			
-			\vspace{1em}
-			
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.475\textwidth}  %%<--- here
-			\begin{center}
-			\centering
-			\label{fig:Erms}
-			\includegraphics[width=1\linewidth]{"Figure1.5".eps}
-			\end{center}
-		\end{column}
-	\end{columns}		
-	\end{frame}
+	\framesubtitle{Regularizing the parameters}
+		\begin{itemize}
+		\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term ($\lambda$) to error function, by this we force the coefficients to not reach high values.
 
-\begin{frame}{\insertsubsection}
-
-\visible<1->{ To control the over-fitting, we try to \textit{regularize} the weights by adding a penalty term ($\lambda$) to error function, by this we force the coefficients to not reach high values.}
-
-\visible<2->{
-		\begin{align*}
-			\tilde{E}(\mathbf{w}) =&\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
-		   				    =& \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
-	\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} =& \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
-			0 =&  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
-             \mathbf{w} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
-\end{align*}
-}
-
+		
+				\begin{align*}
+					\tilde{E}(\mathbf{w}) =&\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
+									   =& \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
+			\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} =& \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
+					0 =&  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
+					 \mathbf{w}_{ML} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
+		\end{align*}			
+		\end{itemize}
 \end{frame}
-
 
 \begin{frame}
 	% \vspace{1em}
 	\lstinputlisting[linerange={3-7,12-16,18-18,24-24}]{codes/lnRegRegulated.m}
 \end{frame}
 
+
 \begin{frame}{\insertsubsection}
-	
-	\begin{figure}
-	\label{fig:Erms}
-		\includegraphics[totalheight=0.75\textheight]{"Figure1.8".eps}
-	\end{figure}
+	\framesubtitle{Training and testing}
+	\textcolor{UniGold}{\textbf{A more sophisticated approach?}}
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{itemize}	
+			\item We could \textcolor{UniOrange}{\textbf{train and test}} and evaluate the error for several values of $\lambda$.
+			\item Even yet, it's too wasteful partitionate and optimize data to find good model parameters or even a \textcolor{UniOrange}{\textbf{flexible}} one.
+			\item We need a more sophisticated approach.
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.475\textwidth}
+			\begin{center}
+			\centering
+			\label{fig:Erms-reg}
+			\includegraphics[width=1\linewidth]{"Figure1.8".eps}
+			\end{center}
+		\end{column}
+	\end{columns}		
+	\end{frame}
 
-
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \subsection{A probabilistic perspective}
@@ -332,40 +337,21 @@
 % \end{frame}
 
 \begin{frame}{\insertsubsection}
-\begin{columns}
-\begin{column}{0.45\textwidth}
-	\visible<1->{So, we'll start to look the regression with a probabilistic approach. To encourage you, let's take the sentence.}
-	\visible<2->{\vspace{1.5em}
-		\begin{block}{Sentence}
-		\textit{Having an \textbf{\textcolor{red}{uncertainty}} in the measured value, we could represent it with a  \textbf{\textcolor{red}{probability distribuition}}}.
-		\end{block}
-   		     }
-\end{column}
-\begin{column}{0.475\textwidth}  %%<--- here
-    \begin{center}
-		\visible<3->{
-		\includegraphics[totalheight=0.5\textheight]{Figure1c16.pdf}
-		}
-     \end{center}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-\begin{columns}
-\begin{column}{0.45\textwidth}
-	\visible<1->{Let's go back to the initial problem of curve fitting. Each observation of the phenomenon is described with a random variable whose \textit{mean} is given by $y(x,\mathbf{w})$, and the \textit{variance} by $\beta$. }
-	\visible<2->{\vspace{1.5em}\\
-			Then, we want to obtain the probability of the \textit{targets}, given some parameters, in this case $\mathbf{x}$, $\mathbf{w}$ and $\beta$.}
-\end{column}
-\begin{column}{0.475\textwidth}  %%<--- here
-    \begin{center}
-		\visible<1->{
-		\includegraphics[totalheight=0.5\textheight]{Figure1c16.pdf}
-		}
-     \end{center}
-\end{column}
-\end{columns}
+	\framesubtitle{Looking back the regression}
+	\begin{columns}
+	\begin{column}{0.45\textwidth}
+		\begin{itemize}
+			\item Having an \textcolor{UniOrange}{\textbf{uncertainty}} in the measured value, we could represent it with a \textcolor{UniOrange}{\textbf{probability distribuition}}.
+			\item Now, each \textcolor{UniOrange}{\textbf{target}} could be expressed as a \textcolor{UniOrange}{\textbf{random variable}}.
+			\item Its \textcolor{UniOrange}{\textbf{mean}} is given by $y(x,\mathbf{w})$, and the \textcolor{UniOrange}{\textbf{variance}} by $\beta$.
+		\end{itemize}
+		\end{column}
+		\begin{column}{0.475\textwidth}  %%<--- here
+			\begin{center}
+				\includegraphics[width=1\linewidth]{Figure1c16.pdf}
+			\end{center}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{\insertsubsection}	
