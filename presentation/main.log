@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2019.4.3)  17 APR 2019 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Debian) (preloaded format=pdflatex 2019.4.3)  18 APR 2019 10:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1241,9 +1241,9 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 62--62
 File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c3.pdf>
 Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 85.
-(pdftex.def)             Requested size: 197.75298pt x 148.03145pt.
+(pdftex.def)             Requested size: 143.81891pt x 107.657pt.
 
-Overfull \hbox (51.78842pt too wide) in paragraph at lines 85--85
+Overfull \hbox (5.53941pt too wide) in paragraph at lines 85--85
  [] 
  []
 
@@ -1259,48 +1259,6 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 85--85
 [8
 
  </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c3.pdf>]
-File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
-<use graphics/prml/Figure1c3.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 85.
-(pdftex.def)             Requested size: 197.75298pt x 148.03145pt.
-
-Overfull \hbox (51.78842pt too wide) in paragraph at lines 85--85
- [] 
- []
-
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 85.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 85--85
-[][]  
- []
-
-[9
-
-]
-File: graphics/prml/Figure1c3.pdf Graphic file (type pdf)
-<use graphics/prml/Figure1c3.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c3.pdf  used on input line 85.
-(pdftex.def)             Requested size: 197.75298pt x 148.03145pt.
-
-Overfull \hbox (51.78842pt too wide) in paragraph at lines 85--85
- [] 
- []
-
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 85.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 85--85
-[][]  
- []
-
-[10
-
-]
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29a".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 289638 bytes
@@ -1308,18 +1266,13 @@ Package epstopdf Info: Source file: <graphics/prml/"Figure1.29a".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 16658 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29a"-eps-converted-to.pdf graphics/prml/"Figure1.29a".eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29a"-eps-converted-to.pdf, id=204, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29a"-eps-converted-to.pdf, id=190, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29a"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29a"-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.29a"-eps-converted-to.pdf  used on input line 114.
-(pdftex.def)             Requested size: 136.04814pt x 101.17755pt.
-
-Overfull \hbox (13.13408pt too wide) in paragraph at lines 114--114
- [][] 
- []
-
+Package pdftex.def Info: graphics/prml/"Figure1.29a"-eps-converted-to.pdf  used on input line 115.
+(pdftex.def)             Requested size: 126.66982pt x 94.20296pt.
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29b".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 289927 bytes
@@ -1327,18 +1280,13 @@ Package epstopdf Info: Source file: <graphics/prml/"Figure1.29b".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 18108 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29b"-eps-converted-to.pdf graphics/prml/"Figure1.29b".eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29b"-eps-converted-to.pdf, id=205, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29b"-eps-converted-to.pdf, id=191, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29b"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29b"-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.29b"-eps-converted-to.pdf  used on input line 114.
-(pdftex.def)             Requested size: 136.04814pt x 101.17755pt.
-
-Overfull \hbox (13.13408pt too wide) in paragraph at lines 114--114
- [][] 
- []
-
+Package pdftex.def Info: graphics/prml/"Figure1.29b"-eps-converted-to.pdf  used on input line 115.
+(pdftex.def)             Requested size: 126.66982pt x 94.20296pt.
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29c".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 286925 bytes
@@ -1346,18 +1294,13 @@ Package epstopdf Info: Source file: <graphics/prml/"Figure1.29c".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 14943 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29c"-eps-converted-to.pdf graphics/prml/"Figure1.29c".eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29c"-eps-converted-to.pdf, id=206, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29c"-eps-converted-to.pdf, id=192, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29c"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29c"-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.29c"-eps-converted-to.pdf  used on input line 114.
-(pdftex.def)             Requested size: 136.04814pt x 101.17755pt.
-
-Overfull \hbox (13.13408pt too wide) in paragraph at lines 114--114
- [][] 
- []
-
+Package pdftex.def Info: graphics/prml/"Figure1.29c"-eps-converted-to.pdf  used on input line 115.
+(pdftex.def)             Requested size: 126.66982pt x 94.20296pt.
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.29d".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 285173 bytes
@@ -1365,36 +1308,55 @@ Package epstopdf Info: Source file: <graphics/prml/"Figure1.29d".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 10907 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.29d"-eps-converted-to.pdf graphics/prml/"Figure1.29d".eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.29d"-eps-converted-to.pdf, id=207, 199.74625pt x 148.555pt>
+<graphics/prml/"Figure1.29d"-eps-converted-to.pdf, id=193, 199.74625pt x 148.555pt>
 File: graphics/prml/"Figure1.29d"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.29d"-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.29d"-eps-converted-to.pdf  used on input line 114.
-(pdftex.def)             Requested size: 136.04814pt x 101.17755pt.
-
-Overfull \hbox (13.13408pt too wide) in paragraph at lines 114--114
- [][] 
- []
-
+Package pdftex.def Info: graphics/prml/"Figure1.29d"-eps-converted-to.pdf  used on input line 115.
+(pdftex.def)             Requested size: 126.66982pt x 94.20296pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 114.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 115.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 114--114
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 115--115
+[][]  
+ []
+
+[9
+
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29a-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29b-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29c-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29d-eps-converted-to.pdf>]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 125.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 125--125
+[][]  
+ []
+
+[10
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 167.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 167--167
 [][]  
  []
 
 [11
 
- </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29a-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29b-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29c-eps-converted-to.pdf> </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.29d-eps-converted-to.pdf>]
+]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 134.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 190.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 134--134
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 190--190
 [][]  
  []
 
@@ -1403,40 +1365,16 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 134--134
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 169.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 204.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 169--169
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 204--204
 [][]  
  []
 
 [13
 
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 182.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 182--182
-[][]  
- []
-
-[14
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 196.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 196--196
-[][]  
- []
-
-[15
-
-] (/home/filipepfarias/Documents/pibic/presentation/codes/lnReg.m) [16
+] (/home/filipepfarias/Documents/pibic/presentation/codes/lnReg.m) [14
 
 ]
 Package epstopdf Info: Source file: <codes/lnReg.eps>
@@ -1446,23 +1384,23 @@ Package epstopdf Info: Source file: <codes/lnReg.eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
 (epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
-<codes/lnReg-eps-converted-to.pdf, id=315, 371.3875pt x 284.06125pt>
+<codes/lnReg-eps-converted-to.pdf, id=300, 371.3875pt x 284.06125pt>
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/lnReg-eps-converted-to.pdf>
-Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 225.
+Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 233.
 (pdftex.def)             Requested size: 145.96455pt x 111.64598pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 225.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 233.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 225--225
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 233--233
 [][]  
  []
 
-[17
+[15
 
  </home/filipepfarias/Documents/pibic/presentation/codes/lnReg-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <codes/lnReg.eps>
@@ -1472,22 +1410,22 @@ Package epstopdf Info: Source file: <codes/lnReg.eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
 (epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/lnReg-eps-converted-to.pdf>
-Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 225.
+Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 233.
 (pdftex.def)             Requested size: 145.96455pt x 111.64598pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 225.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 233.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 225--225
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 233--233
 [][]  
  []
 
-[18
+[16
 
 ]
 Package epstopdf Info: Source file: <codes/lnReg.eps>
@@ -1497,22 +1435,22 @@ Package epstopdf Info: Source file: <codes/lnReg.eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 11396 bytes
 (epstopdf)             Command: <repstopdf --outfile=codes/lnReg-eps-converted-to.pdf codes/lnReg.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 File: codes/lnReg-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/lnReg-eps-converted-to.pdf>
-Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 225.
+Package pdftex.def Info: codes/lnReg-eps-converted-to.pdf  used on input line 233.
 (pdftex.def)             Requested size: 145.96455pt x 111.64598pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 225.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 233.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 225--225
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 233--233
 [][]  
  []
 
-[19
+[17
 
 ]
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.5".eps>
@@ -1522,54 +1460,54 @@ Package epstopdf Info: Source file: <graphics/prml/"Figure1.5".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 10027 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.5"-eps-converted-to.pdf graphics/prml/"Figure1.5".eps>
-(epstopdf)             \includegraphics on input line 235.
+(epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.5"-eps-converted-to.pdf, id=343, 206.7725pt x 150.5625pt>
+<graphics/prml/"Figure1.5"-eps-converted-to.pdf, id=328, 206.7725pt x 150.5625pt>
 File: graphics/prml/"Figure1.5"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.5"-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.5"-eps-converted-to.pdf  used on input line 235.
+Package pdftex.def Info: graphics/prml/"Figure1.5"-eps-converted-to.pdf  used on input line 243.
 (pdftex.def)             Requested size: 277.24722pt x 201.85995pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 235.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 243.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 235--235
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 243--243
+[][]  
+ []
+
+[18
+
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.5-eps-converted-to.pdf>]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 259.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 259--259
+[][]  
+ []
+
+[19
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 259.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 259--259
 [][]  
  []
 
 [20
 
- </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.5-eps-converted-to.pdf>]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 251.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 251--251
-[][]  
- []
-
-[21
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 251.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 251--251
-[][]  
- []
-
-[22
-
-] (/home/filipepfarias/Documents/pibic/presentation/codes/lnRegRegulated.m) [23
+] (/home/filipepfarias/Documents/pibic/presentation/codes/lnRegRegulated.m) [21
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{fig:Erms}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.267 \end{frame}
+l.275 \end{frame}
                  
 Package epstopdf Info: Source file: <graphics/prml/"Figure1.8".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
@@ -1578,64 +1516,106 @@ Package epstopdf Info: Source file: <graphics/prml/"Figure1.8".eps>
 (epstopdf)                    date: 2019-04-03 00:13:31
 (epstopdf)                    size: 10854 bytes
 (epstopdf)             Command: <repstopdf --outfile=graphics/prml/"Figure1.8"-eps-converted-to.pdf graphics/prml/"Figure1.8".eps>
-(epstopdf)             \includegraphics on input line 267.
+(epstopdf)             \includegraphics on input line 275.
 Package epstopdf Info: Output file is already uptodate.
-<graphics/prml/"Figure1.8"-eps-converted-to.pdf, id=386, 206.7725pt x 150.5625pt>
+<graphics/prml/"Figure1.8"-eps-converted-to.pdf, id=372, 206.7725pt x 150.5625pt>
 File: graphics/prml/"Figure1.8"-eps-converted-to.pdf Graphic file (type pdf)
 <use graphics/prml/"Figure1.8"-eps-converted-to.pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.8"-eps-converted-to.pdf  used on input line 267.
+Package pdftex.def Info: graphics/prml/"Figure1.8"-eps-converted-to.pdf  used on input line 275.
 (pdftex.def)             Requested size: 277.24722pt x 201.85995pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 267.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 275.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 267--267
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 275--275
+[][]  
+ []
+
+[22
+
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.8-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <8> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 315.
+<graphics/prml/Figure1c16.pdf, id=395, 238.83278pt x 151.58241pt>
+File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
+<use graphics/prml/Figure1c16.pdf>
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 315.
+(pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
+
+Overfull \hbox (66.07115pt too wide) in paragraph at lines 315--315
+ [][] 
+ []
+
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 315.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 315--315
+[][]  
+ []
+
+[23
+
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c16.pdf>]
+File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
+<use graphics/prml/Figure1c16.pdf>
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 315.
+(pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
+
+Overfull \hbox (66.07115pt too wide) in paragraph at lines 315--315
+ [][] 
+ []
+
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 315.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 315--315
 [][]  
  []
 
 [24
 
- </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.8-eps-converted-to.pdf>]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <8> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 307.
-<graphics/prml/Figure1c16.pdf, id=409, 238.83278pt x 151.58241pt>
+]
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 307.
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 315.
 (pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
 
-Overfull \hbox (66.07115pt too wide) in paragraph at lines 307--307
- [][] 
+Overfull \hbox (66.07115pt too wide) in paragraph at lines 315--315
+ [][][] 
  []
 
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 307.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 315.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 307--307
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 315--315
 [][]  
  []
 
 [25
 
- </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1c16.pdf>]
+]
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 307.
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 332.
 (pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
 
-Overfull \hbox (66.07115pt too wide) in paragraph at lines 307--307
- [][] 
+Overfull \hbox (66.07115pt too wide) in paragraph at lines 332--332
+ [][][] 
  []
 
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 307.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 332.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 307--307
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 332--332
 [][]  
  []
 
@@ -1644,61 +1624,43 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 307--307
 ]
 File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1c16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 307.
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 332.
 (pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
 
-Overfull \hbox (66.07115pt too wide) in paragraph at lines 307--307
+Overfull \hbox (66.07115pt too wide) in paragraph at lines 332--332
  [][][] 
  []
 
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 307.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 332.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 307--307
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 332--332
 [][]  
  []
 
 [27
 
 ]
-File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
-<use graphics/prml/Figure1c16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 324.
-(pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
-
-Overfull \hbox (66.07115pt too wide) in paragraph at lines 324--324
- [][][] 
- []
-
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 324.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 346.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 324--324
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 346--346
 [][]  
  []
 
 [28
 
 ]
-File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
-<use graphics/prml/Figure1c16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 324.
-(pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
-
-Overfull \hbox (66.07115pt too wide) in paragraph at lines 324--324
- [][][] 
- []
-
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 324.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 346.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 324--324
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 346--346
 [][]  
  []
 
@@ -1707,84 +1669,84 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 324--324
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 338.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 362.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 362--362
 [][]  
  []
 
 [30
 
 ]
+File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
+<use graphics/prml/Figure1c16.pdf>
+Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 378.
+(pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
+
+Overfull \hbox (66.07115pt too wide) in paragraph at lines 378--378
+ [][][] 
+ []
+
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 338.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 378.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 338--338
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 378--378
 [][]  
  []
 
 [31
 
 ]
+<graphics/prml/"Figure1.13".pdf, id=485, 215.93623pt x 154.87239pt>
+File: graphics/prml/"Figure1.13".pdf Graphic file (type pdf)
+<use graphics/prml/"Figure1.13".pdf>
+Package pdftex.def Info: graphics/prml/"Figure1.13".pdf  used on input line 395.
+(pdftex.def)             Requested size: 145.96455pt x 104.69267pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 354.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 395.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 354--354
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 395--395
 [][]  
  []
 
 [32
 
-]
-File: graphics/prml/Figure1c16.pdf Graphic file (type pdf)
-<use graphics/prml/Figure1c16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1c16.pdf  used on input line 370.
-(pdftex.def)             Requested size: 212.0357pt x 134.5733pt.
-
-Overfull \hbox (66.07115pt too wide) in paragraph at lines 370--370
- [][][] 
- []
-
+ </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.13.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 370.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 406.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 370--370
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 406--406
 [][]  
  []
 
 [33
 
 ]
-<graphics/prml/"Figure1.13".pdf, id=499, 215.93623pt x 154.87239pt>
-File: graphics/prml/"Figure1.13".pdf Graphic file (type pdf)
-<use graphics/prml/"Figure1.13".pdf>
-Package pdftex.def Info: graphics/prml/"Figure1.13".pdf  used on input line 387.
-(pdftex.def)             Requested size: 145.96455pt x 104.69267pt.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 387.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 427.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 387--387
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 427--427
 [][]  
  []
 
 [34
 
- </home/filipepfarias/Documents/pibic/presentation/graphics/prml/Figure1.13.pdf>]
+]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 398.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 427.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 398--398
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 427--427
 [][]  
  []
 
@@ -1793,10 +1755,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 398--398
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 419.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 427.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 419--419
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 427--427
 [][]  
  []
 
@@ -1805,50 +1767,14 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 419--419
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 419.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 446.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 419--419
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 446--446
 [][]  
  []
 
 [37
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 419.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 419--419
-[][]  
- []
-
-[38
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 438.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 438--438
-[][]  
- []
-
-[39
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 452.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 452--452
-[][]  
- []
-
-[40
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -1860,71 +1786,71 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 460--460
 [][]  
  []
 
+[38
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 468.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 468--468
+[][]  
+ []
+
+[39
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 475.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 475--475
+[][]  
+ []
+
+[40
+
+]
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <6> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 490.
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <5> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 490.
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 490.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 490--490
+[][]  
+ []
+
 [41
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 467.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 490.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 467--467
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 490--490
 [][]  
  []
 
 [42
 
 ]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <6> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 482.
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <5> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 482.
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 482.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 490.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 482--482
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 490--490
 [][]  
  []
 
 [43
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 482.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 482--482
-[][]  
- []
-
-[44
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 482.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 482--482
-[][]  
- []
-
-[45
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 492.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 492--492
-[][]  
- []
-
-[46
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -1936,12 +1862,24 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 500--500
 [][]  
  []
 
-[47
+[44
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 508.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 508--508
+[][]  
+ []
+
+[45
 
 ])
 \openout2 = `bayesian-linear-regression.aux'.
 
- (/home/filipepfarias/Documents/pibic/presentation/bayesian-linear-regression.tex [48
+ (/home/filipepfarias/Documents/pibic/presentation/bayesian-linear-regression.tex [46
 
 
 
@@ -1955,31 +1893,31 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 12--12
 [][]  
  []
 
+[47
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 29.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 29--29
+[][]  
+ []
+
+[48
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 29.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 29--29
+[][]  
+ []
+
 [49
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 29.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 29--29
-[][]  
- []
-
-[50
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 29.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 29--29
-[][]  
- []
-
-[51
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -1991,7 +1929,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 37--37
 [][]  
  []
 
-[52
+[50
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2003,7 +1941,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 47--47
 [][]  
  []
 
-[53
+[51
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2015,7 +1953,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 88--88
 [][]  
  []
 
-[54
+[52
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2027,7 +1965,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 101--101
 [][]  
  []
 
-[55
+[53
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2036,6 +1974,30 @@ Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used o
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
 Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
+[][]  
+ []
+
+[54
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 119.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
+[][]  
+ []
+
+[55
+
+]
+File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
+<use graphics/brasao1_horizontal_monocromatico-b.pdf>
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 135.
+(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
+
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 135--135
 [][]  
  []
 
@@ -2044,10 +2006,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 119.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 135.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 135--135
 [][]  
  []
 
@@ -2056,10 +2018,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 119--119
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 135.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 150.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 135--135
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 150--150
 [][]  
  []
 
@@ -2068,10 +2030,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 135--135
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 135.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 150.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 135--135
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 150--150
 [][]  
  []
 
@@ -2080,10 +2042,10 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 135--135
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 150.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 166.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 150--150
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 166--166
 [][]  
  []
 
@@ -2092,38 +2054,14 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 150--150
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
 <use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 150.
+Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 166.
 (pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 150--150
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 166--166
 [][]  
  []
 
 [61
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 166.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 166--166
-[][]  
- []
-
-[62
-
-]
-File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
-<use graphics/brasao1_horizontal_monocromatico-b.pdf>
-Package pdftex.def Info: graphics/brasao1_horizontal_monocromatico-b.pdf  used on input line 166.
-(pdftex.def)             Requested size: 14.22636pt x 24.00778pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 166--166
-[][]  
- []
-
-[63
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2135,7 +2073,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 174--174
 [][]  
  []
 
-[64
+[62
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2147,7 +2085,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 198--198
 [][]  
  []
 
-[65
+[63
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2159,12 +2097,12 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 211--211
 [][]  
  []
 
-[66
+[64
 
 ])
 \openout2 = `gaussian-processes.aux'.
 
- (/home/filipepfarias/Documents/pibic/presentation/gaussian-processes.tex [67
+ (/home/filipepfarias/Documents/pibic/presentation/gaussian-processes.tex [65
 
 
 
@@ -2195,7 +2133,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][]  
  []
 
-[68
+[66
 
 ]
 Package epstopdf Info: Source file: <codes/"baReg".eps>
@@ -2207,7 +2145,7 @@ Package epstopdf Info: Source file: <codes/"baReg".eps>
 (epstopdf)             Command: <repstopdf --outfile=codes/"baReg"-eps-converted-to.pdf codes/"baReg".eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
-<codes/"baReg"-eps-converted-to.pdf, id=769, 938.50626pt x 201.75375pt>
+<codes/"baReg"-eps-converted-to.pdf, id=754, 938.50626pt x 201.75375pt>
 File: codes/"baReg"-eps-converted-to.pdf Graphic file (type pdf)
 <use codes/"baReg"-eps-converted-to.pdf>
 Package pdftex.def Info: codes/"baReg"-eps-converted-to.pdf  used on input line 49.
@@ -2226,7 +2164,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 49--49
 [][]  
  []
 
-[69
+[67
 
  </home/filipepfarias/Documents/pibic/presentation/codes/baReg-eps-converted-to.pdf>]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2238,7 +2176,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 61--61
 [][]  
  []
 
-[70
+[68
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2250,7 +2188,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 79--79
 [][]  
  []
 
-[71
+[69
 
 ]
 Overfull \hbox (13.31659pt too wide) detected at line 92
@@ -2266,7 +2204,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 92--92
 [][]  
  []
 
-[72
+[70
 
 ]
 Overfull \hbox (13.31659pt too wide) detected at line 111
@@ -2282,7 +2220,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 111--111
 [][]  
  []
 
-[73
+[71
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2294,7 +2232,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 128--128
 [][]  
  []
 
-[74
+[72
 
 ]
 File: graphics/brasao1_horizontal_monocromatico-b.pdf Graphic file (type pdf)
@@ -2306,9 +2244,9 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 145--145
 [][]  
  []
 
-[75
+[73
 
-]) [76
+]) [74
 
 
 ]
@@ -2321,7 +2259,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 84--84
 [][]  
  []
 
-[77
+[75
 
 ]
 \tf@nav=\write8
@@ -2339,7 +2277,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1444B0DB7CD3193C6422C79BF47FE5FD;715.
+(rerunfilecheck)             Checksum: A4EC25432BCAE55FE50A9C7B95D596C3;715.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2349,18 +2287,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33771 strings out of 492649
- 662173 string characters out of 6132032
+ 33767 strings out of 492649
+ 662135 string characters out of 6132032
  1183806 words of memory out of 5000000
  36789 multiletter control sequences out of 15000+600000
  45472 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,19n,90p,847b,1688s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmvtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (77 pages, 644913 bytes).
+Output written on /home/filipepfarias/Documents/pibic/presentation/main.pdf (75 pages, 642558 bytes).
 PDF statistics:
- 956 PDF objects out of 1000 (max. 8388607)
- 791 compressed objects within 8 object streams
- 177 named destinations out of 1000 (max. 500000)
+ 941 PDF objects out of 1000 (max. 8388607)
+ 778 compressed objects within 8 object streams
+ 173 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

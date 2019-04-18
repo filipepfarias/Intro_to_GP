@@ -4,18 +4,18 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {1}{1}{Defining models}{4}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {1}{2}{A probabilistic perspective}{25}{0}{1}
+\beamer@subsectionintoc {1}{2}{A probabilistic perspective}{23}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Bayesian Linear Regression}{48}{0}{2}
+\beamer@sectionintoc {2}{Bayesian Linear Regression}{46}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{50}{0}{2}
+\beamer@subsectionintoc {2}{1}{The D-dimensional Gaussian Distribution}{48}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{Bayes' rule for Gaussian variables}{55}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bayes' rule for Gaussian variables}{53}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Gaussian Processes}{67}{0}{3}
+\beamer@sectionintoc {3}{Gaussian Processes}{65}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Recap}{68}{0}{3}
+\beamer@subsectionintoc {3}{1}{Recap}{66}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{2}{Change of Space}{71}{0}{3}
+\beamer@subsectionintoc {3}{2}{Change of Space}{69}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{3}{Gaussian processes}{74}{0}{3}
+\beamer@subsectionintoc {3}{3}{Gaussian processes}{72}{0}{3}
