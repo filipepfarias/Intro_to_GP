@@ -54,47 +54,6 @@
       \verb https://books.google.com.br/books?id=kOXDtAEACAAJ
       \endverb
     \endentry
-    \entry{crassidis2011optimal}{book}{}
-      \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=30a2c9ba5d52190c26c716620df84f9e}{%
-           family={Crassidis},
-           familyi={C\bibinitperiod},
-           given={J.L.},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=6bc3a009a24a0d50578a01b77f774cfb}{%
-           family={Junkins},
-           familyi={J\bibinitperiod},
-           given={J.L.},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {CRC Press}%
-      }
-      \strng{namehash}{03c37e3eef602727f9de232ec1826200}
-      \strng{fullhash}{03c37e3eef602727f9de232ec1826200}
-      \strng{bibnamehash}{03c37e3eef602727f9de232ec1826200}
-      \strng{authorbibnamehash}{03c37e3eef602727f9de232ec1826200}
-      \strng{authornamehash}{03c37e3eef602727f9de232ec1826200}
-      \strng{authorfullhash}{03c37e3eef602727f9de232ec1826200}
-      \field{sortinit}{C}
-      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781439839867}
-      \field{series}{Chapman \& Hall/CRC Applied Mathematics \& Nonlinear Science}
-      \field{title}{Optimal Estimation of Dynamic Systems}
-      \field{year}{2011}
-      \verb{urlraw}
-      \verb https://books.google.com.br/books?id=CmjRBQAAQBAJ
-      \endverb
-      \verb{url}
-      \verb https://books.google.com.br/books?id=CmjRBQAAQBAJ
-      \endverb
-    \endentry
     \entry{dhrymes2013mathematics}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=7c61d5fda3ef2539e77b2a8a11d94eb4}{%
