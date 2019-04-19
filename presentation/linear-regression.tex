@@ -65,7 +65,7 @@
 \begin{frame}{\insertsubsection}
 	\framesubtitle{The model parameters}
 \begin{columns}
-\begin{column}{0.45\textwidth}
+\begin{column}{0.475\textwidth}
 	\begin{itemize}
 		\item The chosen model will give us some curve that is needed to adjust such that we'll \textcolor{UniOrange}{\textbf{minimize its distance}} to the \textcolor{UniOrange}{\textbf{targets}} ($t$).
 		\item Here, let's define the sum of these distances as \textcolor{UniOrange}{\textbf{cost function}}, or error function, and write it as
@@ -74,7 +74,7 @@
 		\end{align*}
 	\end{itemize}
 \end{column}
-\begin{column}{0.45\textwidth}  
+\begin{column}{0.475\textwidth}  
     \begin{center}
 	\centering
 	\includegraphics[totalheight=0.4\textheight]{Figure1c3.pdf}
@@ -206,7 +206,7 @@
 	\framesubtitle{The over-fitting phenomenon}
 	\textcolor{UniGold}{\textbf{Why the prediction is so distant from the deterministic curve?}}
 	\begin{columns}
-		\begin{column}{0.45\textwidth}
+		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
 			\item A visible effect of the \textcolor{UniOrange}{\textbf{increase of the complexity}} of the model, represented here by the $M$, is the \textcolor{UniOrange}{\textbf{increase of the weights}}.
 			\item This means that the $M$ number of basis functions is increasing too.
@@ -230,7 +230,7 @@
 	\framesubtitle{Training and testing}
 	\textcolor{UniGold}{\textbf{Could be over-fitting a problem?}}
 	\begin{columns}
-		\begin{column}{0.45\textwidth}
+		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
 			\item We could \textcolor{UniOrange}{\textbf{train}} our model, it means evaluate $\mathbf{w}_{ML}$, for only a part of our dataset.
 			\item If the model be a good one, the error must be small when its \textcolor{UniOrange}{\textbf{testing}}.
@@ -252,7 +252,7 @@
 	\framesubtitle{Regularizing the parameters}
 	\textcolor{UniGold}{\textbf{How to control the over-fitting?}}
 	\begin{columns}
-		\begin{column}{0.45\textwidth}
+		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
 			\item With the increase of the model complexity, the value of $\mathbf{w}_{ML}$ increases too.
 			\item A solution could be add a \textcolor{UniOrange}{\textbf{penalty term}} as the norm of the weights increases.
@@ -298,7 +298,7 @@
 	\framesubtitle{Training and testing}
 	\textcolor{UniGold}{\textbf{A more sophisticated approach?}}
 	\begin{columns}
-		\begin{column}{0.45\textwidth}
+		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
 			\item We could \textcolor{UniOrange}{\textbf{train and test}} and evaluate the error for several values of $\lambda$.
 			\item Even yet, it's too wasteful partitionate and optimize data to find good model parameters or even a \textcolor{UniOrange}{\textbf{flexible}} one.
@@ -339,11 +339,12 @@
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Looking back the regression}
 	\begin{columns}
-	\begin{column}{0.45\textwidth}
+	\begin{column}{0.475\textwidth}
 		\begin{itemize}
 			\item Having an \textcolor{UniOrange}{\textbf{uncertainty}} in the measured value, we could represent it with a \textcolor{UniOrange}{\textbf{probability distribuition}}.
 			\item Now, each \textcolor{UniOrange}{\textbf{target}} could be expressed as a \textcolor{UniOrange}{\textbf{random variable}}.
-			\item Its \textcolor{UniOrange}{\textbf{mean}} is given by $y(x,\mathbf{w})$, and the \textcolor{UniOrange}{\textbf{variance}} by $\beta$.
+			\item Its \textcolor{UniOrange}{\textbf{mean}} is given by $y(x,\mathbf{w})$, and the \textcolor{UniOrange}{\textbf{variance}} by $1/\sigma^2 = \beta$.
+			\item $\beta$ is known as \textcolor{UniOrange}{\textbf{precision parameter}} too.
 		\end{itemize}
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
@@ -355,117 +356,100 @@
 \end{frame}
 
 \begin{frame}{\insertsubsection}	
-	\visible<1->{So, if we consider that our conditions are such that being the random variables independent and identically distributed, we can say that our \textit{joint probability} is given by
-	\begin{equation*}
-		p(t | x, \mathbf{w}, \beta) \Rightarrow p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) = \prod_{n=1}^N p \left( t_n | x_n, \mathbf{w}, \beta \right)
-	\end{equation*}
-	}
-	\visible<2->{Let's assume we have a distribution such that $p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta)$. Our goal is, given the \textit{parameters}, maximize the \textit{probability} of the \textit{targets} given the \textit{parameters}. An approach to do this use the fact that
-	}
-	\visible<2->{
-	\begin{equation*}
-	\int_\infty ^{-\infty} p(x) dx = 1 \text{ and } p(x) \geq 0
-	\end{equation*}}
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-
-	Seen this, we're supposing that $p$ could assume values much smaller than one. To avoid computational singularity and for future purposes, we'll take the logarithmic probability. And then
-	\begin{equation*}
-		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right)
-	\end{equation*}
-	Reminding that
+	\framesubtitle{Targets as distributions}
+	\begin{itemize}
+		\item Being the random variables independent and identically distributed, we can say that our \textcolor{UniOrange}{\textbf{joint probability}} is given by
 	\begin{equation*}
 		p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) = \prod_{n=1}^N p \left( t_n | x_n, \mathbf{w}, \beta \right)
 	\end{equation*}
-	Implies that
-	\begin{equation*}
-		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N \ln \left(   p \left( t_n | x_n, \mathbf{w}, \beta \right) \right)
-	\end{equation*}
+		\item Our goal is, given the \textcolor{UniOrange}{\textbf{parameters}} $\mathbf{w}$, maximize the \textcolor{UniOrange}{\textbf{probability}} of the \textcolor{UniOrange}{\textbf{targets}}.
+		\item  Before, consider a property of the probability distribuitions
+		\begin{equation*}
+		\int_\infty ^{-\infty} p(x) dx = 1 \text{ and } p(x) \geq 0
+		\end{equation*}
+		\item Then, to avoid computational singularity and obtain a monotonically increasing function, we apply
+		\begin{equation*}
+			\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N \ln \left(   p \left( t_n | x_n, \mathbf{w}, \beta \right) \right)
+		\end{equation*}		
+	\end{itemize}
 \end{frame}
 
-\begin{frame}{\insertsubsection}
+% \begin{frame}{\insertsubsection}
 
-\begin{columns}
-\begin{column}{0.45\textwidth}
-	\visible<1->{To proceed, we need to know what distribution $p$ is. Let's choose the \textbf{\textcolor{UniGold}{Gaussian distribution}}. \\ }
-\end{column}
-\begin{column}{0.475\textwidth}  %%<--- here
-    \begin{center}
-		\visible<1->{
-		\includegraphics[totalheight=0.5\textheight]{Figure1c16.pdf}
-		}
-     \end{center}
-\end{column}
-\end{columns}
-\end{frame}
+% \begin{columns}
+% \begin{column}{0.475\textwidth}
+% 	\visible<1->{To proceed, we need to know what distribution $p$ is. Let's choose the \textbf{\textcolor{UniGold}{Gaussian distribution}}. \\ }
+% \end{column}
+% \begin{column}{0.475\textwidth}  %%<--- here
+%     \begin{center}
+% 		\visible<1->{
+% 		\includegraphics[totalheight=0.5\textheight]{Figure1c16.pdf}
+% 		}
+%      \end{center}
+% \end{column}
+% \end{columns}
+% \end{frame}
 
-\begin{frame}{\insertsubsection}
-\begin{columns}
-\begin{column}{0.45\textwidth}
+% \begin{frame}{\insertsubsection}
+% \begin{columns}
+% \begin{column}{0.475\textwidth}
 
-	\visible<1->{The \textbf{\textcolor{UniGold}{Gaussian distribution}} comes from many different contexts, as the one that maximize the entropy among of all ones with fixed variance and from the sum of multiple random variables with finite variance. \\ }
+% 	\visible<1->{The \textbf{\textcolor{UniGold}{Gaussian distribution}} comes from many different contexts, as the one that maximize the entropy among of all ones with fixed variance and from the sum of multiple random variables with finite variance. \\ }
 	
-\end{column}
-\begin{column}{0.475\textwidth}  %%<--- here
-    \begin{center}
-		\visible<1->{
-		\includegraphics[width=1\linewidth]{"Figure1.13".pdf}
-		}
-     \end{center}
-\end{column}
-\end{columns}
+% \end{column}
+% \begin{column}{0.475\textwidth}  %%<--- here
+%     \begin{center}
+% 		\visible<1->{
+% 		\includegraphics[width=1\linewidth]{"Figure1.13".pdf}
+% 		}
+%      \end{center}
+% \end{column}
+% \end{columns}
+% \end{frame}
+
+\begin{frame}{\insertsubsection}
+	\framesubtitle{But which distribuition choose?}
+	\begin{columns}
+		\begin{column}{0.475\textwidth}
+			\begin{itemize}
+				\item We'll choose the \textcolor{UniOrange}{\textbf{Gaussian distribution}} just for convenience.
+				\item Then we can state the distribution for each target and then
+				\begin{equation*}
+					p( t| \mathbf{x}, \mathbf{w}, \beta) = \mathcal{N} \left( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1} \right)
+				\end{equation*}
+				\item And we'll try to \textcolor{UniOrange}{\textbf{maximize}}	the targets probability.
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.475\textwidth}
+			\includegraphics[width=1\linewidth]{"Figure1.13".pdf}
+		\end{column}
+	\end{columns}
+	\begin{block}{One-dimensional Gaussian distribution}
+		\begin{equation*}
+			\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\} > 0
+		\end{equation*}
+		where $\mu$ is the mean and $\sigma^2$ the variance.
+	\end{block}	
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-
-\begin{block}{One-dimensional Gaussian distribution}
-\begin{equation*}
-	\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\} > 0
-\end{equation*}
-where $\mu$ is the mean and $\sigma^2$ the variance.
-\end{block}
-
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-
-Now, back to the discussion of the maximization of 
-\begin{equation*}
-		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N \ln \left(   p \left( t_n | x_n, \mathbf{w}, \beta \right) \right)
-\end{equation*}
-
-\visible<2->{Reminding that
-\begin{equation*}
-\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\}
-\end{equation*}
-we can state a Gaussian distribution for each target and then
-}
-\visible<3->{
-\begin{equation*}
- p( t| \mathbf{x}, \mathbf{w}, \beta) = \mathcal{N} \left( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1} \right)
-\end{equation*}
-}
-
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-\visible<1->{
-And then, from the \textit{joint probability} of the Gaussians distributions
-
-\begin{equation*}
-		\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (x_n -  y(x_n, \mathbf{w}))^2
-\end{equation*}
-
-From this, we could obtain the \textbf{maximum likelihood}, or the \textit{best estimation for the parameters}, taking the derivatives of the log probability to zero, according to the terms $\beta$ and $\mathbf{w}$, our model parameters.
-}
-%Maximizing with respect to $\beta$, we'll have 
-
-%\begin{equation*}
-%		\frac{1}{\beta_{ML}} = \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n, \mathbf{w}_{ML}) - t_n \right\}^2
-%\end{equation*}
-%
-%where $\beta_{ML}$ is the precision parameter for the maximum likelihood for the conditional Gaussian distribution.
+	\framesubtitle{Back to the cost function}
+	\begin{itemize}
+		\item From the \textcolor{UniOrange}{\textbf{joint probability}} of the Gaussians distributions we have
+		\begin{align*}
+				\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) 
+				&= \mathcal{N} \left( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1} \right) \\
+				&= \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (x_n -  y(x_n, \mathbf{w}))^2
+		\end{align*}
+		\item If we make
+		\begin{align*}
+			\frac{\partial}{\partial \mathbf{w}}\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = 0
+		\end{align*}
+		we'll obtain the \textcolor{UniOrange}{\textbf{cost function}} obtained before in the linear regression.
+		\item In other words, we'll obtain the weights $\mathbf{w}_{ML}$ that \textcolor{UniOrange}{\textbf{maximize}} the log probability of the targets, as $\beta_{ML}$.
+		\item With this approach, we expect to obtain too the same \textcolor{UniOrange}{\textbf{over-fitting}} problem.\footnote{See Appendix ?}
+		\item Next we'll take a step towards to a more \textcolor{UniOrange}{\textbf{Bayesian}} approach.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{\insertsubsection}
