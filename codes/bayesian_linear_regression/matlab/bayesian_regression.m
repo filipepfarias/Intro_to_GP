@@ -1,7 +1,7 @@
 %% Bayesian Linear Regression
 % Be the model $y = a_1 x + a_2 \\t = y + \xi$ where $\xi$ is the noise.
 
-close all; clear all;
+close all; clear;
 N = 10;
 x = linspace(0,1,N).';
 a1 = 0.5; a2 = 0.8;
