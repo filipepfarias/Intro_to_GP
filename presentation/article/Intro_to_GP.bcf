@@ -1975,6 +1975,8 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">rasmussen2006gaussian</bcf:citekey>
+    <bcf:citekey order="2">bishop2006pattern</bcf:citekey>
+    <bcf:citekey order="3">bishop2006pattern</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
