@@ -1,0 +1,82 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{bishop2006pattern}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ad7339d242af22008cd505455c338f98}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={C.M.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{ad7339d242af22008cd505455c338f98}
+      \strng{fullhash}{ad7339d242af22008cd505455c338f98}
+      \strng{bibnamehash}{ad7339d242af22008cd505455c338f98}
+      \strng{authorbibnamehash}{ad7339d242af22008cd505455c338f98}
+      \strng{authornamehash}{ad7339d242af22008cd505455c338f98}
+      \strng{authorfullhash}{ad7339d242af22008cd505455c338f98}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781493938438}
+      \field{series}{Information Science and Statistics}
+      \field{title}{Pattern Recognition and Machine Learning}
+      \field{year}{2006}
+    \endentry
+    \entry{rasmussen2006gaussian}{book}{}
+      \name{author}{2}{}{%
+        {{hash=c4330159b1e868398640998f7a77c191}{%
+           family={Rasmussen},
+           familyi={R\bibinitperiod},
+           given={C.E.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=040095b8c1c3051ddffbdb4f3f63c47f}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={C.K.I.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University Press Group Limited}%
+      }
+      \strng{namehash}{7262d89f59434afb6f6cfca1d4e79658}
+      \strng{fullhash}{7262d89f59434afb6f6cfca1d4e79658}
+      \strng{bibnamehash}{7262d89f59434afb6f6cfca1d4e79658}
+      \strng{authorbibnamehash}{7262d89f59434afb6f6cfca1d4e79658}
+      \strng{authornamehash}{7262d89f59434afb6f6cfca1d4e79658}
+      \strng{authorfullhash}{7262d89f59434afb6f6cfca1d4e79658}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780262182539}
+      \field{series}{Adaptative computation and machine learning series}
+      \field{title}{Gaussian Processes for Machine Learning}
+      \field{year}{2006}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
