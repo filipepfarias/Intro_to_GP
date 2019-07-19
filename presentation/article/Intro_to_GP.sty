@@ -1,4 +1,4 @@
-%%%% NIPS Macros (LaTex)
+%%%% IntroGP Macros (LaTex)
 %%%% Style File
 %%%% Dec 12, 1990   Rev Aug 14, 1991; Sept, 1995; April, 1997; April, 1999
 
@@ -7,18 +7,18 @@
 %
 % If using main mode, you need to include the commands
 %             \documentclass{article}
-%             \usepackage{nips10submit_e,times}
+%             \usepackage{IntroGP10submit_e,times}
 % as the first lines in your document.  Or, if you do not have Times
 % Roman font available, you can just use
 %             \documentclass{article}
-%             \usepackage{nips10submit_e}
+%             \usepackage{IntroGP10submit_e}
 % instead.
 %
 % If using 2.09 compatibility mode, you need to include the command
-%             \documentstyle[nips10submit_09,times]{article} 
+%             \documentstyle[IntroGP10submit_09,times]{article} 
 % as the first line in your document.  Or, if you do not have Times
 % Roman font available, you can include the command
-%             \documentstyle[nips10submit_09]{article}
+%             \documentstyle[IntroGP10submit_09]{article}
 % instead.
 
 % Change the overall width of the page.  If these parameters are
@@ -27,14 +27,45 @@
 %
 \usepackage{eso-pic} % used by \AddToShipoutPicture 
 
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{pgfplots} 
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1cm]{caption}
+\usepackage{lipsum}
+\usepackage{float}
+
+% set tikz
+\newlength\fwidth
+\pgfplotsset{compat=newest} 
+\pgfplotsset{plot coordinates/math parser=false}
+
+\usepackage{ulem} 
+
+\usepackage{color}
+\usepackage{listings}
+
+\lstset{
+    backgroundcolor=\color[rgb]{0.86,0.88,0.93},
+    language=Matlab, keywordstyle=\color[rgb]{0,0,1},
+    basicstyle=\footnotesize \ttfamily,breaklines=true,
+    escapeinside={\%*}{*)}
+}
+
 \renewcommand{\topfraction}{0.95}   % let figure take up nearly whole page
 \renewcommand{\textfraction}{0.05}  % let figure take up nearly whole page
 
-% Define nipsfinal, set to true if nipsfinalcopy is defined  
-\newif\ifnipsfinal
-\nipsfinalfalse
-\def\nipsfinalcopy{\nipsfinaltrue}
-\font\nipstenhv  = phvb at 8pt % *** IF THIS FAILS, SEE nips10submit_e.sty ***
+% Define IntroGPfinal, set to true if IntroGPfinalcopy is defined  
+\newif\ifIntroGPfinal
+\IntroGPfinalfalse
+\def\IntroGPfinalcopy{\IntroGPfinaltrue}
+\font\IntroGPtenhv  = phvb at 8pt % *** IF THIS FAILS, SEE IntroGP10submit_e.sty ***
 
 % Specify the dimensions of each page
 
@@ -83,7 +114,7 @@
 \def\@maketitle{\vbox{\hsize\textwidth
 \linewidth\hsize \vskip 0.1in \toptitlebar \centering
 {\LARGE\bf \@title\par}  \bottomtitlebar % \vskip 0.1in %  minus
-\ifnipsfinal
+\ifIntroGPfinal
    \def\And{\end{tabular}\hfil\linebreak[0]\hfil
             \begin{tabular}[t]{c}\bf\rule{\z@}{24pt}\ignorespaces}% 
   \def\AND{\end{tabular}\hfil\linebreak[4]\hfil
@@ -189,9 +220,9 @@ plus      -0.5ex minus -.2ex}{0.5ex plus
 % This code is, largely, from the CVPR 2010 conference style file
 % ----- define vruler
 \makeatletter
-\newbox\nipsrulerbox
-\newcount\nipsrulercount
-\newdimen\nipsruleroffset
+\newbox\IntroGPrulerbox
+\newcount\IntroGPrulercount
+\newdimen\IntroGPruleroffset
 \newdimen\cv@lineheight
 \newdimen\cv@boxheight
 \newbox\cv@tmpbox
@@ -209,28 +240,37 @@ plus      -0.5ex minus -.2ex}{0.5ex plus
 % \makevruler[<SCALE>][<INITIAL_COUNT>][<STEP>][<DIGITS>][<HEIGHT>]
 \def\makevruler[#1][#2][#3][#4][#5]{\begingroup\offinterlineskip
 \textheight=#5\vbadness=10000\vfuzz=120ex\overfullrule=0pt%
-\global\setbox\nipsrulerbox=\vbox to \textheight{%
+\global\setbox\IntroGPrulerbox=\vbox to \textheight{%
 {\parskip=0pt\hfuzz=150em\cv@boxheight=\textheight
-\cv@lineheight=#1\global\nipsrulercount=#2%
+\cv@lineheight=#1\global\IntroGPrulercount=#2%
 \cv@tot\cv@boxheight\divide\cv@tot\cv@lineheight\advance\cv@tot2%
 \cv@refno1\vskip-\cv@lineheight\vskip1ex%
-\loop\setbox\cv@tmpbox=\hbox to0cm{{\nipstenhv\hfil\fillzeros[#4]\nipsrulercount}}%
+\loop\setbox\cv@tmpbox=\hbox to0cm{{\IntroGPtenhv\hfil\fillzeros[#4]\IntroGPrulercount}}%
 \ht\cv@tmpbox\cv@lineheight\dp\cv@tmpbox0pt\box\cv@tmpbox\break
-\advance\cv@refno1\global\advance\nipsrulercount#3\relax
+\advance\cv@refno1\global\advance\IntroGPrulercount#3\relax
 \ifnum\cv@refno<\cv@tot\repeat}}\endgroup}%
 \makeatother
 % ----- end of vruler
 
 % \makevruler[<SCALE>][<INITIAL_COUNT>][<STEP>][<DIGITS>][<HEIGHT>]
-\def\nipsruler#1{\makevruler[12pt][#1][1][3][0.993\textheight]\usebox{\nipsrulerbox}}
+\def\IntroGPruler#1{\makevruler[12pt][#1][1][3][0.993\textheight]\usebox{\IntroGPrulerbox}}
 \AddToShipoutPicture{%
-\ifnipsfinal\else
-\nipsruleroffset=\textheight
-\advance\nipsruleroffset by -3.7pt
+\ifIntroGPfinal\else
+\IntroGPruleroffset=\textheight
+\advance\IntroGPruleroffset by -3.7pt
   \color[rgb]{.7,.7,.7}
   \AtTextUpperLeft{%
-    \put(\LenToUnit{-35pt},\LenToUnit{-\nipsruleroffset}){%left ruler
-      \nipsruler{\nipsrulercount}}
+    \put(\LenToUnit{-35pt},\LenToUnit{-\IntroGPruleroffset}){%left ruler
+      \IntroGPruler{\IntroGPrulercount}}
   }
 \fi
 }
+
+\definecolor{UFCOrange}{RGB}{231,120,19}
+\definecolor{UFCGold}{RGB}{206,177,68}
+\definecolor{UFCBlue}{RGB}{0,83,134}
+\definecolor{UFCGreen}{RGB}{0,146,62}
+\definecolor{UFCGray}{RGB}{194,193,193}
+\definecolor{UFCWhite}{RGB}{255,255,255}
+
+
