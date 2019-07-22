@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1563827901 "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.tex" "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.pdf" "Intro_to_GP" 1563827901
+["pdflatex"] 1563829501 "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.tex" "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.pdf" "Intro_to_GP" 1563829502
   "/etc/texmf/web2c/texmf.cnf" 1563796586 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.aux" 1563827901 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.tex" 1563827900 2527 beb512221b682c438a2013c8b6f5c4e9 ""
+  "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.aux" 1563829502 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.tex" 1563829501 2574 c34079821ebc65a4153d0928bf3c358a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb.tfm" 1480098688 2300 14616918391efa49ac8b481a75fbdc1a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1480098696 3584 2d666ecf6d466d8b007246bc2f94d9da ""
@@ -221,14 +221,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1563800449 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1563800473 4131577 cdcb0034898af5865c10c96f40701577 ""
-  "Intro_to_GP.aux" 1563827901 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "Intro_to_GP.out" 1563827901 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "Intro_to_GP.aux" 1563829502 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "Intro_to_GP.out" 1563829501 0 d41d8cd98f00b204e9800998ecf8427e ""
   "Intro_to_GP.sty" 1563796655 9818 5a6b21fa2e46fe4477f1088bcbeb8045 ""
-  "Intro_to_GP.tex" 1563827900 2527 beb512221b682c438a2013c8b6f5c4e9 ""
+  "Intro_to_GP.tex" 1563829501 2574 c34079821ebc65a4153d0928bf3c358a ""
   (generated)
+  "Intro_to_GP.pdf"
+  "Intro_to_GP.out"
+  "Intro_to_GP.aux"
   "Intro_to_GP.log"
   "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.log"
-  "Intro_to_GP.aux"
-  "Intro_to_GP.pdf"
   "/home/danielrdesousa/Documentos/Filipe/Intro_to_GP/presentation/article/Intro_to_GP.pdf"
-  "Intro_to_GP.out"
