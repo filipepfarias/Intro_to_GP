@@ -36,8 +36,17 @@ Federal University of Ceará\\
 
 \lipsum[1]%
 
-\subsection{Linear Regression}
+\section{Linear Regression}
 
+Starting with a simple regression problem. Be the dataset $\mathrm{D}=\left\{ x_i,y_i|i=1,\dots,N \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number od observations of the value $y$. Our objetive is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
+
+For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e, being the function
+
+\begin{equation}
+   f(x,\mathbf{w}) = \sum_{j=0}^M w_j x^j
+\end{equation}
+
+where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \right]$ its coefficients. It's important to note that the $f$ isn't linear in $x$ but in $\mathbf{w}$. These functions which are linear on the unknown
 % \begin{figure}[H]
 %    \centering
 %    \includegraphics[width=.25\textwidth]{Figures/f1.png}
