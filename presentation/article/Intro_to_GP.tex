@@ -40,7 +40,7 @@ Federal University of Ceará\\
 
 Starting with a simple regression problem. Be the dataset $\mathcal{D}=\left\{ x_i,y_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $y$. Our objective is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
 
-For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e, being the function
+For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e., being the function
 
 \begin{equation}
    f(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j x^j
@@ -49,7 +49,7 @@ For this example, we'll use a simple approach based on curve fitting by the poly
 where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \right]$ its coefficients. It's important to note that the $f$ isn't linear in $x$ but in $\mathbf{w}$. These functions which are linear on the unknown parameters are called \textit{linear models}.
 \textcolor{red}{Section 1.1 - Bishop (pg 4).}
 
-We can extend the class of models considering linear combinations of nonlinear functions of the input variables, i.e
+We can extend the class of models considering linear combinations of nonlinear functions of the input variables, i.e.
 
 \begin{equation}
    f(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j \phi_j (x)
@@ -78,7 +78,18 @@ This indicate that if $E$ is zero, $f$ passes exactly through each training data
    \frac{\partial E}{\partial \mathbf{w}} = 0
 \end{equation}
 
-We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, considering $\mathbf{f} = f(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e, $f$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}).
+We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, considering $\mathbf{f} = f(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e. $f$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}). Then we have
+
+\begin{equation}
+   \label{eq:lin-reg-error-function-matrix-form}
+   \mathbf{f} = \Phi \mathbf{w}
+\end{equation}
+
+where $\Phi$ is the \textit{design matrix} such that $\boldsymbol{\phi}(x)$ is evaluated for all $\mathbf{x}$. Proceeding with the minimization, we obtain
+
+\begin{equation}
+   \mathbf{w}^{*} = (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{y}
+\end{equation}
 
 There are many example of choices for basis functions, as
 
@@ -101,5 +112,4 @@ known as \textit{squared exponential}, where $\mu_j$ controls the location of th
 \newpage
 \bibliography{Intro_to_GP_bibliography}
 
-\nocite{graybill1983matrices}
 \end{document}
