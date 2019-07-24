@@ -38,12 +38,12 @@ Federal University of Ceará\\
 
 \section{Linear Regression}
 
-Starting with a simple regression problem. Be the dataset $\mathrm{D}=\left\{ x_i,y_i|i=1,\dots,N \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $y$. Our objective is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
+Starting with a simple regression problem. Be the dataset $\mathcal{D}=\left\{ x_i,y_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $y$. Our objective is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
 
 For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e, being the function
 
 \begin{equation}
-   f(x,\mathbf{w}) = \sum_{j=0}^M w_j x^j
+   f(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j x^j
 \end{equation}
 
 where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \right]$ its coefficients. It's important to note that the $f$ isn't linear in $x$ but in $\mathbf{w}$. These functions which are linear on the unknown parameters are called \textit{linear models}.
@@ -65,6 +65,21 @@ where $\phi_j (x)$ are known as \textit{basis functions}, and then the total num
 
 where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. It's important to note that these linear models are needed to define its basis functions before the training dataset is observed. \textcolor{red}{Section 1.4 - Bishop (pg 33).}
 
+The values of $\mathbf{w}$ are obtained by minimizing the \textit{error function}, a measure of the distance between the training dataset and $f$, given values of $\mathbf{w}$. By the way, the chosen error function will be 
+
+\begin{equation}
+   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ f(x_i,\mathbf{w})-y_i \right\}^2
+   \label{eq:lin-reg-error-function-1}
+\end{equation}
+
+This indicate that if $E$ is zero, $f$ passes exactly through each training data point. Observe that $E$ do not assume negative values because of its quadratic form, then we can find $\mathbf{w}$ by finding the minimum value of $E$, denoted $\mathbf{w^*}$, by
+
+\begin{equation}
+   \frac{\partial E}{\partial \mathbf{w}} = 0
+\end{equation}
+
+We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, considering $\mathbf{f} = f(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e, $f$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}).
+
 There are many example of choices for basis functions, as
 
 \begin{equation}
@@ -73,7 +88,6 @@ There are many example of choices for basis functions, as
 
 known as \textit{squared exponential}, where $\mu_j$ controls the location of the basis function in the \textit{input space}, and $s$ the spatial scale. It's usually referred as 'Gaussian' basis function because of its similarity with the Gaussian distribution function, although there is no probabilistic interpretation here.
 
-Backing to the regression problem
 % \begin{figure}[H]
 %    \centering
 %    \includegraphics[width=.25\textwidth]{Figures/f1.png}
@@ -82,5 +96,10 @@ Backing to the regression problem
 % \end{figure}
 
 \lipsum[1]
+\input{Intro_to_GP_appendices}
 
+\newpage
+\bibliography{Intro_to_GP_bibliography}
+
+\nocite{graybill1983matrices}
 \end{document}

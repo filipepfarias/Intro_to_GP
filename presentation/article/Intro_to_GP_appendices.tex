@@ -1,0 +1,44 @@
+\section*{\LARGE{Appendix}}
+
+\begin{appendices}
+  \section{Derivations}
+  
+  \subsection{Matrix Form}
+  \label{subsec:app-matrix-form}
+  
+  Be the linear model $f(x,\mathbf{w}) = \mathbf{w}^\top \boldsymbol{\phi}(x)$. Suppose $\Phi = \left[ \boldsymbol{\phi}(x_1),\dots,\boldsymbol{\phi}(x_N) \right]^\top$, then $\Phi$ will be of the form
+
+
+\begin{equation}
+    \Phi =
+    \begin{bmatrix}
+      \phi_0(x_0) & \dots & \phi_{M-1}(x_{0}) \\
+      \vdots & \ddots & \vdots \\
+      \phi_{0}(x_{N-1}) & \dots & \phi_{M-1}(x_{N-1})
+    \end{bmatrix}
+\end{equation}
+
+called \textit{design matrix}. Then the model turns to $\mathbf{f} = \Phi \mathbf{w}$. This will lead us to the matrix form for the quadratic error function
+
+\begin{align*}
+  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{f} - \mathbf{y})^\top (\mathbf{f} - \mathbf{y}) \\
+                &= \frac{1}{2}(\Phi \mathbf{w} - \mathbf{y})^\top (\Phi \mathbf{w} - \mathbf{y}) \\
+                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{y}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{y} + \mathbf{y}^\top \mathbf{y}) \nonumber \\
+\end{align*}
+
+Observe that even in the matrix form, the error function remains scalar, which implies that $\mathbf{y}^\top \Phi \mathbf{w} = \mathbf{w}^\top \Phi^\top \mathbf{y}$ by the transpose of the product rule. Then
+
+\begin{align*}
+  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - 2\mathbf{y}^\top \Phi \mathbf{w} + \mathbf{y}^\top \mathbf{y}) \nonumber \\
+\end{align*}
+
+Then we proceed by the minimization by $\frac{\partial E}{\partial \mathbf{w}} = 0$
+
+\begin{align}
+  0 &= \frac{1}{2}(2\mathbf{w}^\top \Phi^\top \Phi - 2\mathbf{y}^\top \Phi) \footnotemark[2] \nonumber \\
+  \mathbf{w}^{*\top} &= \mathbf{y}^\top \Phi (\Phi^\top \Phi) ^{-1} \nonumber \\
+  \mathbf{w}^{*} &= (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{y} 
+\end{align}\footnotetext[2]{Using two facts. First, if $\alpha=\mathbf{x}^{\mathrm{T}} \mathbf{A} \mathbf{x}$, then $\frac{\partial \alpha}{\partial \mathbf{x}}=2 \mathbf{x}^{\top} \mathbf{A}$, being $\alpha$ scalar. Second, if $\alpha=\mathbf{y}^{\mathrm{T}} \mathbf{A} \mathbf{x}$, then $\frac{\partial \alpha}{\partial \mathbf{x}}=\mathbf{y}^{\mathrm{T}} \mathbf{A}$. For both, $A$ is independent of $x$ and $y$.}
+
+  \section{Mauris euismod}
+\end{appendices}
