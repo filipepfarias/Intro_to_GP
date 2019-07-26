@@ -52,14 +52,14 @@ where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \r
 We can extend the class of models considering linear combinations of nonlinear functions of the input variables, i.e.
 
 \begin{equation}
-   f(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j \phi_j (x)
+   f(x,\mathbf{w}) = \sum_{j=0}^{M-1} \phi_j (x) w_j 
    \label{eq:lin-reg-model-1}
 \end{equation}
 
 where $\phi_j (x)$ are known as \textit{basis functions}, and then the total number of parameters for this model will be $M$. We can evaluate the same operation of (\ref{eq:lin-reg-model-1}) in the matrix form by
 
 \begin{equation}
-   f(x,\mathbf{w}) = \mathbf{w}^\top \boldsymbol{\phi}(x)
+   f(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top  \mathbf{w}
    \label{eq:lin-reg-model-1-matrix-form}
 \end{equation}
 
@@ -107,6 +107,8 @@ known as \textit{squared exponential}, where $\mu_j$ controls the location of th
 % \end{figure}
 
 \lipsum[1]
+
+\newpage
 \input{Intro_to_GP_appendices}
 
 \newpage
