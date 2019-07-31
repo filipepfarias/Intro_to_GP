@@ -85,11 +85,29 @@ We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, consideri
    \mathbf{f} = \Phi \mathbf{w}
 \end{equation}
 
-where $\Phi$ is the \textit{design matrix} such that $\boldsymbol{\phi}(x)$ is evaluated for all $\mathbf{x}$. Proceeding with the minimization, we obtain
+where $\Phi$ is the \textit{design matrix} such that $\boldsymbol{\phi}(x)$ is evaluated for all $\mathbf{x}$. Proceeding with the minimization, we obtain the optimal $\mathbf{w}$, or $\mathbf{w}^*$ by
 
 \begin{equation}
+   \label{eq:lin-reg-opt-param}
    \mathbf{w}^{*} = (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{y}
 \end{equation}
+
+which are the parameters that best fit the model to the data.
+
+\textcolor{red}{Insert over-fitting.}
+
+As we increase the number of parameters, our model becomes more flexible and then our error function approximates of zero for the training data. But when compared to the test data, the error increases. This is known as \textit{over-fitting}.
+
+\subsection{Regularized Linear Regression}
+
+An approach to minimize the over-fitting problem is to control the flexibility of the model. This can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
+
+\begin{equation}
+   \label{eq:lin-reg-error-function-regularized}
+   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ f(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
+\end{equation}
+
+whats means that our error increases as the norm of $\mathbf{w}$ grows.
 
 There are many example of choices for basis functions, as
 
