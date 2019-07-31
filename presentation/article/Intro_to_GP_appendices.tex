@@ -44,9 +44,18 @@ For the regularized linear regression, we do $\frac{\lambda}{2} ||\mathbf{w}||^2
 
 \begin{align*}
   E(\mathbf{w}) &= \frac{1}{2}(\mathbf{f} - \mathbf{y})^\top (\mathbf{f} - \mathbf{y}) + \frac{\lambda}{2} \mathbf{w}^\top \mathbf{w}\\
-                &= \frac{1}{2}(\Phi \mathbf{w} - \mathbf{y})^\top (\Phi \mathbf{w} - \mathbf{y}) \\
-                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{y}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{y} + \mathbf{y}^\top \mathbf{y}) \nonumber \\
+                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{y}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{y} + \mathbf{y}^\top \mathbf{y}) + \frac{\lambda}{2} \mathbf{w}^\top \mathbf{w} \nonumber \\
 \end{align*}
+
+And with the minimization we do $\frac{\partial E}{\partial \mathbf{w}} = 0$, then
+
+\begin{align}
+  0 &= \mathbf{w}^\top \Phi^\top \Phi - \mathbf{y}^\top \Phi + \lambda \mathbf{w}^\top\nonumber \\
+  \mathbf{w}^{*\top} &= \mathbf{y}^\top \Phi (\Phi^\top \Phi + \lambda \mathbf{I}) ^{-1} \nonumber \\
+  \mathbf{w}^{*} &= (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{y} 
+\end{align}
+
+where $\mathbf{I}$ is the identity matrix.
 
   \section{Mauris euismod}
 \end{appendices}
