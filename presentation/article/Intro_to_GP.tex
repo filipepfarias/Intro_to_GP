@@ -118,6 +118,18 @@ This allow us to increase the number of parameters trying to control the over-fi
 
 \section{Bayesian Linear Regression}
 
+Until now, we see the curve fitting problem in terms of error minimization. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
+
+Let's consider the same dataset $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $y$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $f(x,\mathbf{w})$. Thus we have
+
+\begin{equation}
+   p(y | x, \mathbf{w}, \beta)=\mathcal{N}\left(y | f(x, \mathbf{w}), \beta^{-1}\right)
+\end{equation}
+
+Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give is more uncertainty about the measured value $y$, then we can call it of precision parameter, i.e. how much certain we are about $y$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 There are many example of choices for basis functions, as
 
 \begin{equation}
