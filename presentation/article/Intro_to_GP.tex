@@ -38,7 +38,7 @@ Federal University of Ceará\\
 
 \section{Linear Regression}
 
-Starting with a simple regression problem. Be the dataset $\mathcal{D}=\left\{ x_i,y_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $y$. Our objective is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
+Starting with a simple regression problem. Be the data set $\mathcal{D}=\left\{ x_i,y_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $y$. Our objective is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
 
 For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e., being the function
 
@@ -63,9 +63,9 @@ where $\phi_j (x)$ are known as \textit{basis functions}, and then the total num
    \label{eq:lin-reg-model-1-matrix-form}
 \end{equation}
 
-where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. It's important to note that these linear models are needed to define its basis functions before the training dataset is observed. \textcolor{red}{Section 1.4 - Bishop (pg 33).}
+where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. It's important to note that these linear models are needed to define its basis functions before the training data set is observed. \textcolor{red}{Section 1.4 - Bishop (pg 33).}
 
-The values of $\mathbf{w}$ are obtained by minimizing the \textit{error function}, a measure of the distance between the training dataset and $f$, given values of $\mathbf{w}$. By the way, the chosen error function will be 
+The values of $\mathbf{w}$ are obtained by minimizing the \textit{error function}, a measure of the distance between the training data set and $f$, given values of $\mathbf{w}$. By the way, the chosen error function will be 
 
 \begin{equation}
    E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ f(x_i,\mathbf{w})-y_i \right\}^2
@@ -114,19 +114,56 @@ whats means that our error increases as the norm of $\mathbf{w}$ grows. This wil
    \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{y} 
 \end{equation}
 
-This allow us to increase the number of parameters trying to control the over-fitting. More, add parameters will allows us to capture different aspects of the dataset, what we will see later.
+This allow us to increase the number of parameters trying to control the over-fitting. More, add parameters will allows us to capture different aspects of the data set, what we will see later.
 
 \section{Bayesian Linear Regression}
 
 Until now, we see the curve fitting problem in terms of error minimization. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
 
-Let's consider the same dataset $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $y$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $f(x,\mathbf{w})$. Thus we have
+\begin{equation}
+   \label{eq:bay-reg-bayes-rule}
+   p(\mathbf{w} | \mathcal{D})=\frac{p(\mathcal{D} | \mathbf{w}) p(\mathbf{w})}{p(\mathcal{D})}
+\end{equation}
+
+We can use the Bayes' theorem (\ref{eq:bay-reg-bayes-rule}) to convert a \textit{prior} probability into a \textit{posterior} probability at the light of some evidence. We can make inferences about quantities such as  the parameters $\mathbf{w}$ in the form of a prior distribution $p(\mathbf{w})$. The observation of the data $\mathcal{D}$ and what its implies in the parameters is expressed as a conditional probability $p(\mathcal{D}|\mathbf{w})$. Then we can evaluate the uncertainty about $\mathbf{w}$ after observed the data $\mathcal{D}$ as a posterior probability $p(\mathbf{w}|\mathcal{D})$.
+
+The quantity $p(\mathcal{D}|\mathbf{w})$ expresses how probable the observed data $\mathcal{D}$ is for different settings of $\mathbf{w}$. Then, not being a probability distribution over the parameters, its integral with respect to $\mathbf{w}$ could not be equal one, then to normalize the equation with respect to the left-side there's a term $p(\mathcal{D})$. This distribution is called \textit{likelihood function}.
+
+Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominator, then considering that integrating a probability distribution over itself is equal to one, we have
+
+\begin{equation}
+   p(\mathcal{D})=\int p(\mathcal{D} | \mathbf{w}) p(\mathbf{w}) \mathrm{d} \mathbf{w}
+\end{equation}
+
+Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $y$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $f(x,\mathbf{w})$. Thus we have
 
 \begin{equation}
    p(y | x, \mathbf{w}, \beta)=\mathcal{N}\left(y | f(x, \mathbf{w}), \beta^{-1}\right)
 \end{equation}
 
-Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give is more uncertainty about the measured value $y$, then we can call it of precision parameter, i.e. how much certain we are about $y$.
+Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give is more uncertainty about the measured value $y$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $y$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $y$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
+
+\begin{equation}
+   p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(y_i | f(x_i, \mathbf{w}), \beta^{-1}\right)
+\end{equation}
+
+When viewed as function of $f(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
+
+\begin{equation}
+   \label{eq:bay-reg-ml-function}
+   \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{f\left(x_{i}, \mathbf{w}\right)-y_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
+\end{equation}
+
+The maximization of (\ref{eq:bay-reg-ml-function}) taking the derivative with respect to $\mathbf{w}$ will lead us back to 
+the same of the minimization of (\ref{eq:lin-reg-error-function-1}), the error function of the linear regression. Here, just by notation, we will call the resulting parameters of the maximization of $\mathbf{w}_{\text{ML}}$.
+
+We can determine the precision parameter by taking the derivative with respect to $\beta$ of (\ref{eq:bay-reg-ml-function}), what gives
+
+\begin{equation}
+   \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{f\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-y_{i}\right\}^{2}
+\end{equation}
+
+Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$. This became possible because we construct probabilistic model and we can make these predictions with a \textit{predictive distribution}, i.e. a probability distribution over $y$, what gives us not just simply a point.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
