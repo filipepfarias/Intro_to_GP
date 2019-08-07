@@ -118,6 +118,8 @@ This allow us to increase the number of parameters trying to control the over-fi
 
 \section{Bayesian Linear Regression}
 
+\subsection{A Bayesian view of Linear Regression}
+
 Until now, we see the curve fitting problem in terms of error minimization. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
 
 \begin{equation}
@@ -134,6 +136,8 @@ Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominat
 \begin{equation}
    p(\mathcal{D})=\int p(\mathcal{D} | \mathbf{w}) p(\mathbf{w}) \mathrm{d} \mathbf{w}
 \end{equation}
+
+\subsection{Bayesian curve fitting}
 
 Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $y$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $f(x,\mathbf{w})$. Thus we have
 
@@ -155,9 +159,9 @@ When viewed as function of $f(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, th
 \end{equation}
 
 The maximization of (\ref{eq:bay-reg-ml-function}) taking the derivative with respect to $\mathbf{w}$ will lead us back to 
-the same of the minimization of (\ref{eq:lin-reg-error-function-1}), the error function of the linear regression. Here, just by notation, we will call the resulting parameters of the maximization of $\mathbf{w}_{\text{ML}}$.
+the same of the minimization of (\ref{eq:lin-reg-error-function-1}), the error function of the linear regression. Here, just by notation, we will call the resulting parameters of the maximization of $\mathbf{w}_{\text{ML}}$, what it is called \textit{maximum likelihood}.
 
-We can determine the precision parameter by taking the derivative with respect to $\beta$ of (\ref{eq:bay-reg-ml-function}), what gives
+We can determine the precision parameter using the maximum likelihood by taking the derivative with respect to $\beta$ of (\ref{eq:bay-reg-ml-function}), what gives
 
 \begin{equation}
    \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{f\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-y_{i}\right\}^{2}
@@ -165,6 +169,19 @@ We can determine the precision parameter by taking the derivative with respect t
 
 Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$. This became possible because we construct probabilistic model and we can make these predictions with a \textit{predictive distribution}, i.e. a probability distribution over $y$, what gives us not just simply a point.
 
+In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{ML}$ and $\beta_\text{ML}$, we have the predictive distribution by
+
+\begin{equation}
+   p\left(y | x, \mathbf{w}_{\mathrm{ML}}, \beta_{\mathrm{ML}}\right)=\mathcal{N}\left(y | f\left(x, \mathbf{w}_{\mathrm{ML}}\right), \beta_{\mathrm{ML}}^{-1}\right)
+\end{equation}
+
+Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution to make the inference using the Bayes' rule. We can now introduce here the probability distribution over the parameters $p(\mathbf{w})$ as presented in the Section 3.1. The choice is arbitrary, but for this particular case we will consider
+
+\begin{equation}
+   p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^{\mathrm{T}} \mathbf{w}\right\}
+\end{equation}
+
+where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There are many example of choices for basis functions, as
