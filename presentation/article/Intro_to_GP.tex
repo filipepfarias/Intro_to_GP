@@ -181,7 +181,8 @@ Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution
    p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^{\mathrm{T}} \mathbf{w}\right\}
 \end{equation}
 
-where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution.
+where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There are many example of choices for basis functions, as
