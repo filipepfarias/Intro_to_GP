@@ -165,6 +165,12 @@ where $\mathbf{I}$ is the identity matrix.
     \begin{equation}
     \begin{aligned} &-\frac{1}{2}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top \boldsymbol{\Lambda}_{a a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)-\frac{1}{2}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right) \\ &-\frac{1}{2}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)^\top \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)-\frac{1}{2}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)^\top \boldsymbol{\Lambda}_{b b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right) \\ &=-\frac{1}{2}\left(\mathbf{x}_{b}^\top \boldsymbol{\Lambda}_{b b} \mathbf{x}_{b}-2 \mathbf{x}_{b}^\top \boldsymbol{\Lambda}_{b b}\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)-2 \mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a b} \boldsymbol{\mu}_{b}\right.\\ & \left.  +2 \boldsymbol{\mu}_{a}^\top \boldsymbol{\Lambda}_{a b} \boldsymbol{\mu}_{b}+\boldsymbol{\mu}_{b}^\top \boldsymbol{\Lambda}_{b b} \boldsymbol{\mu}_{b}+\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \mathbf{x}_{a}-2 \mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a}+\boldsymbol{\mu}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a} \right) \end{aligned}
     \end{equation}
+
+    Then we complete the squares resulting independent
+
+    \begin{equation}
+    \begin{aligned} &-\frac{1}{2}\left(x_{b}-\left(\mu_{b}-\Lambda_{b b}^{-1} \Lambda_{b a}\left(x_{a}-\mu_{a}\right)\right)\right)^{T} \Lambda_{b b}\left(x_{b}-\left(\mu_{b}-\Lambda_{b b}^{-1} \Lambda_{b a}\left(x_{a}-\mu_{a}\right)\right)\right) \\ &+\frac{1}{2}\left(x_{a}^{T} \Lambda_{a b} \Lambda_{b b}^{-1} \Lambda_{b a} x_{a}-2 x_{a}^{T} \Lambda_{a b} \Lambda_{b b}^{-1} \Lambda_{b a} \mu_{a}+\mu_{a} \Lambda_{a b} \Lambda_{b b}^{-1} \Lambda_{b a} \mu_{a}\right) \\ &-\frac{1}{2}\left(x_{a}^{T} \Lambda_{a a} x_{a}-2 x_{a}^{T} \Lambda_{a a} \mu_{a}+\mu_{a}^{T} \Lambda_{a a} \mu_{a}\right) \\ &=-\frac{1}{2}\left(x_{b}-\left(\mu_{b}-\Lambda_{b b}^{-1} \Lambda_{b a}\left(x_{a}-\mu_{a}\right)\right)\right)^{T} \Lambda_{b b}\left(x_{b}-\left(\mu_{b}-\Lambda_{b b}^{-1} \Lambda_{b a}\left(x_{a}-\mu_{a}\right)\right)\right) \\ &-\frac{1}{2}\left(x_{a}-\mu_{a}\right)^{T}\left(\Lambda_{a a}-\Lambda_{a b} \Lambda_{b b}^{-1} \Lambda_{b a}\right)\left(x_{a}-\mu_{a}\right) \end{aligned}
+    \end{equation}
   \end{proof}
   
   
