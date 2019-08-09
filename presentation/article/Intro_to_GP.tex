@@ -134,6 +134,7 @@ The quantity $p(\mathcal{D}|\mathbf{w})$ expresses how probable the observed dat
 Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominator, then considering that integrating a probability distribution over itself is equal to one, we have
 
 \begin{equation}
+   \label{eq:bay-lin-bayes-theorem}
    p(\mathcal{D})=\int p(\mathcal{D} | \mathbf{w}) p(\mathbf{w}) \mathrm{d} \mathbf{w}
 \end{equation}
 
@@ -151,7 +152,7 @@ Where $\beta$ is the variance of the distribution. Note that a large $\beta$ wil
    p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(y_i | f(x_i, \mathbf{w}), \beta^{-1}\right)
 \end{equation}
 
-When viewed as function of $f(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
+When viewed as function of $f(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, or minimize the negative log whats is equivalent, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
 
 \begin{equation}
    \label{eq:bay-reg-ml-function}
@@ -181,8 +182,29 @@ Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution
    p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^{\mathrm{T}} \mathbf{w}\right\}
 \end{equation}
 
-where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem
+where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem considering that our \textit{posterior} distribution is proportional to the product between the \textit{likelihood function} and the assumed \textit{prior}, as seen in (\ref{eq:bay-lin-bayes-theorem}) then, assuming the observation of the whole data set
 
+\begin{equation}
+   p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
+\end{equation}
+
+As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{t}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
+%
+\begin{equation}
+   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
+\end{equation}
+%
+Then we substitute the probability distributions founded before. Note that the first term in the right side is the error function founded in (\ref{eq:bay-reg-ml-function}). Then, the terms which the minimization depends of $\mathbf{w}$ are
+
+\begin{equation}
+    \frac{\beta}{2} \sum_{i=1}^{N}\left\{f\left(x_{i}, \mathbf{w}\right)-y_{i}\right\}^{2} + \frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}
+\end{equation}
+
+And we can note the similarity with the regularized linear regression in (\ref{eq:lin-reg-error-function-regularized}) aside of the term $\lambda$, what can be founded by $\lambda=\alpha / \beta$. It's important to note that even called maximum posterior, here it was presented a minimization in terms of the negative logarithm, but this equals to the maximization of the positive logarithm. The signal was chosen just for similarity with the error function.
+
+This similarity shows that the Bayesian approach comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But so we can say that our model is, in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the the sum and product rules, as done in (\ref{eq:bay-lin-bayes-theorem}).
+
+What was done was simply the marginalization of $\mathbf{w}$, i.e. found the predictive distribution considering the probabilities of $\mathbf{w}$ and the likelihood function. The marginalization for the Gaussians distributions are in the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There are many example of choices for basis functions, as
