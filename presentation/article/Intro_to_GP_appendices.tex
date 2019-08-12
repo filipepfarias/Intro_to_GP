@@ -60,9 +60,10 @@ where $\mathbf{I}$ is the identity matrix.
 
 \vspace{4em}
 
-  \section{Partitioned Gaussian distributions\cite{schon_lindsten}}
+  \section{Bayes' theorem for Gaussian variables\cite{schon_lindsten}}
   \label{subsec:app-par-gau}
 
+  \subsection{Partitioned Gaussian distributions}
   Be $\mathbf{x}$ a n-dimensional vector with a Gaussian distribution $\mathcal{N}\left( \mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma} \right)$, then the partitioned will be
   
   \begin{equation}
@@ -253,9 +254,29 @@ where $\mathbf{I}$ is the identity matrix.
       \boldsymbol{\mu}_{b|a} =  \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)
     \end{equation}
   \end{proof}
-  
-  
 
-  \subsection{Sub}
+  \subsection{Affine transformation}
+
+  \begin{theorem}[Affine transformation]
+
+    Assume $\mathbf{x}_a$ and $\mathbf{x}_b$ are Gaussian distributed and $\mathbf{x}_b$ conditioned by $\mathbf{x}_a$, as
+
+    \begin{equation}
+    p\left(\mathbf{x}_{a}\right) =\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right) =\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \Sigma_{b | a}\right)
+    \end{equation}
+
+    where $\mathbf{M}$ is a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then the joint distribution is given by
+
+    \begin{equation}
+    p\left(\mathbf{x}_{a}, \mathbf{x}_{b}\right)=\mathcal{N}\left(\left(\begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array}\right) ;\left(\begin{array}{c}{\boldsymbol{\mu}_{a}} \\ {\mathbf{M} \boldsymbol{\mu}_{a}+b}\end{array}\right), \mathbf{R}\right)
+    \end{equation}
+
+    being
+
+    \begin{equation}
+    \mathbf{R}=\left(\begin{array}{cc}{\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}+\boldsymbol{\Sigma}_{a}^{-1}} & {-\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1}} \\ {-\boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}} & {\boldsymbol{\Sigma}_{b | a}^{-1}}\end{array}\right)^{-1}=\left(\begin{array}{cc}{\boldsymbol{\Sigma}_{a}} & {\boldsymbol{\Sigma}_{a} \mathbf{M}^\top} \\ {\mathbf{M} \boldsymbol{\Sigma}_{a}} & {\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top}\end{array}\right)
+    \end{equation}
+    
+  \end{theorem}
 
 \end{appendices}
