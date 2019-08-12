@@ -1,6 +1,7 @@
 \section*{\LARGE{Appendix}}
 
 \begin{appendices}
+  \vspace{4em}
   \section{Derivations}
   
   \subsection{Matrix Form}
@@ -57,7 +58,9 @@ And with the minimization we do $\frac{\partial E}{\partial \mathbf{w}} = 0$, th
 
 where $\mathbf{I}$ is the identity matrix.
 
-  \section{Partitioned Gaussian distributions\cite{schon_lindsten}}.
+\vspace{4em}
+
+  \section{Partitioned Gaussian distributions\cite{schon_lindsten}}
 
   Be $\mathbf{x}$ a n-dimensional vector with a Gaussian distribution $\mathcal{N}\left( \mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma} \right)$, then the partitioned will be
   
@@ -78,7 +81,7 @@ where $\mathbf{I}$ is the identity matrix.
     \begin{pmatrix}
       \boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab}  \\
       \boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb}
-    \end{pmatrix} = 
+    \end{pmatrix}
     .
   \end{equation}
 
@@ -86,7 +89,7 @@ where $\mathbf{I}$ is the identity matrix.
 
   \begin{equation}
     \label{eq:app-par-gau-multivariate-gaussian}
-    \mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \mathbf{\Sigma})=\frac{1}{(2 \pi)^{n / 2}} \frac{1}{|\mathbf{\Sigma}|^{1 / 2}} \exp \left\{-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^{\mathrm{T}} \boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right\}
+    \mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \mathbf{\Sigma})=\frac{1}{(2 \pi)^{n / 2}} \frac{1}{ \left( \det \mathbf{\Sigma} \right) ^{1 / 2}} \exp \left\{-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^{\mathrm{T}} \boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right\}
   \end{equation}
 
   We define too, just for convenience of work, the precision matrix $\boldsymbol{\Lambda}$ by
@@ -99,6 +102,8 @@ where $\mathbf{I}$ is the identity matrix.
     \end{pmatrix} 
     \equiv \boldsymbol{\Sigma}^{-1}
   \end{equation}
+
+  assuming all matrices have inverses.
 
   \begin{theorem}[Marginalization]
     Being the random vector $\mathbf{x}$ and its partitioned as above, the marginal density $p(\mathbf{x}_a)$ is given by
@@ -151,14 +156,14 @@ where $\mathbf{I}$ is the identity matrix.
     Here we make use of the \textit{Schur complement}, in which, being the partitioned matrix
 
     \begin{equation}
-    \left(\begin{array}{cc}{\mathbf{A}} & {\mathbf{B}} \\ {\mathbf{C}} & {\mathbf{D}}\end{array}\right)^{-1}=\left(\begin{array}{cc}{\mathbf{M}} & {-\mathbf{M B D}^{-1}} \\ {-\mathbf{D}^{-1} \mathbf{C M}} & {\mathbf{D}^{-1}+\mathbf{D}^{-1} \mathbf{C M B D}^{-1}}\end{array}\right)
+    \left(\begin{array}{cc}{\mathbf{A}} & {\mathbf{B}} \\ {\mathbf{C}} & {\mathbf{D}}\end{array}\right)^{-1}=\left(\begin{array}{cc}{\mathbf{A}^{-1}+\mathbf{A}^{-1} \mathbf{B} \mathbf{M}^{-1} \mathbf{C} \mathbf{A}^{-1}} & {-\mathbf{A}^{-1} \mathbf{B} \mathbf{M}^{-1}} \\ {-\mathbf{M}^{-1} \mathbf{C} \mathbf{A}^{-1}} & {\mathbf{M}^{-1}}\end{array}\right)
     \end{equation}
 
     the quantity $\mathbf{M}^{-1}$ is the Schur complement, defined as 
 
     \begin{equation}
       \label{eq:app-par-gau-schur}
-      \mathbf{M}=\left(\mathbf{A}-\mathbf{B D}^{-1} \mathbf{C}\right)^{-1}  
+      \mathbf{M}=\left(\mathbf{D}-\mathbf{C A}^{-1} \mathbf{B}\right)^{-1}  
     \end{equation}
 
     This will motivated the term grouping below
@@ -170,8 +175,85 @@ where $\mathbf{I}$ is the identity matrix.
     Then we complete the squares resulting independent
 
     \begin{equation*}
-    \begin{aligned} &-\frac{1}{2}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right)^\top \boldsymbol{\Lambda}_{b b}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right) \\ &+\frac{1}{2}\left(\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} \mathbf{x}_{a}-2\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} \boldsymbol{\mu}_{a}+\boldsymbol{\mu}_{a} \boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} \boldsymbol{\mu}_{a}\right) \\ &-\frac{1}{2}\left(\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \mathbf{x}_{a}-2 \mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a}+\boldsymbol{\mu}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a}\right) \\ &=\underbrace{-\frac{1}{2}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right)^\top \boldsymbol{\Lambda}_{b b}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right)}_{E_1} \\ &\underbrace{-\frac{1}{2}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top\left(\boldsymbol{\Lambda}_{a a}-\boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \Lambda_{b a}\right)\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)}_{E_2} \end{aligned}
+    \begin{aligned} &-\frac{1}{2}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right)^\top \boldsymbol{\Lambda}_{b b}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right) \\ &+\frac{1}{2}\left(\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} \mathbf{x}_{a}-2\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} \boldsymbol{\mu}_{a}+\boldsymbol{\mu}_{a} \boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} \boldsymbol{\mu}_{a}\right) \\ &-\frac{1}{2}\left(\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \mathbf{x}_{a}-2 \mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a}+\boldsymbol{\mu}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a}\right) \\ &=\underbrace{-\frac{1}{2}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right)^\top \boldsymbol{\Lambda}_{b b}\left(\mathbf{x}_{b}-\left(\boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)\right)\right)}_{E_1} \\ &\underbrace{-\frac{1}{2}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top\left(\boldsymbol{\Lambda}_{a a}-\boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\right)\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)}_{E_2} \end{aligned}
     \end{equation*}
+
+    Now, back to the marginalization, we have
+
+    \begin{equation}
+      \label{eq:app-par-gau-marginalization-1}
+      p\left(\mathbf{x}_{a}\right)=\int \frac{1}{(2 \pi)^{n / 2}} \frac{1}{ \left( \det \mathbf{\Sigma} \right) ^{1 / 2}} \exp \left\{ E_1 \right\} \exp \left\{ E_2 \right\} d \mathbf{x}_b
+    \end{equation}
+
+    By inspection, we have that, being the integral of the density function equals one and being $n_b$ the dimension of $\mathbf{x}_b$
+
+    \begin{equation}
+      \label{eq:app-par-gau-marginalization-2}
+      \int \exp \left\{ E_1 \right\} d \mathbf{x}_b = \left( 2 \pi \right)^{n_b/2} \left( \det \mathbf{\Lambda}_{bb}^{-1} \right) ^{1 / 2}
+    \end{equation}
+
+    Then, substituting (\ref{eq:app-par-gau-marginalization-1}) in (\ref{eq:app-par-gau-marginalization-2}) we have
+
+    \begin{equation*}
+      p\left(\mathbf{x}_{a}\right)=\frac{1}{(2 \pi)^{n_a / 2}} \frac{\left( \det \mathbf{\Lambda}_{bb}^{-1} \right) ^{1 / 2}}{ \left( \det \mathbf{\Sigma} \right) ^{1 / 2}} \exp \left\{ E_2 \right\}
+    \end{equation*}
+
+    We will use the determinant property below
+
+    \begin{equation}
+    \det \left(\begin{array}{cc}{\mathbf{A}} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{array}\right)=\det \mathbf{A} \det \left(\mathbf{D}-\mathbf{C A}^{-1} \mathbf{B}\right)
+    \end{equation}
+
+    Then, substituting the values of $\boldsymbol{\Sigma}$ we have that
+
+    \begin{equation}
+      \det \boldsymbol{\Sigma}=\det \boldsymbol{\Sigma}_{a a} \det\left(\boldsymbol{\Sigma}_{b b}-\boldsymbol{\Sigma}_{b a} \boldsymbol{\Sigma}_{a a}^{-1} \boldsymbol{\Sigma}_{a b}\right)
+    \end{equation}
+
+    Using the Schur complement
+
+    \begin{equation}
+      \det \boldsymbol{\Sigma}=\det \boldsymbol{\Sigma}_{a a} \det \boldsymbol{\Lambda}_{bb}^{-1}
+    \end{equation}
+
+    Finally, using the Schur complement again, we obtain that $\boldsymbol{\Lambda}_{a a}-\boldsymbol{\Lambda}_{a b} \boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a} = \boldsymbol{\Sigma}_{a a}$, what concludes the proof, substituting the result in $E_2$.
+  \end{proof}
+
+  \begin{theorem}[Conditioning]
+    Being the random vector $\mathbf{x}$ and its partitioned as above, the conditional density $p(\mathbf{x}_b | \mathbf{x}_a)$ is given by
+    \begin{displaymath}
+      p(\mathbf{x}_b | \mathbf{x}_a) = \mathcal{N}\left( \mathbf{x}_a | \boldsymbol{\mu}_{b|a}, \boldsymbol{\Sigma}_{b|a} \right)
+    \end{displaymath}
+    where $\boldsymbol{\mu}_{b|a} = \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)$ and $\boldsymbol{\Sigma}_{b|a} = \boldsymbol{\Lambda}_{aa}^{-1}$.
+  \end{theorem}
+
+  \begin{proof}
+    By the product rule we have
+
+    \begin{equation}
+      p(\mathbf{x}_b|\mathbf{x}_a)=\frac{p(\mathbf{x})}{p(\mathbf{x}_a)}
+    \end{equation}
+
+    We already obtain the value for $p(\mathbf{x}_a)$, then
+
+    \begin{equation}
+      p(\mathbf{x}_b|\mathbf{x}_a)=\frac{(2 \pi )^{n_a/2}}{\left( 2 \pi \right)^{n/2}} \frac{( \det \mathbf{\Sigma}_{aa} )^{n_a/2}}{\left( \det \boldsymbol{\Sigma} \right)^{1/2}} \frac{\exp \left\{ E_1 \right\} \exp \left\{ E_2 \right\}}{\exp \left\{ E_2 \right\}}
+    \end{equation}
+    
+    Similarly to what was done in \textit{marginalization} and using the Schur complement, the result
+
+    \begin{equation}
+      p(\mathbf{x}_b|\mathbf{x}_a)=\frac{1}{\left( 2 \pi \right)^{n_b/2}} \frac{1}{\left( \det \boldsymbol{\Lambda}_{bb} \right)^{1/2}} \exp \left\{ E_1 \right\}
+    \end{equation}
+
+    And finally, by inspection of $E_1$ we have
+
+    \begin{equation}
+      \boldsymbol{\mu}_{b|a} =  \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)
+    \end{equation}
+
+    The case for $p\left( \mathbf{x}_a | \mathbf{x}_b \right)$ it's analogous.
+
   \end{proof}
   
   
