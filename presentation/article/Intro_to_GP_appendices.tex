@@ -250,9 +250,15 @@ where $\mathbf{I}$ is the identity matrix.
 
     And finally, by inspection of $E_1$ we have
 
-    \begin{equation}
-      \boldsymbol{\mu}_{b|a} =  \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)
-    \end{equation}
+    \begin{subequations}
+      \begin{align}
+        \boldsymbol{\mu}_{b|a} &=  \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right) \\
+        \intertext{and analogously}
+        \boldsymbol{\mu}_{a|b} &=  \boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1} \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)
+      \end{align}
+    \end{subequations}
+
+    for $\boldsymbol{\Lambda}_{aa}$.
   \end{proof}
 
   \subsection{Affine transformation}
@@ -268,15 +274,29 @@ where $\mathbf{I}$ is the identity matrix.
     where $\mathbf{M}$ is a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then the joint distribution is given by
 
     \begin{equation}
-    p\left(\mathbf{x}_{a}, \mathbf{x}_{b}\right)=\mathcal{N}\left(\left(\begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array}\right) ;\left(\begin{array}{c}{\boldsymbol{\mu}_{a}} \\ {\mathbf{M} \boldsymbol{\mu}_{a}+b}\end{array}\right), \mathbf{R}\right)
+    p\left(\mathbf{x}_{a}, \mathbf{x}_{b}\right)=\mathcal{N}\left(\left(\begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array}\right) ;\left(\begin{array}{c}{\boldsymbol{\mu}_{a}} \\ {\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}}\end{array}\right), \mathbf{R}\right),
     \end{equation}
 
     being
 
     \begin{equation}
-    \mathbf{R}=\left(\begin{array}{cc}{\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}+\boldsymbol{\Sigma}_{a}^{-1}} & {-\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1}} \\ {-\boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}} & {\boldsymbol{\Sigma}_{b | a}^{-1}}\end{array}\right)^{-1}=\left(\begin{array}{cc}{\boldsymbol{\Sigma}_{a}} & {\boldsymbol{\Sigma}_{a} \mathbf{M}^\top} \\ {\mathbf{M} \boldsymbol{\Sigma}_{a}} & {\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top}\end{array}\right)
+    \mathbf{R}=\left(\begin{array}{cc}{\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}+\boldsymbol{\Sigma}_{a}^{-1}} & {-\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1}} \\ {-\boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}} & {\boldsymbol{\Sigma}_{b | a}^{-1}}\end{array}\right)^{-1}=\left(\begin{array}{cc}{\boldsymbol{\Sigma}_{a}} & {\boldsymbol{\Sigma}_{a} \mathbf{M}^\top} \\ {\mathbf{M} \boldsymbol{\Sigma}_{a}} & {\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top}\end{array}\right).
     \end{equation}
     
   \end{theorem}
+
+  \begin{proof}
+    Being the vector
+
+    \begin{equation}
+      \mathbf{x} = \left( \begin{array}{c} \mathbf{x}_a \\ \mathbf{x}_b \end{array} \right)
+    \end{equation}
+
+    and its joint distribution, from
+
+    \begin{equation}
+      p(\mathbf{x}) = p(\mathbf{x}_b | \mathbf{x}_a)p(\mathbf{x}_a) = \frac{}{}
+    \end{equation}
+  \end{proof}
 
 \end{appendices}
