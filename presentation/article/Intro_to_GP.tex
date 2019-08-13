@@ -35,6 +35,8 @@ Federal University of Ceará\\
 \section{Introduction}
 
 \lipsum[1]%
+\nocite{Bishop:2006:PRM:1162264}
+\nocite{Rasmussen:2005:GPM:1162254}
 
 \section{Linear Regression}
 
@@ -202,9 +204,17 @@ Then we substitute the probability distributions founded before. Note that the f
 
 And we can note the similarity with the regularized linear regression in (\ref{eq:lin-reg-error-function-regularized}) aside of the term $\lambda$, what can be founded by $\lambda=\alpha / \beta$. It's important to note that even called maximum posterior, here it was presented a minimization in terms of the negative logarithm, but this equals to the maximization of the positive logarithm. The signal was chosen just for similarity with the error function.
 
-This similarity shows that the Bayesian approach comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But to say that our model is in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the the sum and product rules, as done in (\ref{eq:bay-lin-bayes-theorem}).
+\subsection{Bayesian inference}
 
-What was done was just \textit{conditioning} the prediction to $\mathbf{w}$, i.e. to found the predictive distribution considering the probabilities of $\mathbf{w}$ and the likelihood function. The conditioning for the Gaussian distributions are in the \autoref{subsec:app-par-gau}.
+The similarity mentioned before shows that the Bayesian approach comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But to say that our model is in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the fully Bayes' theorem as (\ref{eq:bay-reg-bayes-rule}). Then, we have
+
+\begin{equation}
+   \overbrace{p(\mathbf{w}|\mathbf{t})}^{posterior} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{\overbrace{p(\mathbf{t}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
+\end{equation}
+
+This is called \textit{Bayesian inference}. If we assume that all distributions which we are working are Gaussian, the predictive distribution has closed form. To do that, we make use of the closure under linear transformations, of \textit{affine transformations}, or the Gaussian.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There are many example of choices for basis functions, as

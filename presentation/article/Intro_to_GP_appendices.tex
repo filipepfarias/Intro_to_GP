@@ -108,6 +108,7 @@ where $\mathbf{I}$ is the identity matrix.
   assuming all matrices have inverses.
 
   \begin{theorem}[Marginalization]
+    \label{theorem:app-gau-margin}
     Being the random vector $\mathbf{x}$ and its partitioned as above, the marginal density $p(\mathbf{x}_a)$ is given by
     \begin{displaymath}
       p(\mathbf{x}_a) = \mathcal{N}\left( \mathbf{x}_a | \boldsymbol{\mu}_a, \boldsymbol{\Sigma}_{aa} \right)
@@ -161,7 +162,7 @@ where $\mathbf{I}$ is the identity matrix.
     \left(\begin{array}{cc}{\mathbf{A}} & {\mathbf{B}} \\ {\mathbf{C}} & {\mathbf{D}}\end{array}\right)^{-1}=\left(\begin{array}{cc}{\mathbf{A}^{-1}+\mathbf{A}^{-1} \mathbf{B} \mathbf{M}^{-1} \mathbf{C} \mathbf{A}^{-1}} & {-\mathbf{A}^{-1} \mathbf{B} \mathbf{M}^{-1}} \\ {-\mathbf{M}^{-1} \mathbf{C} \mathbf{A}^{-1}} & {\mathbf{M}^{-1}}\end{array}\right)
     \end{equation}
 
-    the quantity $\mathbf{M}^{-1}$ is the Schur complement, defined as 
+    the quantity $\mathbf{M}^{-1}$ is the \textit{Schur complement} of the left side matrix with respect to $\mathbf{D}$, defined as 
 
     \begin{equation}
       \label{eq:app-par-gau-schur}
@@ -200,9 +201,10 @@ where $\mathbf{I}$ is the identity matrix.
       p\left(\mathbf{x}_{a}\right)=\frac{1}{(2 \pi)^{n_a / 2}} \frac{\left( \det \mathbf{\Lambda}_{bb}^{-1} \right) ^{1 / 2}}{ \left( \det \mathbf{\Sigma} \right) ^{1 / 2}} \exp \left\{ E_2 \right\}
     \end{equation*}
 
-    We will use the determinant property below
+    We will use the determinant property from Schur complement below
 
     \begin{equation}
+    \label{eq:app-det-schur-complement}
     \det \left(\begin{array}{cc}{\mathbf{A}} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{array}\right)=\det \mathbf{A} \det \left(\mathbf{D}-\mathbf{C A}^{-1} \mathbf{B}\right)
     \end{equation}
 
@@ -222,6 +224,7 @@ where $\mathbf{I}$ is the identity matrix.
   \end{proof}
 
   \begin{theorem}[Conditioning]
+    \label{theorem:app-gau-condit}
     Being the random vector $\mathbf{x}$ and its partitioned as above, the conditional density $p(\mathbf{x}_b | \mathbf{x}_a)$ is given by
     \begin{displaymath}
       p(\mathbf{x}_b | \mathbf{x}_a) = \mathcal{N}\left( \mathbf{x}_a | \boldsymbol{\mu}_{b|a}, \boldsymbol{\Sigma}_{b|a} \right)
@@ -262,19 +265,22 @@ where $\mathbf{I}$ is the identity matrix.
   \end{proof}
 
   \subsection{Affine transformation}
-
+  \label{subsec:app-affine-transf-gau}
+  
+  Making use of the Theorems \ref{theorem:app-gau-margin} and \ref{theorem:app-gau-condit}, we can show that the Gaussian is closed under linear transformations, i.e. an affine transformation of Gaussians results in another Gaussian.
+  
   \begin{theorem}[Affine transformation]
-
+    
     Assume $\mathbf{x}_a$ and $\mathbf{x}_b$ are Gaussian distributed and $\mathbf{x}_b$ conditioned by $\mathbf{x}_a$, as
 
     \begin{equation}
-    p\left(\mathbf{x}_{a}\right) =\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right) =\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \Sigma_{b | a}\right)
+    p\left(\mathbf{x}_{a}\right) =\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right) =\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \boldsymbol{\Sigma}_{b | a}\right)
     \end{equation}
 
     where $\mathbf{M}$ is a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then the joint distribution is given by
 
     \begin{equation}
-    p\left(\mathbf{x}_{a}, \mathbf{x}_{b}\right)=\mathcal{N}\left(\left(\begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array}\right) ;\left(\begin{array}{c}{\boldsymbol{\mu}_{a}} \\ {\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}}\end{array}\right), \mathbf{R}\right),
+    p\left(\mathbf{x}_{a}, \mathbf{x}_{b}\right)=\mathcal{N}\left(\left(\begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array}\right) \left|\left(\begin{array}{c}{\boldsymbol{\mu}_{a}} \\ {\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}}\end{array}\right.\right), \mathbf{R}\right),
     \end{equation}
 
     being
@@ -292,11 +298,61 @@ where $\mathbf{I}$ is the identity matrix.
       \mathbf{x} = \left( \begin{array}{c} \mathbf{x}_a \\ \mathbf{x}_b \end{array} \right)
     \end{equation}
 
-    and its joint distribution, from
+    and its joint distribution, from the Theorems 1 and 2,
 
     \begin{equation}
-      p(\mathbf{x}) = p(\mathbf{x}_b | \mathbf{x}_a)p(\mathbf{x}_a) = \frac{}{}
+      p(\mathbf{x}) = p(\mathbf{x}_b | \mathbf{x}_a)p(\mathbf{x}_a) = \frac{(2 \pi)^{-\left(n_{a}+n_{b}\right) / 2}}{\sqrt{\det \boldsymbol{\Sigma}_{b | a} \det \boldsymbol{\Sigma}_{a}}} \exp \left\{ -\frac{1}{2} E \right\}
     \end{equation}
+
+    where 
+
+    \begin{equation}
+      E=\left(\mathbf{x}_{b}-\mathbf{M} \mathbf{x}_{a}-\mathbf{d}\right)^\top \boldsymbol{\Sigma}_{b | a}^{-1}\left(\mathbf{x}_{b}-\mathbf{M} \mathbf{x}_{a}-\mathbf{d}\right)+\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top \boldsymbol{\Sigma}_{a}^{-1}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right).
+    \end{equation}
+
+    Rewriting $\mathbf{x}_{b}-\mathbf{M} \mathbf{x}_{a}-\mathbf{d}$ as $f$ and $\mathbf{x}_{a}-\boldsymbol{\mu}_{a}$ as $e$, we have
+
+    \begin{align}
+      \label{eq:app-affine-transf-cov-matrix}
+      E&=\left(f-\mathbf{M}e\right)^\top \boldsymbol{\Sigma}_{b | a}^{-1}\left(f-\mathbf{M}e\right)+\left(e\right)^\top \boldsymbol{\Sigma}_{a}^{-1}\left(e\right) \nonumber \\
+      &= e^\top \left(\mathbf{M}^\top  \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}+\boldsymbol{\Sigma}_{a}^{-1}\right) e-e^\top  \mathbf{M}^\top  \boldsymbol{\Sigma}_{b | a}^{-1} f-f \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M} e+f^\top  \boldsymbol{\Sigma}_{b | a}^{-1} f \nonumber \\
+      &=\left(\begin{array}{c}{e} \\ {f}\end{array}\right)^\top \left(\begin{array}{cc}{\mathbf{M}^\top  \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}+\boldsymbol{\Sigma}_{a}^{-1}} & {-\mathbf{M}^\top  \boldsymbol{\Sigma}_{b | a}^{-1}} \\ {-\boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}} & {\boldsymbol{\Sigma}_{b | a}^{-1}}\end{array}\right)\left(\begin{array}{l}{e} \\ {f}\end{array}\right) \nonumber  \\
+      &= \left(\begin{array}{c}{\mathbf{x}_{a}-\boldsymbol{\mu}_{a}} \\ {\mathbf{x}_{b}-\mathbf{M} \boldsymbol{\mu}_{a}-\mathbf{d}}\end{array}\right)^\top \mathbf{R}^{-1}\left(\begin{array}{c}{\mathbf{x}_{a}-\boldsymbol{\mu}_{a}} \\ {\mathbf{x}_{b}-\mathbf{M} \boldsymbol{\mu}_{a}-\mathbf{d}}\end{array}\right)
+    \end{align}
+
+    By (\ref{eq:app-det-schur-complement}) we have that
+
+    \begin{align}
+      \det \mathbf{R}^{-1}&=\det\left(\boldsymbol{\Sigma}_{b | a}^{-1}\right) \det\left(\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}+\boldsymbol{\Sigma}_{a}^{-1}-\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \boldsymbol{\Sigma}_{b | a} \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}\right) \nonumber  \\
+      &=\det\left(\boldsymbol{\Sigma}_{b | a}^{-1}\right) \det\left(\boldsymbol{\Sigma}_{a}^{-1}\right) \nonumber  \\
+      &=\frac{1}{\det\left(\boldsymbol{\Sigma}_{b | a}\right) \det\left(\boldsymbol{\Sigma}_{a}\right)}
+    \end{align}
+    
+    Finally by inspection of (\ref{eq:app-affine-transf-cov-matrix}), we take the mean of $\mathbf{x}_b$ as $\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}$ which concludes the proof.
   \end{proof}
+
+  With the results of Theorems 1, 2 and 3 we get the following corollary
+
+  \begin{corollary}
+
+    Being $\mathbf{x}_b$ conditioned on $\mathbf{x}_a$ and Gaussian distributed as
+
+    \begin{equation}
+      p\left(x_{a}\right)=\mathcal{N}\left(x_{a} ; \mu_{a}, \Sigma_{a}\right), \quad p\left(x_{b} | x_{a}\right)=\mathcal{N}\left(x_{b} ; M x_{a}+d, \Sigma_{b | a}\right)
+    \end{equation}
+
+    with $\mu_{b} =M \mu_{a}+d$, $\Sigma_{b} =\Sigma_{b | a}+M \Sigma_{a} M^{T}$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
+
+    \begin{subequations}
+    
+    \begin{align}
+      p\left(x_{a} | x_{b}\right)&=\mathcal{N}\left(x_{a} ; \mu_{a | b}, \Sigma_{a | b}\right)
+    \end{align}
+    with
+    \begin{align}
+        \mu_{a | b}&=\Sigma_{a | b}\left(M^{T} \Sigma_{b | a}^{-1}\left(x_{b}-b\right)+\Sigma_{a}^{-1} \mu_{a}\right) \\ \Sigma_{a | b}&=\left(\Sigma_{a}^{-1}+M^{T} \Sigma_{b | a}^{-1} M\right)^{-1}.
+    \end{align}
+  \end{subequations}
+  \end{corollary}
 
 \end{appendices}
