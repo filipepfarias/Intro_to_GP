@@ -227,9 +227,9 @@ where $\mathbf{I}$ is the identity matrix.
     \label{theorem:app-gau-condit}
     Being the random vector $\mathbf{x}$ and its partitioned as above, the conditional density $p(\mathbf{x}_b | \mathbf{x}_a)$ is given by
     \begin{displaymath}
-      p(\mathbf{x}_b | \mathbf{x}_a) = \mathcal{N}\left( \mathbf{x}_a | \boldsymbol{\mu}_{b|a}, \boldsymbol{\Sigma}_{b|a} \right)
+      p(\mathbf{x}_b | \mathbf{x}_a) = \mathcal{N}\left( \mathbf{x}_b | \boldsymbol{\mu}_{b|a}, \boldsymbol{\Sigma}_{b|a} \right)
     \end{displaymath}
-    where $\boldsymbol{\mu}_{b|a} = \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)$ and $\boldsymbol{\Sigma}_{b|a} = \boldsymbol{\Lambda}_{aa}^{-1}$.
+    where $\boldsymbol{\mu}_{b|a} = \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)$ and $\boldsymbol{\Sigma}_{b|a} = \boldsymbol{\Lambda}_{bb}^{-1}$.
   \end{theorem}
 
   \begin{proof}
@@ -338,19 +338,19 @@ where $\mathbf{I}$ is the identity matrix.
     Being $\mathbf{x}_b$ conditioned on $\mathbf{x}_a$ and Gaussian distributed as
 
     \begin{equation}
-      p\left(x_{a}\right)=\mathcal{N}\left(x_{a} ; \mu_{a}, \Sigma_{a}\right), \quad p\left(x_{b} | x_{a}\right)=\mathcal{N}\left(x_{b} ; M x_{a}+d, \Sigma_{b | a}\right)
+      p\left(\mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \boldsymbol{\Sigma}_{b | a}\right)
     \end{equation}
 
-    with $\mu_{b} =M \mu_{a}+d$, $\Sigma_{b} =\Sigma_{b | a}+M \Sigma_{a} M^{T}$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
+    with $\boldsymbol{\mu}_{b} =M \boldsymbol{\mu}_{a}+d$, $\boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} M^{T}$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
 
     \begin{subequations}
     
     \begin{align}
-      p\left(x_{a} | x_{b}\right)&=\mathcal{N}\left(x_{a} ; \mu_{a | b}, \Sigma_{a | b}\right)
+      p\left(\mathbf{x}_{a} | \mathbf{x}_{b}\right)&=\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a | b}, \boldsymbol{\Sigma}_{a | b}\right)
     \end{align}
     with
     \begin{align}
-        \mu_{a | b}&=\Sigma_{a | b}\left(M^{T} \Sigma_{b | a}^{-1}\left(x_{b}-b\right)+\Sigma_{a}^{-1} \mu_{a}\right) \\ \Sigma_{a | b}&=\left(\Sigma_{a}^{-1}+M^{T} \Sigma_{b | a}^{-1} M\right)^{-1}.
+        \boldsymbol{\mu}_{a | b}&=\boldsymbol{\Sigma}_{a | b}\left(\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1}\left(\mathbf{x}_{b}-\mathbf{d}\right)+\boldsymbol{\Sigma}_{a}^{-1} \boldsymbol{\mu}_{a}\right) \\ \boldsymbol{\Sigma}_{a | b}&=\left(\boldsymbol{\Sigma}_{a}^{-1}+\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}\right)^{-1}.
     \end{align}
   \end{subequations}
   \end{corollary}
