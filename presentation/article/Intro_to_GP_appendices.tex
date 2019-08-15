@@ -225,43 +225,67 @@ where $\mathbf{I}$ is the identity matrix.
 
   \begin{theorem}[Conditioning]
     \label{theorem:app-gau-condit}
-    Being the random vector $\mathbf{x}$ and its partitioned as above, the conditional density $p(\mathbf{x}_b | \mathbf{x}_a)$ is given by
+    Being the random vector $\mathbf{x}$ and its partitioned as above, the conditional density $p(\mathbf{x}_a | \mathbf{x}_b)$ is given by
     \begin{displaymath}
-      p(\mathbf{x}_b | \mathbf{x}_a) = \mathcal{N}\left( \mathbf{x}_b | \boldsymbol{\mu}_{b|a}, \boldsymbol{\Sigma}_{b|a} \right)
+      p(\mathbf{x}_a | \mathbf{x}_b) = \mathcal{N}\left( \mathbf{x}_a | \boldsymbol{\mu}_{a|b}, \boldsymbol{\Sigma}_{a|b} \right)
     \end{displaymath}
-    where $\boldsymbol{\mu}_{b|a} = \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)$ and $\boldsymbol{\Sigma}_{b|a} = \boldsymbol{\Lambda}_{bb}^{-1}$.
+    where $\boldsymbol{\mu}_{a|b} = \boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1} \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)$ and $\boldsymbol{\Sigma}_{a|b} = \boldsymbol{\Lambda}_{aa}^{-1}$.
   \end{theorem}
 
   \begin{proof}
     By the product rule we have
 
     \begin{equation}
-      p(\mathbf{x}_b|\mathbf{x}_a)=\frac{p(\mathbf{x})}{p(\mathbf{x}_a)}
+      p(\mathbf{x}_a|\mathbf{x}_b)=\frac{p(\mathbf{x})}{p(\mathbf{x}_b)}
     \end{equation}
 
-    We already obtain the value for $p(\mathbf{x}_a)$, then
+    what is by (\ref{eq:app-par-gau-multivariate-gaussian}),then
 
     \begin{equation}
-      p(\mathbf{x}_b|\mathbf{x}_a)=\frac{(2 \pi )^{n_a/2}}{\left( 2 \pi \right)^{n/2}} \frac{( \det \mathbf{\Sigma}_{aa} )^{n_a/2}}{\left( \det \boldsymbol{\Sigma} \right)^{1/2}} \frac{\exp \left\{ E_1 \right\} \exp \left\{ E_2 \right\}}{\exp \left\{ E_2 \right\}}
+      p\left(\mathbf{x}_{a} | \mathbf{x}_{b}\right)=\sqrt{\frac{ \det \boldsymbol{\Sigma}_{b b}}{(2 \pi)^{n_{a} / 2}  \det \boldsymbol{\Sigma}}} \exp (E)
+    \end{equation}
+
+    where
+
+    \begin{equation}
+      E=-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^\top \boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})+\frac{1}{2}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)^\top \boldsymbol{\Sigma}_{b b}^{-1}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)
     \end{equation}
     
     Similarly to what was done in \textit{marginalization} and using the Schur complement, the result
 
     \begin{equation}
-      p(\mathbf{x}_b|\mathbf{x}_a)=\frac{1}{\left( 2 \pi \right)^{n_b/2}} \frac{1}{\left( \det \boldsymbol{\Lambda}_{bb} \right)^{1/2}} \exp \left\{ E_1 \right\}
+      \det \boldsymbol{\Sigma}=\det \boldsymbol{\Sigma}_{b b} \det\left(\boldsymbol{\Sigma}_{a a}-\boldsymbol{\Sigma}_{a b} \boldsymbol{\Sigma}_{b b}^{-1} \boldsymbol{\Sigma}_{b a}\right) = \det \boldsymbol{\Sigma}_{b b} \det \boldsymbol{\Lambda}_{b b}^{-1}
     \end{equation}
 
-    And finally, by inspection of $E_1$ we have
+    Using that $\boldsymbol{\Lambda} \equiv \boldsymbol{\Sigma}^{-1}$, we expand the term $E$
+
+    \begin{align}
+      E = &-\frac{1}{2}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top \boldsymbol{\Lambda}_{a a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)-\frac{1}{2}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)^\top \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right) \\ &-\frac{1}{2}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)^\top \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)-\frac{1}{2}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)^\top \left( \boldsymbol{\Lambda}_{b b} - \boldsymbol{\Sigma}_{bb}^{-1} \right)\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right) 
+    \end{align}
+
+    Reordering the terms, we'll have
+
+    \begin{equation}
+    \begin{aligned} E &=-\frac{1}{2} \mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \mathbf{x}_{a}+\mathbf{x}_{a}^\top \boldsymbol{\Lambda}_{a a} \left(\boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1}\boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)\right) \\ &-\frac{1}{2} \boldsymbol{\mu}_{a}^\top \boldsymbol{\Lambda}_{a a} \boldsymbol{\mu}_{a}+\boldsymbol{\mu}_{a}^\top \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)-\frac{1}{2}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)^\top \boldsymbol{\Lambda}_{b a} \boldsymbol{\Lambda}_{a a}^{-1} \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right) \end{aligned}
+    \end{equation}
+
+    Completing the squares, we obtain
+
+    \begin{equation}
+      E = \left( \mathbf{x}_a - \left( \boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1}\boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)  \right) \right)^\top \boldsymbol{\Lambda}_{a a} \left( \mathbf{x}_a - \left( \boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1}\boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)  \right) \right)
+    \end{equation}
+
+    Then by inspection we have for the precision matrix $\boldsymbol{\Lambda}_{a a}$
 
     \begin{subequations}
       \begin{align}
-        \boldsymbol{\mu}_{b|a} &=  \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right) \\
+        \boldsymbol{\mu}_{a|b} &=  \boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1} \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right) \\
         \intertext{and analogously}
-        \boldsymbol{\mu}_{a|b} &=  \boldsymbol{\mu}_{a}-\boldsymbol{\Lambda}_{a a}^{-1} \boldsymbol{\Lambda}_{a b}\left(\mathbf{x}_{b}-\boldsymbol{\mu}_{b}\right)
+        \boldsymbol{\mu}_{b|a} &=  \boldsymbol{\mu}_{b}-\boldsymbol{\Lambda}_{b b}^{-1} \boldsymbol{\Lambda}_{b a}\left(\mathbf{x}_{a}-\boldsymbol{\mu}_{a}\right)
       \end{align}
     \end{subequations}
 
-    for $\boldsymbol{\Lambda}_{aa}$.
+    for $\boldsymbol{\Lambda}_{bb}$.
   \end{proof}
 
   \subsection{Affine transformation}
@@ -334,6 +358,7 @@ where $\mathbf{I}$ is the identity matrix.
   With the results of Theorems 1, 2 and 3 we get the following corollary
 
   \begin{corollary}
+    \label{cor:aff-marg-cond-gaussian}
 
     Being $\mathbf{x}_b$ conditioned on $\mathbf{x}_a$ and Gaussian distributed as
 
@@ -341,7 +366,7 @@ where $\mathbf{I}$ is the identity matrix.
       p\left(\mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \boldsymbol{\Sigma}_{b | a}\right)
     \end{equation}
 
-    with $\boldsymbol{\mu}_{b} =M \boldsymbol{\mu}_{a}+d$, $\boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} M^{T}$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
+    with $\boldsymbol{\mu}_{b} =\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}$, $\boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
 
     \begin{subequations}
     

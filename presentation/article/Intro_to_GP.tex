@@ -158,7 +158,7 @@ When viewed as function of $f(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, th
 
 \begin{equation}
    \label{eq:bay-reg-ml-function}
-   \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{f\left(x_{i}, \mathbf{w}\right)-y_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
+   \ln p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{f\left(x_{i}, \mathbf{w}\right)-y_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
 \end{equation}
 
 The maximization of (\ref{eq:bay-reg-ml-function}) taking the derivative with respect to $\mathbf{w}$ will lead us back to 
@@ -170,9 +170,9 @@ We can determine the precision parameter using the maximum likelihood by taking 
    \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{f\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-y_{i}\right\}^{2}
 \end{equation}
 
-Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$. This became possible because we construct probabilistic model and we can make these predictions with a \textit{predictive distribution}, i.e. a probability distribution over $y$, what gives us not just simply a point.
+Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$, given that our model is capable of learn the parameters. And not just one collection of them, but a distribution probability.
 
-In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{ML}$ and $\beta_\text{ML}$, we have the predictive distribution by
+In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{ML}$ and $\beta_\text{ML}$, we have the parameters distribution by
 
 \begin{equation}
    p\left(y | x, \mathbf{w}_{\mathrm{ML}}, \beta_{\mathrm{ML}}\right)=\mathcal{N}\left(y | f\left(x, \mathbf{w}_{\mathrm{ML}}\right), \beta_{\mathrm{ML}}^{-1}\right)
@@ -181,19 +181,20 @@ In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{M
 Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution to make the inference using the Bayes' rule. We can now introduce here the probability distribution over the parameters $p(\mathbf{w})$ as presented in the Section 3.1. The choice is arbitrary, but for this particular case we will consider
 
 \begin{equation}
-   p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^{\mathrm{T}} \mathbf{w}\right\}
+   \label{eq:bay-lin-reg-prior-dist}
+   p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}\right\}
 \end{equation}
 
 where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem considering that our \textit{posterior} distribution is proportional to the product between the \textit{likelihood function} and the assumed \textit{prior}, as seen in (\ref{eq:bay-lin-bayes-theorem}) then, assuming the observation of the whole data set
 
 \begin{equation}
-   p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
+   p(\mathbf{w} | \mathbf{x}, \mathbf{y}, \alpha, \beta) \propto p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
 \end{equation}
 
-As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{t}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
+As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{y}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
 %
 \begin{equation}
-   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
+   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{y}, \alpha, \beta) \propto \ln p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
 \end{equation}
 %
 Then we substitute the probability distributions founded before. Note that the first term in the right side is the error function founded in (\ref{eq:bay-reg-ml-function}). Then, the terms which the minimization depends of $\mathbf{w}$ are
@@ -209,10 +210,61 @@ And we can note the similarity with the regularized linear regression in (\ref{e
 The similarity mentioned before shows that the Bayesian approach comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But to say that our model is in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the fully Bayes' theorem as (\ref{eq:bay-reg-bayes-rule}). Then, we have
 
 \begin{equation}
-   \overbrace{p(\mathbf{w}|\mathbf{t})}^{posterior} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{\overbrace{p(\mathbf{t}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
+   \overbrace{p(\mathbf{w}|\mathbf{y})}^{posterior} = \frac{p(\mathbf{y}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{y})} = \frac{\overbrace{p(\mathbf{y}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{y}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
 \end{equation}
 
-This is called \textit{Bayesian inference}. If we assume that all distributions which we are working are Gaussian, the predictive distribution has closed form. To do that, we make use of the closure under linear transformations, of \textit{affine transformations}, or the Gaussian.
+This is called \textit{Bayesian inference}. If we assume that all distributions which we are working are Gaussian, the posterior distribution has closed form. To do that, we make use of the closure under linear transformations, or \textit{affine transformations}, for the Gaussian. For that, we will make use of the corollary below, which theorems are proven in the \autoref{subsec:app-par-gau}.
+
+\begin{corollary}
+   \label{cor:aff-marg-cond-gaussian}
+
+   Being $\mathbf{x}_b$ conditioned on $\mathbf{x}_a$ and Gaussian distributed as
+
+   \begin{equation}
+     p\left(\mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \boldsymbol{\Sigma}_{b | a}\right)
+   \end{equation}
+
+   with $\boldsymbol{\mu}_{b} =\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}$, $\boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
+
+   \begin{subequations}
+   
+   \begin{align}
+     p\left(\mathbf{x}_{a} | \mathbf{x}_{b}\right)&=\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a | b}, \boldsymbol{\Sigma}_{a | b}\right)
+   \end{align}
+   with
+   \begin{align}
+       \boldsymbol{\mu}_{a | b}&=\boldsymbol{\Sigma}_{a | b}\left(\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1}\left(\mathbf{x}_{b}-\mathbf{d}\right)+\boldsymbol{\Sigma}_{a}^{-1} \boldsymbol{\mu}_{a}\right) \\ \boldsymbol{\Sigma}_{a | b}&=\left(\boldsymbol{\Sigma}_{a}^{-1}+\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}\right)^{-1}.
+   \end{align}
+ \end{subequations}
+ \end{corollary}
+
+ Assuming no deviation in the mean, $\mathbf{d} = \mathbf{0}$, and the linear transformation being our design matrix, $\mathbf{M} = \Phi$, we obtain that
+
+ \begin{equation}
+    p(\mathbf{w}|\mathbf{y},\alpha,\beta) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{\mu}_{\mathbf{w}|\mathbf{y}} , \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}\right)
+ \end{equation}
+
+ being
+
+ \begin{equation}
+   \boldsymbol{\mu}_{\mathbf{w}|\mathbf{y}}=\boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}\left(\beta \Phi^\top \mathbf{y}+\boldsymbol{\Sigma}_{\mathbf{w}}^{-1} \boldsymbol{\mu}_{\mathbf{w}}\right), \quad \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}=\left(\boldsymbol{\Sigma}_{\mathbf{w}}^{-1}+ \beta \Phi^\top \Phi\right)^{-1}
+ \end{equation}
+
+ assumed the prior distribution defined in (\ref{eq:bay-lin-reg-prior-dist}) and the precision matrix $\boldsymbol{\Sigma}_{\mathbf{t}|\mathbf{w}} = \beta^{-1}\mathbf{I}$. Then we have defined
+
+ \begin{equation}
+    \boldsymbol{\mu}_\mathbf{w}=\mathbf{0}, \quad \boldsymbol{\Sigma}_\mathbf{w} = \alpha^{-1} \mathbf{I}
+ \end{equation}
+
+\subsection{Predictive distribution}
+
+In practice, some times it is more valuable the information about $y$ itself than its parameters $\mathbf{w}$. We can make this by evaluating the predictions of $y$ for the new values of $x$ by
+
+\begin{equation}
+   p(y | \mathbf{y},\mathbf{x},x, \alpha, \beta)=\int p(y | \mathbf{w},\mathbf{x},x, \beta) p(\mathbf{w} | \mathbf{y},\mathbf{x},x, \alpha, \beta) \mathrm{d} \mathbf{w}
+\end{equation}
+
+what is called \textit{predictive distribution}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
