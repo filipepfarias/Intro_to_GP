@@ -80,7 +80,7 @@ This indicate that if $E$ is zero, $f$ passes exactly through each training data
    \frac{\partial E}{\partial \mathbf{w}} = 0
 \end{equation}
 
-We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, considering $\mathbf{f} = f(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e. $f$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}). Then we have
+We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, as $\mathbf{f} = f(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e. $f$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}). Then we have
 
 \begin{equation}
    \label{eq:lin-reg-error-function-matrix-form}
@@ -266,7 +266,7 @@ In practice, some times it is more valuable the information about $y$ itself tha
    p(y | \mathbf{y}, \alpha, \beta)=\int p(y | \mathbf{w}, \beta) p(\mathbf{w} | \mathbf{y}, \alpha, \beta) \mathrm{d} \mathbf{w}
 \end{equation}
 
-what is called \textit{predictive distribution}. The disrtibutions under integration were defined in (\ref{eq:bay-cur-fit-1}) and (\ref{eq:bay-inf-posterior}). Then we use the \textit{marginalization} defined in \autoref{subsec:app-par-gau} and obtain that
+what is called \textit{predictive distribution}. The distributions under integration were defined in (\ref{eq:bay-cur-fit-1}) and (\ref{eq:bay-inf-posterior}). Then we use the \textit{marginalization} defined in \autoref{subsec:app-par-gau} and obtain that
 
 \begin{equation}
    p(y | \mathbf{x}, \mathbf{y}, \alpha, \beta)=\mathcal{N}\left(y | \boldsymbol{\mu}_{y}, \boldsymbol{\Sigma}_{y} \right)
@@ -274,7 +274,17 @@ what is called \textit{predictive distribution}. The disrtibutions under integra
 
 with $\boldsymbol{\mu}_y = \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{y}}$ and $\boldsymbol{\Sigma}_y = \beta^{-1} + \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{y}}\boldsymbol{\phi}(x)$. Note that we are considering the linear model as $f(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top \mathbf{w}$, i.e. the affine transformation $\mathbf{M}$ here is $\boldsymbol{\phi}(x)^\top$.
 
-\subsection{Equivalent kernel}
+An alternative formulation \cite{Rasmussen:2005:GPM:1162254} is
+
+\begin{equation}
+\begin{aligned}
+      p(y | \mathbf{x}, \mathbf{y}, \alpha, \beta) = \mathcal{N} & \left(  \boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \Phi\left(K+\beta I\right)^{-1} \mathbf{y} \right., \\ &\left.\boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \boldsymbol{\phi}(x)-\boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \Phi\left(K+\beta I\right)^{-1} \Phi^{\top} \Sigma_\mathbf{w} \boldsymbol{\phi}(x)\right)
+\end{aligned}
+\end{equation}
+
+with $K=\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$.
+
+Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $f(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
 
 There are many example of choices for basis functions, as
 
