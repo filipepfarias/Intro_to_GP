@@ -272,10 +272,9 @@ what is called \textit{predictive distribution}. The disrtibutions under integra
    p(y | \mathbf{x}, \mathbf{y}, \alpha, \beta)=\mathcal{N}\left(y | \boldsymbol{\mu}_{y}, \boldsymbol{\Sigma}_{y} \right)
 \end{equation}
 
-with 
+with $\boldsymbol{\mu}_y = \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{y}}$ and $\boldsymbol{\Sigma}_y = \beta^{-1} + \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{y}}\boldsymbol{\phi}(x)$. Note that we are considering the linear model as $f(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top \mathbf{w}$, i.e. the affine transformation $\mathbf{M}$ here is $\boldsymbol{\phi}(x)^\top$.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equivalent kernel}
 
 There are many example of choices for basis functions, as
 
