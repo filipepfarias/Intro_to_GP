@@ -217,7 +217,6 @@ The similarity mentioned before shows that the Bayesian approach comprise even a
 This is called \textit{Bayesian inference}. If we assume that all distributions which we are working are Gaussian, the posterior distribution has closed form. To do that, we make use of the closure under linear transformations, or \textit{affine transformations}, for the Gaussian. For that, we will make use of the corollary below, which theorems are proven in the \autoref{subsec:app-par-gau}.
 
 \begin{corollary}
-   \label{cor:aff-marg-cond-gaussian}
 
    Being $\mathbf{x}_b$ conditioned on $\mathbf{x}_a$ and Gaussian distributed as
 
@@ -284,15 +283,42 @@ An alternative formulation \cite{Rasmussen:2005:GPM:1162254} is
 
 with $K=\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$.
 
-Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $f(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
+\subsection{Equivalent kernel}
 
-There are many example of choices for basis functions, as
+Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $f(\mathbf{x})$ and $f(\mathbf{x'})$, which is given by
 
 \begin{equation}
-   \phi_j(x) = \exp \left\{ -\frac{\left(x-\mu_j\right)^2}{2s^2} \right\}
+   a
 \end{equation}
 
-known as \textit{squared exponential}, where $\mu_j$ controls the location of the basis function in the \textit{input space}, and $s$ the spatial scale. It's usually referred as 'Gaussian' basis function because of its similarity with the Gaussian distribution function, although there is no probabilistic interpretation here.
+From the form of the equivalent kernel, we see that the predictive mean at nearby points will be highly correlated, whereas for more distant pairs of points the correlation will be smaller.
+
+\section{Gaussian processes}
+
+Until now we have made the inference in the \textit{feature space}, the space where the parameters $\mathbf{w}$ are. In other words, the strategy is to train our model, obtaining the parameters probability distribution, by Bayesian inference, and then evaluating the predictive distribution with the posterior of the inference.
+
+An alternative and equivalent way to achieve such results is to make the inference directly in the space of functions. To this we use the \textit{Gaussian processes} to describe the distribution over the functions directly \cite{Rasmussen:2005:GPM:1162254}.
+
+We define a Gaussian process (GP) as a collection of random variables, such that any finite number of which is normal jointly distributed. As the normal distribution, the GP is completely defined by its mean function $m(\mathbf{x})$ and covariance function $k(\mathbf{x},\mathbf{x'})$ of a real process $f(\mathbf{x})$, these in turn are defined as
+
+\begin{equation}
+   m(\mathbf{x}) = \mathbb{E}\left\{ f(\mathbf{x}) \right\}, \quad
+   k(\mathbf{x},\mathbf{x'}) = \mathbb{E}\left\{ \left( f(\mathbf{x}) - m(\mathbf{x}) \right) \left( f(\mathbf{x'}) - m(\mathbf{x'}) \right) \right\}
+\end{equation}
+
+and finally
+
+\begin{equation}
+   f(\mathbf{x}) \sim \mathcal{GP} \left( m(\mathbf{x}), k(\mathbf{x},\mathbf{x'}) \right)
+\end{equation}
+
+% There are many example of choices for basis functions, as
+
+% \begin{equation}
+%    \phi_j(x) = \exp \left\{ -\frac{\left(x-\mu_j\right)^2}{2s^2} \right\}
+% \end{equation}
+
+% known as \textit{squared exponential}, where $\mu_j$ controls the location of the basis function in the \textit{input space}, and $s$ the spatial scale. It's usually referred as 'Gaussian' basis function because of its similarity with the Gaussian distribution function, although there is no probabilistic interpretation here.
 
 % \begin{figure}[H]
 %    \centering
