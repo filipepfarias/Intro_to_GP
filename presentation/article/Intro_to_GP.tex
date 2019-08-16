@@ -145,6 +145,7 @@ Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominat
 Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $y$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $f(x,\mathbf{w})$. Thus we have
 
 \begin{equation}
+   \label{eq:bay-cur-fit-1}
    p(y | x, \mathbf{w}, \beta)=\mathcal{N}\left(y | f(x, \mathbf{w}), \beta^{-1}\right)
 \end{equation}
 
@@ -241,6 +242,7 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
  Assuming no deviation in the mean, $\mathbf{d} = \mathbf{0}$, and the linear transformation being our design matrix, $\mathbf{M} = \Phi$, we obtain that
 
  \begin{equation}
+   \label{eq:bay-inf-posterior}
     p(\mathbf{w}|\mathbf{y},\alpha,\beta) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{\mu}_{\mathbf{w}|\mathbf{y}} , \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}\right)
  \end{equation}
 
@@ -261,10 +263,16 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
 In practice, some times it is more valuable the information about $y$ itself than its parameters $\mathbf{w}$. We can make this by evaluating the predictions of $y$ for the new values of $x$ by
 
 \begin{equation}
-   p(y | \mathbf{y},\mathbf{x},x, \alpha, \beta)=\int p(y | \mathbf{w},\mathbf{x},x, \beta) p(\mathbf{w} | \mathbf{y},\mathbf{x},x, \alpha, \beta) \mathrm{d} \mathbf{w}
+   p(y | \mathbf{y}, \alpha, \beta)=\int p(y | \mathbf{w}, \beta) p(\mathbf{w} | \mathbf{y}, \alpha, \beta) \mathrm{d} \mathbf{w}
 \end{equation}
 
-what is called \textit{predictive distribution}
+what is called \textit{predictive distribution}. The disrtibutions under integration were defined in (\ref{eq:bay-cur-fit-1}) and (\ref{eq:bay-inf-posterior}). Then we use the \textit{marginalization} defined in \autoref{subsec:app-par-gau} and obtain that
+
+\begin{equation}
+   p(y | \mathbf{x}, \mathbf{y}, \alpha, \beta)=\mathcal{N}\left(y | \boldsymbol{\mu}_{y}, \boldsymbol{\Sigma}_{y} \right)
+\end{equation}
+
+with 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

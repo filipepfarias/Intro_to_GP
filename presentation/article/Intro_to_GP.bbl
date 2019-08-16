@@ -1,0 +1,27 @@
+\begin{thebibliography}{RW05}
+
+\bibitem[Bis06]{Bishop:2006:PRM:1162264}
+Christopher~M. Bishop.
+\newblock {\em Pattern Recognition and Machine Learning (Information Science
+  and Statistics)}.
+\newblock Springer-Verlag, Berlin, Heidelberg, 2006.
+
+\bibitem[Gra83]{graybill1983matrices}
+F.A. Graybill.
+\newblock {\em Matrices with applications in statistics}.
+\newblock Wadsworth statistics - probability series. Wadsworth International
+  Group, 1983.
+
+\bibitem[RW05]{Rasmussen:2005:GPM:1162254}
+Carl~Edward Rasmussen and Christopher K.~I. Williams.
+\newblock {\em Gaussian Processes for Machine Learning (Adaptive Computation
+  and Machine Learning)}.
+\newblock The MIT Press, 2005.
+
+\bibitem[SL11]{schon_lindsten}
+Thomas~B. Schön and Fredrik Lindsten.
+\newblock Manipulating the multivariate gaussian density.
+\newblock Technical report, Division of Automatic Control, Linköping
+  University, Sweden, January 2011.
+
+\end{thebibliography}

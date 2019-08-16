@@ -366,7 +366,7 @@ where $\mathbf{I}$ is the identity matrix.
       p\left(\mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{a} | \boldsymbol{\mu}_{a}, \boldsymbol{\Sigma}_{a}\right), \quad p\left(\mathbf{x}_{b} | \mathbf{x}_{a}\right)=\mathcal{N}\left(\mathbf{x}_{b} | \mathbf{M} \mathbf{x}_{a}+\mathbf{d}, \boldsymbol{\Sigma}_{b | a}\right)
     \end{equation}
 
-    with $\boldsymbol{\mu}_{b} =\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d}$, $\boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top$, $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
+     $\mathbf{M}$ a constant matrix and $\mathbf{d}$ a constant vector, both with the appropriate dimensions. Then conditional distribution $p(\mathbf{x}_a|\mathbf{x}_b)$ is given by
 
     \begin{subequations}
     
@@ -377,6 +377,20 @@ where $\mathbf{I}$ is the identity matrix.
     \begin{align}
         \boldsymbol{\mu}_{a | b}&=\boldsymbol{\Sigma}_{a | b}\left(\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1}\left(\mathbf{x}_{b}-\mathbf{d}\right)+\boldsymbol{\Sigma}_{a}^{-1} \boldsymbol{\mu}_{a}\right) \\ \boldsymbol{\Sigma}_{a | b}&=\left(\boldsymbol{\Sigma}_{a}^{-1}+\mathbf{M}^\top \boldsymbol{\Sigma}_{b | a}^{-1} \mathbf{M}\right)^{-1}.
     \end{align}
+  \end{subequations}
+  
+  The marginal density of $\mathbf{x}_b$ is given by
+
+  
+  \begin{subequations}
+    \begin{equation}
+      p\left(\mathbf{x}_{b}\right)=\mathcal{N}\left(\mathbf{x}_{b} | \boldsymbol{\mu}_{b}, \boldsymbol{\Sigma}_{b}\right)
+    \end{equation}
+    with
+    \begin{equation}
+    \label{eq:app-cor-affine-b}
+     \boldsymbol{\mu}_{b} =\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d} , \quad \boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top .
+    \end{equation}
   \end{subequations}
   \end{corollary}
 
