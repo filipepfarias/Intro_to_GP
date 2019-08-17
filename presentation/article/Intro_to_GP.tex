@@ -288,7 +288,10 @@ with $K=\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$.
 Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $f(\mathbf{x})$ and $f(\mathbf{x'})$, which is given by
 
 \begin{equation}
-   a
+   \begin{aligned}
+      \mathrm{cov}\left\{ f(\mathbf{x}), f(\mathbf{x'})\right\} &=\mathrm{cov} \left\{ \boldsymbol{\phi}(\mathbf{x})^\top \mathbf{w}, \mathbf{w}^\top \boldsymbol{\phi}(\mathbf{x}) \right\} \\
+       &= \boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x}) = \beta^{-1}k(\mathbf{x},\mathbf{x'})
+   \end{aligned}
 \end{equation}
 
 From the form of the equivalent kernel, we see that the predictive mean at nearby points will be highly correlated, whereas for more distant pairs of points the correlation will be smaller.
