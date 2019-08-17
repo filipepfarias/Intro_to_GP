@@ -317,11 +317,32 @@ Such collection definition automatically implies in the marginalization property
 This is important to obtain our Bayesian linear regression as a GP. Being our model $f(\mathbf{x})=\boldsymbol{\phi}(\mathbf{x})^\top \mathbf{w}$ with prior $\mathcal{N}\left( \mathbf{w} | \mathbf{0}, \boldsymbol{\Sigma}_{\mathbf{w}}\right)$. We obtain for the mean and covariance functions
 
 \begin{equation}
+   \label{eq:gau-pro-mean-cov}
    \begin{aligned}
       \mathbb{E}\left\{ f(\mathbf{x}) \right\} &= \boldsymbol{\phi}(\mathbf{x})^\top \mathbb{E} \left\{ \mathbf{w} \right\} = 0,\\
       \mathbb{E}\left\{ f(\mathbf{x})f(\mathbf{x'}) \right\} &= \boldsymbol{\phi}(\mathbf{x})^\top \mathbb{E} \left\{ \mathbf{ww}^\top \right\}\boldsymbol{\phi}(\mathbf{x}) = \boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_{\mathbf{w}} \boldsymbol{\phi}(\mathbf{x'})
    \end{aligned}
 \end{equation}
+
+\subsection{Prediction with Noisy Observations}
+
+The last sections give us an insight about the construction of the learning process for the GP. Analogous to the Bayes' theorem for the Gaussian, we use the idea of the GP as a multidimensional Gaussian distribution and we can make inference with its partitions. 
+
+First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{f}$ and the prediction $\mathbf{f_*}$, as
+
+\begin{equation}
+   \mathcal{N} \left( \left( \begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array} \right) \left| \mathbf{0}, \left( \begin{array}{ll}{\mathbf{K}(\mathbf{x},\mathbf{x})} & {\mathbf{K}(\mathbf{x},\mathbf{x_*})} \\ {\mathbf{K}(\mathbf{x_*},\mathbf{x})} & {\mathbf{K}(\mathbf{x_*},\mathbf{x_*})}\end{array} \right) \right. \right)
+\end{equation}
+
+where $\mathbf{K}(\cdot,\cdot)$ denotes the covariance matrices evaluated at all pairs of $N$-dimensional $\mathbf{x}$ training points and $N_*$-dimensional $\mathbf{x_*}$ test points. Then, making use of \autoref{subsec:app-par-gau}, we use the \textit{conditioning} to obtain the predictive distribution
+
+\begin{equation}
+\begin{aligned}
+      p(\mathbf{f_*}|\mathbf{x_*},\mathbf{x},\mathbf{f}) = \mathcal{N} & \left( \mathbf{f_*} | \mathbf{K}(\mathbf{x_*},\mathbf{x})\mathbf{K}(\mathbf{x},\mathbf{x})^{-1}\mathbf{f}, \right. \\ & \left. \mathbf{K}(\mathbf{x_*},\mathbf{x_*})-\mathbf{K}(\mathbf{x_*},\mathbf{x})\mathbf{K}(\mathbf{x},\mathbf{x})^{-1}\mathbf{K}(\mathbf{x},\mathbf{x_*}) \right)
+\end{aligned}
+\end{equation}
+
+Now assuming the noise in the observations, what is a more realistic modelling situation, we have that $y = f(\mathbf{x}) + \varepsilon$, being $\varepsilon$ the Gaussian noise with variance $\beta^{-1}$. Then we have that $\mathrm{cov}(\mathbf{y})=\mathbf{K}(\mathbf{x},\mathbf{x}) + \beta^{-1}\mathbf{I}$
 
 % There are many example of choices for basis functions, as
 
