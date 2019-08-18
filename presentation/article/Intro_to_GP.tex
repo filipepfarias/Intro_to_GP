@@ -345,24 +345,15 @@ where $\mathbf{K}(\cdot,\cdot)$ denotes the covariance matrices evaluated at all
 \end{aligned}
 \end{equation}
 
-Now assuming the noise in the observations, what is a more realistic modelling situation, we have that $y = f(\mathbf{x}) + \varepsilon$, being $\varepsilon$ the Gaussian noise with variance $\beta^{-1}$. Then we have that $\mathrm{cov}(\mathbf{y})=\mathbf{K}(\mathbf{x},\mathbf{x}) + \beta^{-1}\mathbf{I}$
+Now assuming the noise in the observations, what is a more realistic modelling situation, we have that $y = f(\mathbf{x}) + \varepsilon$, being $\varepsilon$ the Gaussian noise with variance $\beta^{-1}$. Then we have that $\mathrm{cov}(\mathbf{y})=\mathbf{K}(\mathbf{x},\mathbf{x}) + \beta^{-1}\mathbf{I}$.
 
-% There are many example of choices for basis functions, as
+Deriving the conditional distribution corresponding we arrive at the key predictive equations for Gaussian process regression
 
-% \begin{equation}
-%    \phi_j(x) = \exp \left\{ -\frac{\left(x-\mu_j\right)^2}{2s^2} \right\}
-% \end{equation}
+\begin{equation}
+\begin{aligned} p(\mathbf{f}_{*} | \mathbf{x}, \mathbf{y},\mathbf {x_{*}}) &= \mathcal{N}\left(\overline{\mathbf{f}}_{*}, \mathrm{cov}\left(\mathbf{f}_{*}\right)\right), \text { where } \\ \overline{\mathbf{f}}_{*} & \triangleq \mathbb{E}\left\{ \mathbf{f}_{*} | \mathbf{x}, \mathbf{y}, \mathbf{x_{*}}\right\}=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{y} \\ \mathrm{cov}\left(\mathbf{f}_{*}\right) &=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x_{*}}\right)-\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{K}\left(\mathbf{x}, \mathbf{x_{*}}\right) \end{aligned}
+\end{equation}
 
-% known as \textit{squared exponential}, where $\mu_j$ controls the location of the basis function in the \textit{input space}, and $s$ the spatial scale. It's usually referred as 'Gaussian' basis function because of its similarity with the Gaussian distribution function, although there is no probabilistic interpretation here.
-
-% \begin{figure}[H]
-%    \centering
-%    \includegraphics[width=.25\textwidth]{Figures/f1.png}
-%    \caption{Símbolos do diagrama de blocos. (a) Adição de duas seqüências. (b) Multiplicação de uma sequência por um  constante. c) atraso da unidade.}
-%    \label{graph:A-and-B-systems}
-% \end{figure}
-
-\lipsum[1]
+%\lipsum[1]
 
 \newpage
 \input{Intro_to_GP_appendices}
