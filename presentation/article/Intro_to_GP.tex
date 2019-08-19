@@ -297,13 +297,6 @@ The similarity mentioned before shows that the Bayesian approach comprise even a
 
 This is called \textit{Bayesian inference}. If we assume that all distributions which we are working are Gaussian, the posterior distribution has closed form. To do that, we make use of the closure under linear transformations, or \textit{affine transformations}, for the Gaussian. For that, we will make use of the corollary below, which theorems are proven in the \autoref{subsec:app-par-gau}.
 
-\begin{figure}[h]
-   \centering
-   \includegraphics{graphics/prml/{Figure3.7}}
-   \caption{Illustration of sequential Bayesian learning for a simple linear model of the form $y(x, \mathbf{w}) = w_0 + w_1 x$. The hyperparameters $\alpha$ and $\beta$ are assumed as $2$ and $25$, respectively, just by example.}
-   % \label{<label>}
-\end{figure}
-
 \begin{corollary}
 
    Being $\mathbf{x}_b$ conditioned on $\mathbf{x}_a$ and Gaussian distributed as
@@ -325,6 +318,13 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
    \end{align}
  \end{subequations}
  \end{corollary}
+
+ \begin{figure}[h]
+   \centering
+   \includegraphics{graphics/prml/{Figure3.7}}
+   \caption{Illustration of sequential Bayesian learning for a simple linear model of the form $y(x, \mathbf{w}) = w_0 + w_1 x$. The hyperparameters $\alpha$ and $\beta$ are assumed as $2$ and $25$, respectively, just by example.}
+   % \label{<label>}
+\end{figure}
 
  Assuming no deviation in the mean, $\mathbf{d} = \mathbf{0}$, and the linear transformation being our design matrix, $\mathbf{M} = \Phi$, we obtain that
 
