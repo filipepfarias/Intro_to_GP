@@ -40,83 +40,155 @@ Federal University of Ceará\\
 
 \section{Linear Regression}
 
-Starting with a simple regression problem. Be the data set $\mathcal{D}=\left\{ x_i,y_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $y$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $y$. Our objective is make predictions of the new value $\hat{y}$ for some new input $\hat{x}$.
+Starting with a simple regression problem. Be the data set $\mathcal{D}=\left\{ x_i,t_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $t$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $t$. Our objective is make predictions of the new value $\hat{t}$ for some new input $\hat{x}$.
+
+\begin{figure}[htbp]
+   \centering
+   \includegraphics{graphics/prml/{Figure1.2}.pdf}
+   \caption{Training data set with $n=10$ points in blue. The green curve shows the function $sin(2\pi x)$ used to generate the data. Our goal is to predict the value of t for some new value of x, without knowledge of the green curve.}
+   % \label{<label>}
+\end{figure}
 
 For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e., being the function
 
 \begin{equation}
-   f(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j x^j
+   \label{eq:lin-reg-model-1}
+   y(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j x^j
 \end{equation}
 
-where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \right]$ its coefficients. It's important to note that the $f$ isn't linear in $x$ but in $\mathbf{w}$. These functions which are linear on the unknown parameters are called \textit{linear models}.
-\textcolor{red}{Section 1.1 - Bishop (pg 4).}
+where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \right]$ its coefficients. It's important to note that the $y$ isn't linear in $x$ but in $\mathbf{w}$. These functions which are linear on the unknown parameters are called \textit{linear models}.
 
 We can extend the class of models considering linear combinations of nonlinear functions of the input variables, i.e.
 
 \begin{equation}
-   f(x,\mathbf{w}) = \sum_{j=0}^{M-1} \phi_j (x) w_j 
+   y(x,\mathbf{w}) = \sum_{j=0}^{M-1} \phi_j (x) w_j 
    \label{eq:lin-reg-model-1}
 \end{equation}
 
 where $\phi_j (x)$ are known as \textit{basis functions}, and then the total number of parameters for this model will be $M$. We can evaluate the same operation of (\ref{eq:lin-reg-model-1}) in the matrix form by
 
 \begin{equation}
-   f(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top  \mathbf{w}
+   y(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top  \mathbf{w}
    \label{eq:lin-reg-model-1-matrix-form}
 \end{equation}
 
-where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. It's important to note that these linear models are needed to define its basis functions before the training data set is observed. \textcolor{red}{Section 1.4 - Bishop (pg 33).}
+where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. It's important to note that these linear models are needed to define its basis functions before the training data set is observed.
 
-The values of $\mathbf{w}$ are obtained by minimizing the \textit{error function}, a measure of the distance between the training data set and $f$, given values of $\mathbf{w}$. By the way, the chosen error function will be 
+\begin{figure}[htbp]
+   \centering
+   \includegraphics{graphics/prml/{Figure1.3}.pdf}
+   \caption{The error function (\ref{eq:lin-reg-error-function-1}) corresponds to (one half of) the sum of the squares of the displacements (shown by the vertical green bars) of each data point from the function $y(x, \mathbf{w})$.}
+   % \label{<label>}
+\end{figure}
+
+The values of $\mathbf{w}$ are obtained by minimizing the \textit{error function}, a measure of the distance between the training data set and $y$, given values of $\mathbf{w}$. By the way, the chosen error function will be 
 
 \begin{equation}
-   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ f(x_i,\mathbf{w})-y_i \right\}^2
    \label{eq:lin-reg-error-function-1}
+   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2
 \end{equation}
 
-This indicate that if $E$ is zero, $f$ passes exactly through each training data point. Observe that $E$ do not assume negative values because of its quadratic form, then we can find $\mathbf{w}$ by finding the minimum value of $E$, denoted $\mathbf{w^*}$, by
+This indicate that if $E$ is zero, $y$ passes exactly through each training data point. Observe that $E$ do not assume negative values because of its quadratic form, then we can find $\mathbf{w}$ by finding the minimum value of $E$, denoted $\mathbf{w^*}$, by
 
 \begin{equation}
    \frac{\partial E}{\partial \mathbf{w}} = 0
 \end{equation}
 
-We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, as $\mathbf{f} = f(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e. $f$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}). Then we have
+We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, as $\mathbf{y} = y(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e. $y$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}). Then we have
 
 \begin{equation}
    \label{eq:lin-reg-error-function-matrix-form}
-   \mathbf{f} = \Phi \mathbf{w}
+   \mathbf{y} = \Phi \mathbf{w}
 \end{equation}
 
 where $\Phi$ is the \textit{design matrix} such that $\boldsymbol{\phi}(x)$ is evaluated for all $\mathbf{x}$. Proceeding with the minimization, we obtain the optimal $\mathbf{w}$, or $\mathbf{w}^*$ by
 
 \begin{equation}
    \label{eq:lin-reg-opt-param}
-   \mathbf{w}^{*} = (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{y}
+   \mathbf{w}^{*} = (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{t}
 \end{equation}
 
 which are the parameters that best fit the model to the data.
 
-\textcolor{red}{Insert over-fitting.}
+\begin{figure}
+   \centering
+   \begin{subfigure}[htpb]{0.45\linewidth}
+       \centering
+       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.4a}.pdf}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}[htpb]{0.45\linewidth}
+       \centering
+       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.4b}.pdf}       
+   \end{subfigure}
+   \hfill \\
+   \begin{subfigure}[htpb]{0.45\linewidth}
+       \centering
+       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.4c}.pdf}
+   \end{subfigure}
+   \hfill 
+   \begin{subfigure}[htpb]{0.45\linewidth}
+       \centering
+       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.4d}.pdf}
+   \end{subfigure}
+      \caption{Plots of polynomials for the model in (\ref{eq:lin-reg-model-1}) having various orders $M$, shown as red curves.}
+      \label{fig:lin-reg-overfit}
+\end{figure}
 
-As we increase the number of parameters, our model becomes more flexible and then our error function approximates of zero for the training data. But when compared to the test data, the error increases. This is known as \textit{over-fitting}.
+As we increase the number of parameters, our model becomes more flexible and then our error function approximates of zero for the training data. But when compared to the test data, the error increases. This is known as \textit{over-fitting} as seen in Figure \ref{fig:lin-reg-overfit} for $M=9$.
 
 \subsection{Regularized Linear Regression}
 
-An approach to minimize the over-fitting problem is to control the flexibility of the model. This can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
+\begin{table}[h]
+   \centering
+   \begin{tabular}{l| l l l l}
+     & $M=0$ & $M=1$ & $M=6$ & $M=9$ \\
+   \hline
+   $\mathbf{w}_0^*$ & 0.19 & 0.82   & 0.31   & 0.35\\
+   $\mathbf{w}_1^*$ &      & -1.27  & 7.99   & 232.37\\
+   $\mathbf{w}_2^*$ &      &        & -25.43 & -5321.83\\
+   $\mathbf{w}_3^*$ &      &        & 17.37  & 48568.31\\
+   $\mathbf{w}_4^*$ &      &        &        & -231639.30\\
+   $\mathbf{w}_5^*$ &      &        &        & 640042.26\\
+   $\mathbf{w}_6^*$ &      &        &        & -1061800.52\\
+   $\mathbf{w}_7^*$ &      &        &        & 1042400.18\\
+   $\mathbf{w}_8^*$ &      &        &        & -557682.99\\
+   $\mathbf{w}_9^*$ &      &        &        & 125201.43\\
+   \end{tabular}
+   \caption{Table of the coefficients $\mathbf{w}^*$ for polynomials of various order. Observe how the typical magnitude of the coefficients increases dramatically as the order of the polynomial increases.}
+   \label{tab:reg-lin-reg-weights}
+   \end{table}
+
+An approach to minimize the over-fitting problem is to control the flexibility of the model. In the Table \ref{tab:reg-lin-reg-weights} we can note that for a larger number of parameters, if we take the derivative of $y$. Then to control the over-fitting, we can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
 
 \begin{equation}
    \label{eq:lin-reg-error-function-regularized}
-   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ f(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
+   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
 \end{equation}
 
 whats means that our error increases as the norm of $\mathbf{w}$ grows. This will lead us to the matrix form
 
 \begin{equation}
    \label{eq:lin-reg-error-function-regularized-matrix-form}
-   \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{y} 
+   \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{t} 
 \end{equation}
 
 This allow us to increase the number of parameters trying to control the over-fitting. More, add parameters will allows us to capture different aspects of the data set, what we will see later.
+
+\begin{figure}[h]
+   \centering
+   \begin{subfigure}[htpb]{0.45\linewidth}
+       \centering
+       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7a}.pdf}
+   \end{subfigure}
+   \hfill
+   \begin{subfigure}[htpb]{0.45\linewidth}
+       \centering
+       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7b}.pdf}       
+   \end{subfigure}
+      \caption{Plots of polynomials for the model in (\ref{eq:lin-reg-model-1}) having various orders $M$, shown as red curves.}
+      \label{fig:reg-lin-reg-overfit}
+\end{figure}
 
 \section{Bayesian Linear Regression}
 
@@ -142,24 +214,33 @@ Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominat
 
 \subsection{Bayesian curve fitting}
 
-Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $y$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $f(x,\mathbf{w})$. Thus we have
+
+Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $t$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $y(x,\mathbf{w})$. Thus we have
 
 \begin{equation}
    \label{eq:bay-cur-fit-1}
-   p(y | x, \mathbf{w}, \beta)=\mathcal{N}\left(y | f(x, \mathbf{w}), \beta^{-1}\right)
+   p(t | x, \mathbf{w}, \beta)=\mathcal{N}\left(t | y(x, \mathbf{w}), \beta^{-1}\right)
 \end{equation}
 
-Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give is more uncertainty about the measured value $y$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $y$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $y$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
+
+\begin{figure}[h]
+   \centering
+   \includegraphics{graphics/prml/{Figure1.16}}
+   \caption{Schematic illustration of a Gaussian conditional distribution for $t$ given $x$ given by  (\ref{eq:bay-cur-fit-1}), in which the mean is given by the polynomial function y(x, w), and the precision is given by the parameter $\beta$, which is related to the variance $\beta^{-1}=\sigma^2$.}
+   % \label{<label>}
+\end{figure}
+
+Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give is more uncertainty about the measured value $t$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $t$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $t$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
 
 \begin{equation}
-   p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(y_i | f(x_i, \mathbf{w}), \beta^{-1}\right)
+   p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(y_i | y(x_i, \mathbf{w}), \beta^{-1}\right)
 \end{equation}
 
-When viewed as function of $f(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, or minimize the negative log whats is equivalent, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
+When viewed as function of $y(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, or minimize the negative log whats is equivalent, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
 
 \begin{equation}
    \label{eq:bay-reg-ml-function}
-   \ln p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{f\left(x_{i}, \mathbf{w}\right)-y_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
+   \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{y\left(x_{i}, \mathbf{w}\right)-t_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
 \end{equation}
 
 The maximization of (\ref{eq:bay-reg-ml-function}) taking the derivative with respect to $\mathbf{w}$ will lead us back to 
@@ -168,7 +249,7 @@ the same of the minimization of (\ref{eq:lin-reg-error-function-1}), the error f
 We can determine the precision parameter using the maximum likelihood by taking the derivative with respect to $\beta$ of (\ref{eq:bay-reg-ml-function}), what gives
 
 \begin{equation}
-   \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{f\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-y_{i}\right\}^{2}
+   \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{y\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-t_{i}\right\}^{2}
 \end{equation}
 
 Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$, given that our model is capable of learn the parameters. And not just one collection of them, but a distribution probability.
@@ -176,7 +257,7 @@ Now we have a probabilistic view of the regression and then we can make predicti
 In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{ML}$ and $\beta_\text{ML}$, we have the parameters distribution by
 
 \begin{equation}
-   p\left(y | x, \mathbf{w}_{\mathrm{ML}}, \beta_{\mathrm{ML}}\right)=\mathcal{N}\left(y | f\left(x, \mathbf{w}_{\mathrm{ML}}\right), \beta_{\mathrm{ML}}^{-1}\right)
+   p\left(t | x, \mathbf{w}_{\mathrm{ML}}, \beta_{\mathrm{ML}}\right)=\mathcal{N}\left(t | y\left(x, \mathbf{w}_{\mathrm{ML}}\right), \beta_{\mathrm{ML}}^{-1}\right)
 \end{equation}
 
 Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution to make the inference using the Bayes' rule. We can now introduce here the probability distribution over the parameters $p(\mathbf{w})$ as presented in the Section 3.1. The choice is arbitrary, but for this particular case we will consider
@@ -189,19 +270,19 @@ Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution
 where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem considering that our \textit{posterior} distribution is proportional to the product between the \textit{likelihood function} and the assumed \textit{prior}, as seen in (\ref{eq:bay-lin-bayes-theorem}) then, assuming the observation of the whole data set
 
 \begin{equation}
-   p(\mathbf{w} | \mathbf{x}, \mathbf{y}, \alpha, \beta) \propto p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
+   p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
 \end{equation}
 
-As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{y}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
+As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{t}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
 %
 \begin{equation}
-   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{y}, \alpha, \beta) \propto \ln p(\mathbf{y} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
+   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
 \end{equation}
 %
 Then we substitute the probability distributions founded before. Note that the first term in the right side is the error function founded in (\ref{eq:bay-reg-ml-function}). Then, the terms which the minimization depends of $\mathbf{w}$ are
 
 \begin{equation}
-    \frac{\beta}{2} \sum_{i=1}^{N}\left\{f\left(x_{i}, \mathbf{w}\right)-y_{i}\right\}^{2} + \frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}
+    \frac{\beta}{2} \sum_{i=1}^{N}\left\{y\left(x_{i}, \mathbf{w}\right)-t_{i}\right\}^{2} + \frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}
 \end{equation}
 
 And we can note the similarity with the regularized linear regression in (\ref{eq:lin-reg-error-function-regularized}) aside of the term $\lambda$, what can be founded by $\lambda=\alpha / \beta$. It's important to note that even called maximum posterior, here it was presented a minimization in terms of the negative logarithm, but this equals to the maximization of the positive logarithm. The signal was chosen just for similarity with the error function.
@@ -211,10 +292,17 @@ And we can note the similarity with the regularized linear regression in (\ref{e
 The similarity mentioned before shows that the Bayesian approach comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But to say that our model is in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the fully Bayes' theorem as (\ref{eq:bay-reg-bayes-rule}). Then, we have
 
 \begin{equation}
-   \overbrace{p(\mathbf{w}|\mathbf{y})}^{posterior} = \frac{p(\mathbf{y}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{y})} = \frac{\overbrace{p(\mathbf{y}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{y}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
+   \overbrace{p(\mathbf{w}|\mathbf{t})}^{posterior} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{\overbrace{p(\mathbf{t}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
 \end{equation}
 
 This is called \textit{Bayesian inference}. If we assume that all distributions which we are working are Gaussian, the posterior distribution has closed form. To do that, we make use of the closure under linear transformations, or \textit{affine transformations}, for the Gaussian. For that, we will make use of the corollary below, which theorems are proven in the \autoref{subsec:app-par-gau}.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics{graphics/prml/{Figure3.7}}
+   \caption{Illustration of sequential Bayesian learning for a simple linear model of the form $y(x, \mathbf{w}) = w_0 + w_1 x$. The hyperparameters $\alpha$ and $\beta$ are assumed as $2$ and $25$, respectively, just by example.}
+   % \label{<label>}
+\end{figure}
 
 \begin{corollary}
 
@@ -242,13 +330,13 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
 
  \begin{equation}
    \label{eq:bay-inf-posterior}
-    p(\mathbf{w}|\mathbf{y},\alpha,\beta) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{\mu}_{\mathbf{w}|\mathbf{y}} , \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}\right)
+    p(\mathbf{w}|\mathbf{t},\alpha,\beta) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{\mu}_{\mathbf{w}|\mathbf{t}} , \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}\right)
  \end{equation}
 
  being
 
  \begin{equation}
-   \boldsymbol{\mu}_{\mathbf{w}|\mathbf{y}}=\boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}\left(\beta \Phi^\top \mathbf{y}+\boldsymbol{\Sigma}_{\mathbf{w}}^{-1} \boldsymbol{\mu}_{\mathbf{w}}\right), \quad \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{y}}=\left(\boldsymbol{\Sigma}_{\mathbf{w}}^{-1}+ \beta \Phi^\top \Phi\right)^{-1}
+   \boldsymbol{\mu}_{\mathbf{w}|\mathbf{t}}=\boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}\left(\beta \Phi^\top \mathbf{t}+\boldsymbol{\Sigma}_{\mathbf{w}}^{-1} \boldsymbol{\mu}_{\mathbf{w}}\right), \quad \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}=\left(\boldsymbol{\Sigma}_{\mathbf{w}}^{-1}+ \beta \Phi^\top \Phi\right)^{-1}
  \end{equation}
 
  assumed the prior distribution defined in (\ref{eq:bay-lin-reg-prior-dist}) and the precision matrix $\boldsymbol{\Sigma}_{\mathbf{t}|\mathbf{w}} = \beta^{-1}\mathbf{I}$. Then we have defined
@@ -259,25 +347,25 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
 
 \subsection{Predictive distribution}
 
-In practice, some times it is more valuable the information about $y$ itself than its parameters $\mathbf{w}$. We can make this by evaluating the predictions of $y$ for the new values of $x$ by
+In practice, some times it is more valuable the information about $t$ itself than its parameters $\mathbf{w}$. We can make this by evaluating the predictions of $t$ for the new values of $x$ by
 
 \begin{equation}
-   p(y | \mathbf{y}, \alpha, \beta)=\int p(y | \mathbf{w}, \beta) p(\mathbf{w} | \mathbf{y}, \alpha, \beta) \mathrm{d} \mathbf{w}
+   p(t | \mathbf{t}, \alpha, \beta)=\int p(t | \mathbf{w}, \beta) p(\mathbf{w} | \mathbf{t}, \alpha, \beta) \mathrm{d} \mathbf{w}
 \end{equation}
 
 what is called \textit{predictive distribution}. The distributions under integration were defined in (\ref{eq:bay-cur-fit-1}) and (\ref{eq:bay-inf-posterior}). Then we use the \textit{marginalization} defined in \autoref{subsec:app-par-gau} and obtain that
 
 \begin{equation}
-   p(y | \mathbf{x}, \mathbf{y}, \alpha, \beta)=\mathcal{N}\left(y | \boldsymbol{\mu}_{y}, \boldsymbol{\Sigma}_{y} \right)
+   p(t | \mathbf{x}, \mathbf{t}, \alpha, \beta)=\mathcal{N}\left(t | \boldsymbol{\mu}_{t}, \boldsymbol{\Sigma}_{t} \right)
 \end{equation}
 
-with $\boldsymbol{\mu}_y = \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{y}}$ and $\boldsymbol{\Sigma}_y = \beta^{-1} + \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{y}}\boldsymbol{\phi}(x)$. Note that we are considering the linear model as $f(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top \mathbf{w}$, i.e. the affine transformation $\mathbf{M}$ here is $\boldsymbol{\phi}(x)^\top$.
+with $\boldsymbol{\mu}_y = \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{t}}$ and $\boldsymbol{\Sigma}_y = \beta^{-1} + \boldsymbol{\phi}(x)^\top \boldsymbol{\Sigma}_{\mathbf{w} | \mathbf{t}}\boldsymbol{\phi}(x)$. Note that we are considering the linear model as $y(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top \mathbf{w}$, i.e. the affine transformation $\mathbf{M}$ here is $\boldsymbol{\phi}(x)^\top$.
 
 An alternative formulation \cite{Rasmussen:2005:GPM:1162254} is
 
 \begin{equation}
 \begin{aligned}
-      p(y | \mathbf{x}, \mathbf{y}, \alpha, \beta) = \mathcal{N} & \left(  \boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \Phi\left(K+\beta I\right)^{-1} \mathbf{y} \right., \\ &\left.\boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \boldsymbol{\phi}(x)-\boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \Phi\left(K+\beta I\right)^{-1} \Phi^{\top} \Sigma_\mathbf{w} \boldsymbol{\phi}(x)\right)
+      p(t | \mathbf{x}, \mathbf{t}, \alpha, \beta) = \mathcal{N} & \left(  \boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \Phi\left(K+\beta I\right)^{-1} \mathbf{t} \right., \\ &\left.\boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \boldsymbol{\phi}(x)-\boldsymbol{\phi}(x)^{\top} \Sigma_\mathbf{w} \Phi\left(K+\beta I\right)^{-1} \Phi^{\top} \Sigma_\mathbf{w} \boldsymbol{\phi}(x)\right)
 \end{aligned}
 \end{equation}
 
@@ -285,11 +373,11 @@ with $K=\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$.
 
 \subsection{Equivalent kernel}
 
-Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $f(\mathbf{x})$ and $f(\mathbf{x'})$, which is given by
+Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $y(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
 
 \begin{equation}
    \begin{aligned}
-      \mathrm{cov}\left\{ f(\mathbf{x}), f(\mathbf{x'})\right\} &=\mathrm{cov} \left\{ \boldsymbol{\phi}(\mathbf{x})^\top \mathbf{w}, \mathbf{w}^\top \boldsymbol{\phi}(\mathbf{x}) \right\} \\
+      \mathrm{cov}\left\{ y(\mathbf{x}), y(\mathbf{x'})\right\} &=\mathrm{cov} \left\{ \boldsymbol{\phi}(\mathbf{x})^\top \mathbf{w}, \mathbf{w}^\top \boldsymbol{\phi}(\mathbf{x}) \right\} \\
        &= \boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x}) = \beta^{-1}k(\mathbf{x},\mathbf{x'})
    \end{aligned}
 \end{equation}
@@ -302,28 +390,28 @@ Until now we have made the inference in the \textit{feature space}, the space wh
 
 An alternative and equivalent way to achieve such results is to make the inference directly in the space of functions, or \textit{function space}. To this we use the \textit{Gaussian processes} to describe the distribution over the functions directly \cite{Rasmussen:2005:GPM:1162254}.
 
-We define a Gaussian process (GP) as a collection of random variables, such that any finite number of which is normal jointly distributed. As the normal distribution, the GP is completely defined by its mean function $m(\mathbf{x})$ and covariance function $k(\mathbf{x},\mathbf{x'})$ of a real process $f(\mathbf{x})$, these in turn are defined as
+We define a Gaussian process (GP) as a collection of random variables, such that any finite number of which is normal jointly distributed. As the normal distribution, the GP is completely defined by its mean function $m(\mathbf{x})$ and covariance function $k(\mathbf{x},\mathbf{x'})$ of a real process $y(\mathbf{x})$, these in turn are defined as
 
 \begin{equation}
-   m(\mathbf{x}) = \mathbb{E}\left\{ f(\mathbf{x}) \right\}, \quad
-   k(\mathbf{x},\mathbf{x'}) = \mathbb{E}\left\{ \left( f(\mathbf{x}) - m(\mathbf{x}) \right) \left( f(\mathbf{x'}) - m(\mathbf{x'}) \right) \right\}
+   m(\mathbf{x}) = \mathbb{E}\left\{ y(\mathbf{x}) \right\}, \quad
+   k(\mathbf{x},\mathbf{x'}) = \mathbb{E}\left\{ \left( y(\mathbf{x}) - m(\mathbf{x}) \right) \left( y(\mathbf{x'}) - m(\mathbf{x'}) \right) \right\}
 \end{equation}
 
 and finally
 
 \begin{equation}
-   f(\mathbf{x}) \sim \mathcal{GP} \left( m(\mathbf{x}), k(\mathbf{x},\mathbf{x'}) \right)
+   y(\mathbf{x}) \sim \mathcal{GP} \left( m(\mathbf{x}), k(\mathbf{x},\mathbf{x'}) \right)
 \end{equation}
 
 Such collection definition automatically implies in the marginalization property already present for the multidimensional Gaussian distributions. For the GP this means that the observation of a larger set of variables does not change the distribution of the smaller set.
 
-This is important to obtain our Bayesian linear regression as a GP. Being our model $f(\mathbf{x})=\boldsymbol{\phi}(\mathbf{x})^\top \mathbf{w}$ with prior $\mathcal{N}\left( \mathbf{w} | \mathbf{0}, \boldsymbol{\Sigma}_{\mathbf{w}}\right)$. We obtain for the mean and covariance functions
+This is important to obtain our Bayesian linear regression as a GP. Being our model $y(\mathbf{x})=\boldsymbol{\phi}(\mathbf{x})^\top \mathbf{w}$ with prior $\mathcal{N}\left( \mathbf{w} | \mathbf{0}, \boldsymbol{\Sigma}_{\mathbf{w}}\right)$. We obtain for the mean and covariance functions
 
 \begin{equation}
    \label{eq:gau-pro-mean-cov}
    \begin{aligned}
-      \mathbb{E}\left\{ f(\mathbf{x}) \right\} &= \boldsymbol{\phi}(\mathbf{x})^\top \mathbb{E} \left\{ \mathbf{w} \right\} = 0,\\
-      \mathbb{E}\left\{ f(\mathbf{x})f(\mathbf{x'}) \right\} &= \boldsymbol{\phi}(\mathbf{x})^\top \mathbb{E} \left\{ \mathbf{ww}^\top \right\}\boldsymbol{\phi}(\mathbf{x}) = \boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_{\mathbf{w}} \boldsymbol{\phi}(\mathbf{x'})
+      \mathbb{E}\left\{ y(\mathbf{x}) \right\} &= \boldsymbol{\phi}(\mathbf{x})^\top \mathbb{E} \left\{ \mathbf{w} \right\} = 0,\\
+      \mathbb{E}\left\{ y(\mathbf{x})y(\mathbf{x'}) \right\} &= \boldsymbol{\phi}(\mathbf{x})^\top \mathbb{E} \left\{ \mathbf{ww}^\top \right\}\boldsymbol{\phi}(\mathbf{x}) = \boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_{\mathbf{w}} \boldsymbol{\phi}(\mathbf{x'})
    \end{aligned}
 \end{equation}
 
@@ -331,7 +419,7 @@ This is important to obtain our Bayesian linear regression as a GP. Being our mo
 
 The last sections give us an insight about the construction of the learning process for the GP. Analogous to the Bayes' theorem for the Gaussian, we use the idea of the GP as a multidimensional Gaussian distribution and we can make inference with its partitions. 
 
-First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{f}$ and the prediction $\mathbf{f_*}$, as
+First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{y}$ and the prediction $\mathbf{y_*}$, as
 
 \begin{equation}
    \mathcal{N} \left( \left( \begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array} \right) \left| \mathbf{0}, \left( \begin{array}{ll}{\mathbf{K}(\mathbf{x},\mathbf{x})} & {\mathbf{K}(\mathbf{x},\mathbf{x_*})} \\ {\mathbf{K}(\mathbf{x_*},\mathbf{x})} & {\mathbf{K}(\mathbf{x_*},\mathbf{x_*})}\end{array} \right) \right. \right)
@@ -341,19 +429,26 @@ where $\mathbf{K}(\cdot,\cdot)$ denotes the covariance matrices evaluated at all
 
 \begin{equation}
 \begin{aligned}
-      p(\mathbf{f_*}|\mathbf{x_*},\mathbf{x},\mathbf{f}) = \mathcal{N} & \left( \mathbf{f_*} | \mathbf{K}(\mathbf{x_*},\mathbf{x})\mathbf{K}(\mathbf{x},\mathbf{x})^{-1}\mathbf{f}, \right. \\ & \left. \mathbf{K}(\mathbf{x_*},\mathbf{x_*})-\mathbf{K}(\mathbf{x_*},\mathbf{x})\mathbf{K}(\mathbf{x},\mathbf{x})^{-1}\mathbf{K}(\mathbf{x},\mathbf{x_*}) \right)
+      p(\mathbf{y_*}|\mathbf{x_*},\mathbf{x},\mathbf{y}) = \mathcal{N} & \left( \mathbf{y_*} | \mathbf{K}(\mathbf{x_*},\mathbf{x})\mathbf{K}(\mathbf{x},\mathbf{x})^{-1}\mathbf{y}, \right. \\ & \left. \mathbf{K}(\mathbf{x_*},\mathbf{x_*})-\mathbf{K}(\mathbf{x_*},\mathbf{x})\mathbf{K}(\mathbf{x},\mathbf{x})^{-1}\mathbf{K}(\mathbf{x},\mathbf{x_*}) \right)
 \end{aligned}
 \end{equation}
 
-Now assuming the noise in the observations, what is a more realistic modelling situation, we have that $y = f(\mathbf{x}) + \varepsilon$, being $\varepsilon$ the Gaussian noise with variance $\beta^{-1}$. Then we have that $\mathrm{cov}(\mathbf{y})=\mathbf{K}(\mathbf{x},\mathbf{x}) + \beta^{-1}\mathbf{I}$.
+Now assuming the noise in the observations, what is a more realistic modelling situation, we have that $t = y(\mathbf{x}) + \varepsilon$, being $\varepsilon$ the Gaussian noise with variance $\beta^{-1}$. Then we have that $\mathrm{cov}(\mathbf{t})=\mathbf{K}(\mathbf{x},\mathbf{x}) + \beta^{-1}\mathbf{I}$.
 
 Deriving the conditional distribution corresponding we arrive at the key predictive equations for Gaussian process regression
 
 \begin{equation}
-\begin{aligned} p(\mathbf{f}_{*} | \mathbf{x}, \mathbf{y},\mathbf {x_{*}}) &= \mathcal{N}\left(\overline{\mathbf{f}}_{*}, \mathrm{cov}\left(\mathbf{f}_{*}\right)\right), \text { where } \\ \overline{\mathbf{f}}_{*} & \triangleq \mathbb{E}\left\{ \mathbf{f}_{*} | \mathbf{x}, \mathbf{y}, \mathbf{x_{*}}\right\}=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{y} \\ \mathrm{cov}\left(\mathbf{f}_{*}\right) &=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x_{*}}\right)-\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{K}\left(\mathbf{x}, \mathbf{x_{*}}\right) \end{aligned}
+\begin{aligned} p(\mathbf{y}_{*} | \mathbf{x}, \mathbf{t},\mathbf {x_{*}}) &= \mathcal{N}\left(\overline{\mathbf{y}}_{*}, \mathrm{cov}\left(\mathbf{y}_{*}\right)\right), \text { where } \\ \overline{\mathbf{y}}_{*} & \triangleq \mathbb{E}\left\{ \mathbf{y}_{*} | \mathbf{x}, \mathbf{t}, \mathbf{x_{*}}\right\}=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{t} \\ \mathrm{cov}\left(\mathbf{y}_{*}\right) &=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x_{*}}\right)-\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{K}\left(\mathbf{x}, \mathbf{x_{*}}\right) \end{aligned}
 \end{equation}
 
-%\lipsum[1]
+\begin{figure}[h]
+   \centering
+   \includegraphics{graphics/prml/{Figure6.8}}
+   \caption{Illustration of Gaussian process regression applied to the sinusoidal data set in which the three right-most data points have been omitted. The green curve shows the sinusoidal function from which the data points, shown in blue, are obtained by sampling and addition of Gaussian noise. The red line shows the mean of the Gaussian process predictive distribution, and the shaded region corresponds to plus and minus two standard deviations. Notice how the uncertainty increases in the region to the right of the data points.}
+   % \label{<label>}
+\end{figure}
+
+\section{Applications}
 
 \newpage
 \input{Intro_to_GP_appendices}
