@@ -381,9 +381,9 @@ An alternative formulation \cite{Rasmussen:2005:GPM:1162254} is
 
 with $K=\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$.
 
-\subsection{Equivalent kernel}
+\subsection{Kernels}
 
-For the moment, however, we shall proceed rather informally and consider a simple approach based on curve fitting. In particular, we shall fit the data using a polynomial function of the form
+In the linear regression, in particular particular, we fit the data using a polynomial function of the form
 %
 \begin{equation}
       f(x, \mathbf{w})=w_{0}+w_{1} x+w_{2} x^{2}+\ldots+w_{M} x^{M}=\sum_{j=0}^{M} w_{j} x^{j}
@@ -400,7 +400,9 @@ where $M$ is the \textit{order} of the polynomial, and $x^j$ denotes $x$ raised 
 \end{align*}
 %
 
-Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $y(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
+With this, our linear model is able to capture different aspects of the data set, as periodicity, exponential increasing, roughness etc.  These functions become \textit{kernels} when its number tends to infinite \cite{mackay1998introduction}.
+
+Notice that in the previous section, we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $y(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
 
 \begin{equation}
    \begin{aligned}
@@ -409,7 +411,7 @@ Notice that we are using transformations always of the type $\Phi^{\top} \boldsy
    \end{aligned}
 \end{equation}
 
-From the form of the equivalent kernel, we see that the predictive mean at nearby points will be highly correlated, whereas for more distant pairs of points the correlation will be smaller.
+From the form of the kernel, we see that the predictive mean at nearby points will be highly correlated, whereas for more distant pairs of points the correlation will be smaller. The linearity preserves the propriety of addition, then our model accepts the junction of others functions to create a new kernel, in order to capture some aspects of the data set. 
 
 \section{Gaussian processes}
 
