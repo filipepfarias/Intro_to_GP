@@ -383,6 +383,23 @@ with $K=\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$.
 
 \subsection{Equivalent kernel}
 
+For the moment, however, we shall proceed rather informally and consider a simple approach based on curve fitting. In particular, we shall fit the data using a polynomial function of the form
+%
+\begin{equation}
+      f(x, \mathbf{w})=w_{0}+w_{1} x+w_{2} x^{2}+\ldots+w_{M} x^{M}=\sum_{j=0}^{M} w_{j} x^{j}
+      \label{eq:intro-poly}
+\end{equation}
+%
+where $M$ is the \textit{order} of the polynomial, and $x^j$ denotes $x$ raised to the power of $j$. The polynomial coefficients $w_0, \dots , w_M$ are collectively denoted by the vector $\mathbf{w}$. Note that, although the polynomial function $f(x, \mathbf{w})$ is a nonlinear function of $x$, it is a linear function of the coefficients $w$. Functions, such as the polynomial, which are linear in the unknown parameters have important properties and are called \textit{linear models}. In general, we could write this weighted sum with any other function. In other words, we can put this in terms of $\phi_n(x)=x^n$, where $\phi$ could be other \textit{basis function}, e.g. we could have different functions $f$ for different basis functions.
+%
+\begin{align*}
+      f(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) +w_2 \phi_2(x)  + ... + w_{M-1} \phi_{M-1}(x); \\
+                        &= w_0 \exp\left\{ - \frac{(x-\mu_0)^2}{2\sigma^2}\right\} + w_1  \exp\left\{ - \frac{(x-\mu_1)^2}{2\sigma^2}\right\} + \\ & ... + w_{M-1} \exp\left\{ - \frac{(x-\mu_{M-1})^2}{2\sigma^2}\right\}; \\
+                        &= w_0 \sin(0 \cdot x) + w_1 \cos(1 \cdot x) + \\ &... + w_{M-2} \sin((M-2) \cdot x) + w_{M-1} \cos((M-1) \cdot x); \\
+                        &=\sum_{j=0}^{M-1} w_{j} \phi_{j}(x);
+\end{align*}
+%
+
 Notice that we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $y(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
 
 \begin{equation}
