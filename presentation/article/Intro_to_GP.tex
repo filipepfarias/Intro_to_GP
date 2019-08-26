@@ -34,9 +34,7 @@ Federal University of Ceará\\
 
 \section{Introduction}
 
-The problem of searching for patterns in data is a fundamental one and has a long and successful history. The field of pattern recognition is concerned with the automatic discovery of regularities in data through the use of computer algorithms and with the use of these regularities to take actions.
-
-Applications in which the training data comprises examples of the input vectors along with their corresponding target vectors are known as \textit{supervised learning} problems. If the desired output consists of one or more continuous variables, then the task is called \textit{regression}\cite{Bishop:2006:PRM:1162264}.
+The problem of searching for patterns in data is a fundamental one and has a long and successful history. The field of pattern recognition is concerned with the automatic discovery of regularities in data through the use of computer algorithms and with the use of these regularities to take actions. Applications in which the training data comprises examples of the input vectors along with their corresponding target vectors are known as \textit{supervised learning} problems. If the desired output consists of one or more continuous variables, then the task is called \textit{regression} \cite{Bishop:2006:PRM:1162264} and it will be the concept revisited in this report.
 
 In general we denote the input as $\mathbf{x}$, and the output (or target) as $t$. The input is usually represented as a vector $\mathbf{x}$ as there are in general many input variables. We have a dataset $\mathcal{D}$ of $n$ observations, $\mathcal{D}=\left\{\left(\mathbf{x}_{i}, t_{i}\right) | i=1, \ldots, n\right\}$. Given this training data we wish to make predictions for new inputs $\mathbf{x_*}$ that we have not seen in the \textit{training set}. Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
 
@@ -225,7 +223,7 @@ Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominat
 \subsection{Bayesian curve fitting}
 
 
-Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $t$. This uncertainty can be represented as a probability distribution $p$, in this particular case a Gaussian distribution, with a mean equal to the model $y(x,\mathbf{w})$. Thus we have
+Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $t$. This uncertainty can be represented as a probability distribution function $p$, in this particular case a Gaussian distribution, with a mean equal to the model $y(x,\mathbf{w})$. Thus we have
 
 \begin{equation}
    \label{eq:bay-cur-fit-1}
@@ -240,7 +238,7 @@ Let's consider the same data set $\mathcal{D}$ presented before, but now we have
    % \label{<label>}
 \end{figure}
 
-Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give is more uncertainty about the measured value $t$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $t$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $t$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
+Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give us more imprecision about the measured value $t$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $t$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $t$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
 
 \begin{equation}
    p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(y_i | y(x_i, \mathbf{w}), \beta^{-1}\right)
@@ -299,7 +297,7 @@ And we can note the similarity with the regularized linear regression in (\ref{e
 
 \subsection{Bayesian inference}
 
-The similarity mentioned before shows that the Bayesian approach comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But to say that our model is in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the fully Bayes' theorem as (\ref{eq:bay-reg-bayes-rule}). Then, we have
+The similarity between the maximization and the Bayesian approach mentioned before shows that the second comprise even a model training such as the classical regression, as also the control of the over fitting by the regularization. But to say that our model is in fact Bayesian, we might obtain not just a single value, as in MAP, but its distribution. This requires the application the fully Bayes' theorem as (\ref{eq:bay-reg-bayes-rule}). Then, we have
 
 \begin{equation}
    \overbrace{p(\mathbf{w}|\mathbf{t})}^{posterior} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{\overbrace{p(\mathbf{t}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
