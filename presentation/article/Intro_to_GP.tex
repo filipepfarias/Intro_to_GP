@@ -28,9 +28,9 @@ Federal University of Ceará\\
 
 \maketitle
 
-\begin{abstract}
-   A wide variety of methods exists to deal with supervised learning, as restrict a class of linear functions of the inputs, as linear regression, or give a prior probability to every possible function, giving high probability to the functions we consider more likely. The second approach is a way to Gaussian process itself. We will make the pathway through a intuitive construction of this framework.
-\end{abstract}
+% \begin{abstract}
+%    A stochastic process is a generalization of a probability distribution (which describes a finite-dimensional random variable) to \textit{functions}. By focussing on processes which are \textit{Gaussian}, it turns out that the computations required for inference and learning become relatively easy. Thus, the supervised learning problems in machine learning which can be thought of as learning a function from examples can be cast directly into the Gaussian process framework \cite{Rasmussen:2005:GPM:1162254}.
+% \end{abstract}
 
 \section{Introduction}
 
@@ -38,24 +38,18 @@ The problem of searching for patterns in data is a fundamental one and has a lon
 
 Applications in which the training data comprises examples of the input vectors along with their corresponding target vectors are known as \textit{supervised learning} problems. If the desired output consists of one or more continuous variables, then the task is called \textit{regression}\cite{Bishop:2006:PRM:1162264}.
 
-In general we denote the input as $\mathbf{x}$, and the output (or target) as $t$. The input is usually represented as a vector $\mathbf{x}$ as there are in general many input variables. We have a dataset $\mathcal{D}$ of $n$ observations, $\mathcal{D}=\left\{\left(\mathbf{x}_{i}, t_{i}\right) | i=1, \ldots, n\right\}$. Given this training data we wish to make predictions for new inputs $\mathbf{x_*}$ that we have not seen in the \textit{training set}. Thus it is clear that the problem at hand is inductive; we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
+In general we denote the input as $\mathbf{x}$, and the output (or target) as $t$. The input is usually represented as a vector $\mathbf{x}$ as there are in general many input variables. We have a dataset $\mathcal{D}$ of $n$ observations, $\mathcal{D}=\left\{\left(\mathbf{x}_{i}, t_{i}\right) | i=1, \ldots, n\right\}$. Given this training data we wish to make predictions for new inputs $\mathbf{x_*}$ that we have not seen in the \textit{training set}. Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
 
-A wide variety of methods have been proposed to deal with the \textit{supervised learning} problem; here we describe two common approaches. The first is to restrict the class of functions that we consider, for example by only considering linear functions of the input. The second approach is (speaking rather loosely) to give a prior probability to every possible function, where higher probabilities are given to functions that we consider to be \textit{more likely}, for example because they are smoother than other functions. \cite{Rasmussen:2005:GPM:1162254}
-
-The first approach has an obvious problem in that we have to decide upon the richness of the class of functions considered; if we are using a model based on a certain class of functions (e.g. linear functions) and the target function is not well modelled by this class, then the predictions will be poor. One may be tempted to increase the flexibility of the class of functions, but this runs into the danger of \textit{overfitting}, where we can obtain a good fit to the training data, but perform badly when making test predictions.
-
-The second approach appears to have a serious problem, in that surely there are an infinite set of possible functions to compute in a finite time. This is where the Gaussian \textit{process} comes as a possible approach. A Gaussian process is a generalization of the Gaussian probability \textit{distribution}. Whereas a probability distribution describes random variables which are scalars or vectors (for multivariate distributions), a stochastic \textit{process} governs the properties of functions. Leaving mathematical sophistication aside, one can loosely think of a function as a very long vector, each entry in the vector specifying the function value $f(x)$ at a particular input $x$. Indeed, the question of how we deal computationally with these infinite dimensional objects has the resolution: if you ask only for the properties of the function at a finite number of points, then inference in the Gaussian process will give you the same answer if you ignore the infinitely many other points, as if you would have taken them all into account. And these answers are consistent with answers to any other finite queries you may have. One of the main attractions of the Gaussian process framework is precisely that it unites a sophisticated and consistent view with computational tractability.
-\nocite{Bishop:2006:PRM:1162264}
-\nocite{Rasmussen:2005:GPM:1162254}
+The approach is to give a \textit{prior} probability to every possible function, where higher probabilities are given to functions that we consider to be \textit{more likely}, for example because they are smoother than other functions. \cite{Rasmussen:2005:GPM:1162254}. This appears to have a serious problem, in that surely there are an infinite set of possible functions to compute in a finite time. This is where the Gaussian \textit{process} comes as a possible approach. A Gaussian process is a generalization of the Gaussian probability \textit{distribution}. Whereas a probability distribution describes random variables which are scalars or vectors (for multivariate distributions), a random process governs the properties of functions \cite{getoor2009}. We can think of a function as a very long vector, each entry in the vector specifying the function value $f(x)$ at a particular input $x$. Indeed, the question of how we deal computationally with these infinite dimensional objects has the resolution: if you ask only for the properties of the function at a finite number of points, then \textit{infer} the properties for the predictions in the Gaussian process will give you the same answer if you ignore the infinitely many other points, as if you would have taken them all into account. One of the main attractions of the Gaussian process framework is precisely that it unites a sophisticated and consistent view with computational tractability.
 
 \section{Linear Regression}
 
-Starting with a simple regression problem. Be the data set $\mathcal{D}=\left\{ x_i,t_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $t$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $t$. Our objective is make predictions of the new value $\hat{t}$ for some new input $\hat{x}$.
+To understand the concepts the are covered by the Gaussian process, we start with a simple regression problem. Be the data set $\mathcal{D}=\left\{ x_i,t_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $t$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $t$. Our objective is make predictions of the new value $\hat{t}$ for some new input $\hat{x}$.
 
 \begin{figure}[htbp]
    \centering
    \includegraphics{graphics/prml/{Figure1.2}.pdf}
-   \caption{Training data set with $n=10$ points in blue. The green curve shows the function $sin(2\pi x)$ used to generate the data. Our goal is to predict the value of t for some new value of x, without knowledge of the green curve.}
+   \caption{Training data set with $n=10$ points in blue. The green curve shows the function $sin(2\pi x)$ used to generate the data. Our goal is to predict the value of t for some new value of x, without knowledge of the green curve \cite{Bishop:2006:PRM:1162264}.}
    % \label{<label>}
 \end{figure}
 
@@ -72,22 +66,22 @@ We can extend the class of models considering linear combinations of nonlinear f
 
 \begin{equation}
    y(x,\mathbf{w}) = \sum_{j=0}^{M-1} \phi_j (x) w_j 
-   \label{eq:lin-reg-model-1}
+   \label{eq:lin-reg-model-phi}
 \end{equation}
 
-where $\phi_j (x)$ are known as \textit{basis functions}, and then the total number of parameters for this model will be $M$. We can evaluate the same operation of (\ref{eq:lin-reg-model-1}) in the matrix form by
+where $\phi_j (x)$ are known as \textit{basis functions}, and then the total number of parameters for this model will be $M$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. We can evaluate the same operation of (\ref{eq:lin-reg-model-1}) in the matrix form by
 
 \begin{equation}
    y(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top  \mathbf{w}
    \label{eq:lin-reg-model-1-matrix-form}
 \end{equation}
 
-where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. It's important to note that these linear models are needed to define its basis functions before the training data set is observed.
+where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. 
 
 \begin{figure}[htbp]
    \centering
    \includegraphics{graphics/prml/{Figure1.3}.pdf}
-   \caption{The error function (\ref{eq:lin-reg-error-function-1}) corresponds to (one half of) the sum of the squares of the displacements (shown by the vertical green bars) of each data point from the function $y(x, \mathbf{w})$.}
+   \caption{The error function (\ref{eq:lin-reg-error-function-1}) corresponds to (one half of) the sum of the squares of the displacements (shown by the vertical green bars) of each data point from the function $y(x, \mathbf{w})$ \cite{Bishop:2006:PRM:1162264}.}
    % \label{<label>}
 \end{figure}
 
@@ -141,7 +135,7 @@ which are the parameters that best fit the model to the data.
        \centering
        \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.4d}.pdf}
    \end{subfigure}
-      \caption{Plots of polynomials for the model in (\ref{eq:lin-reg-model-1}) having various orders $M$, shown as red curves.}
+      \caption{Plots of polynomials for the model in (\ref{eq:lin-reg-model-1}) having various orders $M$, shown as red curves \cite{Bishop:2006:PRM:1162264}.}
       \label{fig:lin-reg-overfit}
 \end{figure}
 
@@ -149,7 +143,7 @@ As we increase the number of parameters, our model becomes more flexible and the
 
 \subsection{Regularized Linear Regression}
 
-\begin{table}[h]
+\begin{table}[htpb]
    \centering
    \begin{tabular}{l| l l l l}
      & $M=0$ & $M=1$ & $M=6$ & $M=9$ \\
@@ -165,27 +159,30 @@ As we increase the number of parameters, our model becomes more flexible and the
    $\mathbf{w}_8^*$ &      &        &        & -557682.99\\
    $\mathbf{w}_9^*$ &      &        &        & 125201.43\\
    \end{tabular}
-   \caption{Table of the coefficients $\mathbf{w}^*$ for polynomials of various order. Observe how the typical magnitude of the coefficients increases dramatically as the order of the polynomial increases.}
+   \caption{Table of the coefficients $\mathbf{w} ^*$ for polynomials of various order. Observe how the typical magnitude of the coefficients increases dramatically as the order of the polynomial increases \cite{Bishop:2006:PRM:1162264}.}
    \label{tab:reg-lin-reg-weights}
    \end{table}
 
-An approach to minimize the over-fitting problem is to control the flexibility of the model. In the Table \ref{tab:reg-lin-reg-weights} we can note that for a larger number of parameters, if we take the derivative of $y$. Then to control the over-fitting, we can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
+An approach to controls the over-fitting problem is to deal with the flexibility of the model. In the Table \ref{tab:reg-lin-reg-weights} we can note that, for a larger number of parameters, the derivative of the function $y$ takes larger constants. Then to control the over-fitting, we can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
 
-\begin{equation}
-   \label{eq:lin-reg-error-function-regularized}
-   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
-\end{equation}
 
-whats means that our error increases as the norm of $\mathbf{w}$ grows. This will lead us to the matrix form
+\begin{subequations}
+   \begin{equation}
+      \label{eq:lin-reg-error-function-regularized}
+      E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
+   \end{equation}
+   \begin{equation}
+      \label{eq:lin-reg-error-function-regularized-matrix-form}
+      \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{t} 
+   \end{equation}
+\end{subequations}
 
-\begin{equation}
-   \label{eq:lin-reg-error-function-regularized-matrix-form}
-   \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{t} 
-\end{equation}
+whats means that our error increases as the norm of $\mathbf{w}$ grows, ans we can control this increasing by adjusting the term $\lambda$ as we want. By this we see in \autoref{fig:reg-lin-reg-overfit-lambda} that the regularization acts like a \textit{smoothing} factor over the function.
 
-This allow us to increase the number of parameters trying to control the over-fitting. More, add parameters will allows us to capture different aspects of the data set, what we will see later.
 
-\begin{figure}[h]
+% This allow us to increase the number of parameters trying to control the over-fitting. More, add parameters will allows us to capture different aspects of the data set, what we will see later.
+
+\begin{figure}[htpb]
    \centering
    \begin{subfigure}[htpb]{0.45\linewidth}
        \centering
@@ -196,15 +193,15 @@ This allow us to increase the number of parameters trying to control the over-fi
        \centering
        \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7b}.pdf}       
    \end{subfigure}
-      \caption{Plots of polynomials for the model in (\ref{eq:lin-reg-model-1}) having various orders $M$, shown as red curves.}
-      \label{fig:reg-lin-reg-overfit}
+      \caption{Plots of $M = 9$ polynomials fitted to the data set using the regularized error function (\ref{eq:lin-reg-error-function-regularized}) for two values of the regularization parameter $\lambda$ corresponding to $\ln \lambda = -18$ and $\ln \lambda = 0$. The case of no regularizer, i.e., $\lambda = 0$, corresponding to $\ln \lambda = -\infty$, is shown at the bottom right of \autoref{fig:lin-reg-overfit} \cite{Bishop:2006:PRM:1162264}.}
+      \label{fig:reg-lin-reg-overfit-lambda}
 \end{figure}
 
 \section{Bayesian Linear Regression}
 
 \subsection{A Bayesian view of Linear Regression}
 
-Until now, we see the curve fitting problem in terms of error minimization. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
+Until now, we see the curve fitting problem in terms of the minimization of the error function. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
 
 \begin{equation}
    \label{eq:bay-reg-bayes-rule}
@@ -233,10 +230,10 @@ Let's consider the same data set $\mathcal{D}$ presented before, but now we have
 \end{equation}
 
 
-\begin{figure}[h]
+\begin{figure}[htpb]
    \centering
    \includegraphics{graphics/prml/{Figure1.16}}
-   \caption{Schematic illustration of a Gaussian conditional distribution for $t$ given $x$ given by  (\ref{eq:bay-cur-fit-1}), in which the mean is given by the polynomial function y(x, w), and the precision is given by the parameter $\beta$, which is related to the variance $\beta^{-1}=\sigma^2$.}
+   \caption{Schematic illustration of a Gaussian conditional distribution for $t$ given $x$ given by  (\ref{eq:bay-cur-fit-1}), in which the mean is given by the polynomial function y(x, w), and the precision is given by the parameter $\beta$, which is related to the variance $\beta^{-1}=\sigma^2$ \cite{Bishop:2006:PRM:1162264}.}
    % \label{<label>}
 \end{figure}
 
@@ -329,10 +326,10 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
  \end{subequations}
  \end{corollary}
 
- \begin{figure}[h]
+ \begin{figure}[htpb]
    \centering
    \includegraphics{graphics/prml/{Figure3.7}}
-   \caption{Illustration of sequential Bayesian learning for a simple linear model of the form $y(x, \mathbf{w}) = w_0 + w_1 x$. The hyperparameters $\alpha$ and $\beta$ are assumed as $2$ and $25$, respectively, just by example.}
+   \caption{Illustration of sequential Bayesian learning for a simple linear model of the form $y(x, \mathbf{w}) = w_0 + w_1 x$. The hyperparameters $\alpha$ and $\beta$ are assumed as $2$ and $25$, respectively, just by example \cite{Bishop:2006:PRM:1162264}.}
    % \label{<label>}
 \end{figure}
 
@@ -400,7 +397,7 @@ where $M$ is the \textit{order} of the polynomial, and $x^j$ denotes $x$ raised 
 \end{align*}
 %
 
-With this, our linear model is able to capture different aspects of the data set, as periodicity, exponential increasing, roughness etc.  These functions become \textit{kernels} when its number tends to infinite \cite{mackay1998introduction}.
+With this, our linear model is able to capture different aspects of the data set, as periodicity, exponential increasing, roughness etc. When the number of basis functions tends to infinite these models become \textit{kernels} \cite{mackay1998introduction}. It's important to note that these linear models are needed to define its basis functions before the training data set is observed.
 
 Notice that in the previous section, we are using transformations always of the type $\Phi^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \Phi$, or $\boldsymbol{\phi}(x)^{\top} \boldsymbol{\Sigma}_\mathbf{w} \boldsymbol{\phi}(x)$. Then we can generalize the form $\boldsymbol{\phi}(\mathbf{x})^\top \boldsymbol{\Sigma}_\mathbf{w}\boldsymbol{\phi}(\mathbf{x'})$ where $\mathbf{x}$ and $\mathbf{x'}$ are in either the training or the test sets. We define this form as $k(\mathbf{x},\mathbf{x'})$, where $k(\cdot,\cdot)$ is called \textit{covariance function}, or \textit{kernel}. Further insight into the role of the equivalent kernel can be obtained by considering the covariance between $y(\mathbf{x})$ and $y(\mathbf{x'})$, which is given by
 
@@ -470,10 +467,10 @@ Deriving the conditional distribution corresponding we arrive at the key predict
 \begin{aligned} p(\mathbf{y}_{*} | \mathbf{x}, \mathbf{t},\mathbf {x_{*}}) &= \mathcal{N}\left(\overline{\mathbf{y}}_{*}, \mathrm{cov}\left(\mathbf{y}_{*}\right)\right), \text { where } \\ \overline{\mathbf{y}}_{*} & \triangleq \mathbb{E}\left\{ \mathbf{y}_{*} | \mathbf{x}, \mathbf{t}, \mathbf{x_{*}}\right\}=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{t} \\ \mathrm{cov}\left(\mathbf{y}_{*}\right) &=\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x_{*}}\right)-\mathbf{K}\left(\mathbf{x_{*}}, \mathbf{x}\right)\left(\mathbf{K}(\mathbf{x}, \mathbf{x})+\beta^{-1} \mathbf{I}\right)^{-1} \mathbf{K}\left(\mathbf{x}, \mathbf{x_{*}}\right) \end{aligned}
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[htpb]
    \centering
    \includegraphics{graphics/prml/{Figure6.8}}
-   \caption{Illustration of Gaussian process regression applied to the sinusoidal data set in which the three right-most data points have been omitted. The green curve shows the sinusoidal function from which the data points, shown in blue, are obtained by sampling and addition of Gaussian noise. The red line shows the mean of the Gaussian process predictive distribution, and the shaded region corresponds to plus and minus two standard deviations. Notice how the uncertainty increases in the region to the right of the data points.}
+   \caption{Illustration of Gaussian process regression applied to the sinusoidal data set in which the three right-most data points have been omitted. The green curve shows the sinusoidal function from which the data points, shown in blue, are obtained by sampling and addition of Gaussian noise. The red line shows the mean of the Gaussian process predictive distribution, and the shaded region corresponds to plus and minus two standard deviations. Notice how the uncertainty increases in the region to the right of the data points \cite{Bishop:2006:PRM:1162264}.}
    % \label{<label>}
 \end{figure}
 
