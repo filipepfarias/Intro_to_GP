@@ -413,11 +413,11 @@ From the form of the kernel, we see that the predictive mean at nearby points wi
 
 \section{Gaussian processes}
 
-Until now we have made the inference in the \textit{feature space}, the space where the parameters $\mathbf{w}$ are. In other words, the strategy is to train our model, obtaining the parameters probability distribution, by Bayesian inference, and then evaluating the predictive distribution with the posterior of the inference.
+Until now we have made the inference in the \textit{feature space}, the space where the parameters $\mathbf{w}$ are. In other words, the strategy was to train our model, obtaining the parameters probability distribution, by Bayesian inference, and then evaluating the predictive distribution with the posterior of the inference.
 
 An alternative and equivalent way to achieve such results is to make the inference directly in the space of functions, or \textit{function space}. To this we use the \textit{Gaussian processes} to describe the distribution over the functions directly \cite{Rasmussen:2005:GPM:1162254}.
 
-We define a Gaussian process (GP) as a collection of random variables, such that any finite number of which is normal jointly distributed. As the normal distribution, the GP is completely defined by its mean function $m(\mathbf{x})$ and covariance function $k(\mathbf{x},\mathbf{x'})$ of a real process $y(\mathbf{x})$, these in turn are defined as
+We define a Gaussian process (GP) as a collection of random variables, such that any finite number of which is normal jointly distributed. In other words, it can be thought  of as a generalization of a Gaussian distribution over a finite vector space to a function space of infinite dimension \cite{mackay1998introduction}. As the normal distribution, the GP is completely defined by its mean function $m(\mathbf{x})$ and covariance function $k(\mathbf{x},\mathbf{x'})$ of a real process $y(\mathbf{x})$, these in turn are defined as
 
 \begin{equation}
    m(\mathbf{x}) = \mathbb{E}\left\{ y(\mathbf{x}) \right\}, \quad
