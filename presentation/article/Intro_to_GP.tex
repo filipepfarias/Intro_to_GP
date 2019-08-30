@@ -33,6 +33,7 @@ Federal University of Ceará\\
 % \end{abstract}
 
 \section{Introduction}
+\nocite{hennig2013gaussian}
 
 The problem of searching for patterns in data is a fundamental one and has a long and successful history. The field of pattern recognition is concerned with the automatic discovery of regularities in data through the use of computer algorithms and with the use of these regularities to take actions. Applications in which the training data comprises examples of the input vectors along with their corresponding target vectors are known as \textit{supervised learning} problems. If the desired output consists of one or more continuous variables, then the task is called \textit{regression} \cite{Bishop:2006:PRM:1162264} and it will be the concept revisited in this report.
 
@@ -329,7 +330,7 @@ This is called \textit{Bayesian inference}. If we assume that all distributions 
 
  \begin{figure}[htpb]
    \centering
-   \includegraphics{graphics/prml/{Figure3.7}}
+   \includegraphics[width=.95\linewidth]{graphics/prml/{Figure3.7}}
    \caption{Illustration of sequential Bayesian learning for a simple linear model of the form $y(x, \mathbf{w}) = w_0 + w_1 x$. The hyperparameters $\alpha$ and $\beta$ are assumed as $2$ and $25$, respectively, just by example \cite{Bishop:2006:PRM:1162264}.}
    % \label{<label>}
 \end{figure}
@@ -446,10 +447,12 @@ This is important to obtain our Bayesian linear regression as a GP. Being our mo
 
 The last sections give us an insight about the construction of the learning process for the GP. Analogous to the Bayes' theorem for the Gaussian, we use the idea of the GP as a multidimensional Gaussian distribution and we can make inference with its partitions. 
 
-First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{y}$ and the prediction $\mathbf{y_*}$, as
+First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{t}$ and the prediction $\mathbf{t_*}$, as
 
 \begin{equation}
-   \mathcal{N} \left( \left( \begin{array}{c}{\mathbf{x}_{a}} \\ {\mathbf{x}_{b}}\end{array} \right) \left| \mathbf{0}, \left( \begin{array}{ll}{\mathbf{K}(\mathbf{x},\mathbf{x})} & {\mathbf{K}(\mathbf{x},\mathbf{x_*})} \\ {\mathbf{K}(\mathbf{x_*},\mathbf{x})} & {\mathbf{K}(\mathbf{x_*},\mathbf{x_*})}\end{array} \right) \right. \right)
+   \left( \begin{array}{l}{\mathbf{t}}  \\ {\mathbf{t}_*} \end{array} \right) 
+   \sim
+   \mathcal{N} \left( \mathbf{0}, \left[ \begin{array}{ll}{\mathbf{K}(\mathbf{x},\mathbf{x})} & {\mathbf{K}(\mathbf{x},\mathbf{x_*})} \\ {\mathbf{K}(\mathbf{x_*},\mathbf{x})} & {\mathbf{K}(\mathbf{x_*},\mathbf{x_*})}\end{array} \right] \right)
 \end{equation}
 
 where $\mathbf{K}(\cdot,\cdot)$ denotes the covariance matrices evaluated at all pairs of $N$-dimensional $\mathbf{x}$ training points and $N_*$-dimensional $\mathbf{x_*}$ test points. Then, making use of \autoref{subsec:app-par-gau}, we use the \textit{conditioning} to obtain the predictive distribution

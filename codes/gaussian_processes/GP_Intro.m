@@ -1,4 +1,4 @@
-% clear enviroments
+%% clear enviroments
 close all; clear;
 
 % generating synthetic data
@@ -8,7 +8,7 @@ Y = @(x) sin(2*pi*x);
 ns = normrnd(0,SIGMA^2,size(X));
 T = Y(X) + ns;
 
-% GP regression
+%% GP regression
 
 % contructing kernel
 F = 200; % number of features
@@ -37,7 +37,7 @@ vpost = kxx - A * A';
 stdpost = sqrt(diag(vpost));
 
 % plot
-figure;
+close all; figure;
 hold on;
 plot(X,T,'o','LineWidth',1,'Color','blue');
 plot(x,mpost,'-','LineWidth',1,'Color','red');
