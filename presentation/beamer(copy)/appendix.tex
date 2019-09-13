@@ -1,0 +1,86 @@
+\section{Appendix}\label{sec:appendix}
+\framecard{\insertsection}
+\subsection{Appendix A - Matrix Calculus}
+
+\begin{frame}{\insertsubsection}
+
+\begin{definition}[Matrix Multiplication]
+Given $\mathbf{A}$ being $m \times n$ and $\mathbf{B}$ being $p \times q$
+\begin{equation*}
+\mathbf{A}\mathbf{B} = \left[ \sum^n_{s=1} a_{is}b_{sj} \right] \text{, with } n = p 
+\end{equation*}
+\begin{equation*}
+\mathbf{B}\mathbf{A} = \left[ \sum^r_{k=1} b_{ik}a_{kj} \right] \text{, with } m = q
+\end{equation*}
+\end{definition}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+\begin{definition}[Matrix Multiplication]
+Given $\mathbf{A}$ being $m \times n$ and $\mathbf{B}$ being $p \times q$
+\begin{equation*}
+\left[ \mathbf{A}\mathbf{B} \right]^T = \left[ \sum^m_{s=1} a_{is}b_{sj} \right]^T  = \left[ \sum^n_{s=1} b_{is}a_{sj} \right] = \mathbf{B}^T \mathbf{A}^T \text{, with } n = p
+\end{equation*}
+\end{definition}
+
+\end{frame}
+
+
+\begin{frame}{\insertsubsection}
+
+\begin{block}{Proposition}
+Given $\mathbf{y}$ being $m \times 1$, $\mathbf{x}$ being $n \times 1$, $\mathbf{A}$ being $m \times n$ independent of $\mathbf{x}$ and
+
+\begin{equation*}
+\mathbf{y} = \mathbf{A} \mathbf{x}
+\end{equation*}
+
+Then
+
+\begin{equation*}
+\frac{\partial \mathbf{y}}{\partial \mathbf{x}} = \mathbf{A}
+\end{equation*}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+\begin{definition}[Matrix Derivative]
+Given $\mathbf{A}$ being $m \times n$ and $\mathbf{B}$ being $p \times q$
+\begin{equation*}
+\mathbf{A}\mathbf{B} = \left[ \sum^n_{s=1} a_{is}b_{sj} \right]
+\end{equation*}
+\begin{equation*}
+\mathbf{B}\mathbf{A} = \left[ \sum^r_{k=1} b_{ik}a_{kj} \right]
+\end{equation*}
+\end{definition}
+
+\end{frame}
+
+\subsection{Appendix B - Bayes' Rule}
+
+\begin{frame}{\insertsubsection}
+
+\begin{definition}[Bayes' Rule]
+Given a dataset $\mathcal{D} := \{ \mathbf{x},\mathbf{t} \}$ and $\mathbf{w}$ being the parameters, we have
+\begin{equation*}
+p(\mathbf{w}| \mathcal{D}) = \frac{p(\mathcal{D}|\mathbf{w}) p(\mathbf{w})}{p(\mathcal{D})}
+\end{equation*}
+\end{definition}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+    To obtain the posterior distribution, being $\mathcal{D} = \{ \mathbf{x}, \mathbf{t} \}$, we do
+    \begin{align*}
+        p(\mathbf{w}|\mathbf{x},\mathbf{t}) = \frac{p( \mathbf{x}, \mathbf{t} | \mathbf{w}) p(\mathbf{w})}{p(\mathbf{x},\mathbf{t})}
+    \end{align*}
+    But if $p(\mathbf{x},\mathbf{t}) = p(\mathbf{t}|\mathbf{x}) p(\mathbf{x}) $ and $ p(\mathbf{x},\mathbf{t}|\mathbf{w}) = p(\mathbf{t}|\mathbf{w},\mathbf{x}) p(\mathbf{x}) $, the we have
+    \begin{align*}
+        p(\mathbf{w}|\mathbf{x},\mathbf{t}) = \frac{p( \mathbf{t}, \mathbf{w} | \mathbf{x}) p(\mathbf{w})}{p(\mathbf{t}|\mathbf{x})}
+    \end{align*}
+\end{frame}

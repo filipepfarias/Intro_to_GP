@@ -1,0 +1,311 @@
+\section{Bayesian Linear Regression}
+\framecard{\insertsection}
+
+\begin{frame}{\insertsection}
+	
+	At this point, we have a probabilistic model and we may want to predict values for $x$. Then, we need a \textit{predictive distribution}. \\
+	\vspace{1em}
+	Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Rule}, to convert a \textit{prior} probability in a \textit{posterior} probability and put some uncertainty in the parameters too. \\
+	\end{frame}
+	
+	\begin{frame}{\insertsubsection}
+	Mathematically, by Bayes' Rule, we could infer
+	\visible<2->{
+	\begin{equation*}
+	\underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} | \alpha \right)}_{\text{prior}}
+	\end{equation*}
+	}
+	\visible<3->{
+	and for simplicity, consider the follow prior for $\mathbf{w}$
+	\begin{equation*}
+	p \left( \mathbf{w} | \alpha \right) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{0}, \alpha^{-1} \mathbf{I} \right) = \left(  \frac{\alpha}{2 \pi}\right) ^{(M+1)/2} \exp \left\{ - \frac{\alpha}{2} \mathbf{w}^{\top} \mathbf{w} \right\}
+	\end{equation*}
+	where $\alpha$ the precision of the distribution and $M+1$ is the dimension of $\mathbf{w}$, for a polynomial of $M^{th}$ order. Variables such $\alpha$ are called \textit{hyperparameters} and control the distribuition of model parameters.}
+	\end{frame}
+	
+	\begin{frame}{\insertsubsection}
+	By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that will lead us to a term
+	
+	\begin{equation*}
+	\sum^N_{n=1} \left\{ y(x_n, \mathbf{w}) - t_n \right\}^2 + \frac{\alpha}{2} \mathbf{w}^{\top}\mathbf{w} + \text{const.}
+	\end{equation*}
+	
+	Note that if we consider $\lambda = \alpha / \beta$, this will back to the regularized form of \textit{least squares}. This technique is called \textit{maximum posterior} (MAP).
+	\end{frame}
+	
+	\begin{frame}{\insertsubsection}
+	
+	So, observe that even making some probabilistic assumptions, we don't have yet a fully bayesian model, given that finding the \textit{maximum likelihood}, we're finding only the parameters given one model such that maximize our targets probabilities. Furthermore, even with some probabilistic assumptions, our model still have a \textbf{over-fitting} problem, given that we obtained the same expressions for the simple regression, adding some constants.\\
+	\vspace{1em}
+	The next step is put some \textbf{uncertainty in predictive model}, and makes adjustments in the light of our new evidences. By that we could obtain a "more Bayesian" model, in other words, a \textcolor{UniGold}{\textbf{Bayesian Linear Regression}}.
+	
+	\end{frame}
+	
+	%\begin{frame}{\insertsubsection}
+	%	\visible<1->{Let's take a look at the Bayes Theorem}
+	%	
+	%	\visible<2->{
+	%	\begin{block}{Bayes Theorem}{
+	%			\begin{equation*}\label{bayes_theorem}
+	%				\visible<2->{ p(\mathbf{w}|\mathcal{D}) = \frac{p(\mathcal{D}| \mathbf{w}) p(\mathbf{w}) } {  p(\mathcal{D}) } } 
+	%			\end{equation*}
+	%			}
+	%	\end{block}
+	%	\visible<3->{The new role of Bayes Theorem here is the fact that we could obtain new, or better, probability distribuitions for the weights in light of an determined data set $\mathcal{D}$.}
+	%	}
+	%\end{frame}
+	
+	%\begin{frame}{\insertsubsection}
+	%	\visible<1->{\textbf{\textcolor{UniGold}{At this time, it's important to point out some things. \\}}}
+	%	\vspace{1.5em}
+	%	\visible<2->{When we write $ p \left( t_n | x_n, \mathbf{w}, \beta \right)$, we assume a probability distribuition over the parameters $\mathbf{w}$ and $\beta$ too.\\}
+	%	\vspace{1.5em}
+	%	\visible<3->{Then we could observe that we'll obtain a \textbf{discrete distribution of functions} in their \textit{parameters}.\\}
+	%	\vspace{1.5em}
+	%	\visible<4->{So, here is where the Bayes Theorem plays an important role by \textbf{adjusting} these \textit{parameters} as we obtain evidences.}
+	%\end{frame}
+	%
+	%\begin{frame}{\insertsubsection}
+	%	\visible<1->{Taking some steps back, let's re-visit the \textbf{Curve Fitting}. There, the strategy was minimize the error function.\vspace{1.5em} \\}
+	%	\visible<2->{Now we'll try to view the same problem with a \textit{probabilistic perspective}. We're trying to make predictions for the target value $\mathbf{t}$ given some new values of $x$.\vspace{1.5em} \\}
+	%
+	%\end{frame}
+	
+	
+	%\begin{frame}{\insertsubsection}
+	%	And taking the derivatives with respect to $\beta$ to minimize the error	
+	%		\begin{align*}
+	%		\visible<1->{
+	%			\frac{\partial}{\partial \beta}\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) &=0 } \\
+	%		\visible<2->{
+	%			 -\frac{1}{2} \sum^N_{n=1} \left\{ y(x_n,\mathbf{w} -t_n ) \right\}^2 + \frac{N}{2}\frac{1}{\beta} &= 0 \\  }
+	%		\visible<3->{
+	%			 \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n,\mathbf{w} -t_n ) \right\}^2  &= \frac{1}{\beta_{ML}}  }
+	%		\end{align*}
+	%	\visible<4->{
+	%	Where $\beta_{ML}$ is the maximum likelihood.}
+	%
+	%\end{frame}
+
+\begin{frame}{\insertsection}
+	Seeking a Bayesian approach, the next steps consists to apply the \textbf{sum} and \textbf{product} rules of probability to evaluate the predictive distribution. By now we assume that the hyperparameters are fixed, but they could assume a distribution too. \\
+	\vspace{1em}
+	We saw that the posterior distribution for $\mathbf{w}$ could be given by
+	\begin{equation*}
+		\underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t} \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x} \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} \right)}_{\text{prior}}
+	\end{equation*}
+
+\end{frame}
+
+
+\subsection{The D-dimensional Gaussian Distribution}
+
+\begin{frame}{\insertsubsection}
+
+Remember the One-dimensional Gaussian distribution
+\begin{block}{One-dimensional Gaussian distribution}
+\begin{equation*}
+	\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\} > 0
+\end{equation*}
+where $\mu$ is the mean and $\sigma^2$ the variance.
+\end{block}
+\visible<2->{\vspace{1em}
+			First we'll consider a geometrical approach by the quadratic distance $(x -  \mu)^2$ normalized by the variance $\sigma^2$. This comprehension will help us with the D-dimensional case.
+   		     	}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	To more than one dimensions, we'll consider the points ($x$) distance for the mean of the distribution, as we done in the one dimensional case, by adding a term to prioritize some dimension distribution in particular. Then
+	\begin{equation*}
+		\Delta^2 = (\mathbf{x} - \boldsymbol{\mu})^{\top} \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu}) 
+	\end{equation*}
+called \textit{Mahalanobis distance}. And it's becomes the \textit{Euclidean distance}, when $\boldsymbol{\Sigma}$ is the indentity matrix. This means that the all the distances are equally normalized. The matrix $\boldsymbol{\Sigma}$ is the covariance matrix of the distributions, by definition.
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+And then
+\begin{block}{D-dimensional Gaussian distribution}
+\begin{equation*}
+	\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi )^{D/2}} \frac{1}{|\boldsymbol{\Sigma}|^{1/2}} \exp \left\{ -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\top} \boldsymbol{\Sigma} ^{-1} (\mathbf{x} - \boldsymbol{\mu})  \right\} 
+\end{equation*}
+where $\boldsymbol{\mu}$ is the D-dimensional mean vector, $\boldsymbol{\Sigma}$ the D$\times$D-dimensional variance matrix and $|\boldsymbol{\Sigma}|$ its determinant.
+\end{block}
+\end{frame}
+
+ \begin{frame}{\insertsubsection}
+ 
+ \begin{block}{Partitioned Gaussians}
+ Given a joint Gaussian distribution $\mathcal{N}(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma})$ with $\boldsymbol{\Lambda} \equiv \boldsymbol{\Sigma}^{-1}$ and
+ \begin{equation*}
+ 	\mathbf{x} = 
+ 	 \begin{pmatrix}
+ 		\mathbf{x} _{a} \\
+ 		\mathbf{x} _{b}
+ 	\end{pmatrix} , 
+ 	\boldsymbol{\mu} = 
+ 	 \begin{pmatrix}
+ 		\boldsymbol{\mu}_{a} \\
+ 		\boldsymbol{\mu}_{b}
+ 	\end{pmatrix} , 
+ 	 \boldsymbol{\Sigma} = 
+ 	 \begin{pmatrix}
+ 		\boldsymbol{\Sigma}_{aa} & \boldsymbol{\Sigma}_{ab} \\
+ 		\boldsymbol{\Sigma}_{ba} & \boldsymbol{\Sigma}_{bb} 
+ 	\end{pmatrix} ,  \boldsymbol{\Lambda} = 
+ 	 \begin{pmatrix}
+ 		\boldsymbol{\Lambda}_{aa} & \boldsymbol{\Lambda}_{ab} \\
+ 		\boldsymbol{\Lambda}_{ba} & \boldsymbol{\Lambda}_{bb} 
+ 	\end{pmatrix}.
+ \end{equation*}
+ Will give us \\
+ \begin{itemize}
+ \item \textcolor{UniGold}{Conditional distribution:}
+ \begin{equation*}
+ p\left( \mathbf{x}_a | \mathbf{x}_b \right) = \mathcal{N}\left( \mathbf{x}_a| \boldsymbol{\mu}_{a|b}, \boldsymbol{\Lambda}^{-1}_{aa} \right), \  \boldsymbol{\mu}_{a|b} =  \boldsymbol{\mu}_a - \boldsymbol{\Lambda}^{-1}_{aa}\boldsymbol{\Lambda}_{ab} \left( \mathbf{x}_b - \boldsymbol{\mu}_b \right)
+ \end{equation*}
+
+ \item \textcolor{UniGold}{Marginal distribution:}
+ \begin{equation*}
+ p\left( \mathbf{x}_a \right) = \mathcal{N} \left( \mathbf{x}_a | \boldsymbol{\mu}_a,\boldsymbol{\Sigma}_{aa} \right)
+ \end{equation*}
+ \end{itemize}
+
+ \end{block}
+ \end{frame}
+
+
+\subsection{Bayes' rule for Gaussian variables}
+
+\begin{frame}{\insertsubsection}
+
+To proceed we'd like to prove that the Gaussians are \textbf{closed under linear transformations}. This will allow us to transform the Gaussians under the likelihood distribution given a prior. For example, given a distribution
+
+\begin{equation*}
+	p(\mathbf{z}) = p(\mathbf{x},\mathbf{y})
+\end{equation*}
+
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	In other words, we're trying to find the parginal distribution $p\left( \mathbf{y} \right)$ and the conditional distribution $p\left( \mathbf{x} | \mathbf{y} \right)$, given
+	\begin{align*}
+	p\left( \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Lambda}^{-1} \right) \\
+	p\left( \mathbf{y} | \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{y}|\mathbf{Ax}+\mathbf{b}, \mathbf{L}^{-1} \right)
+	\end{align*}
+}
+\visible<2->{
+So, applying the joint distribution and the its $\ln$ after
+	\begin{align*}
+	p\left( \mathbf{z} \right) =& \ p\left(  \mathbf{x}, \mathbf{y} \right) = p\left(  \mathbf{y} | \mathbf{x} \right) p\left( \mathbf{x} \right) \\
+	\ln p\left( \mathbf{z} \right) =& \ln p\left(  \mathbf{y} | \mathbf{x} \right) + \ln p\left( \mathbf{x} \right)  \\
+					   =&  -\frac{1}{2}\left( \mathbf{x} - \boldsymbol{\mu} \right)^{\top}\boldsymbol{\Lambda}\left( \mathbf{x} - \boldsymbol{\mu} \right) \\ & -\frac{1}{2} \left( \mathbf{y} - \mathbf{Ax} - \mathbf{b} \right)^{\top} \mathbf{L} \left( \mathbf{y} - \mathbf{Ax} - \mathbf{b} \right)+ \text{const}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	The "const" is the term independent of $\mathbf{x}$ and $\mathbf{y}$. Then, expanding the quadratic form
+	\begin{align*}
+	\ln p\left( \mathbf{z} \right) =&  -\frac{1}{2} \mathbf{x}^{\top} \left( \boldsymbol{\Lambda} + \mathbf{A}^{\top} \mathbf{L} \mathbf{A} \right) \mathbf{x} - \frac{1}{2} \mathbf{y}^{\top} \mathbf{Ly} + \frac{1}{2} \mathbf{y}^{\top} \mathbf{LAx} + \frac{1}{2} \mathbf{x}^{\top} \mathbf{A}^{\top} \mathbf{Ly} \\ 
+					   =& - \frac{1}{2} \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix}^{\top} \begin{pmatrix} \boldsymbol{\Lambda} + \mathbf{A}^{\top} \mathbf{LA} & -\mathbf{A}^{\top} \mathbf{L} \\ -\mathbf{LA} & \mathbf{L} \end{pmatrix}  \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix} = - \frac{1}{2} \mathbf{z}^{\top} \mathbf{Rz}
+	\end{align*}
+}
+\visible<2->{
+	We'll apply the partitioned matrices inversion to obtain $\mathbf{R}^{-1}$
+	\begin{align*}
+	\mathbf{R}^{-1} =& \begin{pmatrix} \boldsymbol{\Lambda}^{-1} & \boldsymbol{\Lambda}^{-1}\mathbf{A}^{\top} \\ \mathbf{A}\boldsymbol{\Lambda}^{-1} & \mathbf{L}^{-1} + \mathbf{A}\boldsymbol{\Lambda}^{-1}\mathbf{A}^{\top} \end{pmatrix}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+\visible<1->{
+	The expanded form of $\ln p\left( \mathbf{z} \right)$ give us the mean too by the linear terms, then
+	\begin{align*}
+	\mathbf{x}^{\top} \boldsymbol{\Lambda \mu}  -\mathbf{x}^{\top} \mathbf{A}^{\top} \mathbf{Lb} + \mathbf{y}^{\top} \mathbf{Lb} = \begin{pmatrix} \mathbf{x} \\ \mathbf{y} \end{pmatrix}^{\top} \begin{pmatrix} \boldsymbol{\Lambda \mu} - \mathbf{A}^{\top} \mathbf{Lb} \\ \mathbf{Lb}  \end{pmatrix}
+	\end{align*}
+}
+\visible<2->{
+	By inspection of the linear terms
+	\begin{align*}
+	\mathbb{E}[\mathbf{z}] = \mathbf{R}^{-1} \begin{pmatrix} \boldsymbol{\Lambda \mu} - \mathbf{A}^{\top} \mathbf{Lb} \\ \mathbf{Lb}  \end{pmatrix} =  \begin{pmatrix} \boldsymbol{\mu}  \\  \mathbf{A}\boldsymbol{\mu} + \mathbf{b}  \end{pmatrix}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+And then we we'll have that
+\visible<1->{
+	\begin{align*}
+	\mathbb{E}[\mathbf{y}] =& \ \mathbf{A}\boldsymbol{\mu} + \mathbf{b} \\
+	\text{cov}[\mathbf{y}] =& \ \mathbf{L}^{-1} + \mathbf{A}\boldsymbol{\Lambda}^{-1}\mathbf{A}^{\top}
+	\end{align*}
+}
+\visible<2->{
+	\begin{align*}
+	\mathbb{E}[\mathbf{x}|\mathbf{y}] =& \ \left(  \boldsymbol{\Lambda} + \mathbf{A}^{\top} \mathbf{LA} \right)^{-1} \left\{ \mathbf{A}^{\top} \mathbf{L}(\mathbf{y}- \mathbf{b}) + \boldsymbol{\Lambda \mu} \right\} \\
+	\text{cov}[\mathbf{x}|\mathbf{y}] =& \ \left(  \boldsymbol{\Lambda} + \mathbf{A}^{\top} \mathbf{LA} \right)^{-1}
+	\end{align*}
+}
+\end{frame}
+
+\begin{frame}{\insertsection}
+In the next step, we'll assume a \textbf{prior distribution over parameters}, $p(\mathbf{w})$, and define it as a Gaussian distribution, then
+\begin{equation*}
+	p(\mathbf{w}) = \mathcal{N} \left( \mathbf{w} | \mathbf{m}_0, \mathbf{S}_0 \right)
+\end{equation*}	
+with mean $\mathbf{m}_0$ and variance $\mathbf{S}_0$.
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{\insertsubsection}
+
+\begin{block}{Marginal and Conditioned Gaussians}
+
+\begin{itemize}
+\item \textcolor{UniGold}{For $\mathbf{y}$ given $\mathbf{x}$:}
+\begin{align*}
+	p\left( \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Lambda}^{-1} \right) \\
+	p\left( \mathbf{y} | \mathbf{x} \right) =& \mathcal{N} \left( \mathbf{y}|\mathbf{Ax}+\mathbf{b}, \mathbf{L}^{-1} \right)
+\end{align*}
+
+\item \textcolor{UniGold}{For $\mathbf{x}$ given $\mathbf{y}$:}
+\begin{align*}
+p\left( \mathbf{x} | \mathbf{y} \right) =& \ \mathcal{N}\left( \mathbf{y}| ,  \boldsymbol{\Sigma} \left\{ \mathbf{A}^{\top} \mathbf{L}(\mathbf{y}-\mathbf{b} + \boldsymbol{\Sigma \mu}) \right\}, \boldsymbol{\Sigma} \right) \\
+p\left( \mathbf{y} \right) =& \ \mathcal{N}\left( \mathbf{y}|\mathbf{A} \boldsymbol{\mu} + \mathbf{b}, \mathbf{L}^{-1} + \mathbf{A}\boldsymbol{\Lambda}^{-1}\mathbf{A}^{\top} \right) \text{, where } \boldsymbol{\Sigma} = \left(  \boldsymbol{\Lambda} + \mathbf{A}^{\top} \mathbf{LA} \right)^{-1}
+\end{align*}
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	By the derivations, we make the assumptions of given $p(\mathbf{w})$ and  for $p(\mathbf{t}|\mathbf{w})$ such that 
+	\begin{align*}
+		p(\mathbf{t}|\mathbf{w}) &= \mathcal{N}\left( \mathbf{t}|y(\mathbf{x},\mathbf{w}), \beta^{-1} \right)	\\
+		&= \mathcal{N}\left( \mathbf{t}|\boldsymbol{\Phi}^{\top}\mathbf{w}, \beta^{-1} \right)
+	\end{align*}
+	And then $p(\mathbf{w}|\mathbf{t}) = \mathcal{N}\left( \mathbf{w}|\mathbf{m}_N, \mathbf{S}_N \right)$ where
+	\begin{align*}
+		\mathbf{m}_N &= \mathbf{S}_N \left( \mathbf{S}_0^{-1}\mathbf{m}_0 + \beta \boldsymbol{\Phi}^{\top}\mathbf{t}  \right) \\
+		\mathbf{S}_N^{-1} &= \mathbf{S}_0^{-1} + \beta\boldsymbol{\Phi}^{\top}\boldsymbol{\Phi}
+	\end{align*}
+\end{frame}
+
+% \begin{frame}{\insertsubsection}
+% 	We'll make the same optimization we made for the mono-variate case. So the logarithmic likelihood results 
+% 	\begin{block}{Maximum likelihood for the Gaussian}
+% 	\begin{equation*}
+% 	\ln p \left( \mathbf{X} | \boldsymbol{\mu}, \boldsymbol{\Sigma} \right) =
+% 	- \frac{N D}{2} \ln (2 \pi) - \frac{N}{2} \ln |\boldsymbol{\Sigma}| - 
+% 	\frac{1}{2} \sum^N_{n=1} \left( \mathbf{x}_n - \boldsymbol{\mu} \right)^{\top} 
+% 	\Sigma^{-1} \left( \mathbf{x}_n - \boldsymbol{\mu} \right)
+% 	\end{equation*}	
+% 	\end{block}
+
+% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -7,7 +7,7 @@
   \subsection{Matrix Form}
   \label{subsec:app-matrix-form}
   
-  Be the linear model $f(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top \mathbf{w}$. Suppose $\Phi = \left[ \boldsymbol{\phi}(x_1),\dots,\boldsymbol{\phi}(x_N) \right]^\top$, then $\Phi$ will be of the form
+  Be the linear model $y(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top \mathbf{w}$. Suppose $\Phi = \left[ \boldsymbol{\phi}(x_1),\dots,\boldsymbol{\phi}(x_N) \right]^\top$, then $\Phi$ will be of the form
 
 
 \begin{equation}
@@ -19,41 +19,41 @@
     \end{bmatrix}
 \end{equation}
 
-called \textit{design matrix}. Then the model turns to $\mathbf{f} = \Phi \mathbf{w}$. This will lead us to the matrix form for the quadratic error function
+called \textit{design matrix}. Then the model turns to $\mathbf{y} = \Phi \mathbf{w}$. This will lead us to the matrix form for the quadratic error function
 
 \begin{align*}
-  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{f} - \mathbf{y})^\top (\mathbf{f} - \mathbf{y}) \\
-                &= \frac{1}{2}(\Phi \mathbf{w} - \mathbf{y})^\top (\Phi \mathbf{w} - \mathbf{y}) \\
-                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{y}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{y} + \mathbf{y}^\top \mathbf{y}) \nonumber \\
+  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{y} - \mathbf{t})^\top (\mathbf{y} - \mathbf{t}) \\
+                &= \frac{1}{2}(\Phi \mathbf{w} - \mathbf{t})^\top (\Phi \mathbf{w} - \mathbf{t}) \\
+                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{t}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{t} + \mathbf{t}^\top \mathbf{t}) \nonumber \\
 \end{align*}
 
-Observe that even in the matrix form, the error function remains scalar, which implies that $\mathbf{y}^\top \Phi \mathbf{w} = \mathbf{w}^\top \Phi^\top \mathbf{y}$ by the transpose of the product rule. Then
+Observe that even in the matrix form, the error function remains scalar, which implies that $\mathbf{t}^\top \Phi \mathbf{w} = \mathbf{w}^\top \Phi^\top \mathbf{t}$ by the transpose of the product rule. Then
 
 \begin{align*}
-  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - 2\mathbf{y}^\top \Phi \mathbf{w} + \mathbf{y}^\top \mathbf{y}) \nonumber \\
+  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - 2\mathbf{t}^\top \Phi \mathbf{w} + \mathbf{t}^\top \mathbf{t}) \nonumber \\
 \end{align*}
 
 Then we proceed by the minimization by $\frac{\partial E}{\partial \mathbf{w}} = 0$
 
 \begin{align}
-  0 &= \frac{1}{2}(2\mathbf{w}^\top \Phi^\top \Phi - 2\mathbf{y}^\top \Phi) \footnotemark[2] \nonumber \\
-  \mathbf{w}^{*\top} &= \mathbf{y}^\top \Phi (\Phi^\top \Phi) ^{-1} \nonumber \\
-  \mathbf{w}^{*} &= (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{y} 
-\end{align}\footnotetext[2]{Using two facts. First, if $\alpha=\mathbf{x}^{\mathrm{T}} \mathbf{A} \mathbf{x}$, then $\frac{\partial \alpha}{\partial \mathbf{x}}=2 \mathbf{x}^{\top} \mathbf{A}$, being $\alpha$ scalar. Second, if $\alpha=\mathbf{y}^{\mathrm{T}} \mathbf{A} \mathbf{x}$, then $\frac{\partial \alpha}{\partial \mathbf{x}}=\mathbf{y}^{\mathrm{T}} \mathbf{A}$. For both, $\mathbf{A}$ is independent of $\mathbf{x}$ and $\mathbf{y}$ \cite{graybill1983matrices}.}
+  0 &= \frac{1}{2}(2\mathbf{w}^\top \Phi^\top \Phi - 2\mathbf{t}^\top \Phi) \footnotemark[2] \nonumber \\
+  \mathbf{w}^{*\top} &= \mathbf{t}^\top \Phi (\Phi^\top \Phi) ^{-1} \nonumber \\
+  \mathbf{w}^{*} &= (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{t} 
+\end{align}\footnotetext[2]{Using two facts. First, if $\alpha=\mathbf{x}^{\mathrm{T}} \mathbf{A} \mathbf{x}$, then $\frac{\partial \alpha}{\partial \mathbf{x}}=2 \mathbf{x}^{\top} \mathbf{A}$, being $\alpha$ scalar. Second, if $\alpha=\mathbf{t}^{\mathrm{T}} \mathbf{A} \mathbf{x}$, then $\frac{\partial \alpha}{\partial \mathbf{x}}=\mathbf{t}^{\mathrm{T}} \mathbf{A}$. For both, $\mathbf{A}$ is independent of $\mathbf{x}$ and $\mathbf{t}$ \cite{graybill1983matrices}.}
 
 For the regularized linear regression, we do $\frac{\lambda}{2} ||\mathbf{w}||^2 = \mathbf{w}^\top \mathbf{w}$, then
 
 \begin{align*}
-  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{f} - \mathbf{y})^\top (\mathbf{f} - \mathbf{y}) + \frac{\lambda}{2} \mathbf{w}^\top \mathbf{w}\\
-                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{y}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{y} + \mathbf{y}^\top \mathbf{y}) + \frac{\lambda}{2} \mathbf{w}^\top \mathbf{w} \nonumber \\
+  E(\mathbf{w}) &= \frac{1}{2}(\mathbf{y} - \mathbf{t})^\top (\mathbf{y} - \mathbf{t}) + \frac{\lambda}{2} \mathbf{w}^\top \mathbf{w}\\
+                &= \frac{1}{2}(\mathbf{w}^\top \Phi^\top \Phi \mathbf{w}  - \mathbf{t}^\top \Phi \mathbf{w} - \mathbf{w}^\top \Phi^\top \mathbf{t} + \mathbf{t}^\top \mathbf{t}) + \frac{\lambda}{2} \mathbf{w}^\top \mathbf{w} \nonumber \\
 \end{align*}
 
 And with the minimization we do $\frac{\partial E}{\partial \mathbf{w}} = 0$, then
 
 \begin{align}
-  0 &= \mathbf{w}^\top \Phi^\top \Phi - \mathbf{y}^\top \Phi + \lambda \mathbf{w}^\top\nonumber \\
-  \mathbf{w}^{*\top} &= \mathbf{y}^\top \Phi (\Phi^\top \Phi + \lambda \mathbf{I}) ^{-1} \nonumber \\
-  \mathbf{w}^{*} &= (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{y} 
+  0 &= \mathbf{w}^\top \Phi^\top \Phi - \mathbf{t}^\top \Phi + \lambda \mathbf{w}^\top\nonumber \\
+  \mathbf{w}^{*\top} &= \mathbf{t}^\top \Phi (\Phi^\top \Phi + \lambda \mathbf{I}) ^{-1} \nonumber \\
+  \mathbf{w}^{*} &= (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{t} 
 \end{align}
 
 where $\mathbf{I}$ is the identity matrix.

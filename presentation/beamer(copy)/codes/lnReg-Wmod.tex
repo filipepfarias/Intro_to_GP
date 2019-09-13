@@ -1,0 +1,54 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\fwidth,
+height=0.75\fwidth,
+at={(0\fwidth,0\fwidth)},
+scale only axis,
+xmin=0,
+xmax=20,
+xlabel style={font=\color{white!15!black}},
+xlabel={M},
+ymode=log,
+ymin=0.706715398478147,
+ymax=17.7451130643817,
+yminorticks=true,
+ylabel style={font=\color{white!15!black}},
+ylabel={$\text{\bf{} $|$$|$w}_{\text{ML}}\text{$|$$|$}$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+yminorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black},
+scale=\fwidth,legend style={nodes={scale=0.5, transform shape}},
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0	-3.20311962500679\\
+1	0.831968959314739\\
+2	0.706715398478147\\
+3	3.58705183434429\\
+4	4.05181275125246\\
+5	4.66688828832832\\
+6	6.26585382469512\\
+7	7.81980950133055\\
+8	8.45516024848456\\
+9	10.8431070701734\\
+10	13.5024640157626\\
+11	16.7232127265325\\
+12	15.2285097682246\\
+13	14.3402334648633\\
+14	14.4201731062232\\
+15	15.3701395577053\\
+16	16.9165527922721\\
+17	16.8070337679857\\
+18	16.4767715602566\\
+19	17.7451130643817\\
+};
+
+\end{axis}
+\end{tikzpicture}%

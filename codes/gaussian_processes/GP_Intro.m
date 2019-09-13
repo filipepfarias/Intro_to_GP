@@ -39,13 +39,13 @@ stdpost = sqrt(diag(vpost));
 % plot
 close all; figure;
 hold on;
-plot(X,T,'o','LineWidth',1,'Color','blue');
+fill([x;flipud(x)], [mpost-2*stdpost;flipud(mpost+2*stdpost)], 'r','LineStyle','none');
+alpha(.15);
 plot(x,mpost,'-','LineWidth',1,'Color','red');
 %plot(x,mpost-2*stdpost,'-','LineWidth',1,'Color','green');
 %plot(x,mpost+2*stdpost,'-','LineWidth',1,'Color','green');
-fill([x;flipud(x)], [mpost-2*stdpost;flipud(mpost+2*stdpost)], 'r','LineStyle','none');
-alpha(.15)
 fplot(Y,[0,1],'LineWidth',1,'Color','green');
+plot(X,T,'o','LineWidth',1,'Color','blue');
 hold off;
-legend('Data','Post Mean','$\pm$ 2 $\times$ Post std ','f(x)=$\sin (2 \pi x)$','Interpreter','latex');
+legend('$2 \sigma_{x,x^.}$','$\overline{\mathbf{y}}_{*}$','$\sin (2 \pi x)$','Data','Interpreter','latex');
 xlim([-.02 1.02]); ylim([-1.5 1.5]);

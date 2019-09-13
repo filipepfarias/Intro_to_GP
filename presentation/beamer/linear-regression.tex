@@ -22,7 +22,7 @@
 \begin{frame}{\insertsubsection}
 	\framesubtitle{An initial curve fitting problem}
 	\begin{itemize}
-		\item Let's fit the points below by \textcolor{UniOrange}{\textbf{polynomial curve fitting}}.
+		\item Let's take the points below generated from the function $y(x)=\sin (2\pi x)$.
 	\end{itemize}
 
 	\begin{figure}
@@ -34,12 +34,12 @@
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Chosing a model}
 	\begin{itemize}
-		\item Be the model chosen a \textcolor{UniOrange}{\textbf{polynomial}}, we'll have
+		\item We can express the curve with a polynomial, being the \textcolor{UniOrange}{\textbf{model}}
 		\begin{align*}
 			y(x,\mathbf{w}) &= w_0x^0 + w_1x^1 + w_2x^2  + ... + w_{M-1}x^{M-1}  = \sum^{M-1}_{j=1} w_j x^j
 		\end{align*}	
 		\item In general, we could write this \textcolor{UniOrange}{\textbf{weighted sum}} with any other function. In other words, we can put this in terms of $\phi_n(x)=x^n$, where $\phi$ could be other \textcolor{UniOrange}{\textbf{basis function}}.
-		\item e.g. we could have different $y$s for different basis functions.
+		\item e.g. we could have different $y(x)$ for different basis functions, or \textcolor{UniOrange}{\textbf{features}}.
 		\begin{align*}
 			y(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) +w_2 \phi_2(x)  + ... + w_{M-1} \phi_{M-1}(x) \\
 							&= w_0 \exp\left\{ - \frac{(x-\mu_0)^2}{2\sigma^2}\right\} + w_1  \exp\left\{ - \frac{(x-\mu_1)^2}{2\sigma^2}\right\} + \\ & ... + w_{M-1} \exp\left\{ - \frac{(x-\mu_{M-1})^2}{2\sigma^2}\right\} \\
@@ -51,14 +51,25 @@
 
 \begin{frame}{\insertsubsection}
 	\framesubtitle{A non-linear model linear in parameters}
-	\begin{itemize}
-		\item For simplicity, we'll carry this notation along.
-		\begin{align*}
-			y(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) +w_2 \phi_2(x)  + ... + w_{M-1} \phi_{M-1}(x) \\
-							&= \sum^{M-1}_{j=1} w_j \phi_j(x)
-		\end{align*}
-		\item We'll evaluate $\phi$ for all $x$, and then project it in the $w$ vector space, then our model could be formed by \textcolor{UniOrange}{\textbf{non-linear}} functions. But, remaining \textcolor{UniOrange}{\textbf{linear on parameters}}.
-	\end{itemize}
+	\begin{columns}
+		\begin{column}{0.475\textwidth}
+			\begin{itemize}
+				\item For simplicity, we'll carry this notation along.
+				\begin{align*}
+					y(x,\mathbf{w}) &= w_0 \phi_0(x) +w_1 \phi_1(x) + ...\\
+					& + w_{M-1} \phi_{M-1}(x) \\
+									&= \sum^{M-1}_{j=1} w_j \phi_j(x)
+				\end{align*}
+				\item We'll evaluate $\phi$ for all $x$, and then project it in the $w$ vector space, the \textbf{\textcolor{UniOrange}{feature-space}}, then our model could be formed by \textcolor{UniOrange}{\textbf{non-linear}} functions. But, remaining \textcolor{UniOrange}{\textbf{linear on parameters}}.
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.475\textwidth}  
+			\begin{center}
+			\centering
+			\includegraphics[totalheight=0.6\textwidth]{{Figure3.2}}
+			 \end{center}
+		\end{column}
+		\end{columns}
 \end{frame}
 
 \subsection{Optimizing the parameters}
@@ -67,8 +78,8 @@
 \begin{columns}
 \begin{column}{0.475\textwidth}
 	\begin{itemize}
-		\item The chosen model will give us some curve that is needed to adjust such that we'll \textcolor{UniOrange}{\textbf{minimize its distance}} to the \textcolor{UniOrange}{\textbf{targets}} ($t$).
-		\item Here, let's define the sum of these distances as \textcolor{UniOrange}{\textbf{cost function}}, or error function, and write it as
+		\item The chosen model will give us some curve that is needed to adjust such that we'll \textcolor{UniOrange}{\textbf{minimize its distance}} to the \textcolor{UniOrange}{\textbf{targets}} $t$.
+		\item This approach lead us to use the \textcolor{UniOrange}{\textbf{least squares}} to estimate the weights and minimize the \textcolor{UniOrange}{\textbf{error}} $E$.
 		\begin{align*}
 			E(\mathbf{w}) \triangleq \frac{1}{2} \sum_{n=1}^N \left\{ y_n -  t_n \right\}^2
 		\end{align*}
@@ -118,7 +129,7 @@
 	\framesubtitle{The model parameters}
 	\textcolor{UniGold}{\textbf{Why choose a quadratic norm distance?}}\footnote{See Appendix ?}
 	\begin{itemize}
-		\item The first row figures could me used for the derivations, taking care with some \textcolor{UniOrange}{\textbf{non-continuous derivatives}}.
+		\item The first row figures could be used for the derivations, taking care with some \textcolor{UniOrange}{\textbf{non-continuous derivatives}}.
 		\item We'll use the \textcolor{UniOrange}{\textbf{quadratic norm}} because its the minor integer $q$ differentiable, and then the error measures $E$ between the model $y(x,\mathbf{w})$ and the targets $t$ will be euclidean.
 		\item More, increasing the value of $q$, the smallests than 1 and bigger than 0 errors between the model and the targets that become irrelevant for $E$.
 	\end{itemize}
@@ -145,7 +156,7 @@
 		\begin{equation*}
 			\underbrace{
 				\begin{bmatrix}
-				y_1 \\ y_2 \\  \vdots \\ y_N
+				y_0 \\ y_1 \\  \vdots \\ y_{N-1}
 				\end{bmatrix}
 			}_\mathbf{y} = 
 			\underbrace{
@@ -158,42 +169,35 @@
 			}_\Phi
 			\underbrace{
 				\begin{bmatrix}
-				w_1 \\ w_2 \\  \vdots \\ w_N
+				w_0 \\ w_1 \\  \vdots \\ w_{N-1}
 				\end{bmatrix}
 			}_\mathbf{w}
 		\end{equation*}
+		where $\Phi$ is the \textcolor{UniOrange}{\textbf{design matrix}}.
 		\item This represents the system $\mathbf{y} = \Phi \mathbf{w}$.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{\insertsubsection}
-	\framesubtitle{The cost function}
+	\framesubtitle{The cost function and minimization problem}
 	\begin{itemize}
 		\item If $E(\mathbf{w}) = \frac{1}{2} \left( \mathbf{y} - \mathbf{t} \right)^{\top}\left( \mathbf{y} - \mathbf{t} \right)$ where $\mathbf{t} = \begin{bmatrix} t_1 & t_2 & ... & t_n
 		\end{bmatrix}^{\top}$
 		\item Then we'll have 
 		\begin{align*}
-			E(\mathbf{w}) =& \frac{1}{2} \left( \mathbf{y}^{\top}\mathbf{y} -  \mathbf{t}^{\top}\mathbf{y} - \mathbf{y}^{\top}\mathbf{t} + \mathbf{t}^{\top}\mathbf{t} \right) \\
-					   =& \frac{1}{2} \left( ( \Phi \mathbf{w})^{\top}( \Phi \mathbf{w}) -  \mathbf{t}^{\top}( \Phi \mathbf{w}) - ( \Phi \mathbf{w})^{\top}\mathbf{t} + \mathbf{t}^{\top}\mathbf{t} \right) \\
-					   =& \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} \right)
+			E(\mathbf{w}) &= \frac{1}{2} \left( \mathbf{y}^{\top}\mathbf{y} -  \mathbf{t}^{\top}\mathbf{y} - \mathbf{y}^{\top}\mathbf{t} + \mathbf{t}^{\top}\mathbf{t} \right) \\
+					   &= \frac{1}{2} \left( ( \Phi \mathbf{w})^{\top}( \Phi \mathbf{w}) -  \mathbf{t}^{\top}( \Phi \mathbf{w}) - ( \Phi \mathbf{w})^{\top}\mathbf{t} + \mathbf{t}^{\top}\mathbf{t} \right) \\
+					   &= \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} \right)
 		\end{align*}
-		this by the fact that $\alpha =  \mathbf{t}^{\top}( \Phi \mathbf{w}) = ( \Phi \mathbf{w})^{\top}\mathbf{t}$, being $\alpha$ a scalar.
-		\item Then too, $E(\mathbf{w})$	 remains scalar.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-	\framesubtitle{Minimization problem}
-	\begin{itemize}
 		\item In sequence, we'll try to minimize it in terms of the weights ($\mathbf{w}$) by
 			\begin{align*}
-				0 =& \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} \\
-				0 =& \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 \right) \\
-				\mathbf{w}^{\top} =&  \mathbf{t}^{\top} \Phi \left( \Phi^{\top} \Phi \right)^{-1} \\
-				\mathbf{w}_{ML} =& \left( \Phi^{\top} \Phi \right)^{-1}\Phi^{\top} \mathbf{t}
+				0 &= \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} = \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 \right) \\
+				\mathbf{w}^{\top} &=  \mathbf{t}^{\top} \Phi \left( \Phi^{\top} \Phi \right)^{-1} \\
+				\mathbf{w}^* &= \left( \Phi^{\top} \Phi \right)^{-1}\Phi^{\top} \mathbf{t}
 			\end{align*}
-		\item Here, we've obtained the weights $\mathbf{w}_{ML}$ with the \textcolor{UniOrange}{\textbf{maximum likelihood}} for fitting the curve.
+		\item Here, we've obtained the weights $\mathbf{w}^*$ with the \textcolor{UniOrange}{\textbf{best fit}} of the curve.
 		\item We could say that the model \textcolor{UniOrange}{\textbf{learned}} the parameters.
+		% \item Then too, $E(\mathbf{w})$	 remains scalar.
 	\end{itemize}
 \end{frame}
 
@@ -279,10 +283,10 @@
 
 		
 				\begin{align*}
-					\tilde{E}(\mathbf{w}) =&\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
-									   =& \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
-			\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} =& \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
-					0 =&  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
+					\tilde{E}(\mathbf{w}) &=\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
+									   &= \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
+			\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} &= \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
+					0 &=  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
 					 \mathbf{w}_{ML} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
 		\end{align*}			
 		\end{itemize}
