@@ -24,8 +24,10 @@ for i = 1:100
     
     hold on;
     phiXp = phi(Xp); Tp = phiXp*W;
-    plot(Xp,Tp); axis([0 1 -1.5 1.5]); xlabel('x','Interpreter','latex'); ylabel('y','Interpreter','latex');
-    legend('Deterministic', 'Data', 'Predicted'); title(['$\ln \lambda = $',num2str(lnlambda(i))],'Interpreter','latex')
+    plot(Xp,Tp); axis([0 1 -1.5 1.5]); xlabel('x','Interpreter','latex');
+    ylabel('y','Interpreter','latex');
+    legend('Deterministic', 'Data', 'Predicted'); title(['$\ln \lambda =$ ',...
+        num2str(lnlambda(i)),' $|$ $M =$ ',num2str(M)],'Interpreter','latex');
     hold off; pause(0.005);
     matlab2tikz([mfilename,'/',mfilename,'_','frame_',num2str(i),'.tex'],'width','0.075\linewidth',...
         'showInfo', false,'extraaxisoptions', style);

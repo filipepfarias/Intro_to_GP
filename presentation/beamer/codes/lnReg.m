@@ -1,6 +1,6 @@
 clear; close all; warning('off','all'); %Wmod = [];
 
-n = 20; 
+n = 10; 
 x = linspace(0,1,n)';
 y = @(x) sin(2*pi*x);
 e = .2*randn(size(x));

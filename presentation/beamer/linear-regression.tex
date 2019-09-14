@@ -22,7 +22,7 @@
 \begin{frame}{\insertsubsection}
 	\framesubtitle{An initial curve fitting problem}
 	\begin{itemize}
-		\item Let's take the points below generated from the function $y(x)=\sin (2\pi x)$.
+		\item Let's take the points below generated from the function $y(x)=\sin (2\pi x)$ with addition of Gaussian noise with zero mean and $0.2$ of standard deviation.
 	\end{itemize}
 
 	\begin{figure}
@@ -71,8 +71,11 @@
 		\end{column}
 		\end{columns}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Optimizing the parameters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\insertsubsection}
 	\framesubtitle{The model parameters}
 \begin{columns}
@@ -231,7 +234,7 @@
 				%  \input{./codes/lnReg/"lnReg_frame_7"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_8"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_9"}\newframe
-				%  \input{./codes/lnReg/"lnReg_frame_10"}\newframe
+				  \input{./codes/lnReg/"lnReg_frame_10"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_11"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_12"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_13"}\newframe
@@ -241,7 +244,7 @@
 				%  \input{./codes/lnReg/"lnReg_frame_17"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_18"}\newframe
 				%  \input{./codes/lnReg/"lnReg_frame_19"}\newframe
-				 \input{./codes/lnReg/"lnReg_frame_20"}
+				% \input{./codes/lnReg/"lnReg_frame_20"}
 			 \end{animateinline}
 		\end{column}
 	\end{columns}
@@ -286,33 +289,78 @@
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
 			\centering
-			\begin{figure}
-				\setlength\fwidth{0.075\textwidth}
-				\input{./codes/"lnReg-Wmod".tex}
-			\end{figure}
+			% \begin{figure}
+			% 	\setlength\fwidth{0.075\textwidth}
+			% 	\input{./codes/"lnReg-Wmod".tex}
+			% \end{figure}
 			%\begin{center}
 			%\includegraphics[width=1\linewidth]{lnReg-Wmod.eps}
 			%\end{center}
+			\begin{animateinline}[autoplay,loop]{5}
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_1"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_2"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_3"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_4"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_5"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_6"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_7"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_8"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_9"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_10"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_11"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_12"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_13"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_14"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_15"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_16"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_17"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_18"}\newframe
+				%  \input{./codes/lnRegRegulated/"lnRegRegulated_frame_19"}\newframe
+				\input{./codes/lnRegRegulated/"lnRegRegulated_frame_100"}\newframe
+			 \end{animateinline}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+	\framesubtitle{Regularizing the parameters}
+	\textcolor{UniGold}{\textbf{How to control the over-fitting?}}
+	\begin{columns}
+		\begin{column}{0.475\textwidth}
+			\begin{itemize}	
+			\item With the increase of the model complexity, the value of $\mathbf{w}^*$ increases too.
+			\item A solution could be add a \textcolor{UniOrange}{\textbf{penalty term}} as the norm of the weights increases.
+			\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term $\lambda$ to error function, by this we force the coefficients to not reach high values.
+			\begin{align*}
+				\tilde{E}(\mathbf{w}) &=\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
+		\Rightarrow & \mathbf{w}^*_\text{reg} = \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
+	\end{align*}			
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.475\textwidth}  %%<--- here
+			\centering
+			%\label{fig:Erms-reg}
+			\includegraphics[width=1\linewidth]{"Figure1.8".eps}
 		\end{column}
 	\end{columns}
 \end{frame}
 
 
-\begin{frame}{\insertsubsection}
-	\framesubtitle{Regularizing the parameters}
-		\begin{itemize}
-		\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term $\lambda$ to error function, by this we force the coefficients to not reach high values.
+% \begin{frame}{\insertsubsection}
+% 	\framesubtitle{Regularizing the parameters}
+% 		\begin{itemize}
+% 		\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term $\lambda$ to error function, by this we force the coefficients to not reach high values.
 
 		
-				\begin{align*}
-					\tilde{E}(\mathbf{w}) &=\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
-									   &= \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
-			\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} &= \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
-					0 &=  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
-					 \mathbf{w}^*_\text{reg} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
-		\end{align*}			
-		\end{itemize}
-\end{frame}
+% 				\begin{align*}
+% 					\tilde{E}(\mathbf{w}) &=\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
+% 									   &= \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
+% 			\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} &= \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
+% 					0 &=  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
+% 					 \mathbf{w}^*_\text{reg} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
+% 		\end{align*}			
+% 		\end{itemize}
+% \end{frame}
 
 %\begin{frame}
 	% \vspace{1em}
@@ -341,7 +389,11 @@
 	\end{columns}		
 	\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{An uncertainty perspective}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Looking back the regression}
@@ -362,6 +414,7 @@
 	\end{columns}
 \end{frame}
 
+
 \begin{frame}{\insertsubsection}	
 	\framesubtitle{Targets as distributions}
 	\begin{itemize}
@@ -381,30 +434,30 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{\insertsubsection}
-	\framesubtitle{But which distribuition choose?}
-	\begin{columns}
-		\begin{column}{0.475\textwidth}
-			\begin{itemize}
-				\item We'll choose the \textcolor{UniOrange}{\textbf{Gaussian distribution}} just for convenience.
-				\item Then we can state the distribution for each target and then
-				\begin{equation*}
-					p( t| \mathbf{x}, \mathbf{w}, \beta) = \mathcal{N} \left( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1} \right)
-				\end{equation*}
-				\item And we'll try to \textcolor{UniOrange}{\textbf{maximize}}	the targets probability.
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.475\textwidth}
-			\includegraphics[width=1\linewidth]{"Figure1.13".pdf}
-		\end{column}
-	\end{columns}
-	\begin{block}{One-dimensional Gaussian distribution}
-		\begin{equation*}
-			\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\} > 0
-		\end{equation*}
-		where $\mu$ is the mean and $\sigma^2$ the variance.
-	\end{block}	
-\end{frame}
+% \begin{frame}{\insertsubsection}
+% 	\framesubtitle{But which distribuition choose?}
+% 	\begin{columns}
+% 		\begin{column}{0.475\textwidth}
+% 			\begin{itemize}
+% 				\item We'll choose the \textcolor{UniOrange}{\textbf{Gaussian distribution}} just for convenience.
+% 				\item Then we can state the distribution for each target and then
+% 				\begin{equation*}
+% 					p( t| \mathbf{x}, \mathbf{w}, \beta) = \mathcal{N} \left( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1} \right)
+% 				\end{equation*}
+% 				\item And we'll try to \textcolor{UniOrange}{\textbf{maximize}}	the targets probability.
+% 			\end{itemize}
+% 		\end{column}
+% 		\begin{column}{0.475\textwidth}
+% 			\includegraphics[width=1\linewidth]{"Figure1.13".pdf}
+% 		\end{column}
+% 	\end{columns}
+% 	\begin{block}{One-dimensional Gaussian distribution}
+% 		\begin{equation*}
+% 			\mathcal{N}(x | \mu, \sigma^2) = \frac{1}{(2 \pi \sigma^2)^{1/2}} \exp \left\{ -\frac{1}{2 \sigma^2} (x- \mu)^2 \right\} > 0
+% 		\end{equation*}
+% 		where $\mu$ is the mean and $\sigma^2$ the variance.
+% 	\end{block}	
+% \end{frame}
 
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Back to the cost function}
@@ -420,8 +473,8 @@
 			\frac{\partial}{\partial \mathbf{w}}\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = 0
 		\end{align*}
 		we'll obtain the \textcolor{UniOrange}{\textbf{cost function}} obtained before in the linear regression.
-		\item In other words, we'll obtain the weights $\mathbf{w}_{ML}$ that \textcolor{UniOrange}{\textbf{maximize}} the log probability of the targets, as $\beta_{ML}$.
-		\item With this approach, we expect to obtain too the same \textcolor{UniOrange}{\textbf{over-fitting}} problem.\footnote{See Appendix ?}
+		\item In other words, we'll obtain the weights $\mathbf{w}$ that \textcolor{UniOrange}{\textbf{maximize}} the log probability of the targets.
+		%\item With this approach, we expect to obtain too the same \textcolor{UniOrange}{\textbf{over-fitting}} problem.\footnote{See Appendix ?}
 		\item Next we'll take a step towards to a \textcolor{UniOrange}{\textbf{Bayesian}} approach.
 	\end{itemize}
 \end{frame}
