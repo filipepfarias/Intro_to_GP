@@ -26,7 +26,10 @@
 			\end{column}
 			\begin{column}{0.475\textwidth}   
 				\centering
-				\includegraphics[width=1.1\linewidth]{"Figure3.7"}
+				\begin{figure}
+					\includegraphics[width=1\linewidth]{"Triplot-of-prior-likelihood-and-posterior"}
+				\caption{\cite{AksuAnil2018}}
+				\end{figure}
 			\end{column}
 		\end{columns}
 \end{frame}
@@ -41,7 +44,8 @@
 			\overbrace{p(\mathbf{w}|\mathbf{t})}^{posterior} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{\overbrace{p(\mathbf{t}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
 		 \end{equation*}
 		 where we assume some uncertainty over the parameters, i.e. a probability density function $p(\mathbf{w})$.
-		 \item This is called \textcolor{UniOrange}{\textbf{Bayesian Inference}}
+		 \item We'll use the knowledge about the data with the \textcolor{UniOrange}{\textbf{likelihood function}} and some previous knowledge, or \textcolor{UniOrange}{\textbf{prior}}, that we have about the parameters to obtain the knowledge considering these two, or \textcolor{UniOrange}{\textbf{posterior}}.
+		 \item This is called \textcolor{UniOrange}{\textbf{Bayesian Inference}}.
 	\end{itemize}
 % \visible<2->{
 % \begin{equation*}
