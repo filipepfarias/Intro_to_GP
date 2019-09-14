@@ -339,8 +339,7 @@
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
 			\centering
-			%\label{fig:Erms-reg}
-			\includegraphics[width=1\linewidth]{"Figure1.8".eps}
+			\includegraphics[width=1\linewidth]{"Figure1.8"}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -368,26 +367,26 @@
 %\end{frame}
 
 
-\begin{frame}{\insertsubsection}
-	\framesubtitle{Training and testing}
-	\textcolor{UniGold}{\textbf{A more sophisticated approach?}}
-	\begin{columns}
-		\begin{column}{0.475\textwidth}
-			\begin{itemize}	
-			\item We could \textcolor{UniOrange}{\textbf{train and test}} and evaluate the error for several values of $\lambda$.
-			\item Even yet, it's too wasteful partitionate and optimize data to find good model parameters or even a \textcolor{UniOrange}{\textbf{flexible}} one.
-			\item We need a more sophisticated approach.
-			\end{itemize}
-		\end{column}
-		\begin{column}{0.475\textwidth}
-			\begin{center}
-			\centering
-			\label{fig:Erms-reg}
-			\includegraphics[width=1\linewidth]{"Figure1.8".eps}
-			\end{center}
-		\end{column}
-	\end{columns}		
-	\end{frame}
+% \begin{frame}{\insertsubsection}
+% 	\framesubtitle{Training and testing}
+% 	\textcolor{UniGold}{\textbf{A more sophisticated approach?}}
+% 	\begin{columns}
+% 		\begin{column}{0.475\textwidth}
+% 			\begin{itemize}	
+% 			\item We could \textcolor{UniOrange}{\textbf{train and test}} and evaluate the error for several values of $\lambda$.
+% 			\item Even yet, it's too wasteful partitionate and optimize data to find good model parameters or even a \textcolor{UniOrange}{\textbf{flexible}} one.
+% 			\item We need a more sophisticated approach.
+% 			\end{itemize}
+% 		\end{column}
+% 		\begin{column}{0.475\textwidth}
+% 			\begin{center}
+% 			\centering
+% 			\label{fig:Erms-reg}
+% 			\includegraphics[width=1\linewidth]{"Figure1.8".eps}
+% 			\end{center}
+% 		\end{column}
+% 	\end{columns}		
+% 	\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -397,6 +396,7 @@
 
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Looking back the regression}
+	\textcolor{UniGold}{\textbf{What if we assume not knowing the data exactly?}}
 	\begin{columns}
 	\begin{column}{0.475\textwidth}
 		\begin{itemize}
@@ -408,7 +408,7 @@
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
 			\begin{center}
-				\includegraphics[width=1\linewidth]{Figure1c16.pdf}
+				\includegraphics[width=1\linewidth]{"Figure1.16"}
 			\end{center}
 		\end{column}
 	\end{columns}
@@ -472,9 +472,10 @@
 		\begin{align*}
 			\frac{\partial}{\partial \mathbf{w}}\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) = 0
 		\end{align*}
-		we'll obtain the \textcolor{UniOrange}{\textbf{cost function}} obtained before in the linear regression.
-		\item In other words, we'll obtain the weights $\mathbf{w}$ that \textcolor{UniOrange}{\textbf{maximize}} the log probability of the targets.
+		we'll obtain the \textcolor{UniOrange}{\textbf{cost function}} obtained before in the linear regression, then our assumptions are well grounded.
+		\item With the maximization, we'll obtain the weights $\mathbf{w}$ that \textcolor{UniOrange}{\textbf{maximize}} the log probability of the targets, given the parameters.
 		%\item With this approach, we expect to obtain too the same \textcolor{UniOrange}{\textbf{over-fitting}} problem.\footnote{See Appendix ?}
-		\item Next we'll take a step towards to a \textcolor{UniOrange}{\textbf{Bayesian}} approach.
+		\item This is called \textcolor{UniOrange}{\textbf{maximum likelihood}}, since we are looking for the \textcolor{UniOrange}{\textbf{parameters}} distribution that are more probable to had been generated the data.
+		\item This is a initial step towards to a \textcolor{UniOrange}{\textbf{Bayesian}} approach.
 	\end{itemize}
 \end{frame}

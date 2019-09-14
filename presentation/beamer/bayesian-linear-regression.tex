@@ -2,11 +2,33 @@
 \framecard{\insertsection}
 
 \begin{frame}{\insertsection}
+	\framesubtitle{Bayesian vs. Frequentist statistics}
 	
-	At this point, we have a probabilistic model and we may want to predict values for $x$. Then, we need a \textit{predictive distribution}. \\
-	\vspace{1em}
-	Let's say we have the probabilities of some idea we desire to update it in the light of some new evidence. This could be done with \textbf{Bayes' Rule}, to convert a \textit{prior} probability in a \textit{posterior} probability and put some uncertainty in the parameters too. \\
-	\end{frame}
+	\textcolor{UniGold}{\textbf{What if we assume not knowing the data exactly?}}
+
+	\begin{columns}
+		\begin{column}{0.475\textwidth}
+			\begin{itemize}
+				\item The principle of the Bayesian statistics is express our \textcolor{UniOrange}{\textbf{degree of belief}} in an event.
+				\item This belief could be based on some \textcolor{UniOrange}{\textbf{prior}} knowledge about the event or personal beliefs.
+				\item This differs from frequentist statistics, where the probability is based on the number of trials.
+				\item Suppose a die to be thrown once
+			\end{itemize}
+			\only<1>{
+			\begin{block}{Frequentist}
+				There's empiric evidence that similar dice thrown in past produce similar outcomes with the same frequency.
+			\end{block}}
+			\only<2>{
+			\begin{exampleblock}{Bayesian}
+				The last argument is right, but the \textcolor{UniBlue}{\textbf{belief of the observer}} it's important to the statistics, as the number of the Lotto.
+			\end{exampleblock}}
+			\end{column}
+			\begin{column}{0.475\textwidth}   
+				\centering
+				\includegraphics[width=1.1\linewidth]{"Figure3.7"}
+			\end{column}
+		\end{columns}
+\end{frame}
 	
 	\begin{frame}{\insertsubsection}
 	Mathematically, by Bayes' Rule, we could infer
