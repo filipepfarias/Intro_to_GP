@@ -201,10 +201,10 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
+%\begin{frame}
 % \vspace{1em}
-\lstinputlisting[linerange={3-7,11-12,14-15,17-17,23-23}]{codes/lnReg.m}
-\end{frame}
+%\lstinputlisting[linerange={3-7,11-12,14-15,17-17,23-23}]{codes/lnReg.m}
+%\end{frame}
 
 \begin{frame}{\insertsubsection}
 	\framesubtitle{The over-fitting phenomenon}
@@ -212,8 +212,7 @@
 	\begin{columns}
 		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
-			\item A visible effect of the \textcolor{UniOrange}{\textbf{increase of the complexity}} of the model, represented here by the $M$, is the \textcolor{UniOrange}{\textbf{increase of the weights}}.
-			\item This means that the $M$ number of basis functions is increasing too.
+			\item A visible effect of the \textcolor{UniOrange}{\textbf{increase of the complexity}} of the model, is the increase of the \textcolor{UniOrange}{\textbf{number of features}} $M$.
 			\item It's easy to see that our model start's to differ from the $y$ and starts to interpolate the noise. We call this of \textcolor{UniOrange}{\textbf{over-fitting}}.
 			\item This phenomenon illustrate a method of always search for the \textcolor{UniOrange}{\textbf{best estimation of the parameters}}.
 			
@@ -222,13 +221,32 @@
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
-			\begin{figure}
-				\setlength\fwidth{0.075\textwidth}
-				\input{./codes/"lnReg".tex}
-			\end{figure}
+			\begin{animateinline}[autoplay,loop]{5}
+				%  \input{./codes/lnReg/"lnReg_frame_1"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_2"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_3"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_4"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_5"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_6"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_7"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_8"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_9"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_10"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_11"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_12"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_13"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_14"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_15"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_16"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_17"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_18"}\newframe
+				%  \input{./codes/lnReg/"lnReg_frame_19"}\newframe
+				 \input{./codes/lnReg/"lnReg_frame_20"}
+			 \end{animateinline}
 		\end{column}
 	\end{columns}
 \end{frame}
+
 
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Training and testing}
@@ -236,10 +254,9 @@
 	\begin{columns}
 		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
-			\item We could \textcolor{UniOrange}{\textbf{train}} our model, it means evaluate $\mathbf{w}_{ML}$, for only a part of our dataset.
-			\item If the model be a good one, the error must be small when its \textcolor{UniOrange}{\textbf{testing}}.
-			\item It means the error must be small when we evaluate all dataset with the $\mathbf{w}_{ML}$ of the trained part.
-			\item But this does not occur. So the \textcolor{UniOrange}{\textbf{error increases}}.
+			\item We could \textcolor{UniOrange}{\textbf{train}} our model, it means evaluate $\mathbf{w}^*$, for only a part of our dataset.
+			\item If the model be a good one, the error must be small when its \textcolor{UniOrange}{\textbf{testing}}, i.e. the error must be small when we evaluate all dataset with the $\mathbf{w}^*$ of the trained part.
+			\item But this in general does not occur and the \textcolor{UniOrange}{\textbf{error increases}}.
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
@@ -258,8 +275,13 @@
 	\begin{columns}
 		\begin{column}{0.475\textwidth}
 			\begin{itemize}	
-			\item With the increase of the model complexity, the value of $\mathbf{w}_{ML}$ increases too.
+			\item With the increase of the model complexity, the value of $\mathbf{w}^*$ increases too.
 			\item A solution could be add a \textcolor{UniOrange}{\textbf{penalty term}} as the norm of the weights increases.
+			\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term $\lambda$ to error function, by this we force the coefficients to not reach high values.
+			\begin{align*}
+				\tilde{E}(\mathbf{w}) &=\frac{1}{2} (\mathbf{y}-\mathbf{t})^{\top}(\mathbf{y}-\mathbf{t}) +\frac{\lambda}{2} \mathbf{w}^{\top}\mathbf{w} \\
+		\Rightarrow & \mathbf{w}^*_\text{reg} = \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
+	\end{align*}			
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
@@ -279,7 +301,7 @@
 \begin{frame}{\insertsubsection}
 	\framesubtitle{Regularizing the parameters}
 		\begin{itemize}
-		\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term ($\lambda$) to error function, by this we force the coefficients to not reach high values.
+		\item To control the over-fitting, we try to \textcolor{UniOrange}{\textbf{regularize}} the weights by adding a penalty term $\lambda$ to error function, by this we force the coefficients to not reach high values.
 
 		
 				\begin{align*}
@@ -287,15 +309,15 @@
 									   &= \frac{1}{2} \left( \mathbf{w}^{\top} \Phi^{\top} \Phi \mathbf{w} -  2\mathbf{t}^{\top} \Phi \mathbf{w} + \mathbf{t}^{\top}\mathbf{t} + \lambda \mathbf{w}^{\top}\mathbf{I}\mathbf{w} \right) \\
 			\Rightarrow \frac{\partial E(\mathbf{w})}{\partial \mathbf{w}} &= \frac{1}{2} \left( 2 \mathbf{w}^{\top} \Phi^{\top} \Phi  -  2\mathbf{t}^{\top} \Phi + 0 + 2 \lambda \mathbf{w}^{\top} \mathbf{I} \right) \\
 					0 &=  \mathbf{w}^{\top} \Phi^{\top} \Phi  -  \mathbf{t}^{\top} \Phi + \lambda \mathbf{w}^{\top} \mathbf{I} \\
-					 \mathbf{w}_{ML} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
+					 \mathbf{w}^*_\text{reg} = & \left( \Phi^{\top} \Phi + \lambda \mathbf{I} \right)^{-1} \Phi^{\top} \mathbf{t}
 		\end{align*}			
 		\end{itemize}
 \end{frame}
 
-\begin{frame}
+%\begin{frame}
 	% \vspace{1em}
-	\lstinputlisting[linerange={3-7,12-16,18-18,24-24}]{codes/lnRegRegulated.m}
-\end{frame}
+%	\lstinputlisting[linerange={3-7,12-16,18-18,24-24}]{codes/lnRegRegulated.m}
+%\end{frame}
 
 
 \begin{frame}{\insertsubsection}
