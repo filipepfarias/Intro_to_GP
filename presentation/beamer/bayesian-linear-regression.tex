@@ -1,4 +1,5 @@
 \section{Bayesian Linear Regression}
+
 \framecard{\insertsection}
 
 \begin{frame}{\insertsection}
@@ -30,84 +31,94 @@
 		\end{columns}
 \end{frame}
 	
-	\begin{frame}{\insertsubsection}
-	Mathematically, by Bayes' Rule, we could infer
-	\visible<2->{
-	\begin{equation*}
-	\underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} | \alpha \right)}_{\text{prior}}
-	\end{equation*}
-	}
-	\visible<3->{
-	and for simplicity, consider the follow prior for $\mathbf{w}$
-	\begin{equation*}
-	p \left( \mathbf{w} | \alpha \right) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{0}, \alpha^{-1} \mathbf{I} \right) = \left(  \frac{\alpha}{2 \pi}\right) ^{(M+1)/2} \exp \left\{ - \frac{\alpha}{2} \mathbf{w}^{\top} \mathbf{w} \right\}
-	\end{equation*}
-	where $\alpha$ the precision of the distribution and $M+1$ is the dimension of $\mathbf{w}$, for a polynomial of $M^{th}$ order. Variables such $\alpha$ are called \textit{hyperparameters} and control the distribuition of model parameters.}
-	\end{frame}
-	
-	\begin{frame}{\insertsubsection}
-	By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that will lead us to a term
-	
-	\begin{equation*}
-	\sum^N_{n=1} \left\{ y(x_n, \mathbf{w}) - t_n \right\}^2 + \frac{\alpha}{2} \mathbf{w}^{\top}\mathbf{w} + \text{const.}
-	\end{equation*}
-	
-	Note that if we consider $\lambda = \alpha / \beta$, this will back to the regularized form of \textit{least squares}. This technique is called \textit{maximum posterior} (MAP).
-	\end{frame}
-	
-	\begin{frame}{\insertsubsection}
-	
-	So, observe that even making some probabilistic assumptions, we don't have yet a fully bayesian model, given that finding the \textit{maximum likelihood}, we're finding only the parameters given one model such that maximize our targets probabilities. Furthermore, even with some probabilistic assumptions, our model still have a \textbf{over-fitting} problem, given that we obtained the same expressions for the simple regression, adding some constants.\\
-	\vspace{1em}
-	The next step is put some \textbf{uncertainty in predictive model}, and makes adjustments in the light of our new evidences. By that we could obtain a "more Bayesian" model, in other words, a \textcolor{UniGold}{\textbf{Bayesian Linear Regression}}.
-	
-	\end{frame}
-	
-	%\begin{frame}{\insertsubsection}
-	%	\visible<1->{Let's take a look at the Bayes Theorem}
-	%	
-	%	\visible<2->{
-	%	\begin{block}{Bayes Theorem}{
-	%			\begin{equation*}\label{bayes_theorem}
-	%				\visible<2->{ p(\mathbf{w}|\mathcal{D}) = \frac{p(\mathcal{D}| \mathbf{w}) p(\mathbf{w}) } {  p(\mathcal{D}) } } 
-	%			\end{equation*}
-	%			}
-	%	\end{block}
-	%	\visible<3->{The new role of Bayes Theorem here is the fact that we could obtain new, or better, probability distribuitions for the weights in light of an determined data set $\mathcal{D}$.}
-	%	}
-	%\end{frame}
-	
-	%\begin{frame}{\insertsubsection}
-	%	\visible<1->{\textbf{\textcolor{UniGold}{At this time, it's important to point out some things. \\}}}
-	%	\vspace{1.5em}
-	%	\visible<2->{When we write $ p \left( t_n | x_n, \mathbf{w}, \beta \right)$, we assume a probability distribuition over the parameters $\mathbf{w}$ and $\beta$ too.\\}
-	%	\vspace{1.5em}
-	%	\visible<3->{Then we could observe that we'll obtain a \textbf{discrete distribution of functions} in their \textit{parameters}.\\}
-	%	\vspace{1.5em}
-	%	\visible<4->{So, here is where the Bayes Theorem plays an important role by \textbf{adjusting} these \textit{parameters} as we obtain evidences.}
-	%\end{frame}
-	%
-	%\begin{frame}{\insertsubsection}
-	%	\visible<1->{Taking some steps back, let's re-visit the \textbf{Curve Fitting}. There, the strategy was minimize the error function.\vspace{1.5em} \\}
-	%	\visible<2->{Now we'll try to view the same problem with a \textit{probabilistic perspective}. We're trying to make predictions for the target value $\mathbf{t}$ given some new values of $x$.\vspace{1.5em} \\}
-	%
-	%\end{frame}
-	
-	
-	%\begin{frame}{\insertsubsection}
-	%	And taking the derivatives with respect to $\beta$ to minimize the error	
-	%		\begin{align*}
-	%		\visible<1->{
-	%			\frac{\partial}{\partial \beta}\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) &=0 } \\
-	%		\visible<2->{
-	%			 -\frac{1}{2} \sum^N_{n=1} \left\{ y(x_n,\mathbf{w} -t_n ) \right\}^2 + \frac{N}{2}\frac{1}{\beta} &= 0 \\  }
-	%		\visible<3->{
-	%			 \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n,\mathbf{w} -t_n ) \right\}^2  &= \frac{1}{\beta_{ML}}  }
-	%		\end{align*}
-	%	\visible<4->{
-	%	Where $\beta_{ML}$ is the maximum likelihood.}
-	%
-	%\end{frame}
+\begin{frame}{\insertsection}
+	\framesubtitle{Bayes' Rule}
+
+	\begin{itemize}
+		\item The main idea of the Bayesian approach is put some \textcolor{UniOrange}{\textbf{uncertainty}} over the parameters and make \textcolor{UniOrange}{\textbf{inferences}}, i.e. obtain some statistics in light over the data.
+		\item This principle is elucidated by the Bayes' Rule
+		\begin{equation*}
+			\overbrace{p(\mathbf{w}|\mathbf{t})}^{posterior} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{\overbrace{p(\mathbf{t}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
+		 \end{equation*}
+		 where we assume some uncertainty over the parameters, i.e. a probability density function $p(\mathbf{w})$.
+		 \item This is called \textcolor{UniOrange}{\textbf{Bayesian Inference}}
+	\end{itemize}
+% \visible<2->{
+% \begin{equation*}
+% \underbrace{p\left( \mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta \right)}_{\text{posterior}} \propto \underbrace{p\left(  \mathbf{t} |\mathbf{w} ,\mathbf{x}, \beta \right)}_{\text{likelihood}}  \underbrace{p\left( \mathbf{w} | \alpha \right)}_{\text{prior}}
+% \end{equation*}
+% }
+% \visible<3->{
+% and for simplicity, consider the follow prior for $\mathbf{w}$
+% \begin{equation*}
+% p \left( \mathbf{w} | \alpha \right) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{0}, \alpha^{-1} \mathbf{I} \right) = \left(  \frac{\alpha}{2 \pi}\right) ^{(M+1)/2} \exp \left\{ - \frac{\alpha}{2} \mathbf{w}^{\top} \mathbf{w} \right\}
+% \end{equation*}
+% where $\alpha$ the precision of the distribution and $M+1$ is the dimension of $\mathbf{w}$, for a polynomial of $M^{th}$ order. Variables such $\alpha$ are called \textit{hyperparameters} and control the distribuition of model parameters.}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that will lead us to a term
+
+\begin{equation*}
+\sum^N_{n=1} \left\{ y(x_n, \mathbf{w}) - t_n \right\}^2 + \frac{\alpha}{2} \mathbf{w}^{\top}\mathbf{w} + \text{const.}
+\end{equation*}
+
+Note that if we consider $\lambda = \alpha / \beta$, this will back to the regularized form of \textit{least squares}. This technique is called \textit{maximum posterior} (MAP).
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+
+So, observe that even making some probabilistic assumptions, we don't have yet a fully bayesian model, given that finding the \textit{maximum likelihood}, we're finding only the parameters given one model such that maximize our targets probabilities. Furthermore, even with some probabilistic assumptions, our model still have a \textbf{over-fitting} problem, given that we obtained the same expressions for the simple regression, adding some constants.\\
+\vspace{1em}
+The next step is put some \textbf{uncertainty in predictive model}, and makes adjustments in the light of our new evidences. By that we could obtain a "more Bayesian" model, in other words, a \textcolor{UniGold}{\textbf{Bayesian Linear Regression}}.
+
+\end{frame}
+
+%\begin{frame}{\insertsubsection}
+%	\visible<1->{Let's take a look at the Bayes Theorem}
+%	
+%	\visible<2->{
+%	\begin{block}{Bayes Theorem}{
+%			\begin{equation*}\label{bayes_theorem}
+%				\visible<2->{ p(\mathbf{w}|\mathcal{D}) = \frac{p(\mathcal{D}| \mathbf{w}) p(\mathbf{w}) } {  p(\mathcal{D}) } } 
+%			\end{equation*}
+%			}
+%	\end{block}
+%	\visible<3->{The new role of Bayes Theorem here is the fact that we could obtain new, or better, probability distribuitions for the weights in light of an determined data set $\mathcal{D}$.}
+%	}
+%\end{frame}
+
+%\begin{frame}{\insertsubsection}
+%	\visible<1->{\textbf{\textcolor{UniGold}{At this time, it's important to point out some things. \\}}}
+%	\vspace{1.5em}
+%	\visible<2->{When we write $ p \left( t_n | x_n, \mathbf{w}, \beta \right)$, we assume a probability distribuition over the parameters $\mathbf{w}$ and $\beta$ too.\\}
+%	\vspace{1.5em}
+%	\visible<3->{Then we could observe that we'll obtain a \textbf{discrete distribution of functions} in their \textit{parameters}.\\}
+%	\vspace{1.5em}
+%	\visible<4->{So, here is where the Bayes Theorem plays an important role by \textbf{adjusting} these \textit{parameters} as we obtain evidences.}
+%\end{frame}
+%
+%\begin{frame}{\insertsubsection}
+%	\visible<1->{Taking some steps back, let's re-visit the \textbf{Curve Fitting}. There, the strategy was minimize the error function.\vspace{1.5em} \\}
+%	\visible<2->{Now we'll try to view the same problem with a \textit{probabilistic perspective}. We're trying to make predictions for the target value $\mathbf{t}$ given some new values of $x$.\vspace{1.5em} \\}
+%
+%\end{frame}
+
+
+%\begin{frame}{\insertsubsection}
+%	And taking the derivatives with respect to $\beta$ to minimize the error	
+%		\begin{align*}
+%		\visible<1->{
+%			\frac{\partial}{\partial \beta}\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) &=0 } \\
+%		\visible<2->{
+%			 -\frac{1}{2} \sum^N_{n=1} \left\{ y(x_n,\mathbf{w} -t_n ) \right\}^2 + \frac{N}{2}\frac{1}{\beta} &= 0 \\  }
+%		\visible<3->{
+%			 \frac{1}{N} \sum^N_{n=1} \left\{ y(x_n,\mathbf{w} -t_n ) \right\}^2  &= \frac{1}{\beta_{ML}}  }
+%		\end{align*}
+%	\visible<4->{
+%	Where $\beta_{ML}$ is the maximum likelihood.}
+%
+%\end{frame}
 
 \begin{frame}{\insertsection}
 	Seeking a Bayesian approach, the next steps consists to apply the \textbf{sum} and \textbf{product} rules of probability to evaluate the predictive distribution. By now we assume that the hyperparameters are fixed, but they could assume a distribution too. \\
