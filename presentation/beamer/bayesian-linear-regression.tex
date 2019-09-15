@@ -245,6 +245,39 @@
 	\end{center}
 \end{frame}
 
+% \subsection{Change of Space}
+\begin{frame}{\insertsection}
+    \framesubtitle{Change of Space} 
+
+    \textcolor{UniGold}{\textbf{From Bayesian inference}}
+    \begin{itemize}
+        % \item We have 
+		% \begin{equation*}
+		% 	p(\mathbf{w}|\mathbf{t}) = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}
+		%  \end{equation*}
+		% omitted $\mathbf{x}$ for brevity.
+        \item In the most of the cases, we are more interested in making predictions of $\mathbf{t}$ than in the parameters $\mathbf{w}$ in the space of the parameters, or \textcolor{UniOrange}{\textbf{weight-space}}, for the new values of $\mathbf{x}$. We'll define from the Bayes' Rule a \textcolor{UniOrange}{\textbf{predictive distribution}} $$p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{x}, \mathbf{t})=\displaystyle\int p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{w}) p(\mathbf{w} | \mathbf{x}, \mathbf{t}) \mathrm{d} \mathbf{w}$$
+        \item And turn to the \textcolor{UniOrange}{\textbf{feature-space}}
+    \begin{equation*}
+       \begin{aligned} p\left(f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t}\right) &=\int p(f_{*} | \boldsymbol{\phi}^\top_*, \mathbf{w}) p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w} \\ &=\mathcal{N}\left(\beta \boldsymbol{\phi}^{\top}_* \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}} \Phi \mathbf{t}, \boldsymbol{\phi}^{\top}_* \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}} \boldsymbol{\phi}(\mathbf{x}_{*})\right) \end{aligned} 
+    \end{equation*}
+	where $f_{*} \triangleq f\left(\mathbf{x}_{*}\right)$, $\boldsymbol{\phi}_* = \boldsymbol{\phi}(\mathbf{x}_*) $ at $\mathbf{x}_{*}$ and  $\Phi = \Phi(\mathbf{x})$ at $\mathbf{x}$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsection}
+    \framesubtitle{A briefly change of view point} 
+
+    \textcolor{UniGold}{\textbf{Alternative formulation}}
+    
+    \begin{equation*}
+        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{t}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
+        \end{aligned}
+    \end{equation*}
+    where $K = \Phi^{\top}\mathbf{S}_0\Phi$
+    
+\end{frame}
+
 
 % \begin{frame}{\insertsubsection}
 % By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that will lead us to a term

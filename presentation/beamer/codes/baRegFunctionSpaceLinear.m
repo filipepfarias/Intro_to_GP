@@ -1,5 +1,4 @@
 clear; close all;
-
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
@@ -14,7 +13,7 @@ GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
     bsxfun(@rdivide,bsxfun(@minus,y,m').^2,v'))./sqrt(2*pi),sqrt(v')));
 
 fr = 30; % # frames
-mov(fr) = struct('cdata',[],'colormap',[]);
+% mov(fr) = struct('cdata',[],'colcormap',[]);
 
 %% data generation
 % ns = 20; X = linspace(-4,4,ns)';
@@ -54,8 +53,12 @@ V = kxx;
 L = chol(V + 1.0e-8 * eye(size(V))); % jitter for numerical stability
 y = linspace(-15,20,250)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
+
+set(gcf,...
+        'PaperPosition',.5*[0 0 16 9],...
+        'PaperSize',.5*[16 9]);
 for f = 1:fr
-    clf; hold on
+    clf; hold on;
     imagesc(x,y,P);
     plot(x,max(min(m,20),-15),'-','Color',dgr,'LineWidth',0.7);
     plot(x,max(min(m + 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
@@ -66,10 +69,13 @@ for f = 1:fr
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
     xlim([-6,6]);
     ylim([-15,20]);
-    drawnow; pause(0.02)
-    mov(f) = getframe(gcf);
+    %drawnow;% pause(0.02)
+%     mov(f) = getframe(gcf);
+    
+    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+    hold off;
 end
-save([mfilename,'prior'],'mov');
+% save([mfilename,'prior'],'mov');
 %% prior on Y = fX + e
 phiX = phi(X); % features of data
 M = phiX * mu;
@@ -83,7 +89,7 @@ vpost = kxx - A * A'; % kxx − kxX(kXX + σ²I)^{−1}kXx)
 %spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-8 * eye(n))' * randn(n,3)); % samples
 stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
 
-close all;
+
 L = chol(vpost + 1.0e-13 * eye(size(vpost))); % jitter for numerical stability
 y = linspace(-15,20,n)';
 P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
@@ -99,7 +105,9 @@ for f = 1:fr
     plot(X,T,'bo');
     xlim([-6,6]);
     ylim([-15,20]);
-    drawnow;
-    mov(f) = getframe(gcf);
+    %drawnow;
+    %mov(f) = getframe(gcf);
+    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
+    hold off;
 end
-save([mfilename,'post'],'mov');
+%save([mfilename,'post'],'mov');

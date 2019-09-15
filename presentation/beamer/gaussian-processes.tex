@@ -62,35 +62,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Change of Space}
-\begin{frame}{\insertsubsection}
-    \framesubtitle{A briefly change of view point} 
-
-    \textcolor{UniGold}{\textbf{From Bayesian inference}}
-    \begin{itemize}
-        \item We have $$p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)$$
-        \item We'll change from \textcolor{UniOrange}{\textbf{weight-space}} $$p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{x}, \mathbf{t})=\displaystyle\int p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{w}) p(\mathbf{w} | \mathbf{x}, \mathbf{t}) \mathrm{d} \mathbf{w}$$
-        \item To \textcolor{UniOrange}{\textbf{feature-space}}
-    \begin{equation*}
-       \begin{aligned} p\left(f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t}\right) &=\int p\left(f_{*} | \mathbf{x}_{*}, \mathbf{w}\right) p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w}=\int \mathbf{x}_{*}^{\top} \mathbf{w} \ p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w} \\ &=\mathcal{N}\left(\beta \boldsymbol{\phi}(\mathbf{x}_{*})^{\top} \mathbf{S}_N \Phi \mathbf{t}, \boldsymbol{\phi}(\mathbf{x}_{*})^{\top} \mathbf{S}_N^{-1} \boldsymbol{\phi}(\mathbf{x}_{*})\right) \end{aligned} 
-    \end{equation*}
-    where $f_{*} \triangleq f\left(\mathbf{x}_{*}\right) \text { at } \mathbf{x}_{*}$ and $\Phi = \Phi(\mathbf{x})$
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{\insertsubsection}
-    \framesubtitle{A briefly change of view point} 
-
-    \textcolor{UniGold}{\textbf{Alternative formulation}}
-    
-    \begin{equation*}
-        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{t}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
-        \end{aligned}
-    \end{equation*}
-    where $K = \Phi^{\top}\mathbf{S}_0\Phi$
-    
-\end{frame}
-
 \begin{frame}{\insertsubsection}
     \framesubtitle{Introducing kernels}
 
