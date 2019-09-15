@@ -400,10 +400,11 @@
 	\begin{columns}
 	\begin{column}{0.475\textwidth}
 		\begin{itemize}
-			\item Having an \textcolor{UniOrange}{\textbf{uncertainty}} in the measured value, we could represent it with a \textcolor{UniOrange}{\textbf{probability distribuition}}.
+			\item Having an \textcolor{UniOrange}{\textbf{uncertainty}} in the measured value, we could represent it with a \textcolor{UniOrange}{\textbf{probability distribution}}.
 			\item Now, each \textcolor{UniOrange}{\textbf{target}} could be expressed as a \textcolor{UniOrange}{\textbf{random variable}}.
 			\item Its \textcolor{UniOrange}{\textbf{mean}} is given by $y(x,\mathbf{w})$, and the \textcolor{UniOrange}{\textbf{variance}} by $1/\sigma^2 = \beta$.
 			\item $\beta$ is known as \textcolor{UniOrange}{\textbf{precision parameter}} too.
+			\item For this case, we'll consider the distribution being \text{UniOrange}{\textbf{Gaussian}}.
 		\end{itemize}
 		\end{column}
 		\begin{column}{0.475\textwidth}  %%<--- here
@@ -467,7 +468,7 @@
 		\begin{align*}
 				\ln \left( p( \mathbf{t}| \mathbf{x}, \mathbf{w}, \beta) \right) 
 				&= \mathcal{N} \left( t | y(\mathbf{x}, \mathbf{w}), \beta^{-1} \right) \\
-				&= \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (x_n -  y(x_n, \mathbf{w}))^2
+				&= \sum_{n=1}^N - \frac{1}{2} \ln (2 \pi) + \sum_{n=1}^N \frac{1}{2} \ln \beta - \sum_{n=1}^N \frac{\beta}{2} (t_n -  y(x_n, \mathbf{w}))^2
 		\end{align*}
 		\item If we make
 		\begin{align*}

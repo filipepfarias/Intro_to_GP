@@ -1,5 +1,4 @@
 clear; close all;
-
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012

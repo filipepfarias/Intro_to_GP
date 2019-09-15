@@ -9,6 +9,9 @@ e = .2*randn(size(x));
 t = y(x) + e;
 gaussmf = @(x,params) (exp(-(x-params(2)).^2/(2*params(1))));
 
+style = ['scale=0.075\linewidth,'...
+                       'legend style={nodes={scale=0.5, transform shape}},',...
+                       ];                  
 %% prior
 M = 2;
 alpha = .1;
@@ -32,21 +35,27 @@ for i=1:length(t)
         F = mvnpdf([X1(:) X2(:)],MuPrior',inv(SigmaPrior));
         F = reshape(F,length(x2),length(x1));
         %figure(f2); clf;
-        subplot(1,4,1); imagesc(x1,x2,F);set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
+        subplot(2,2,1); imagesc(x1,x2,F);set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
         W = mvnrnd(MuPrior',inv(SigmaPrior),10); pbaspect([1 1 1]); title('Prior'); 
         
         xx = linspace(0,1,100);
         yt = W(:,2)*xx + W(:,1);
         %figure(f1); clf;
-        subplot(1,4,4); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
+        subplot(2,2,4); plot(xx,yt,'r'); hold on; plot(xx,y(xx),'g','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
         pbaspect([1 1 1]); pause;
+        set(gcf,'Units','inches');
+        screenposition = get(gcf,'Position');
+        set(gcf,...
+            'PaperPosition',2*[0 0 2 2],...
+            'PaperSize',2*[2 2]);
+        print([mfilename,'/',mfilename,'_','frame_',num2str(0)],'-dpdf');
     end
     
     if i ~= 1
         F = mvnpdf([X1(:) X2(:)],MuPost',inv(SigmaPost));
         F = reshape(F,length(x2),length(x1));
         %figure(f2); clf;
-        subplot(1,4,1); imagesc(x1,x2,F); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
+        subplot(2,2,1); imagesc(x1,x2,F); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
         pbaspect([1 1 1]);title('Prior');
         %figure(f3); clf;
     end
@@ -60,22 +69,30 @@ for i=1:length(t)
     xx = linspace(0,1,100);
     yt = W(:,2)*xx + W(:,1);
     %figure(f1); clf;
-    subplot(1,4,4); plot(xx,yt); hold on; plot(xx,y(xx),'r--','LineWidth',1); hold on; plot(x(1:i),t(1:i),'o'); xlim([0 1]); ylim([0 2]);
+    subplot(2,2,4); plot(xx,yt,'r'); hold on; plot(xx,y(xx),'g','LineWidth',1); hold on; plot(x(1:i),t(1:i),'bo'); xlim([0 1]); ylim([0 2]);
     pbaspect([1 1 1]); title('Predicted');
     
     F = mvnpdf([X1(:) X2(:)],MuPost',inv(SigmaPost));
     F = reshape(F,length(x2),length(x1));
     %figure(f2); clf;
-    subplot(1,4,3); imagesc(x1,x2,F); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5); 
+    subplot(2,2,3); imagesc(x1,x2,F); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5); 
     pbaspect([1 1 1]);title('Posterior');
     %figure(f3); clf; 
     
     lkhd = [X1(:) X2(:)]*phix(i,:)'; lkhd = (sqrt(2*pi)*beta)\gaussmf(lkhd(:),[1 t(i)]);
     lkhd = reshape(lkhd,length(x2),length(x1));
-    subplot(1,4,2); imagesc(x1,x2,lkhd); set(gca,'YDir','normal'); hold on; plot(w1,w2,'r+','LineWidth',1.5);
-    pbaspect([1 1 1]); title('Likelihood'); pause(0.5);
+    subplot(2,2,2); imagesc(x1,x2,lkhd); set(gca,'YDir','normal'); hold on; plot(w1,w2,'r+','LineWidth',1.5);
+    pbaspect([1 1 1]); title('Likelihood'); %pause(0.5);
     
     if i == 1
-        pause;
+        %pause;
     end
+%     matlab2tikz([mfilename,'/',mfilename,'_','frame_',num2str(i),'.tex'],'width','0.075\linewidth',...
+%         'showInfo', false,'extraaxisoptions', style);
+    set(gcf,'Units','inches');
+    screenposition = get(gcf,'Position');
+    set(gcf,...
+        'PaperPosition',2*[0 0 2 2],...
+        'PaperSize',2*[2 2]);
+    print([mfilename,'/',mfilename,'_','frame_',num2str(i)],'-dpdf');
 end
