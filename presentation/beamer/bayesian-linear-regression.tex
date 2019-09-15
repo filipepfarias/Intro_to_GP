@@ -182,16 +182,43 @@
 		\boldsymbol{\mu}_{b} =\mathbf{M} \boldsymbol{\mu}_{a}+\mathbf{d} , \quad \boldsymbol{\Sigma}_{b} =\boldsymbol{\Sigma}_{b | a}+\mathbf{M} \boldsymbol{\Sigma}_{a} \mathbf{M}^\top .
 		\end{equation*}
 	\end{subequations}
-	\end{block}
+	\end{block}	
 \end{frame}
 
 \begin{frame}{\insertsection}
-	\framesubtitle{The over-fitting phenomenon}
-	\textcolor{UniGold}{\textbf{Why the prediction is so distant from the deterministic curve?}}
-	\begin{center}
+	\framesubtitle{Some Gaussian algebra}
+
+	\begin{block}{Substituting...}
+		Being $\mathbf{M}$ the design matrix $\Phi$ and $\mathbf{d}$ a zero vector, we have the posterior distribution
+
+		\begin{equation*}
+			p(\mathbf{w}|\mathbf{t},\alpha,\beta) = \mathcal{N} \left( \mathbf{w} | \boldsymbol{\mu}_{\mathbf{w}|\mathbf{t}} , \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}\right)
+		\end{equation*}
+		being
+
+		\begin{equation*}
+		\boldsymbol{\mu}_{\mathbf{w}|\mathbf{t}}=\boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}\left(\beta \Phi^\top \mathbf{t}+\boldsymbol{\Sigma}_{\mathbf{w}}^{-1} \boldsymbol{\mu}_{\mathbf{w}}\right), \quad \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}=\left(\boldsymbol{\Sigma}_{\mathbf{w}}^{-1}+ \beta \Phi^\top \Phi\right)^{-1}.
+		\end{equation*}
 		
-	\resizebox{.6\linewidth}{!}{	
-		\begin{animateinline}{2}
+		Assuming the prior
+
+		\begin{equation*}
+			\mathbf{w} \sim \mathcal{N} \left( \mathbf{0}, \alpha^{-1} \mathbf{I} \right)
+		\end{equation*} we have
+
+		
+		\begin{equation*}
+			\boldsymbol{\mu}_{\mathbf{w}|\mathbf{t}}=\beta \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}  \Phi^\top \mathbf{t}, \quad \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}}=\left(\alpha^{-1} \mathbf{I}+ \beta \Phi^\top \Phi\right)^{-1}.
+			\end{equation*}
+
+	\end{block}
+\end{frame}
+
+\begin{frame}{\insertsection}	
+	\framesubtitle{An example}
+	\begin{center}
+	\resizebox{.65\linewidth}{!}{	
+		\begin{animateinline}[controls]{2}
 			 \includegraphics{./codes/baReg/"baReg_frame_0"}\newframe
 			 \includegraphics{./codes/baReg/"baReg_frame_1"}\newframe
 			 \includegraphics{./codes/baReg/"baReg_frame_2"}\newframe
@@ -217,6 +244,8 @@
 		}
 	\end{center}
 \end{frame}
+
+
 % \begin{frame}{\insertsubsection}
 % By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that will lead us to a term
 
