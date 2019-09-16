@@ -1,5 +1,5 @@
 clear; close all;
-
+mkdir([mfilename,'/']);
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
@@ -7,8 +7,8 @@ dgr = [239,125,45]/255-20/255; % color [0,125,122]
 dre = [119,154,171]/255-50/255; % color [130,0,0]
 lightdgr = [1,1,1] - 0.5 * ([1,1,1] - dgr);
 lightdre = [1,1,1] - 0.5 * ([1,1,1] - dre);
-dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dgr));
-dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dre));
+dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dgr));
+dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dre));
 
 GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
     bsxfun(@rdivide,bsxfun(@minus,y,m').^2,v'))./sqrt(2*pi),sqrt(v')));
@@ -53,6 +53,10 @@ V = kxx;
 L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
 y = linspace(-15,20,n)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
+
+set(gcf,...
+        'PaperPosition',.5*[0 0 16 9],...
+        'PaperSize',.5*[16 9]);
 for f = 1:fr
     clf; hold on
     imagesc(x,y,P);
@@ -65,7 +69,9 @@ for f = 1:fr
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
     xlim([-6,6]);
     ylim([-15,20]);
-    drawnow; pause(0.02)
+    drawnow;
+    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+    %pause(0.02)
 end
 
 %% prior on Y = fX + e
@@ -81,7 +87,7 @@ vpost = kxx - A * A'; % kxx − kxX(kXX + σ²I)^{−1}kXx)
 %spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-5 * eye(n))' * randn(n,3)); % samples
 stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
 
-close all;
+%close all;
 L = chol(vpost + 1.0e-5 * eye(size(vpost))); % jitter for numerical stability
 y = linspace(-15,20,n)';
 P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
@@ -97,5 +103,7 @@ for f = 1:fr
     plot(X,T,'bo');
     xlim([-6,6]);
     ylim([-15,20]);
-    drawnow; pause(0.02)
+    drawnow;
+    %pause(0.02)
+    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
 end

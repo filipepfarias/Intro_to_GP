@@ -6,8 +6,8 @@ dgr = [239,125,45]/255-20/255; % color [0,125,122]
 dre = [119,154,171]/255-50/255; % color [130,0,0]
 lightdgr = [1,1,1] - 0.5 * ([1,1,1] - dgr);
 lightdre = [1,1,1] - 0.5 * ([1,1,1] - dre);
-dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dgr));
-dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dre));
+dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dgr));
+dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dre));
 
 GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
     bsxfun(@rdivide,bsxfun(@minus,y,m').^2,v'))./sqrt(2*pi),sqrt(v')));
@@ -86,7 +86,7 @@ for f = 1:fr
 %     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
     hold off;
 end
-% save([mfilename,'prior'],'mov');
+% %save([mfilename,'prior'],'mov');
 return
 %% prior on Y = fX + e
 phiX = phi(X); % features of data

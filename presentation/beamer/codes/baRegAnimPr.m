@@ -9,7 +9,7 @@ dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,
 dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dre));
 
 fr = 30;
-% mov(fr) = struct('cdata',[],'colormap',[]);
+% %mov(fr) = struct('cdata',[],'colormap',[]);
 
 %% dataset
 ns = 20; 

@@ -40,5 +40,6 @@ for f = 1:F
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
     xlim([-8,8]);
     ylim([-15,20]);
-    drawnow; pause(0.02)
+    drawnow;
+    %pause(0.02)
 end
