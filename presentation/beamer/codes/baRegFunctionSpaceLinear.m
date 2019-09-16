@@ -1,4 +1,5 @@
 clear; close all;
+mkdir([mfilename,'/']);
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
@@ -55,8 +56,8 @@ y = linspace(-15,20,250)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
 
 set(gcf,...
-        'PaperPosition',.5*[0 0 16 9],...
-        'PaperSize',.5*[16 9]);
+        'PaperPosition',.3*[0 0 16 9],...
+        'PaperSize',.3*[16 9]);
 for f = 1:fr
     clf; hold on;
     imagesc(x,y,P);
@@ -72,7 +73,7 @@ for f = 1:fr
     %drawnow;% pause(0.02)
 %     mov(f) = getframe(gcf);
     
-%     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
     hold off;
 end
 % %save([mfilename,'prior'],'mov');
@@ -108,7 +109,7 @@ for f = 1:fr
     ylim([-15,20]);
     %drawnow;
     %mov(f) = getframe(gcf);
-%     print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
+    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
     hold off;
 end
 %save([mfilename,'post'],'mov');

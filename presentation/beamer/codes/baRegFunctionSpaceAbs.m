@@ -56,8 +56,8 @@ y = linspace(-15,20,n)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
 
 set(gcf,...
-        'PaperPosition',.5*[0 0 16 9],...
-        'PaperSize',.5*[16 9]);
+        'PaperPosition',.3*[0 0 16 9],...
+        'PaperSize',.3*[16 9]);
     
 for f = 1:fr
     clf; hold on

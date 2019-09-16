@@ -45,8 +45,8 @@ F = reshape(F,length(x2),length(x1));
 L = chol(SigmaPrior + 1.0e-8 * eye(size(SigmaPrior)));
 
 set(gcf,...
-        'PaperPosition',.5*[0 0 16 9],...
-        'PaperSize',.5*[16 9]);
+        'PaperPosition',.3*[0 0 16 9],...
+        'PaperSize',.3*[16 9]);
 
 for f = 1:fr
     for i=1:1
