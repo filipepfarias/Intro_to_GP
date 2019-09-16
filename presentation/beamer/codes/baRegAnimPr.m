@@ -5,8 +5,8 @@ dgr = [239,125,45]/255; % color [0,125,122]
 dre = [0.4906,0,0]; % color [130,0,0]
 lightdgr = [1,1,1] - 0.5 * ([1,1,1] - dgr);
 lightdre = [1,1,1] - 0.5 * ([1,1,1] - dre);
-dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dgr));
-dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,0.6,2024)').^0.5,[1,1,1]-dre));
+dgr2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dgr));
+dre2white = bsxfun(@minus,[1,1,1],bsxfun(@times,(linspace(0,1,2024)').^0.5,[1,1,1]-dre));
 
 fr = 30;
 % mov(fr) = struct('cdata',[],'colormap',[]);
@@ -57,15 +57,17 @@ for f = 1:fr
             W2 = MuPrior + L'*s2(:,f);
             W3 = MuPrior + L'*s3(:,f);
             
-            subplot(1,2,1); imagesc(x1,x2,F); colormap(dgr2white);
+            subplot(1,2,1); imagesc(x1,x2,F); hold on;
+            %contour(x1,x2,F); 
+            colormap(dgr2white);
             %hold on; contour(x1,x2,F,3,'Color',dgr);
             set(gca,'YDir','normal'); 
-            hold on; plot(w1,w2,'r+','LineWidth',1.5);
-            hold on; plot(W1(1,1),W1(2,1),'o','MarkerEdgeColor','none',...
+            plot(w1,w2,'Color',dgr,'LineWidth',1.5);
+            plot(W1(1,1),W1(2,1),'o','MarkerEdgeColor','none',...
                 'MarkerFaceColor',dgr,'MarkerSize',5); 
-            hold on; plot(W2(1,1),W2(2,1),'o','MarkerEdgeColor','none',...
+            plot(W2(1,1),W2(2,1),'o','MarkerEdgeColor','none',...
                 'MarkerFaceColor',dgr-[.25, .2, .01],'MarkerSize',5); 
-            hold on; plot(W3(1,1),W3(2,1),'o','MarkerEdgeColor','none',...
+            plot(W3(1,1),W3(2,1),'o','MarkerEdgeColor','none',...
                 'MarkerFaceColor',dgr-[.5, .3, .015],'MarkerSize',5); 
             title('Prior'); pbaspect([1 1 1]);
             
@@ -78,8 +80,8 @@ for f = 1:fr
             subplot(1,2,2); plot(xx,yt1,'Color',dgr); hold on;
             plot(xx,yt2,'Color',dgr-[.25, .2, .01]); hold on; 
             plot(xx,yt3,'Color',dgr-[.5, .3, .015]); hold on; 
-            plot(xx,y(xx),'r--','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
-            pbaspect([1 1 1]);
+            plot(xx,y(xx),'r','LineWidth',1); title('Predicted'); xlim([0 1]); ylim([0 2]);
+            pbaspect([1 1 1]);hold off;
         end
     end
     drawnow;

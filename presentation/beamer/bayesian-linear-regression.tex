@@ -2,6 +2,8 @@
 
 \framecard{\insertsection}
 
+\subsection{Bayesian statistics}
+
 \begin{frame}{\insertsection}
 	\framesubtitle{Bayesian vs. Frequentist statistics}
 	
@@ -148,6 +150,8 @@
 	\end{block}
 \end{frame}
 
+\subsection{Some Gaussian algebra}
+
 \begin{frame}{\insertsection}
 	\framesubtitle{Some Gaussian algebra}
 
@@ -245,7 +249,7 @@
 	\end{center}
 \end{frame}
 
-% \subsection{Change of Space}
+\subsection{Change of Space}
 \begin{frame}{\insertsection}
     \framesubtitle{Change of Space} 
 
@@ -257,24 +261,198 @@
 		%  \end{equation*}
 		% omitted $\mathbf{x}$ for brevity.
         \item In the most of the cases, we are more interested in making predictions of $\mathbf{t}$ than in the parameters $\mathbf{w}$ in the space of the parameters, or \textcolor{UniOrange}{\textbf{weight-space}}, for the new values of $\mathbf{x}$. We'll define from the Bayes' Rule a \textcolor{UniOrange}{\textbf{predictive distribution}} $$p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{x}, \mathbf{t})=\displaystyle\int p(\mathbf{t}_{*} | \mathbf{x}_{*}, \mathbf{w}) p(\mathbf{w} | \mathbf{x}, \mathbf{t}) \mathrm{d} \mathbf{w}$$
-        \item And turn to the \textcolor{UniOrange}{\textbf{feature-space}}
+        \item And turn to the \textcolor{UniOrange}{\textbf{feature-space}} $f$
     \begin{equation*}
        \begin{aligned} p\left(f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t}\right) &=\int p(f_{*} | \boldsymbol{\phi}^\top_*, \mathbf{w}) p(\mathbf{w} | \Phi, \mathbf{t}) d \mathbf{w} \\ &=\mathcal{N}\left(\beta \boldsymbol{\phi}^{\top}_* \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}} \Phi \mathbf{t}, \boldsymbol{\phi}^{\top}_* \boldsymbol{\Sigma}_{\mathbf{w}|\mathbf{t}} \boldsymbol{\phi}(\mathbf{x}_{*})\right) \end{aligned} 
     \end{equation*}
-	where $f_{*} \triangleq f\left(\mathbf{x}_{*}\right)$, $\boldsymbol{\phi}_* = \boldsymbol{\phi}(\mathbf{x}_*) $ at $\mathbf{x}_{*}$ and  $\Phi = \Phi(\mathbf{x})$ at $\mathbf{x}$.
+	where $f_{*} \triangleq f\left(\mathbf{x}_{*}\right)$, $\boldsymbol{\phi}_* = \boldsymbol{\phi}(\mathbf{x}_*) $ at $\mathbf{x}_{*}$ and $\Phi = \Phi(\mathbf{x})$ at $\mathbf{x}$.
     \end{itemize}
 \end{frame}
 
-\begin{frame}{\insertsubsection}
-    \framesubtitle{A briefly change of view point} 
+% \begin{frame}{\insertsubsection}
+%     \framesubtitle{A briefly change of view point} 
 
-    \textcolor{UniGold}{\textbf{Alternative formulation}}
+%     \textcolor{UniGold}{\textbf{Alternative formulation}}
     
-    \begin{equation*}
-        \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{t}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
-        \end{aligned}
-    \end{equation*}
-    where $K = \Phi^{\top}\mathbf{S}_0\Phi$
+%     \begin{equation*}
+%         \begin{aligned} f_{*} | \mathbf{x}_{*}, \Phi, \mathbf{t} & \sim \mathcal{N}\left(\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \mathbf{t}, \boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}-\boldsymbol{\phi}_{*}^{\top} \mathbf{S}_0 \Phi\left(K+\beta^{-2} I\right)^{-1} \Phi^{\top} \mathbf{S}_0 \boldsymbol{\phi}_{*}\right)
+%         \end{aligned}
+%     \end{equation*}
+%     where $K = \Phi^{\top}\mathbf{S}_0\Phi$
+    
+% \end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Change of Space} 
+
+    \begin{center}
+	\resizebox{\linewidth}{!}{	
+		\begin{animateinline}[autoplay,loop]{15}
+			%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_1"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_2"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_3"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_4"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_5"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_6"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_7"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_8"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_9"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_10"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_11"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_12"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_13"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_14"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_15"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_16"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_17"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_18"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_19"}\newframe
+			 \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_20"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_21"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_22"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_23"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_24"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_25"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_26"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_27"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_28"}\newframe
+			\includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_29"}\newframe
+		    \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_30"}
+		 \end{animateinline}
+		}
+	\end{center}
+    
+\end{frame}
+\begin{frame}{\insertsection}
+    \framesubtitle{Change of Space} 
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_1"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_2"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_3"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_4"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_5"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_6"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_7"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_8"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_9"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_10"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_11"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_12"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_13"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_14"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_15"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_16"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_17"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_18"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_19"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_20"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_21"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_22"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_23"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_24"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_25"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_26"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_27"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_28"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_29"}\newframe
+				 \includegraphics{./codes/baRegAnimPos/"baRegAnimPos_post_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Change of Space} 
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{20}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_1"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_2"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_3"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_4"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_5"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_6"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_7"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_8"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_9"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_10"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_11"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_12"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_13"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_14"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_15"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_16"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_17"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_18"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_19"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_20"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_21"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_22"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_23"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_24"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_25"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_26"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_27"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_28"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_29"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Change of Space} 
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{20}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_1"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_2"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_3"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_4"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_5"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_6"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_7"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_8"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_9"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_10"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_11"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_12"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_13"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_14"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_15"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_16"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_17"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_18"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_19"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_20"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_21"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_22"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_23"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_24"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_25"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_26"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_27"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_28"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_29"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceLinear/"baRegFunctionSpaceLinear_post_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
     
 \end{frame}
 

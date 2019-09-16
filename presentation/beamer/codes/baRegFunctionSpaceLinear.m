@@ -72,7 +72,7 @@ for f = 1:fr
     %drawnow;% pause(0.02)
 %     mov(f) = getframe(gcf);
     
-    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+%     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
     hold off;
 end
 % save([mfilename,'prior'],'mov');
@@ -107,7 +107,7 @@ for f = 1:fr
     ylim([-15,20]);
     %drawnow;
     %mov(f) = getframe(gcf);
-    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
+%     print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
     hold off;
 end
 %save([mfilename,'post'],'mov');

@@ -1,5 +1,4 @@
 clear; close all;
-
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
@@ -14,7 +13,7 @@ GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
     bsxfun(@rdivide,bsxfun(@minus,y,m').^2,v'))./sqrt(2*pi),sqrt(v')));
 
 fr = 30; % # frames
-% mov(fr) = struct('cdata',[],'colormap',[]);
+% mov(fr) = struct('cdata',[],'colcormap',[]);
 
 %% data generation
 % ns = 20; X = linspace(-4,4,ns)';
@@ -30,53 +29,65 @@ load('data.mat');
 N = length(T); % gives T,X,sigma
 
 %% prior on w
-F = 6; % number of features
+F = 2; % number of features
 phi = @(a)(bsxfun(@power,a,0:F-1)); % φ(a) = [1; a]
 mu = zeros(F,1);
 Sigma = eye(F); % p(w) = N(µ, Σ)
 
 %% prior on f(x)
-n = 300; x = linspace(-6,6,n)'; % ‘test’ points
+n = 100; x = linspace(-2.5,2.5,n)'; % ‘test’ points
 phix = phi(x); % features of x
-m = phix * mu;
-kxx = phix * Sigma * phix'; % p(fx) = N(m, kxx)
-s = bsxfun(@plus,m,chol(kxx + 1.0e-5 * eye(n))' * randn(n,3)); % samples from prior
+m = mu;
+kxx = Sigma ; % p(fx) = N(m, kxx)
+s = bsxfun(@plus,m,chol(kxx + 1.0e-8 * eye(F))' * randn(F,3)); % samples from prior
 stdpi = sqrt(diag(kxx)); % marginal stddev, for plotting prior
 
 %% plot
 
-s1 = GPanimation(n,fr);
-s2 = GPanimation(n,fr);
-s3 = GPanimation(n,fr);
+s1 = GPanimation(F,fr);
+s2 = GPanimation(F,fr);
+s3 = GPanimation(F,fr);
 
 %kxx = k(x,x); % kernel function (enter your favorite here)
 V = kxx;
-L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
-y = linspace(-15,20,n)';
+L = chol(V + 1.0e-8 * eye(size(V))); % jitter for numerical stability
+y = linspace(-2.5,2.5,n)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
 
 set(gcf,...
         'PaperPosition',.5*[0 0 16 9],...
         'PaperSize',.5*[16 9]);
+    
+[W1,W2] = meshgrid(x,y);    
+W = [W1(:) W2(:)];
+W = mvnpdf(W,m',kxx);
+W = reshape(W,length(x),length(y));
 for f = 1:fr
-    clf; hold on
-    imagesc(x,y,P);
-    plot(x,max(min(m,20),-15),'-','Color',dgr,'LineWidth',0.7);
-    plot(x,max(min(m + 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
-    plot(x,max(min(m - 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
-    plot(x,phi(x),'-','Color',0.3*ones(3,1));
+    clf; hold on;
+        
+    contour(x,y,W,4)
+%     caxis([min(y(:))-0.5*range(y(:)),max(y(:))])
+%     axis([-3 3 -3 3 0 0.4])
+%     xlabel('x1')
+%     ylabel('x2')
+%     zlabel('Probability Density')
+    %plot(x,max(min(m,2),-2),'-','Color',dgr,'LineWidth',0.7);
+%     plot(x,max(min(m + 2 * sqrt(diag(V)),2),0),'-','Color',lightdgr,'LineWidth',.5);
+%     plot(x,max(min(m - 2 * sqrt(diag(V)),2),0),'-','Color',lightdgr,'LineWidth',.5);
+%     plot(x,phi(x),'-','Color',0.3*ones(3,1));
     plot(x,m + L' * s1(:,f),'--','Color',dgr);
     plot(x,m + L' * s2(:,f),'--','Color',dgr);
     plot(x,m + L' * s3(:,f),'--','Color',dgr);
     xlim([-6,6]);
     ylim([-15,20]);
-    drawnow;
-    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
-%     pause(0.02)
+    %drawnow;% pause(0.02)
 %     mov(f) = getframe(gcf);
+    
+%     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+    hold off;
 end
 % save([mfilename,'prior'],'mov');
-
+return
 %% prior on Y = fX + e
 phiX = phi(X); % features of data
 M = phiX * mu;
@@ -87,11 +98,11 @@ kxX = phix * Sigma * phiX'; % cov(fx, fX) = kxX
 A = kxX / R; % pre-compute for re-use
 mpost = m + A * (R' \ (T-M)); % p(fx ∣ T ) = N(m + kxX(kXX + σ²I)^{−1} (T − M),
 vpost = kxx - A * A'; % kxx − kxX(kXX + σ²I)^{−1}kXx)
-%spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-5 * eye(n))' * randn(n,3)); % samples
+%spost = bsxfun(@plus,mpost,chol(vpost + 1.0e-8 * eye(n))' * randn(n,3)); % samples
 stdpo = sqrt(diag(vpost)); % marginal stddev, for plotting
 
-% close all;
-L = chol(vpost + 1.0e-5 * eye(size(vpost))); % jitter for numerical stability
+
+L = chol(vpost + 1.0e-13 * eye(size(vpost))); % jitter for numerical stability
 y = linspace(-15,20,n)';
 P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
 for f = 1:fr
@@ -106,9 +117,9 @@ for f = 1:fr
     plot(X,T,'bo');
     xlim([-6,6]);
     ylim([-15,20]);
-    drawnow;
-    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
-%     pause(0.02)
-%     mov(f) = getframe(gcf);
+    %drawnow;
+    %mov(f) = getframe(gcf);
+%     print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpdf');
+    hold off;
 end
-% save([mfilename,'post'],'mov');
+%save([mfilename,'post'],'mov');
