@@ -96,6 +96,7 @@ P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
 for f = 1:fr
     clf; hold on
     imagesc(x,y,P);
+
     plot(x,max(min(mpost,20),-15),'-','Color',dre,'LineWidth',0.7); hold on;
     plot(x,max(min(mpost + 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;
     plot(x,max(min(mpost - 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;

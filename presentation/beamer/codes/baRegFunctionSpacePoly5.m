@@ -56,10 +56,10 @@ y = linspace(-15,20,n)';
 P = GaussDensity(y,m,diag(V+eps)); colormap(dgr2white);
 
 set(gcf,...
-        'PaperPosition',.5*[0 0 16 9],...
-        'PaperSize',.5*[16 9]);
+        'PaperPosition',.3*[0 0 16 9],...
+        'PaperSize',.3*[16 9]);
 for f = 1:fr
-    clf; hold on
+    clf; hold on;
     imagesc(x,y,P);
     plot(x,max(min(m,20),-15),'-','Color',dgr,'LineWidth',0.7);
     plot(x,max(min(m + 2 * sqrt(diag(V)),20),-15),'-','Color',lightdgr,'LineWidth',.5);
@@ -96,7 +96,7 @@ L = chol(vpost + 1.0e-5 * eye(size(vpost))); % jitter for numerical stability
 y = linspace(-15,20,n)';
 P = GaussDensity(y,mpost,diag(vpost+eps)); colormap(dre2white);
 for f = 1:fr
-    clf; hold on
+    clf; hold on;
     imagesc(x,y,P);
     plot(x,max(min(mpost,20),-15),'-','Color',dre,'LineWidth',0.7); hold on;
     plot(x,max(min(mpost + 2 * stdpo,20),-15),'-','Color',lightdre,'LineWidth',.5); hold on;
