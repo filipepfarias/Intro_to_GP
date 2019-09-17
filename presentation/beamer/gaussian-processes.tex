@@ -82,8 +82,7 @@
 % \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Gaussian processes}
-\begin{frame}{\insertsubsection}
+\begin{frame}{\insertsection}
     \framesubtitle{Some mathematical justification}
 
     \textcolor{UniGold}{\textbf{Gaussian processes, the definition...}}
@@ -109,9 +108,9 @@
     \end{itemize}
 \end{frame}
 
+\subsection{Some mathematical justification}
 
-\subsection{Gaussian processes}
-\begin{frame}{\insertsubsection}
+\begin{frame}{\insertsection}
     \framesubtitle{Some mathematical justification}
 
     \begin{block}{Definition}
@@ -158,3 +157,439 @@
 %     \end{equation*}
 %     \end{itemize}
 \end{frame}
+
+\subsection{Some kernel examples}
+\begin{frame}{\insertsection}
+    \framesubtitle{Those step functions}
+	
+	% \begin{equation*}
+	% 	\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	% \end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPStep1/"GPStep1_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Those step functions}
+	
+	% \begin{equation*}
+	% 	\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	% \end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPStep2/"GPStep2_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Wiener Process - Prior}
+	
+	\begin{equation*}
+		\operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right)=\int_{c_{\min }}^{\infty} \theta\left(x_{i}-c\right) \theta\left(x_{j}-c\right) \mathrm{d} c=\min \left(x_{i}, x_{j}\right)-c_{\min }
+	\end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Wiener Process}
+	- Posterior
+	\begin{equation*}
+		\operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right)=\int_{c_{\min }}^{\infty} \theta\left(x_{i}-c\right) \theta\left(x_{j}-c\right) \mathrm{d} c=\min \left(x_{i}, x_{j}\right)-c_{\min }
+	\end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_1"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_2"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_3"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_4"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_5"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_6"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_7"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_8"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_9"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_10"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_11"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_12"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_13"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_14"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_15"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_16"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_17"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_18"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_19"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_20"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_21"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_22"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_23"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_24"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_25"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_26"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_27"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_28"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_29"}\newframe
+				 \includegraphics{./codes/GPStepWiener/"GPStepWiener_post_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Those absolute functions}
+	
+	% \begin{equation*}
+	% 	\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	% \end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPAbs1/"GPAbs1_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Those absolute functions}
+	
+	% \begin{equation*}
+	% 	\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	% \end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPAbs2/"GPAbs2_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Those absolute functions}
+	
+	% \begin{equation*}
+	% 	\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	% \end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPAbs3/"GPAbs3_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Cubic Splines - Prior}
+	
+	\begin{equation*}
+     \operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right) =1+(1+b) x_{i} x_{j}+\frac{b}{3}\left(\left|x_{i}-x_{j}\right|^{3}-x^{3}-y^{3}\right) 
+	\end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_1"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_2"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_3"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_4"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_5"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_6"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_7"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_8"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_9"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_10"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_11"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_12"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_13"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_14"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_15"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_16"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_17"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_18"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_19"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_20"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_21"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_22"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_23"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_24"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_25"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_26"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_27"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_28"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_29"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Cubic Splines - Prior}
+	
+	\begin{equation*}
+     \operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right) =1+(1+b) x_{i} x_{j}+\frac{b}{3}\left(\left|x_{i}-x_{j}\right|^{3}-x^{3}-y^{3}\right) 
+	\end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_1"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_2"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_3"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_4"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_5"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_6"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_7"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_8"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_9"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_10"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_11"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_12"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_13"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_14"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_15"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_16"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_17"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_18"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_19"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_20"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_21"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_22"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_23"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_24"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_25"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_26"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_27"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_28"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_29"}\newframe
+				 \includegraphics{./codes/GPAbsCubic/"GPAbsCubic_post_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+

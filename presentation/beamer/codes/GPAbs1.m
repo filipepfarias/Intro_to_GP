@@ -30,7 +30,7 @@ N = length(T); % gives T,X,sigma
 
 %% prior on w
 %F = 16; % number of features
-phi = @(a)(bsxfun(@minus,abs(bsxfun(@minus,a,linspace(-8,8,100))),linspace(-8,8,100))); % φ(a) = [1; a]
+phi = @(a)(bsxfun(@minus,abs(bsxfun(@minus,a,linspace(-8,8,5))),linspace(-8,8,5))); % φ(a) = [1; a]
 k = @(a,b)(phi(a) * phi(b)');
 mu = @(a)(zeros(size(a,1),1)); % p(w) = N(µ, Σ)
 
