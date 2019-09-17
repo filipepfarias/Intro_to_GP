@@ -120,7 +120,7 @@
     \begin{block}{Lemma}
         Any kernel that can be written as
         \begin{equation*}
-            \left(T_{k} f\right)(\mathbf{x})=\int_{\mathbb{X}} k\left(\mathbf{x}, \mathbf{x}^{\prime}\right) f\left(\mathbf{x}^{\prime}\right) d \mu\left(\mathbf{x}^{\prime}\right)
+            k\left(\mathbf{x}, \mathbf{x}^{\prime}\right)=\sum \mathclap \int \lambda_{l} \phi_{l}(\mathbf{x}) \phi_{l}^{*}\left(\mathbf{x}^{\prime}\right)
         \end{equation*}
         is a Mercer kernel.
     \end{block}
@@ -304,8 +304,8 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Wiener Process}
-	- Posterior
+    \framesubtitle{Wiener Process - Posterior}
+	
 	\begin{equation*}
 		\operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right)=\int_{c_{\min }}^{\infty} \theta\left(x_{i}-c\right) \theta\left(x_{j}-c\right) \mathrm{d} c=\min \left(x_{i}, x_{j}\right)-c_{\min }
 	\end{equation*}
