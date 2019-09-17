@@ -1,0 +1,17 @@
+[2] Config.pm:302> INFO - This is Biber 2.11
+[3] Config.pm:305> INFO - Logfile is 'main.blg'
+[91] biber:313> INFO - === Mon Sep 16, 2019, 22:42:01
+[169] Biber.pm:371> INFO - Reading 'main.bcf'
+[369] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[410] Biber.pm:3976> INFO - Processing section 0
+[438] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[440] bibtex.pm:1489> INFO - LaTeX decoding ...
+[477] bibtex.pm:1305> INFO - Found BibTeX data source 'bibliography.bib'
+[586] Utils.pm:193> WARN - month field 'September' in entry 'hennig-tr-is-8' is not an integer - this will probably not sort properly.
+[713] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[713] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[714] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[714] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[758] bbl.pm:617> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[771] bbl.pm:720> INFO - Output to main.bbl
+[771] Biber.pm:110> INFO - WARNINGS: 1

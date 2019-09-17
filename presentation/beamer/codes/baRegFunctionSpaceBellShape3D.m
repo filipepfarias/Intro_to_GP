@@ -15,7 +15,7 @@ GaussDensity = @(y,m,v)(bsxfun(@rdivide,exp(-0.5*...
 
 fr = 30; % # frames
 %mov(fr) = struct('cdata',[],'colormap',[]);
-figure('units','normalized','outerposition',[0 0 1 1]);
+%figure('units','normalized','outerposition',[0 0 1 1]);
 
 %% data generation
 ns = 50; [X1,X2] = meshgrid(linspace(-4,4,ns),linspace(-4,4,ns));
@@ -25,7 +25,7 @@ Y = @(X1,X2) sin(.25*pi*X1).*sin(.25*pi*X2);
 
 sigma = 2/3;
 e = sigma*randn(size(X1));
-T3 = Y(X1,X2);
+T3 = Y(X1,X2) + e;
 
 X = [X1(:) X2(:)];
 T = T3(:);
@@ -59,7 +59,9 @@ V = kxx;
 L = chol(V + 1.0e-5 * eye(size(V))); % jitter for numerical stability
 m3 = reshape(m,size(x1));
 std3 = sqrt(diag(V)); std3 = reshape(std3,size(m3));
-
+set(gcf,...
+        'PaperPosition',.3*[0 0 16 9],...
+        'PaperSize',.3*[16 9]);
 for f = 1:fr
     clf; hold on
     %imagesc(x,y,P);
@@ -79,8 +81,10 @@ for f = 1:fr
     %plot(x,m + L' * s3(:,f),'--','Color',dgr);
     %xlim([-6,6]);
     zlim([-10,10]);
-    drawnow;% pause(0.02)
-    mov(f) = getframe;
+    drawnow; pause(0.02)
+%     mov(f) = getframe;
+    set(gca,'visible','off');
+    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpng');
 end
 %save([mfilename,'prior'],'mov');
 
@@ -107,6 +111,8 @@ for f = 1:fr
     clf; hold on;
     plot3(X1,X2,T3,'o','MarkerFaceColor',dgr-[.2 .2 0],'MarkerEdgeColor',...
         'none','MarkerSize',2);
+    plot3(X1,X2,Y(X1,X2),'o','MarkerFaceColor',dre-[.2 .2 0],'MarkerEdgeColor',...
+        'none','MarkerSize',2);
     surf(x1,x2,max(min(m3 + 2 * std3,200),-200),'FaceLighting',...
         'gouraud','FaceColor',lightdgr,'EdgeColor',dgr,'EdgeLighting',...
         'gouraud','FaceAlpha',.3,'EdgeColor','none');
@@ -117,8 +123,10 @@ for f = 1:fr
     surf(x1,x2,ys1,'FaceLighting','gouraud','FaceColor',lightdgr,...
         'EdgeColor',dgr,'EdgeLighting','gouraud','EdgeAlpha',.5);
     light('Position',[-1 0 400],'Style','infinite'); material dull; view(3);
-    zlim([-2,2]); mov(f) = getframe;
-    drawnow;% pause(0.02)
+    zlim([-2,2]); %mov(f) = getframe;
+    drawnow; pause(0.02);
+    set(gca,'visible','off');
+    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpng');
     
 end
 %save([mfilename,'post'],'mov');

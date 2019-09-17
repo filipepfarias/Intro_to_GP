@@ -369,7 +369,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Linear Prior} 
+
+	\begin{equation*}
+		\phi(x) = \left( 1 \quad x \quad x.^2 \quad x.^3 \quad x.^4 \quad x.^5 \right)^\top
+	\end{equation*}
 
     \begin{center}
 		
@@ -413,7 +417,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Linear Posterior} 
+	
+	\begin{equation*}
+		\phi(x) = \left( 1 \quad x \right)^\top
+	\end{equation*}
 
     \begin{center}
 		
@@ -457,7 +465,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Polynomial Prior} 
+	
+	\begin{equation*}
+		\phi(x) = \left( 1 \quad x \quad x.^2 \quad x.^3 \quad x.^4 \quad x.^5 \right)^\top
+	\end{equation*}
 
     \begin{center}
 		
@@ -501,7 +513,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Polynomial Posterior} 
+	
+	\begin{equation*}
+		\phi(x) = \left( 1 \quad x \quad x.^2 \quad x.^3 \quad x.^4 \quad x.^5 \right)^\top
+	\end{equation*}
 
     \begin{center}
 		
@@ -546,7 +562,11 @@
 
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Absolute Prior} 
+	
+	\begin{equation*}
+		\phi(x)=(|x-8|+8 \quad|x-7|+7 \quad|x-6|+6 \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -590,9 +610,13 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Absolute Posterior} 
 
-    \begin{center}
+	\begin{equation*}
+		\phi(x)=(|x-8|+8 \quad|x-7|+7 \quad|x-6|+6 \quad \ldots)^{\top}
+	\end{equation*}
+	
+	\begin{center}
 		
 		\resizebox{\linewidth}{!}{	
 			\begin{animateinline}[autoplay,loop]{15}
@@ -635,7 +659,11 @@
 
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Bell Curve Prior}
+	
+	\begin{equation*}
+	\phi(x)=\left(e^{-\frac{1}{2}(x-8)^{2}} e^{-\frac{1}{2}(x-7)^{2}} \quad e^{-\frac{1}{2}(x-6)^{2}}\ldots \right)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -679,7 +707,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Bell Curve Posterior}
+	
+	\begin{equation*}
+	\phi(x)=\left(e^{-\frac{1}{2}(x-8)^{2}} e^{-\frac{1}{2}(x-7)^{2}} \quad e^{-\frac{1}{2}(x-6)^{2}}\ldots \right)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -724,7 +756,11 @@
 
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Fourier Prior} 
+
+	\begin{equation*}
+		\phi(x)=(\cos (x) \cos (2 x) \cos (3 x) \quad \ldots \quad \sin (x) \quad \sin (2 x) \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -768,7 +804,12 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+    \framesubtitle{Fourier Posterior} 
+
+	
+	\begin{equation*}
+		\phi(x)=(\cos (x) \cos (2 x) \cos (3 x) \quad \ldots \quad \sin (x) \quad \sin (2 x) \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -813,7 +854,11 @@
 
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Legendre Prior} 
+	
+	\begin{equation*}
+		\phi(x)=\left(b^{0} P_{0}(x), b^{1} P_{1}(x), \ldots, b^{13} P_{13}(x)\right)^{\top} \quad P_{n}(x)=\frac{1}{2^{n} n !} \frac{d^{n}}{d x^{n}}\left(x^{2}-1\right)^{n}
+	\end{equation*}
 
     \begin{center}
 		
@@ -857,7 +902,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Legendre Posterior} 
+	
+	\begin{equation*}
+		\phi(x)=\left(b^{0} P_{0}(x), b^{1} P_{1}(x), \ldots, b^{13} P_{13}(x)\right)^{\top} \quad P_{n}(x)=\frac{1}{2^{n} n !} \frac{d^{n}}{d x^{n}}\left(x^{2}-1\right)^{n}
+	\end{equation*}
 
     \begin{center}
 		
@@ -902,7 +951,11 @@
 
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Step Prior} 
+	
+	\begin{equation*}
+		\phi(x)=-1+2(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -946,7 +999,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Step Posterior} 
+	
+	\begin{equation*}
+		\phi(x)=-1+2(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -991,7 +1048,11 @@
 
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Increasing Step Prior} 
+	
+	\begin{equation*}
+		\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -1035,7 +1096,11 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Change of Space} 
+	\framesubtitle{Increasing Step Posterior} 
+	
+	\begin{equation*}
+		\phi(x)=(\theta(x-8) \quad \theta(8-x) \quad \theta(x-7) \quad \theta(7-x) \quad \ldots)^{\top}
+	\end{equation*}
 
     \begin{center}
 		
@@ -1072,6 +1137,102 @@
 				 \includegraphics{./codes/baRegFunctionSpaceStep2/"baRegFunctionSpaceStep2_post_frame_28"}\newframe
 				 \includegraphics{./codes/baRegFunctionSpaceStep2/"baRegFunctionSpaceStep2_post_frame_29"}\newframe
 				 \includegraphics{./codes/baRegFunctionSpaceStep2/"baRegFunctionSpaceStep2_post_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+	\framesubtitle{Bidimensional Bell Curve Prior}
+	
+	\begin{equation*}
+	\phi(x)=\left(e^{-\frac{1}{2}(\mathbf{x}-(8,8))^{2}} e^{-\frac{1}{2}(\mathbf{x}-(8,7))^{2}} \quad \ldots e^{-\frac{1}{2}(\mathbf{x}-(7,8))^{2}}\ldots \right)^{\top}
+	\end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_1"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_2"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_3"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_4"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_5"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_6"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_7"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_8"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_9"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_10"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_11"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_12"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_13"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_14"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_15"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_16"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_17"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_18"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_19"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_20"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_21"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_22"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_23"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_24"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_25"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_26"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_27"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_28"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_29"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_prior_frame_30"}
+			 \end{animateinline}
+			}
+	\end{center}
+    
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{Multidimensional Bell Curve Posterior}
+	
+	\begin{equation*}
+		\phi(x)=\left(e^{-\frac{1}{2}(\mathbf{x}-(8,8))^{2}} e^{-\frac{1}{2}(\mathbf{x}-(8,7))^{2}} \quad \ldots e^{-\frac{1}{2}(\mathbf{x}-(7,8))^{2}}\ldots \right)^{\top}
+	\end{equation*}
+
+    \begin{center}
+		
+		\resizebox{\linewidth}{!}{	
+			\begin{animateinline}[autoplay,loop]{15}
+				%  \includegraphics{./codes/baRegAnimPr/"baRegAnimPr_prior_frame_0"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_1"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_2"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_3"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_4"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_5"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_6"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_7"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_8"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_9"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_10"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_11"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_12"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_13"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_14"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_15"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_16"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_17"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_18"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_19"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_20"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_21"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_22"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_23"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_24"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_25"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_26"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_27"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_28"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_29"}\newframe
+				 \includegraphics{./codes/baRegFunctionSpaceBellShape3D/"baRegFunctionSpaceBellShape3D_post_frame_30"}
 			 \end{animateinline}
 			}
 	\end{center}
