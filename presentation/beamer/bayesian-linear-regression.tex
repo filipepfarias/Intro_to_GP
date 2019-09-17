@@ -1240,6 +1240,46 @@
 \end{frame}
 
 
+\begin{frame}{\insertsection}
+    \framesubtitle{\textit{Kernelization} to infinitely many features} 
+
+    \textcolor{UniGold}{\textbf{If we make the number of features goes to infinity?}}
+    \begin{itemize}
+        % \item We have 
+		% \begin{equation*}
+		% 	p(\mathbf{w}|\mathbf{t}) = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{p(\mathbf{t})} = \frac{p(\mathbf{t}|\mathbf{w}) p(\mathbf{w})}{\int p(\mathbf{t}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}
+		%  \end{equation*}
+		% omitted $\mathbf{x}$ for brevity.
+        \item Let's take the Bell Curve as example, or Gaussian function,
+		\begin{equation*}
+			\phi_{h}(\mathbf{x})=\exp \left[-\frac{\left(\mathbf{x}-\mathbf{c}_{h}\right)^{2}}{2 r^{2}}\right]
+		\end{equation*}
+
+		where $H$ is the number of features and $\mathbf{c}_{h}$ its centers positioning.
+		\item Let's define too, the \textcolor{UniOrange}{\textbf{covariance matrix}} $\mathbf{C}$ with inputs
+		\begin{equation*}
+			C_{n n^{\prime}}=Q_{n n^{\prime}}+\delta_{n n^{\prime}} \sigma_{\nu}^{2}=\sigma_{w}^{2} \sum_{h} \phi_{h}\left(\mathbf{x}^{(n)}\right) \phi_{h}\left(\mathbf{x}^{\left(n^{\prime}\right)}\right)+\delta_{n n^{\prime}} \sigma_{\nu}^{2}
+		\end{equation*}
+		\only<1>{
+		\item If we put the center of the curve at a point $x=h$ and take the limit $H \rightarrow \infty$, the sum over $h$ becomes an integral\footnote{To avoid the covariance divergence with H, we
+		make $\sigma_{w}^{2}$ scale as $S/(\Delta H)$, where $\Delta H$ is the number of basis per unit length along the x-axis}
+		\begin{equation*}
+			\begin{aligned} Q_{n n^{\prime}} &=S \int_{h_{\min }}^{h_{\max }} \mathrm{d} h \phi_{h}\left(x^{(n)}\right) \phi_{h}\left(x^{\left(n^{\prime}\right)}\right) \\ &=S \int_{h_{\min }}^{h_{\max }} \mathrm{d} h \exp \left[-\frac{\left(x^{(n)}-h\right)^{2}}{2 r^{2}}\right] \exp \left[-\frac{\left(x^{\left(n^{\prime}\right)}-h\right)^{2}}{2 r^{2}}\right] \end{aligned}
+		\end{equation*}
+		}
+		\only<2>{
+		\item If we let the limits of integration be $\pm \infty$, we can solve this integral
+		\begin{equation*}
+			Q_{n n^{\prime}}=\sqrt{\pi r^{2}} S \exp \left[-\frac{\left(x^{\left(n^{\prime}\right)}-x^{(n)}\right)^{2}}{4 r^{2}}\right]
+		\end{equation*}
+		}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsection}
+    \framesubtitle{\textit{Kernelization} to infinitely many features} 
+
+\end{frame}
 
 % \begin{frame}{\insertsubsection}
 % By this, we can find a distribution and its maximum, or most probable value of $\mathbf{w}$ given the data taking the minimum of the negative logarithm of the infered expression, that will lead us to a term

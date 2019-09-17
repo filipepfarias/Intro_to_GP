@@ -25,7 +25,7 @@ fr = 30; % # frames
 % sigma = 4;
 % e = sigma*randn(size(X));
 % T = Y(X) + e;
-
+mkdir([mfilename,'/']);
 load('data.mat');
 N = length(T); % gives T,X,sigma
 
