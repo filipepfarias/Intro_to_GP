@@ -1377,7 +1377,7 @@
     \framesubtitle{Gaussian Process - Prior}
 	
 	\begin{equation*}
-     \operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right) =1+(1+b) x_{i} x_{j}+\frac{b}{3}\left(\left|x_{i}-x_{j}\right|^{3}-x^{3}-y^{3}\right) 
+		\operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right) =\sqrt{2 \pi} \lambda \sigma^{2} \exp \left(-\frac{\left(x_{i}-x_{j}\right)^{2}}{4 \lambda^{2}}\right)
 	\end{equation*}
 
     \begin{center}
@@ -1422,10 +1422,10 @@
 \end{frame}
 
 \begin{frame}{\insertsection}
-    \framesubtitle{Cubic Splines - Posterior}
+    \framesubtitle{Gaussian Process - Posterior}
 	
 	\begin{equation*}
-     \operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right) =1+(1+b) x_{i} x_{j}+\frac{b}{3}\left(\left|x_{i}-x_{j}\right|^{3}-x^{3}-y^{3}\right) 
+		\operatorname{cov}\left(f_{x_{i}}, f_{x_{j}}\right) =\sqrt{2 \pi} \lambda \sigma^{2} \exp \left(-\frac{\left(x_{i}-x_{j}\right)^{2}}{4 \lambda^{2}}\right)
 	\end{equation*}
 
     \begin{center}

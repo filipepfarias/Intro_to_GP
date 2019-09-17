@@ -80,7 +80,7 @@ end
 % phiX = phi(X); % features of data
 M = mu(X);
 kXX = k(X,X); % p(fX) = N(M, kXX)
-G = kXX ;%+ sigma^-2 * eye(N); % p(T) = N(M, kXX + σ²I)
+G = kXX + sigma^2 * eye(N); % p(T) = N(M, kXX + σ²I)
 R = chol(G); % most expensive step: O(N³)
 kxX = k(x,X); % cov(fx, fX) = kxX
 A = kxX / R; % pre-compute for re-use
