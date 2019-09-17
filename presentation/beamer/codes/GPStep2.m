@@ -30,7 +30,7 @@ N = length(T); % gives T,X,sigma
 
 %% prior on w
 %F = 16; % number of features
-phi = @(a)(bsxfun(@gt,a,linspace(-8,8,5))./sqrt(5)); % φ(a) = [1; a]
+phi = @(a)(bsxfun(@gt,a,linspace(-8,8,20))./sqrt(20)); % φ(a) = [1; a]
 k = @(a,b)(phi(a) * phi(b)');
 mu = @(a)(zeros(size(a,1),1)); % p(w) = N(µ, Σ)
 
@@ -71,8 +71,8 @@ for f = 1:fr
     xlim([-8,8]);
     ylim([-5-1e2*eps,5]);
     drawnow;
-    pause(0.02)
-%     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+%     pause(0.02)
+    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
 end
 
 % %% prior on Y = fX + e

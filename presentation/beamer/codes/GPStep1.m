@@ -71,8 +71,8 @@ for f = 1:fr
     xlim([-8,8]);
     ylim([-5-1e2*eps,5]);
     drawnow;
-    pause(0.02)
-%     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
+%     pause(0.02)
+    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpdf');
 end
 
 % %% prior on Y = fX + e
