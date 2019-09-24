@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  24 SEP 2019 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  24 SEP 2019 13:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -832,98 +832,98 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 29.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Underfull \vbox (badness 2229) has occurred while \output is active []
-
- [1
+) [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<graphics/prml/Figure1.2.pdf, id=30, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure1.2.pdf, id=32, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.2.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.2.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.2.pdf  used on input line 66.
+Package pdftex.def Info: graphics/prml/Figure1.2.pdf  used on input line 74.
 (pdftex.def)             Requested size: 213.79822pt x 159.59584pt.
+
+Underfull \vbox (badness 6380) has occurred while \output is active []
+
  [2 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf>]
 <graphics/prml/Figure1.3.pdf, id=54, 206.29341pt x 154.42793pt>
 File: graphics/prml/Figure1.3.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.3.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.3.pdf  used on input line 98.
+Package pdftex.def Info: graphics/prml/Figure1.3.pdf  used on input line 106.
 (pdftex.def)             Requested size: 206.29291pt x 154.42755pt.
-<graphics/prml/Figure1.4a.pdf, id=61, 213.79875pt x 159.59625pt>
+ [3 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.3.pdf>]
+<graphics/prml/Figure1.4a.pdf, id=92, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4a.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4a.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4a.pdf  used on input line 136.
+Package pdftex.def Info: graphics/prml/Figure1.4a.pdf  used on input line 144.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
-<graphics/prml/Figure1.4b.pdf, id=62, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure1.4b.pdf, id=93, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4b.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4b.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4b.pdf  used on input line 141.
+Package pdftex.def Info: graphics/prml/Figure1.4b.pdf  used on input line 149.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
-<graphics/prml/Figure1.4c.pdf, id=63, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure1.4c.pdf, id=94, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4c.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4c.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4c.pdf  used on input line 146.
+Package pdftex.def Info: graphics/prml/Figure1.4c.pdf  used on input line 154.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
-<graphics/prml/Figure1.4d.pdf, id=64, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure1.4d.pdf, id=95, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4d.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4d.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4d.pdf  used on input line 151.
+Package pdftex.def Info: graphics/prml/Figure1.4d.pdf  used on input line 159.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
- [3 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.3.pdf>] [4 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4a.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4b.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4c.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4d.pdf>]
-<graphics/prml/Figure1.7a.pdf, id=148, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure1.7a.pdf, id=106, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.7a.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.7a.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.7a.pdf  used on input line 204.
+Package pdftex.def Info: graphics/prml/Figure1.7a.pdf  used on input line 212.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
-<graphics/prml/Figure1.7b.pdf, id=149, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure1.7b.pdf, id=107, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.7b.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.7b.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.7b.pdf  used on input line 209.
+Package pdftex.def Info: graphics/prml/Figure1.7b.pdf  used on input line 217.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
- [5 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.7a.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.7b.pdf>]
-<graphics/prml/Figure1.16.pdf, id=192, 238.83278pt x 151.58241pt>
+ [4 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4a.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4b.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4c.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4d.pdf>] [5 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.7a.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.7b.pdf>]
+<graphics/prml/Figure1.16.pdf, id=193, 238.83278pt x 151.58241pt>
 File: graphics/prml/Figure1.16.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.16.pdf  used on input line 250.
+Package pdftex.def Info: graphics/prml/Figure1.16.pdf  used on input line 258.
 (pdftex.def)             Requested size: 238.83218pt x 151.58203pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 261.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 269.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 261.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 269.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 261.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 269.
  [6 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.16.pdf>] [7]
-<graphics/prml/Figure3.7.pdf, id=261, 426.59375pt x 511.9125pt>
+<graphics/prml/Figure3.7.pdf, id=262, 426.59375pt x 511.9125pt>
 File: graphics/prml/Figure3.7.pdf Graphic file (type pdf)
 <use graphics/prml/Figure3.7.pdf>
-Package pdftex.def Info: graphics/prml/Figure3.7.pdf  used on input line 346.
+Package pdftex.def Info: graphics/prml/Figure3.7.pdf  used on input line 354.
 (pdftex.def)             Requested size: 377.60951pt x 453.1558pt.
  [8] [9 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure3.7.pdf>] [10] [11]
-<graphics/prml/Figure6.8.pdf, id=328, 213.79875pt x 159.59625pt>
+<graphics/prml/Figure6.8.pdf, id=329, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure6.8.pdf Graphic file (type pdf)
 <use graphics/prml/Figure6.8.pdf>
-Package pdftex.def Info: graphics/prml/Figure6.8.pdf  used on input line 489.
+Package pdftex.def Info: graphics/prml/Figure6.8.pdf  used on input line 497.
 (pdftex.def)             Requested size: 213.79822pt x 159.59584pt.
- [12 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure6.8.pdf>] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex [13] [14] [15] [16] [17]) [18] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
+ [12 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure6.8.pdf>] [13] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex [14] [15] [16] [17] [18]) [19] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
 Underfull \hbox (badness 1412) in paragraph at lines 4--8
 []\T1/cmr/m/n/10 Bishop, C. M. (2006).  |   []   |   []   |   []   |   []   |   []
  []
 
-) [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 504.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 504.
+) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
  (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 504.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 504.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
 Package rerunfilecheck Info: File `Intro_to_GP.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 504.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 512.
  ) 
 Here is how much of TeX's memory you used:
- 39267 strings out of 492609
- 888733 string characters out of 6129048
+ 39270 strings out of 492609
+ 888764 string characters out of 6129048
  1300659 words of memory out of 5000000
  42482 multiletter control sequences out of 15000+600000
  552304 words of font info for 73 fonts, out of 8000000 for 9000
@@ -932,10 +932,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf (19 pages, 561313 bytes).
+Output written on /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf (20 pages, 561958 bytes).
 PDF statistics:
- 575 PDF objects out of 1000 (max. 8388607)
- 476 compressed objects within 5 object streams
- 146 named destinations out of 1000 (max. 500000)
+ 581 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 149 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
