@@ -348,11 +348,11 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
 INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
+INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
+INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
+INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.2.pdf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm

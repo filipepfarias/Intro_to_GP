@@ -33,6 +33,11 @@ MacKay, D.~J. (1998).
 \newblock Introduction to gaussian processes.
 \newblock {\em NATO ASI Series F Computer and Systems Sciences}, 168:133--166.
 
+\bibitem[Rasmussen, 2004]{Rasmussen_2004}
+Rasmussen, C.~E. (2004).
+\newblock {\em Gaussian Processes in Machine Learning}, page 63–71.
+\newblock Springer Berlin Heidelberg.
+
 \bibitem[Rasmussen and Williams, 2005]{Rasmussen:2005:GPM:1162254}
 Rasmussen, C.~E. and Williams, C. K.~I. (2005).
 \newblock {\em Gaussian Processes for Machine Learning (Adaptive Computation

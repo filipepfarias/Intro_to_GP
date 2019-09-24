@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Intro_to_GP.aux
 The style file: apalike.bst
 Database file #1: Intro_to_GP_bibliography.bib
-You've used 8 entries,
+You've used 9 entries,
             1935 wiz_defined-function locations,
-            522 strings with 4907 characters,
-and the built_in function-call counts, 2498 in all, are:
-= -- 247
-> -- 74
-< -- 8
-+ -- 22
-- -- 22
-* -- 180
-:= -- 463
-add.period$ -- 25
-call.type$ -- 8
-change.case$ -- 48
-chr.to.int$ -- 8
-cite$ -- 8
-duplicate$ -- 104
-empty$ -- 186
-format.name$ -- 36
-if$ -- 483
+            530 strings with 5069 characters,
+and the built_in function-call counts, 2942 in all, are:
+= -- 294
+> -- 81
+< -- 10
++ -- 24
+- -- 24
+* -- 200
+:= -- 525
+add.period$ -- 28
+call.type$ -- 9
+change.case$ -- 53
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 134
+empty$ -- 220
+format.name$ -- 39
+if$ -- 588
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 10
-newline$ -- 43
-num.names$ -- 24
-pop$ -- 44
+missing$ -- 12
+newline$ -- 48
+num.names$ -- 27
+pop$ -- 55
 preamble$ -- 1
-purify$ -- 51
+purify$ -- 57
 quote$ -- 0
-skip$ -- 81
+skip$ -- 110
 stack$ -- 0
-substring$ -- 152
-swap$ -- 6
-text.length$ -- 0
+substring$ -- 178
+swap$ -- 22
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 44
 warning$ -- 0
-while$ -- 20
+while$ -- 23
 width$ -- 0
-write$ -- 103
+write$ -- 116
