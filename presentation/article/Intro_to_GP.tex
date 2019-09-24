@@ -41,9 +41,11 @@ Let`s suppose a data set $\mathcal{D} = \left\{ \mathbf{x}_i,\mathbf{t}_i \right
 
 The model may or not contain some \textit{parameters} that will be adjusted during the \textit{training phase}, where the model itself or its parameters are modified aiming to reduce the mismatch with the train set. In general we define a \textit{loss function} which increases with the mismatch, or \textit{error} of the model. Then our work will be reduce this error. The model with the least error will be the one that defines when our model has learned.
 
+Unfortunately, in the trying of obtain the best model, we may lose the capability of generalize our model, then we can increase the flexibility of it by accepting some \textit{uncertainty} above it. More, sometimes a good first assumption can make the difference to the estimation, and one may want to put its beliefs in the model, before observe some data, i.e. make some \textit{prior} assumptions. These both strategies are well defined by the Bayesian statistics and could help if we assume a probabilistic model.
+
 % Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
 
-Sometimes, a good first assumption can make the difference to the estimation, and one may want to put its beliefs in the model, before observe some data, i.e. make some \textit{prior} assumptions. This strategy is well defined by the Bayesian statistics and could help if we assume a probabilistic model. For this, we can accept some \textit{uncertainty} over the model or its parameters.
+
 
 
 The approach is to give a \textit{prior} probability to every possible function, where higher probabilities are given to functions that we consider to be \textit{more likely}, for example because they are smoother than other functions. \cite{Rasmussen:2005:GPM:1162254}. This appears to have a serious problem, in that surely there are an infinite set of possible functions to compute in a finite time. This is where the Gaussian \textit{process} comes as a possible approach. 
