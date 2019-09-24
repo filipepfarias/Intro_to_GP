@@ -35,7 +35,7 @@ Federal University of Ceará\\
 \section{Introduction}
 \nocite{hennig2013gaussian}
 
-The problem of searching for patterns in data is a fundamental one and has a long and successful history. The field of pattern recognition is concerned with the automatic discovery of regularities in data through the use of computer algorithms and with the use of these regularities to take actions. Applications in which the training data comprises examples of the input vectors along with their corresponding target vectors are known as \textit{supervised learning} problems. If the desired output consists of one or more continuous variables, then the task is called \textit{regression} \cite{Bishop:2006:PRM:1162264} and it will be the concept revisited in this report.
+The Gaussian processes has been shown as a powerfull tool for robust estimation. Its advantages goes from its flexibility \textit{regression} \cite{Bishop:2006:PRM:1162264} .
 
 In general we denote the input as $\mathbf{x}$, and the output (or target) as $t$. The input is usually represented as a vector $\mathbf{x}$ as there are in general many input variables. We have a dataset $\mathcal{D}$ of $n$ observations, $\mathcal{D}=\left\{\left(\mathbf{x}_{i}, t_{i}\right) | i=1, \ldots, n\right\}$. Given this training data we wish to make predictions for new inputs $\mathbf{x_*}$ that we have not seen in the \textit{training set}. Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
 
