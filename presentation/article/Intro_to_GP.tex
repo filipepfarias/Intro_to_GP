@@ -507,6 +507,20 @@ Deriving the conditional distribution corresponding we arrive at the key predict
 
 As in the distributions, the kernels have its parameters to be set before the model training. Such parameters, called hyperparameters can assume a distribution over itself, and with this, we can learn the parameters to the data just as we've been doing for the inference. In general, the posterior distribution for the hyperparameters are intractable, then we cal use MAP to choose at least one value (the most probable one), or evaluate the integral numerically.
 
+\section{Applications in disease mapping}
+\subsection{The model}
+\textcolor{red}{Here we must have defined how the inferencial process occurs.}
+
+
+
+\begin{subequations}
+     \begin{empheq}[left={\empheqlbrace\,}]{align}
+      \mathbf{y} &\sim \prod^N_{i=1}Poisson\left( y_i | f_i \right) \\
+      f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left( m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
+      \theta,\gamma &\sim p(\theta)
+     \end{empheq}
+ \end{subequations}
+
 \newpage
 \input{Intro_to_GP_appendices}
 

@@ -294,6 +294,14 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/footmisc/footmisc.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/footmisc/footmisc.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/empheq.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/empheq.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  25 SEP 2019 06:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  25 SEP 2019 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -715,39 +715,87 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box60
 \@float@everytoks=\toks47
 \@floatcapt=\box61
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/empheq.sty
+Package: empheq 2017/03/31 v2.15 Emphasizing equations
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count305
+\calc@Bcount=\count306
+\calc@Adimen=\dimen276
+\calc@Bdimen=\dimen277
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count307
+\calc@Cskip=\skip58
 )
-\c@theorem=\count305
-\c@corollary=\count306
-\fwidth=\skip56
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count308
+\l_MT_multwidth_dim=\dimen278
+\origjot=\skip59
+\l_MT_shortvdotswithinadjustabove_dim=\dimen279
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen280
+\l_MT_above_intertext_sep=\dimen281
+\l_MT_below_intertext_sep=\dimen282
+\l_MT_above_shortintertext_sep=\dimen283
+\l_MT_below_shortintertext_sep=\dimen284
+)
+\l_EQ_equationtype_int=\count309
+\l_EQ_alignmentmode_int=\count310
+\l_EQ_totalwidth_dim=\dimen285
+\l_EQ_displaywidth_dim=\dimen286
+\l_EQ_temp_linewidth_dim=\dimen287
+\EmphEqdelimitershortfall=\dimen288
+\EmphEqdelimiterfactor=\count311
+\g_EQ_toptag_height_dim=\dimen289
+\g_EQ_bottomtag_depth_dim=\dimen290
+\g_EQ_toprow_height_dim=\dimen291
+\g_EQ_bottomrow_depth_dim=\dimen292
+\g_EQ_widesttag_dim=\dimen293
+\EQ_mathdisplay_box=\box62
+\EQ_tag_box=\box63
+\g_EQ_temprow_int=\count312
+)
+\c@theorem=\count313
+\c@corollary=\count314
+\fwidth=\skip60
  (/usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box62
-\UL@hyphenbox=\box63
-\UL@skip=\skip57
+\UL@box=\box64
+\UL@hyphenbox=\box65
+\UL@skip=\skip61
 \UL@hook=\toks48
-\UL@height=\dimen276
-\UL@pe=\count307
-\UL@pixel=\dimen277
-\ULC@box=\box64
+\UL@height=\dimen294
+\UL@pe=\count315
+\UL@pixel=\dimen295
+\ULC@box=\box66
 Package: ulem 2012/05/18
-\ULdepth=\dimen278
+\ULdepth=\dimen296
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count308
-\lst@gtempboxa=\box65
+\lst@mode=\count316
+\lst@gtempboxa=\box67
 \lst@token=\toks49
-\lst@length=\count309
-\lst@currlwidth=\dimen279
-\lst@column=\count310
-\lst@pos=\count311
-\lst@lostspace=\dimen280
-\lst@width=\dimen281
-\lst@newlines=\count312
-\lst@lineno=\count313
-\lst@maxwidth=\dimen282
+\lst@length=\count317
+\lst@currlwidth=\dimen297
+\lst@column=\count318
+\lst@pos=\count319
+\lst@lostspace=\dimen298
+\lst@width=\dimen299
+\lst@newlines=\count320
+\lst@lineno=\count321
+\lst@maxwidth=\dimen300
  (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count314
-\lst@skipnumbers=\count315
-\lst@framebox=\box66
+\c@lstnumber=\count322
+\lst@skipnumbers=\count323
+\lst@framebox=\box68
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
@@ -755,16 +803,16 @@ Package: listings 2019/02/27 1.8b (Carsten Heinz)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
-\IntroGPrulerbox=\box67
-\IntroGPrulercount=\count316
-\IntroGPruleroffset=\dimen283
-\cv@lineheight=\dimen284
-\cv@boxheight=\dimen285
-\cv@tmpbox=\box68
-\cv@refno=\count317
-\cv@tot=\count318
-\cv@tmpc@=\count319
-\cv@tmpc=\count320
+\IntroGPrulerbox=\box69
+\IntroGPrulercount=\count324
+\IntroGPruleroffset=\dimen301
+\cv@lineheight=\dimen302
+\cv@boxheight=\dimen303
+\cv@tmpbox=\box70
+\cv@refno=\count325
+\cv@tot=\count326
+\cv@tmpc@=\count327
+\cv@tmpc=\count328
 ) (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux)
 \openout1 = `Intro_to_GP.aux'.
 
@@ -782,19 +830,19 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
-\AtBeginShipoutBox=\box69
+\AtBeginShipoutBox=\box71
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
-\scratchdimen=\dimen286
-\scratchbox=\box70
-\nofMPsegments=\count322
-\nofMParguments=\count323
+\scratchcounter=\count329
+\scratchdimen=\dimen304
+\scratchbox=\box72
+\nofMPsegments=\count330
+\nofMParguments=\count331
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count324
-\MPscratchDim=\dimen287
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen305
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
 \everyMPtoPDFconversion=\toks51
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -811,7 +859,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count335
 )
 LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
@@ -820,7 +868,7 @@ LaTeX Info: Redefining \nameref on input line 27.
 \@outlinefile=\write4
 \openout4 = `Intro_to_GP.out'.
 
-\c@lstlisting=\count328
+\c@lstlisting=\count336
 LaTeX Font Info:    Try loading font information for U+msa on input line 29.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -910,36 +958,39 @@ File: graphics/prml/Figure6.8.pdf Graphic file (type pdf)
 <use graphics/prml/Figure6.8.pdf>
 Package pdftex.def Info: graphics/prml/Figure6.8.pdf  used on input line 501.
 (pdftex.def)             Requested size: 213.79822pt x 159.59584pt.
- [12] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex [13 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure6.8.pdf>] [14] [15] [16] [17] [18]) [19] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
+
+Underfull \vbox (badness 1742) has occurred while \output is active []
+
+ [12] [13 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure6.8.pdf>] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex [14] [15] [16] [17] [18]) [19] (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
 Underfull \hbox (badness 1412) in paragraph at lines 4--8
 []\T1/cmr/m/n/10 Bishop, C. M. (2006).  |   []   |   []   |   []   |   []   |   []
  []
 
 ) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 530.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 530.
  (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 516.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 530.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 530.
 Package rerunfilecheck Info: File `Intro_to_GP.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 530.
  ) 
 Here is how much of TeX's memory you used:
- 39267 strings out of 492609
- 888714 string characters out of 6129048
- 1302658 words of memory out of 5000000
- 42481 multiletter control sequences out of 15000+600000
+ 40061 strings out of 492609
+ 903270 string characters out of 6129048
+ 1320096 words of memory out of 5000000
+ 43254 multiletter control sequences out of 15000+600000
  552304 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,21n,138p,1852b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf (20 pages, 562819 bytes).
+Output written on /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf (20 pages, 564722 bytes).
 PDF statistics:
- 578 PDF objects out of 1000 (max. 8388607)
- 478 compressed objects within 5 object streams
- 147 named destinations out of 1000 (max. 500000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 154 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
