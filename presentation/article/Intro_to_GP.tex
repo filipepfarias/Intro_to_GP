@@ -2,7 +2,7 @@
 \documentclass[11pt]{article} % For LaTeX2e
 \usepackage{Intro_to_GP}
 
-\title{Introduction to Gaussian Processes}
+\title{Introduction to Gaussian Processes \textcolor{red}{ - RAW}}
 
 \IntroGPfinaltrue
 
@@ -35,7 +35,7 @@ Federal University of Ceará\\
 \section{Introduction}
 \nocite{hennig2013gaussian}
 
-First, we`ll overview some initial concepts that will set the background for the GP. Let's suppose a data set $\mathcal{D} = \left\{ \left( \mathbf{x}_i,\mathbf{t}_i \right) \right\}_1^N$ which we denote the input as $\mathbf{x}$, the output (or target) as $\mathbf{t}$ and $N$ as the number of observations. The first step in our workflow is define a \textit{training} set, i.e. some data that is given to make our first assumptions of the \textit{model}. The model $\mathbf{y}$ can be defined as a guess of the law that rules the phenomenon of which our data was observed. This law can be, by example a senoid function as represented in \textcolor{red}{Figure 1}. Given this training data we wish to make \textit{predictions} for new inputs $\mathbf{x_*}$ that we have not observed in the training set.
+First, we`ll overview some initial concepts that will set the background for the GP framework. Let's suppose a data set $\mathcal{D} = \left\{ \left( x_i,t_i \right) \right\}_{i=0}^{N-1}$ which we denote the input as $x$, the output (or target) as $t$ and $N$ as the number of observations. The first step in our workflow is define a \textit{training} set, i.e. some data that is given to make our first assumptions of the \textit{model}. The model $y$ can be defined as a guess of the law that rules the phenomenon of which our data was observed. \textcolor{red}{This law can be, by example a senoid function as represented in Figure 1}. Given this training data we wish to make \textit{predictions} for new inputs $x_*$ that we have not observed in the training set.
 
 % \begin{equation}
 %    y(\mathbf{x},\mathbf{w}) = \mathbf{x}^\top \mathbf{w}
@@ -55,9 +55,38 @@ Furthermore, the concept of \textit{infer} is similar to what we have done since
 
 Finally, we'll deal with a specific class of models in which we assume not a distribution of parameters but functions in general. By example, in a space with infinite possible functions, we'll evaluate how much possible which one are to be generated the data by its statistics, what is similar to what was done for the parameters. And in this part we make the fully use of the Gaussian process.
 
+\section{Linear Regression}
+
+The following scenario is given. The data set of observations is given by $\mathcal{D} = \left\{ \left( x_i,t_i \right) \right\}_{i=0}^{N-1}$, hence we make a guess about the law that rules the phenomenon behind the data. In general, we define that model as a mathematical function $y$ whose parameters $\mathbf{w}$ will be adjusted in trying of learn the phenomenon law. By example, we may choose a polynomial as a model and try to adjust its coefficients, that will be the parameters for the model in this case.
+
+\begin{equation}
+   y\left( x,\mathbf{w} \right) = w_0 x^0 + \dots + w_{M-1} x^{M-1}
+\end{equation}
+
+This approach is not linear in the inputs, i.e. the model output $y$ it isn't a linear transformation of the inputs. But we can say that is \textit{linear on the parameters}. To visualize this, considering the parameters array $\mathbf{w} = \left( w_0, \cdots , w_{M-1} \right)^\top$, we put in the matrix form as 
+
+\begin{equation}
+   y\left( x,\mathbf{w} \right) = \mathbf{w}^\top \boldsymbol{\phi}(x).
+\end{equation}
+
+Here we have defined the array $\boldsymbol{\phi}(x) = \left( x^0, \cdots , x^{M-1} \right)^\top$ in order to keep the linearity of the model. This approach becomes more clear if we take $\boldsymbol{\phi}$ for all the space where we have the observations, by this we mean evaluate $\boldsymbol{\phi}$ for all the $\left\{ x_i \right\}_{i=0}^{N-1}$ inputs, and we'll obtain
+
+\begin{equation}
+   \begin{pmatrix}
+      x^0_0 & \cdots & x^{M-1}_0 \\
+      x^0_1 & \cdots & x^{M-1}_1 \\
+      \vdots & \ddots & \vdots \\
+      x^0_{N-1} & \cdots & x^{M-1}_{N-1}
+   \end{pmatrix}.
+\end{equation}
+
+This matrix is called the \textit{design matrix} $\Phi$. Hence for the vector with all the outputs, we would obtain of $\mathbf{y} = \mathbf{w}^\top \Phi$. These tools make possible gain some insight that help us in the follow steps. Backing to the data, let`s take the targets in the vector form, this is $\mathbf{t} = \left( t_0 , \cdots , t^{N-1} \right)^\top$, so we can consider that $\mathbf{t}$ is a \textit{vector in space}\cite{Bishop:2006:PRM:1162264}. If we take the columns of $\Phi$, denoting each one by $\boldsymbol{\varphi}_j$, then the vector $\mathbf{y}$ is defined as a linear combination of the $\boldsymbol{\varphi}_j$. 
+
+\iffalse
 \section{Bayesian Linear Regression}
 
 We start considering a model $y\left( \mathbf{x},\mathbf{w} \right)$ parametrized by $\mathbf{w}$
+
 
 \begin{figure}[htbp]
    \centering
@@ -507,22 +536,13 @@ Deriving the conditional distribution corresponding we arrive at the key predict
 
 As in the distributions, the kernels have its parameters to be set before the model training. Such parameters, called hyperparameters can assume a distribution over itself, and with this, we can learn the parameters to the data just as we've been doing for the inference. In general, the posterior distribution for the hyperparameters are intractable, then we cal use MAP to choose at least one value (the most probable one), or evaluate the integral numerically.
 
-\section{Applications in disease mapping}
-\subsection{The model}
-\textcolor{red}{Here we must have defined how the inferencial process occurs.}
+\fi
+\include{Intro_to_GP-application.tex}
 
-
-
-\begin{subequations}
-     \begin{empheq}[left={\empheqlbrace\,}]{align}
-      \mathbf{y} &\sim \prod^N_{i=1}Poisson\left( y_i | f_i \right) \\
-      f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left( m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
-      \theta,\gamma &\sim p(\theta)
-     \end{empheq}
- \end{subequations}
-
+\iffalse
 \newpage
 \input{Intro_to_GP_appendices}
+\fi
 
 \newpage
 \bibliography{Intro_to_GP_bibliography}
