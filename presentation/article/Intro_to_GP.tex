@@ -80,7 +80,15 @@ Here we have defined the array $\boldsymbol{\phi}(x) = \left( x^0, \cdots , x^{M
    \end{pmatrix}.
 \end{equation}
 
-This matrix is called the \textit{design matrix} $\Phi$. Hence for the vector with all the outputs, we would obtain of $\mathbf{y} = \mathbf{w}^\top \Phi$. These tools make possible gain some insight that help us in the follow steps. Backing to the data, let`s take the targets in the vector form, this is $\mathbf{t} = \left( t_0 , \cdots , t^{N-1} \right)^\top$, so we can consider that $\mathbf{t}$ is a \textit{vector in space}\cite{Bishop:2006:PRM:1162264}. If we take the columns of $\Phi$, denoting each one by $\boldsymbol{\varphi}_j$, then the vector $\mathbf{y}$ is defined as a linear combination of the $\boldsymbol{\varphi}_j$. 
+This matrix is called the \textit{design matrix} $\Phi$. Hence for the vector with all the outputs, we would obtain of $\mathbf{y} = \mathbf{w}^\top \Phi$. These tools make possible gain some insight that help us in the follow steps. Backing to the data, let`s take the targets in the vector form, this is $\mathbf{t} = \left( t_0 , \cdots , t^{N-1} \right)^\top$, so we can consider that $\mathbf{t}$ is a \textit{vector in space}\cite{Bishop:2006:PRM:1162264}. If we take the columns of $\Phi$, denoting each one by $\boldsymbol{\varphi}_j$, what defines the vector $\mathbf{y}$ by its linear combination. If we take a polynomial of $M^\text{th}$ order, being $M$ smaller than the number of points $N$, than we say that $\boldsymbol{\varphi}$ will span a linear subspace $\mathcal{S}$ of dimensionality $M$. With this, our problem turns to actually train the parameters, what can be done defining some metric that say to us when the model is missing, as a \textit{loss function}.
+
+Maybe an intuitive way to say to the model if he's going far away from the target is measure this error, i.e. how much the model is \textit{distant} from the target. We may generalize the distance itself by the \textit{Minkowsky distance} $L_p$ between $\mathbf{u}$ and $\mathbf{v}$, defined as
+
+\begin{equation}
+   L_p\left( \mathbf{u},\mathbf{v} \right)=\left(\sum_{i=1}^n |u_i-v_i|^p\right)^{1/p}
+\end{equation}
+
+where we have the Euclidean distance for $p=2$ and the also known Manhattan distance for $p=1$. The question here is define what distance use, by example the Euclidean distance is the most common due to its analytical tractability and practical importance. With this choice the error between the model and the targets will be define as the distance between $\mathbf{y}$ and $\mathbf{t}$, and where the orthogonal projection of $\mathbf{t}$ onto the subspace $\mathcal{S}$ is the minimal distance. The \textit{learning} step of the parameters $\mathbf{w}$ lies on choose those whose that distance is minimal.
 
 \iffalse
 \section{Bayesian Linear Regression}
