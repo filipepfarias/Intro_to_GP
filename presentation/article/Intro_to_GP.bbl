@@ -6,9 +6,26 @@ Bishop, C.~M. (2006).
   and Statistics)}.
 \newblock Springer-Verlag, Berlin, Heidelberg.
 
+\bibitem[DeGroot and Schervish, 2012]{degroot2012probability}
+DeGroot, M. and Schervish, M. (2012).
+\newblock {\em Probability and Statistics}.
+\newblock Addison-Wesley.
+
+\bibitem[Getoor, 2009]{getoor2009}
+Getoor, R. (2009).
+\newblock J. l. doob: Foundations of stochastic processes and probabilistic
+  potential theory.
+\newblock {\em Ann. Probab.}, 37(5):1647--1663.
+
 \bibitem[Hennig, 2013]{hennig2013gaussian}
 Hennig, P. (2013).
 \newblock Gaussian processes.
 \newblock Machine Learning Summer School 2013.
+
+\bibitem[Rasmussen and Williams, 2005]{Rasmussen:2005:GPM:1162254}
+Rasmussen, C.~E. and Williams, C. K.~I. (2005).
+\newblock {\em Gaussian Processes for Machine Learning (Adaptive Computation
+  and Machine Learning)}.
+\newblock The MIT Press.
 
 \end{thebibliography}

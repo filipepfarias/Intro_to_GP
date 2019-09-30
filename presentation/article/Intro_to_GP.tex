@@ -57,6 +57,13 @@ Finally, we'll deal with a specific class of models in which we assume not a dis
 
 \section{Linear Regression}
 
+\begin{figure}[htbp]
+   \centering
+   \includegraphics{graphics/prml/{Figure1.2}.pdf}
+   \caption{Training data set with $n=10$ points in blue. The green curve shows the function $sin(2\pi x)$ used to generate the data. Our goal is to predict the value of t for some new value of x, without knowledge of the green curve \cite{Bishop:2006:PRM:1162264}.}
+   % \label{<label>}
+\end{figure}
+
 The following scenario is given. The data set of observations is given by $\mathcal{D} = \left\{ \left( x_i,t_i \right) \right\}_{i=0}^{N-1}$, hence we make a guess about the law that rules the phenomenon behind the data. In general, we define that model as a mathematical function $y$ whose parameters $\mathbf{w}$ will be adjusted in trying of learn the phenomenon law. By example, we may choose a polynomial as a model and try to adjust its coefficients, that will be the parameters for the model in this case.
 
 \begin{equation}
@@ -91,96 +98,16 @@ Maybe an intuitive way to say to the model if he's going far away from the targe
 where we have the Euclidean distance for $p=2$ and the also known Manhattan distance for $p=1$. The question here is define what distance use, by example the Euclidean distance is the most common due to its analytical tractability and practical importance. With this choice the error between the model and the targets will be define as the distance between $\mathbf{y}$ and $\mathbf{t}$, and where the orthogonal projection of $\mathbf{t}$ onto the subspace $\mathcal{S}$ is the minimal distance. The \textit{learning} step of the parameters $\mathbf{w}$ lies on choose those whose make that distance minimal. Hence, being $\langle\cdot,\cdot\rangle$ the inner product, we have
 
 \begin{equation}
-   L_2(\mathbf{t}-\mathbf{y}) = \langle \mathbf{t}-\mathbf{y},\mathbf{t}-\mathbf{y}\rangle^{1/2}
+   L_2(\mathbf{t}-\mathbf{y}) = \langle \mathbf{t}-\mathbf{y},\mathbf{t}-\mathbf{y}\rangle^{1/2}.
 \end{equation}
 
-\iffalse
-\section{Bayesian Linear Regression}
-
-We start considering a model $y\left( \mathbf{x},\mathbf{w} \right)$ parametrized by $\mathbf{w}$
-
-
-\begin{figure}[htbp]
-   \centering
-   \includegraphics{graphics/prml/{Figure1.2}.pdf}
-   \caption{Training data set with $n=10$ points in blue. The green curve shows the function $sin(2\pi x)$ used to generate the data. Our goal is to predict the value of t for some new value of x, without knowledge of the green curve \cite{Bishop:2006:PRM:1162264}.}
-   % \label{<label>}
-\end{figure}
-
-% Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
-
-
-The approach is to give a \textit{prior} probability to every possible function, where higher probabilities are given to functions that we consider to be \textit{more likely}, for example because they are smoother than other functions. \cite{Rasmussen:2005:GPM:1162254}. This appears to have a serious problem, in that surely there are an infinite set of possible functions to compute in a finite time. This is where the Gaussian \textit{process} comes as a possible approach. 
-A Gaussian process is a generalization of the Gaussian probability \textit{distribution}. Whereas a probability distribution describes random variables which are scalars or vectors (for multivariate distributions), a random process governs the properties of functions \cite{getoor2009}. 
-
-We can think of a function as a very long vector, each entry in the vector specifying the function value $f(x)$ at a particular input $x$. Indeed, the question of how we deal computationally with these infinite dimensional objects has the resolution: if you ask only for the properties of the function at a finite number of points, then \textit{infer} the properties for the predictions in the Gaussian process will give you the same answer if you ignore the infinitely many other points, as if you would have taken them all into account. One of the main attractions of the Gaussian process framework is precisely that it unites a sophisticated and consistent view with computational tractability.
-
-\section{Linear Regression}
-
-To understand the concepts the are covered by the Gaussian processes, we start with a simple regression problem. Be the data set $\mathcal{D}=\left\{ x_i,t_i|i=0,\dots,N-1 \right\}$, where we observe a real-valued input variable $x$ and a measured real-valued variable $t$. Then, we'll use synthetically generated data for comparison against any learned \textit{model}. And $N$ will be the number of observations of the value $t$. Our objective is make predictions of the new value $\hat{t}$ for some new input $\hat{x}$.
-
-
-
-For this example, we'll use a simple approach based on curve fitting by the polynomial model, i.e., being the function
+In general we denote $L$ as a \textit{loss function} and add an $1/2$ term multiplying the inner product, what will be shown next. The minimal distance makes itself clear the process of minimization for looking the best choice of parameters. In this case, the minimization is taken by the derivative of $L_2$ with $\partial L_2/ \partial \mathbf{w} = 0$, then
 
 \begin{equation}
-   \label{eq:lin-reg-model-1}
-   y(x,\mathbf{w}) = \sum_{j=0}^{M-1} w_j x^j
+   \mathbf{w}^* = \left( \Phi^\top \Phi \right)^{-1} \Phi ^\top \mathbf{t}
 \end{equation}
 
-where $M$ is the order of the polynomial and $\mathbf{w}=\left[ w_0,\dots,w_M \right]$ its coefficients. It's important to note that the $y$ isn't linear in $x$ but in $\mathbf{w}$. These functions which are linear on the unknown parameters are called \textit{linear models}.
-
-We can extend the class of models considering linear combinations of nonlinear functions of the input variables, i.e.
-
-\begin{equation}
-   y(x,\mathbf{w}) = \sum_{j=0}^{M-1} \phi_j (x) w_j 
-   \label{eq:lin-reg-model-phi}
-\end{equation}
-
-where $\phi_j (x)$ are known as \textit{basis functions}, and then the total number of parameters for this model will be $M$. In the example of the curve fitting, the polynomial regression implies that $\phi_j(x)=x^j$. We can evaluate the same operation of (\ref{eq:lin-reg-model-1}) in the matrix form by
-
-\begin{equation}
-   y(x,\mathbf{w}) = \boldsymbol{\phi}(x)^\top  \mathbf{w}
-   \label{eq:lin-reg-model-1-matrix-form}
-\end{equation}
-
-where $\boldsymbol{\phi}(x) = \left[ \phi_0(x), \dots, \phi_{M-1}(x) \right]^\top$. 
-
-\begin{figure}[htbp]
-   \centering
-   \includegraphics{graphics/prml/{Figure1.3}.pdf}
-   \caption{The error function (\ref{eq:lin-reg-error-function-1}) corresponds to (one half of) the sum of the squares of the displacements (shown by the vertical green bars) of each data point from the function $y(x, \mathbf{w})$ \cite{Bishop:2006:PRM:1162264}.}
-   % \label{<label>}
-\end{figure}
-
-The values of $\mathbf{w}$ are obtained by minimizing the \textit{error function}, a measure of the distance between the training data set and $y$, given values of $\mathbf{w}$. By the way, the chosen error function will be 
-
-\begin{equation}
-   \label{eq:lin-reg-error-function-1}
-   E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2
-\end{equation}
-
-This indicate that if $E$ is zero, $y$ passes exactly through each training data point. Observe that $E$ do not assume negative values because of its quadratic form, then we can find $\mathbf{w}$ by finding the minimum value of $E$, denoted $\mathbf{w^*}$, by
-
-\begin{equation}
-   \frac{\partial E}{\partial \mathbf{w}} = 0
-\end{equation}
-
-We can rewrite (\ref{eq:lin-reg-error-function-1}) in the matrix form, as $\mathbf{y} = y(\mathbf{x},\mathbf{w})$, where $\mathbf{x}=\left[ x_0,\dots, x_{N-1} \right]^\top$, i.e. $y$ evaluated for all input variables (See Appendix \ref{subsec:app-matrix-form}). Then we have
-
-\begin{equation}
-   \label{eq:lin-reg-error-function-matrix-form}
-   \mathbf{y} = \Phi \mathbf{w}
-\end{equation}
-
-where $\Phi$ is the \textit{design matrix} such that $\boldsymbol{\phi}(x)$ is evaluated for all $\mathbf{x}$. Proceeding with the minimization, we obtain the optimal $\mathbf{w}$, or $\mathbf{w}^*$ by
-
-\begin{equation}
-   \label{eq:lin-reg-opt-param}
-   \mathbf{w}^{*} = (\Phi^\top \Phi)^{-1}\Phi^\top \mathbf{t}
-\end{equation}
-
-which are the parameters that best fit the model to the data.
+for $\mathbf{y} = \mathbf{w}^\top \Phi$. Making use of the optimization notation, we denoted $\mathbf{w}^*$ as the best choice of the parameters. Note that, even working with a polynomial model, we do not manipulate it in fact. This approach enable us to generalize for a several types of \textit{basis functions}, i.e. functions that will define our design matrix.
 
 \begin{figure}
    \centering
@@ -207,63 +134,83 @@ which are the parameters that best fit the model to the data.
       \label{fig:lin-reg-overfit}
 \end{figure}
 
-As we increase the number of parameters, our model becomes more flexible and then our error function approximates of zero for the training data. But when compared to the test data, the error increases. This is known as \textit{over-fitting} as seen in Figure \ref{fig:lin-reg-overfit} for $M=9$.
+The linear regression is one of the simplest methods for estimation and bring us an idea to find the law of the phenomenon, but one of its problems is its flexibility and non-robustness. By the example of the polynomial model, if we construct the polynomial for the learned parameters, we note that its coefficients will have high values. This is because when learning the targets, if we consider the order of the polynomial the same as the number of data, the model starts to interpolate the noise, i.e. the aspects captured by the model may not be precise with the law of the phenomenon and with this, the derivatives of the polynomial may grow\textcolor{red}{ , as shown in the Figure ??}. Some questions may arise as how know exactly this law, what in fact we may never know. The next step lead us to a probabilistic point of view with some more tools to deal with the problem.
 
-\subsection{Regularized Linear Regression}
+\section{Bayesian Linear Regression}
 
-\begin{table}[htpb]
-   \centering
-   \begin{tabular}{l| l l l l}
-     & $M=0$ & $M=1$ & $M=6$ & $M=9$ \\
-   \hline
-   $\mathbf{w}_0^*$ & 0.19 & 0.82   & 0.31   & 0.35\\
-   $\mathbf{w}_1^*$ &      & -1.27  & 7.99   & 232.37\\
-   $\mathbf{w}_2^*$ &      &        & -25.43 & -5321.83\\
-   $\mathbf{w}_3^*$ &      &        & 17.37  & 48568.31\\
-   $\mathbf{w}_4^*$ &      &        &        & -231639.30\\
-   $\mathbf{w}_5^*$ &      &        &        & 640042.26\\
-   $\mathbf{w}_6^*$ &      &        &        & -1061800.52\\
-   $\mathbf{w}_7^*$ &      &        &        & 1042400.18\\
-   $\mathbf{w}_8^*$ &      &        &        & -557682.99\\
-   $\mathbf{w}_9^*$ &      &        &        & 125201.43\\
-   \end{tabular}
-   \caption{Table of the coefficients $\mathbf{w} ^*$ for polynomials of various order. Observe how the typical magnitude of the coefficients increases dramatically as the order of the polynomial increases \cite{Bishop:2006:PRM:1162264}.}
-   \label{tab:reg-lin-reg-weights}
-   \end{table}
-
-An approach to controls the over-fitting problem is to deal with the flexibility of the model. In the Table \ref{tab:reg-lin-reg-weights} we can note that, for a larger number of parameters, the derivative of the function $y$ takes larger constants. Then to control the over-fitting, we can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
+% Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
 
 
-\begin{subequations}
-   \begin{equation}
-      \label{eq:lin-reg-error-function-regularized}
-      E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
-   \end{equation}
-   \begin{equation}
-      \label{eq:lin-reg-error-function-regularized-matrix-form}
-      \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{t} 
-   \end{equation}
-\end{subequations}
+The approach is to give a \textit{prior} probability to every possible function, where higher probabilities are given to functions that we consider to be \textit{more likely}, for example because they are smoother than other functions. \cite{Rasmussen:2005:GPM:1162254}. This appears to have a serious problem, in that surely there are an infinite set of possible functions to compute in a finite time. This is where the Gaussian \textit{process} comes as a possible approach. 
+A Gaussian process is a generalization of the Gaussian probability \textit{distribution}. Whereas a probability distribution describes random variables which are scalars or vectors (for multivariate distributions), a random process governs the properties of functions \cite{getoor2009}. 
 
-whats means that our error increases as the norm of $\mathbf{w}$ grows, ans we can control this increasing by adjusting the term $\lambda$ as we want. By this we see in \autoref{fig:reg-lin-reg-overfit-lambda} that the regularization acts like a \textit{smoothing} factor over the function.
+We can think of a function as a very long vector, each entry in the vector specifying the function value $f(x)$ at a particular input $x$. Indeed, the question of how we deal computationally with these infinite dimensional objects has the resolution: if you ask only for the properties of the function at a finite number of points, then \textit{infer} the properties for the predictions in the Gaussian process will give you the same answer if you ignore the infinitely many other points, as if you would have taken them all into account. One of the main attractions of the Gaussian process framework is precisely that it unites a sophisticated and consistent view with computational tractability.
+
+
+% \begin{figure}[htbp]
+%    \centering
+%    \includegraphics{graphics/prml/{Figure1.3}.pdf}
+%    \caption{The error function (\ref{eq:lin-reg-error-function-1}) corresponds to (one half of) the sum of the squares of the displacements (shown by the vertical green bars) of each data point from the function $y(x, \mathbf{w})$ \cite{Bishop:2006:PRM:1162264}.}
+%    % \label{<label>}
+% \end{figure}
+
+
+
+% \subsection{Regularized Linear Regression}
+
+% \begin{table}[htpb]
+%    \centering
+%    \begin{tabular}{l| l l l l}
+%      & $M=0$ & $M=1$ & $M=6$ & $M=9$ \\
+%    \hline
+%    $\mathbf{w}_0^*$ & 0.19 & 0.82   & 0.31   & 0.35\\
+%    $\mathbf{w}_1^*$ &      & -1.27  & 7.99   & 232.37\\
+%    $\mathbf{w}_2^*$ &      &        & -25.43 & -5321.83\\
+%    $\mathbf{w}_3^*$ &      &        & 17.37  & 48568.31\\
+%    $\mathbf{w}_4^*$ &      &        &        & -231639.30\\
+%    $\mathbf{w}_5^*$ &      &        &        & 640042.26\\
+%    $\mathbf{w}_6^*$ &      &        &        & -1061800.52\\
+%    $\mathbf{w}_7^*$ &      &        &        & 1042400.18\\
+%    $\mathbf{w}_8^*$ &      &        &        & -557682.99\\
+%    $\mathbf{w}_9^*$ &      &        &        & 125201.43\\
+%    \end{tabular}
+%    \caption{Table of the coefficients $\mathbf{w} ^*$ for polynomials of various order. Observe how the typical magnitude of the coefficients increases dramatically as the order of the polynomial increases \cite{Bishop:2006:PRM:1162264}.}
+%    \label{tab:reg-lin-reg-weights}
+%    \end{table}
+
+% An approach to controls the over-fitting problem is to deal with the flexibility of the model. In the Table \ref{tab:reg-lin-reg-weights} we can note that, for a larger number of parameters, the derivative of the function $y$ takes larger constants. Then to control the over-fitting, we can be done by controlling the norm of $\mathbf{w}^*$ as the number of parameters increases. By (\ref{eq:lin-reg-error-function-1}) we can add the penalty term $||\mathbf{w}||^2 $ scaled by the factor $\lambda / 2$, then
+
+
+% \begin{subequations}
+%    \begin{equation}
+%       \label{eq:lin-reg-error-function-regularized}
+%       E(\mathbf{w}) = \frac{1}{2} \sum_{n=1}^N \left\{ y(x_i,\mathbf{w})-y_i \right\}^2 + \frac{\lambda}{2} ||\mathbf{w}||^2
+%    \end{equation}
+%    \begin{equation}
+%       \label{eq:lin-reg-error-function-regularized-matrix-form}
+%       \mathbf{w}^{*} = (\Phi^\top \Phi + \lambda \mathbf{I})^{-1}\Phi^\top \mathbf{t} 
+%    \end{equation}
+% \end{subequations}
+
+% whats means that our error increases as the norm of $\mathbf{w}$ grows, ans we can control this increasing by adjusting the term $\lambda$ as we want. By this we see in \autoref{fig:reg-lin-reg-overfit-lambda} that the regularization acts like a \textit{smoothing} factor over the function.
 
 
 % This allow us to increase the number of parameters trying to control the over-fitting. More, add parameters will allows us to capture different aspects of the data set, what we will see later.
 
-\begin{figure}[htpb]
-   \centering
-   \begin{subfigure}[htpb]{0.45\linewidth}
-       \centering
-       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7a}.pdf}
-   \end{subfigure}
-   \hfill
-   \begin{subfigure}[htpb]{0.45\linewidth}
-       \centering
-       \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7b}.pdf}       
-   \end{subfigure}
-      \caption{Plots of $M = 9$ polynomials fitted to the data set using the regularized error function (\ref{eq:lin-reg-error-function-regularized}) for two values of the regularization parameter $\lambda$ corresponding to $\ln \lambda = -18$ and $\ln \lambda = 0$. The case of no regularizer, i.e., $\lambda = 0$, corresponding to $\ln \lambda = -\infty$, is shown at the bottom right of \autoref{fig:lin-reg-overfit} \cite{Bishop:2006:PRM:1162264}.}
-      \label{fig:reg-lin-reg-overfit-lambda}
-\end{figure}
+% \begin{figure}[htpb]
+%    \centering
+%    \begin{subfigure}[htpb]{0.45\linewidth}
+%        \centering
+%        \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7a}.pdf}
+%    \end{subfigure}
+%    \hfill
+%    \begin{subfigure}[htpb]{0.45\linewidth}
+%        \centering
+%        \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.7b}.pdf}       
+%    \end{subfigure}
+%       \caption{Plots of $M = 9$ polynomials fitted to the data set using the regularized error function (\ref{eq:lin-reg-error-function-regularized}) for two values of the regularization parameter $\lambda$ corresponding to $\ln \lambda = -18$ and $\ln \lambda = 0$. The case of no regularizer, i.e., $\lambda = 0$, corresponding to $\ln \lambda = -\infty$, is shown at the bottom right of \autoref{fig:lin-reg-overfit} \cite{Bishop:2006:PRM:1162264}.}
+%       \label{fig:reg-lin-reg-overfit-lambda}
+% \end{figure}
 
 \section{Bayesian Linear Regression}
 
@@ -361,6 +308,7 @@ Then we substitute the probability distributions founded before. Note that the f
 \end{equation}
 
 And we can note the similarity with the regularized linear regression in (\ref{eq:lin-reg-error-function-regularized}) aside of the term $\lambda$, what can be founded by $\lambda=\alpha / \beta$. It's important to note that even called maximum posterior, here it was presented a minimization in terms of the negative logarithm, but this equals to the maximization of the positive logarithm. The signal was chosen just for similarity with the error function.
+\iffalse
 
 \subsection{Bayesian inference}
 
