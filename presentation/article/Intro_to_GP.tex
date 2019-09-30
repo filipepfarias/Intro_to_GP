@@ -68,6 +68,7 @@ The following scenario is given. The data set of observations is given by $\math
 
 \begin{equation}
    y\left( x,\mathbf{w} \right) = w_0 x^0 + \dots + w_{M-1} x^{M-1}
+   \label{eq:polynomial-regression}
 \end{equation}
 
 This approach is not linear in the inputs, i.e. the model output $y$ it isn't a linear transformation of the inputs. But we can say that is \textit{linear on the parameters}. To visualize this, considering the parameters array $\mathbf{w} = \left( w_0, \cdots , w_{M-1} \right)^\top$, we put in the matrix form as 
@@ -130,13 +131,107 @@ for $\mathbf{y} = \mathbf{w}^\top \Phi$. Making use of the optimization notation
        \centering
        \includegraphics[width=1\linewidth]{graphics/prml/{Figure1.4d}.pdf}
    \end{subfigure}
-      \caption{Plots of polynomials for the model in (\ref{eq:lin-reg-model-1}) having various orders $M$, shown as red curves \cite{Bishop:2006:PRM:1162264}.}
+      \caption{Plots of polynomials for the model in (\ref{eq:polynomial-regression}) having various orders $M$, shown as red curves \cite{Bishop:2006:PRM:1162264}.}
       \label{fig:lin-reg-overfit}
 \end{figure}
 
-The linear regression is one of the simplest methods for estimation and bring us an idea to find the law of the phenomenon, but one of its problems is its flexibility and non-robustness. By the example of the polynomial model, if we construct the polynomial for the learned parameters, we note that its coefficients will have high values. This is because when learning the targets, if we consider the order of the polynomial the same as the number of data, the model starts to interpolate the noise, i.e. the aspects captured by the model may not be precise with the law of the phenomenon and with this, the derivatives of the polynomial may grow\textcolor{red}{ , as shown in the Figure ??}. Some questions may arise as how know exactly this law, what in fact we may never know. The next step lead us to a probabilistic point of view with some more tools to deal with the problem.
+The linear regression is one of the simplest methods for estimation and bring us an idea to find the law of the phenomenon, but one of its problems is its flexibility and non-robustness. There's a method trying to reduce this \textit{non-flexibility} in the model regularizing the parameters, known as regularization, but we'll be not discussed in this work. By the example of the polynomial model, if we construct the polynomial for the learned parameters, we note that its coefficients will have high values. This is because when learning the targets, if we consider the order of the polynomial the same as the number of data, the model starts to interpolate the noise, i.e. the aspects captured by the model may not be precise with the law of the phenomenon and with this, the derivatives of the polynomial may grow\textcolor{red}{ , as shown in the Figure \ref{fig:lin-reg-overfit}}. Some questions may arise as how know exactly this law, what in fact we may never know. The next step lead us to a probabilistic point of view with some more tools to deal with the problem.
 
 \section{Bayesian Linear Regression}
+
+\subsection{A Bayesian view of Linear Regression}
+
+Until now, we see the curve fitting problem in terms of the minimization of the error function. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
+
+\begin{equation}
+   \label{eq:bay-reg-bayes-rule}
+   p(\mathbf{w} | \mathcal{D})=\frac{p(\mathcal{D} | \mathbf{w}) p(\mathbf{w})}{p(\mathcal{D})}
+\end{equation}
+
+We can use the Bayes' theorem (\ref{eq:bay-reg-bayes-rule}) to convert a \textit{prior} probability into a \textit{posterior} probability at the light of some evidence. Here, we represented the distribution probability of $\mathbf{w}$ that could be generated the data $\mathcal{D}$ as $p(\mathbf{w}|\mathcal{D})$. We can make prior assumptions about quantities such as the parameters $\mathbf{w}$ in the form of a prior distribution $p(\mathbf{w})$. The observation of the data $\mathcal{D}$ and what its implies in the parameters is expressed as a conditional probability $p(\mathcal{D}|\mathbf{w})$. Then we can evaluate the uncertainty about $\mathbf{w}$ after observed the data $\mathcal{D}$ as a posterior probability $p(\mathbf{w}|\mathcal{D})$.
+
+The quantity $p(\mathcal{D}|\mathbf{w})$ expresses how probable the observed data $\mathcal{D}$ is for different settings of $\mathbf{w}$. Then, not being necessarily a probability distribution, but a function over the parameters \cite{degroot2012probability}, its integral with respect to $\mathbf{w}$ could not be equal one, then to normalize the equation with respect to the left-side there's a term $p(\mathcal{D})$. This distribution is called \textit{likelihood function}.
+
+Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominator, then considering that integrating a probability distribution over itself is equal to one, we have
+
+\begin{equation}
+   \label{eq:bay-lin-bayes-theorem}
+   p(\mathcal{D})=\int p(\mathcal{D} | \mathbf{w}) p(\mathbf{w}) \mathrm{d} \mathbf{w}
+\end{equation}
+\iffalse
+\subsection{Bayesian curve fitting}
+
+Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $t$. This uncertainty can be represented as a probability distribution function $p$, in this particular case a Gaussian distribution, with a mean equal to the model $y(x,\mathbf{w})$. Thus we have
+
+\begin{equation}
+   \label{eq:bay-cur-fit-1}
+   p(t | x, \mathbf{w}, \beta)=\mathcal{N}\left(t | y(x, \mathbf{w}), \beta^{-1}\right)
+\end{equation}
+
+
+\begin{figure}[htpb]
+   \centering
+   \includegraphics{graphics/prml/{Figure1.16}}
+   \caption{Schematic illustration of a Gaussian conditional distribution for $t$ given $x$ given by  (\ref{eq:bay-cur-fit-1}), in which the mean is given by the polynomial function y(x, w), and the precision is given by the parameter $\beta$, which is related to the variance $\beta^{-1}=\sigma^2$ \cite{Bishop:2006:PRM:1162264}.}
+   % \label{<label>}
+\end{figure}
+
+Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give us more imprecision about the measured value $t$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $t$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $t$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
+
+\begin{equation}
+   p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(t_i | y(x_i, \mathbf{w}), \beta^{-1}\right)
+\end{equation}
+
+When viewed as function of $y(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, or minimize the negative log whats is equivalent, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
+
+\begin{equation}
+   \label{eq:bay-reg-ml-function}
+   \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{y\left(x_{i}, \mathbf{w}\right)-t_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
+\end{equation}
+
+The maximization of (\ref{eq:bay-reg-ml-function}) taking the derivative with respect to $\mathbf{w}$ will lead us back to 
+the same of the minimization of (\ref{eq:lin-reg-error-function-1}), the error function of the linear regression. Here, just by notation, we will call the resulting parameters of the maximization of $\mathbf{w}_{\text{ML}}$, what it is called \textit{maximum likelihood}.
+
+We can determine the precision parameter using the maximum likelihood by taking the derivative with respect to $\beta$ of (\ref{eq:bay-reg-ml-function}), what gives
+
+\begin{equation}
+   \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{y\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-t_{i}\right\}^{2}
+\end{equation}
+
+Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$, given that our model is capable of learn the parameters. And not just one collection of them, but a distribution probability.
+
+In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{ML}$ and $\beta_\text{ML}$, we have the parameters distribution by
+
+\begin{equation}
+   p\left(t | x, \mathbf{w}_{\mathrm{ML}}, \beta_{\mathrm{ML}}\right)=\mathcal{N}\left(t | y\left(x, \mathbf{w}_{\mathrm{ML}}\right), \beta_{\mathrm{ML}}^{-1}\right)
+\end{equation}
+
+Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution to make the inference using the Bayes' rule. We can now introduce here the probability distribution over the parameters $p(\mathbf{w})$ as presented in the Section 3.1. The choice is arbitrary, but for this particular case we will consider
+
+\begin{equation}
+   \label{eq:bay-lin-reg-prior-dist}
+   p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}\right\}
+\end{equation}
+
+where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem considering that our \textit{posterior} distribution is proportional to the product between the \textit{likelihood function} and the assumed \textit{prior}, as seen in (\ref{eq:bay-lin-bayes-theorem}) then, assuming the observation of the whole data set
+
+\begin{equation}
+   p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
+\end{equation}
+
+As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{t}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
+%
+\begin{equation}
+   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
+\end{equation}
+%
+Then we substitute the probability distributions founded before. Note that the first term in the right side is the error function founded in (\ref{eq:bay-reg-ml-function}). Then, the terms which the minimization depends of $\mathbf{w}$ are
+
+\begin{equation}
+    \frac{\beta}{2} \sum_{i=1}^{N}\left\{y\left(x_{i}, \mathbf{w}\right)-t_{i}\right\}^{2} + \frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}
+\end{equation}
+
+And we can note the similarity with the regularized linear regression in (\ref{eq:lin-reg-error-function-regularized}) aside of the term $\lambda$, what can be founded by $\lambda=\alpha / \beta$. It's important to note that even called maximum posterior, here it was presented a minimization in terms of the negative logarithm, but this equals to the maximization of the positive logarithm. The signal was chosen just for similarity with the error function.
 
 % Thus we need to move from the finite training data $\mathcal{D}$ to a function $f$ that makes predictions for all possible input values. To do this we must make assumptions about the characteristics of the underlying function, as otherwise any function which is consistent with the training data would be equally valid.
 
@@ -211,104 +306,7 @@ We can think of a function as a very long vector, each entry in the vector speci
 %       \caption{Plots of $M = 9$ polynomials fitted to the data set using the regularized error function (\ref{eq:lin-reg-error-function-regularized}) for two values of the regularization parameter $\lambda$ corresponding to $\ln \lambda = -18$ and $\ln \lambda = 0$. The case of no regularizer, i.e., $\lambda = 0$, corresponding to $\ln \lambda = -\infty$, is shown at the bottom right of \autoref{fig:lin-reg-overfit} \cite{Bishop:2006:PRM:1162264}.}
 %       \label{fig:reg-lin-reg-overfit-lambda}
 % \end{figure}
-
-\section{Bayesian Linear Regression}
-
-\subsection{A Bayesian view of Linear Regression}
-
-Until now, we see the curve fitting problem in terms of the minimization of the error function. Then we will see the same by a probabilistic perspective gaining some insights into error minimization and regularization, leading us to a full Bayesian treatment.
-
-\begin{equation}
-   \label{eq:bay-reg-bayes-rule}
-   p(\mathbf{w} | \mathcal{D})=\frac{p(\mathcal{D} | \mathbf{w}) p(\mathbf{w})}{p(\mathcal{D})}
-\end{equation}
-
-We can use the Bayes' theorem (\ref{eq:bay-reg-bayes-rule}) to convert a \textit{prior} probability into a \textit{posterior} probability at the light of some evidence. We can make assumptions about quantities such as the parameters $\mathbf{w}$ in the form of a prior distribution $p(\mathbf{w})$. The observation of the data $\mathcal{D}$ and what its implies in the parameters is expressed as a conditional probability $p(\mathcal{D}|\mathbf{w})$. Then we can evaluate the uncertainty about $\mathbf{w}$ after observed the data $\mathcal{D}$ as a posterior probability $p(\mathbf{w}|\mathcal{D})$.
-
-The quantity $p(\mathcal{D}|\mathbf{w})$ expresses how probable the observed data $\mathcal{D}$ is for different settings of $\mathbf{w}$. Then, not being necessarily a probability distribution, but a function over the parameters \cite{degroot2012probability}, its integral with respect to $\mathbf{w}$ could not be equal one, then to normalize the equation with respect to the left-side there's a term $p(\mathcal{D})$. This distribution is called \textit{likelihood function}.
-
-Integrating the both sides with respect to $\mathbf{w}$, we obtain the denominator, then considering that integrating a probability distribution over itself is equal to one, we have
-
-\begin{equation}
-   \label{eq:bay-lin-bayes-theorem}
-   p(\mathcal{D})=\int p(\mathcal{D} | \mathbf{w}) p(\mathbf{w}) \mathrm{d} \mathbf{w}
-\end{equation}
-
-\subsection{Bayesian curve fitting}
-
-
-Let's consider the same data set $\mathcal{D}$ presented before, but now we have some uncertainty over the value of the measured value $t$. This uncertainty can be represented as a probability distribution function $p$, in this particular case a Gaussian distribution, with a mean equal to the model $y(x,\mathbf{w})$. Thus we have
-
-\begin{equation}
-   \label{eq:bay-cur-fit-1}
-   p(t | x, \mathbf{w}, \beta)=\mathcal{N}\left(t | y(x, \mathbf{w}), \beta^{-1}\right)
-\end{equation}
-
-
-\begin{figure}[htpb]
-   \centering
-   \includegraphics{graphics/prml/{Figure1.16}}
-   \caption{Schematic illustration of a Gaussian conditional distribution for $t$ given $x$ given by  (\ref{eq:bay-cur-fit-1}), in which the mean is given by the polynomial function y(x, w), and the precision is given by the parameter $\beta$, which is related to the variance $\beta^{-1}=\sigma^2$ \cite{Bishop:2006:PRM:1162264}.}
-   % \label{<label>}
-\end{figure}
-
-Where $\beta$ is the variance of the distribution. Note that a large $\beta$ will give us more imprecision about the measured value $t$, then we can call it of \textit{precision parameter}, i.e. how much certain we are about $t$. As we done in linear regression, we are trying to obtain the parameters for the model. In other words, given a value $t$, we trying to obtain the \textit{mean} and the \textit{variance} which maximize the probability of the measured value. Assuming the data set being independent and identically distributed, the joint probability of the whole data set will be
-
-\begin{equation}
-   p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)= \prod_{i=0}^{N-1} \mathcal{N}\left(t_i | y(x_i, \mathbf{w}), \beta^{-1}\right)
-\end{equation}
-
-When viewed as function of $y(x_i, \mathbf{w})$, the model, and $\beta^{-1}$, this is the likelihood function for the Gaussian. The parameters of the distribution can be determined by maximizing the likelihood function. It is convenient to maximize the log of the likelihood function, or minimize the negative log whats is equivalent, this implies that the maximization of the log of the function is equivalent to the maximization of the function itself, because the logarithm is a monotonically increasing of its argument. This helps the mathematical analysis and helps numerically because the small probabilities can easily underflow the numerical precision of the computer. Then\footnote[2]{Consider the Gaussian distribution as $\mathcal{N}\left(x | \mu, \sigma^{2}\right)=\left(2 \pi \sigma^{2}\right)^{-1 / 2} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\}$}
-
-\begin{equation}
-   \label{eq:bay-reg-ml-function}
-   \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta)=-\frac{\beta}{2} \sum_{i=1}^{N}\left\{y\left(x_{i}, \mathbf{w}\right)-t_{i}\right\}^{2}+\frac{N}{2} \ln \beta-\frac{N}{2} \ln (2 \pi)
-\end{equation}
-
-The maximization of (\ref{eq:bay-reg-ml-function}) taking the derivative with respect to $\mathbf{w}$ will lead us back to 
-the same of the minimization of (\ref{eq:lin-reg-error-function-1}), the error function of the linear regression. Here, just by notation, we will call the resulting parameters of the maximization of $\mathbf{w}_{\text{ML}}$, what it is called \textit{maximum likelihood}.
-
-We can determine the precision parameter using the maximum likelihood by taking the derivative with respect to $\beta$ of (\ref{eq:bay-reg-ml-function}), what gives
-
-\begin{equation}
-   \frac{1}{\beta_{\mathrm{ML}}}=\frac{1}{N} \sum_{i=0}^{N-1}\left\{y\left(x_{i}, \mathbf{w}_{\mathrm{ML}}\right)-t_{i}\right\}^{2}
-\end{equation}
-
-Now we have a probabilistic view of the regression and then we can make predictions for new values of $x$, given that our model is capable of learn the parameters. And not just one collection of them, but a distribution probability.
-
-In other words, after find the maximum likelihood parameters $\mathbf{w}_\text{ML}$ and $\beta_\text{ML}$, we have the parameters distribution by
-
-\begin{equation}
-   p\left(t | x, \mathbf{w}_{\mathrm{ML}}, \beta_{\mathrm{ML}}\right)=\mathcal{N}\left(t | y\left(x, \mathbf{w}_{\mathrm{ML}}\right), \beta_{\mathrm{ML}}^{-1}\right)
-\end{equation}
-
-Aiming to apply a "more Bayesian" approach, we not have yet a prior distribution to make the inference using the Bayes' rule. We can now introduce here the probability distribution over the parameters $p(\mathbf{w})$ as presented in the Section 3.1. The choice is arbitrary, but for this particular case we will consider
-
-\begin{equation}
-   \label{eq:bay-lin-reg-prior-dist}
-   p(\mathbf{w} | \alpha)=\mathcal{N}\left(\mathbf{w} | \mathbf{0}, \alpha^{-1} \mathbf{I}\right)=\left(\frac{\alpha}{2 \pi}\right)^{(M+1) / 2} \exp \left\{-\frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}\right\}
-\end{equation}
-
-where $\alpha$ is the variance, or precision parameter, of the distribution and $M+1$ is the number of parameters of the model, i.e. the length of $\mathbf{w}$. We call \textit{hyperparameters} the variables such $\alpha$ who control the model parameters distribution. And now we have by the Bayes' theorem considering that our \textit{posterior} distribution is proportional to the product between the \textit{likelihood function} and the assumed \textit{prior}, as seen in (\ref{eq:bay-lin-bayes-theorem}) then, assuming the observation of the whole data set
-
-\begin{equation}
-   p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) p(\mathbf{w} | \alpha)
-\end{equation}
-
-As done before, we maximize the posterior probability, i.e. find the most probable value given the data by the term $p(\mathbf{w} | \mathbf{x}, \mathbf{t}) $ aside of the distribution parameters. This will result a particular choice of $\mathbf{w}$. We call this approach of \textit{maximum posterior}, or MAP. Then taking the negative logarithm
-%
-\begin{equation}
-   \ln p(\mathbf{w} | \mathbf{x}, \mathbf{t}, \alpha, \beta) \propto \ln p(\mathbf{t} | \mathbf{x}, \mathbf{w}, \beta) + \ln p(\mathbf{w} | \alpha)
-\end{equation}
-%
-Then we substitute the probability distributions founded before. Note that the first term in the right side is the error function founded in (\ref{eq:bay-reg-ml-function}). Then, the terms which the minimization depends of $\mathbf{w}$ are
-
-\begin{equation}
-    \frac{\beta}{2} \sum_{i=1}^{N}\left\{y\left(x_{i}, \mathbf{w}\right)-t_{i}\right\}^{2} + \frac{\alpha}{2} \mathbf{w}^\top \mathbf{w}
-\end{equation}
-
-And we can note the similarity with the regularized linear regression in (\ref{eq:lin-reg-error-function-regularized}) aside of the term $\lambda$, what can be founded by $\lambda=\alpha / \beta$. It's important to note that even called maximum posterior, here it was presented a minimization in terms of the negative logarithm, but this equals to the maximization of the positive logarithm. The signal was chosen just for similarity with the error function.
-\iffalse
+\fi
 
 \subsection{Bayesian inference}
 
@@ -496,7 +494,6 @@ Deriving the conditional distribution corresponding we arrive at the key predict
 
 As in the distributions, the kernels have its parameters to be set before the model training. Such parameters, called hyperparameters can assume a distribution over itself, and with this, we can learn the parameters to the data just as we've been doing for the inference. In general, the posterior distribution for the hyperparameters are intractable, then we cal use MAP to choose at least one value (the most probable one), or evaluate the integral numerically.
 
-\fi
 \include{Intro_to_GP-application.tex}
 
 \iffalse

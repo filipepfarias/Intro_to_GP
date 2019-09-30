@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  29 SEP 2019 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  30 SEP 2019 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -892,53 +892,55 @@ Package pdftex.def Info: graphics/prml/Figure1.2.pdf  used on input line 62.
 <graphics/prml/Figure1.4a.pdf, id=51, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4a.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4a.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4a.pdf  used on input line 116.
+Package pdftex.def Info: graphics/prml/Figure1.4a.pdf  used on input line 117.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
 <graphics/prml/Figure1.4b.pdf, id=52, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4b.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4b.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4b.pdf  used on input line 121.
+Package pdftex.def Info: graphics/prml/Figure1.4b.pdf  used on input line 122.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
 <graphics/prml/Figure1.4c.pdf, id=53, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4c.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4c.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4c.pdf  used on input line 126.
+Package pdftex.def Info: graphics/prml/Figure1.4c.pdf  used on input line 127.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
 <graphics/prml/Figure1.4d.pdf, id=54, 213.79875pt x 159.59625pt>
 File: graphics/prml/Figure1.4d.pdf Graphic file (type pdf)
 <use graphics/prml/Figure1.4d.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.4d.pdf  used on input line 131.
+Package pdftex.def Info: graphics/prml/Figure1.4d.pdf  used on input line 132.
 (pdftex.def)             Requested size: 178.86702pt x 133.51929pt.
 
+Underfull \vbox (badness 5231) has occurred while \output is active []
 
-LaTeX Warning: Reference `eq:lin-reg-model-1' on page 3 undefined on input line 133.
+ [3] [4 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4a.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4b.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4c.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4d.pdf>]
+
+LaTeX Warning: Reference `subsec:app-par-gau' on page 5 undefined on input line 319.
+
+<graphics/prml/Figure3.7.pdf, id=115, 426.59375pt x 511.9125pt>
+File: graphics/prml/Figure3.7.pdf Graphic file (type pdf)
+<use graphics/prml/Figure3.7.pdf>
+Package pdftex.def Info: graphics/prml/Figure3.7.pdf  used on input line 345.
+(pdftex.def)             Requested size: 377.60951pt x 453.1558pt.
+
+LaTeX Warning: Reference `eq:bay-lin-reg-prior-dist' on page 5 undefined on input line 363.
 
 
-LaTeX Warning: Reference `eq:lin-reg-model-1' on page 3 undefined on input line 133.
+LaTeX Warning: Reference `eq:bay-cur-fit-1' on page 5 undefined on input line 377.
 
-[3] [4 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4a.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4b.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4c.pdf> </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.4d.pdf>]
-<graphics/prml/Figure1.16.pdf, id=114, 238.83278pt x 151.58241pt>
-File: graphics/prml/Figure1.16.pdf Graphic file (type pdf)
-<use graphics/prml/Figure1.16.pdf>
-Package pdftex.def Info: graphics/prml/Figure1.16.pdf  used on input line 250.
-(pdftex.def)             Requested size: 238.83218pt x 151.58203pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 261.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 261.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 261.
- [5 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure1.16.pdf>]
 
-LaTeX Warning: Reference `eq:lin-reg-error-function-1' on page 6 undefined on input line 269.
+LaTeX Warning: Reference `subsec:app-par-gau' on page 5 undefined on input line 377.
 
-[6]
+[5] [6 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure3.7.pdf>] [7]
 
-LaTeX Warning: Reference `eq:lin-reg-error-function-regularized' on page 7 undefined on input line 310.
+LaTeX Warning: Reference `subsec:app-par-gau' on page 8 undefined on input line 470.
 
-[7]
+[8]
+<graphics/prml/Figure6.8.pdf, id=179, 213.79875pt x 159.59625pt>
+File: graphics/prml/Figure6.8.pdf Graphic file (type pdf)
+<use graphics/prml/Figure6.8.pdf>
+Package pdftex.def Info: graphics/prml/Figure6.8.pdf  used on input line 488.
+(pdftex.def)             Requested size: 213.79822pt x 159.59584pt.
+ [9 </Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure6.8.pdf>]
 \openout2 = `Intro_to_GP-application.tex.aux'.
 
 
@@ -948,38 +950,36 @@ Underfull \hbox (badness 1412) in paragraph at lines 4--8
 []\T1/cmr/m/n/10 Bishop, C. M. (2006).  |   []   |   []   |   []   |   []   |   []
  []
 
-) [8
+) [10
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 510.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 510.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 507.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 507.
  (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux (/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP-application.tex.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 510.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 510.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 507.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 507.
 Package rerunfilecheck Info: File `Intro_to_GP.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 510.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 507.
  ) 
 Here is how much of TeX's memory you used:
- 39899 strings out of 492609
- 900429 string characters out of 6129048
- 1313096 words of memory out of 5000000
- 43204 multiletter control sequences out of 15000+600000
- 550930 words of font info for 71 fonts, out of 8000000 for 9000
+ 39882 strings out of 492609
+ 900291 string characters out of 6129048
+ 1315096 words of memory out of 5000000
+ 43181 multiletter control sequences out of 15000+600000
+ 547051 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,9n,138p,1089b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
-
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf (8 pages, 356495 bytes).
+ 85i,13n,138p,1180b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf (10 pages, 389903 bytes).
 PDF statistics:
  279 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 42 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

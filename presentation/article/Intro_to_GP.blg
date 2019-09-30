@@ -6,24 +6,24 @@ A level-1 auxiliary file: Intro_to_GP-application.tex.aux
 Database file #1: Intro_to_GP_bibliography.bib
 You've used 5 entries,
             1935 wiz_defined-function locations,
-            504 strings with 4480 characters,
-and the built_in function-call counts, 1550 in all, are:
-= -- 149
+            503 strings with 4454 characters,
+and the built_in function-call counts, 1527 in all, are:
+= -- 147
 > -- 47
 < -- 5
 + -- 14
 - -- 14
-* -- 112
-:= -- 288
+* -- 107
+:= -- 286
 add.period$ -- 15
 call.type$ -- 5
 change.case$ -- 29
 chr.to.int$ -- 5
 cite$ -- 5
 duplicate$ -- 65
-empty$ -- 116
+empty$ -- 113
 format.name$ -- 23
-if$ -- 298
+if$ -- 293
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 7
@@ -35,7 +35,7 @@ purify$ -- 32
 quote$ -- 0
 skip$ -- 51
 stack$ -- 0
-substring$ -- 91
+substring$ -- 85
 swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
