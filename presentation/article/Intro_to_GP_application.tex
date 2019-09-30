@@ -1,12 +1,13 @@
 \section{Applications in disease mapping}
 \subsection{The model}
-\textcolor{red}{Here we must have defined how the inferencial process occurs.}
-\cite{aki2001}
-\cite{jarno2010}
+% \textcolor{red}{Here we must have defined how the inferencial process occurs.}
+There's several applications using GP and here we'll resume an example for disease mapping presented by \cite{Vanhatalo2010Vehtari}. Then let's assume that our phenomenon is ruled by an function $f$. But, we interested in the distribution of them, considering the approach presented in this work. So, we may say that we evaluated each observation $y_i$ from an unknown function $f_i$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likehood by the product of each one \cite{jarno2010}.
 \begin{subequations}
      \begin{empheq}[left={\empheqlbrace\,}]{align}
-      y_1, y_2, \dots, y_n &\sim Poisson\left( f_i \right) \\
+      y_1, y_2, \dots, y_n &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
       f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left( m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
       \theta &\sim p(\gamma)
      \end{empheq}
  \end{subequations}
+
+In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process which mean in each region is given by the increasing rate of deaths. At this point we have defined $e$ as the standardized expected number of deaths \cite{Vanhatalo2010Vehtari}, what combined with $\mu$ in a product, reveals the 

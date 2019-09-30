@@ -11,6 +11,12 @@ DeGroot, M. and Schervish, M. (2012).
 \newblock {\em Probability and Statistics}.
 \newblock Addison-Wesley.
 
+\bibitem[Graybill, 1983]{graybill1983matrices}
+Graybill, F. (1983).
+\newblock {\em Matrices with applications in statistics}.
+\newblock Wadsworth statistics - probability series. Wadsworth International
+  Group.
+
 \bibitem[Hennig, 2013]{hennig2013gaussian}
 Hennig, P. (2013).
 \newblock Gaussian processes.
@@ -26,5 +32,24 @@ Rasmussen, C.~E. and Williams, C. K.~I. (2005).
 \newblock {\em Gaussian Processes for Machine Learning (Adaptive Computation
   and Machine Learning)}.
 \newblock The MIT Press.
+
+\bibitem[Schön and Lindsten, 2011]{schon_lindsten}
+Schön, T.~B. and Lindsten, F. (2011).
+\newblock Manipulating the multivariate gaussian density.
+\newblock Technical report, Division of Automatic Control, Linköping
+  University, Sweden.
+
+\bibitem[Vanhatalo, 2010]{jarno2010}
+Vanhatalo, J. (2010).
+\newblock {\em Speeding up the inference in Gaussian process models}.
+\newblock PhD thesis, Aalto University School of Science and Technology,
+  Faculty of Information and Natural Sciences, Department of Biomedical
+  Engineering and Computational Science, Aalto.
+
+\bibitem[Vanhatalo et~al., 2010]{Vanhatalo2010Vehtari}
+Vanhatalo, J., Pietiläinen, V., and Vehtari, A. (2010).
+\newblock Approximate inference for disease mapping with sparse gaussian
+  processes.
+\newblock {\em Statistics in medicine}, 29:1580--607.
 
 \end{thebibliography}
