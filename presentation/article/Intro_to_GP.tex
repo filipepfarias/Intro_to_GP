@@ -88,7 +88,11 @@ Maybe an intuitive way to say to the model if he's going far away from the targe
    L_p\left( \mathbf{u},\mathbf{v} \right)=\left(\sum_{i=1}^n |u_i-v_i|^p\right)^{1/p}
 \end{equation}
 
-where we have the Euclidean distance for $p=2$ and the also known Manhattan distance for $p=1$. The question here is define what distance use, by example the Euclidean distance is the most common due to its analytical tractability and practical importance. With this choice the error between the model and the targets will be define as the distance between $\mathbf{y}$ and $\mathbf{t}$, and where the orthogonal projection of $\mathbf{t}$ onto the subspace $\mathcal{S}$ is the minimal distance. The \textit{learning} step of the parameters $\mathbf{w}$ lies on choose those whose that distance is minimal.
+where we have the Euclidean distance for $p=2$ and the also known Manhattan distance for $p=1$. The question here is define what distance use, by example the Euclidean distance is the most common due to its analytical tractability and practical importance. With this choice the error between the model and the targets will be define as the distance between $\mathbf{y}$ and $\mathbf{t}$, and where the orthogonal projection of $\mathbf{t}$ onto the subspace $\mathcal{S}$ is the minimal distance. The \textit{learning} step of the parameters $\mathbf{w}$ lies on choose those whose make that distance minimal. Hence, being $\langle\cdot,\cdot\rangle$ the inner product, we have
+
+\begin{equation}
+   L_2(\mathbf{t}-\mathbf{y}) = \langle \mathbf{t}-\mathbf{y},\mathbf{t}-\mathbf{y}\rangle^{1/2}
+\end{equation}
 
 \iffalse
 \section{Bayesian Linear Regression}
