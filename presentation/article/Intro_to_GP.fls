@@ -415,8 +415,6 @@ INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/p
 INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/prml/Figure6.8.pdf
 INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_application.tex
 INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_application.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0900.tfm
@@ -435,6 +433,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
+INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex
+INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_appendices.tex
 INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
 INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
 INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux

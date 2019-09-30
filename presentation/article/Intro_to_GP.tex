@@ -237,7 +237,7 @@ The similarity between the maximization and the Bayesian approach mentioned befo
    \overbrace{p(\mathbf{w}|\mathcal{D})}^{posterior} = \frac{p(\mathcal{D}|\mathbf{w}) p(\mathbf{w})}{p(\mathcal{D})} = \frac{\overbrace{p(\mathcal{D}|\mathbf{w})}^{\text{\textit{likelihood}}} \overbrace{p(\mathbf{w})}^{\text{\textit{prior}}}}{\underbrace{\int p(\mathcal{D}|\mathbf{w}) p(\mathbf{w}) d\mathbf{w}}_{\text{\textit{marginal distribution}}}}
 \end{equation}
 
-If we assume that all distributions which we are working are Gaussian, the posterior distribution has closed form. To do that, we make use of the closure under linear transformations, or \textit{affine transformations}, for the Gaussian. For that, we will make use of the corollary below, which theorems are proven in the \textcolor{red}{\autoref{subsec:app-par-gau}}.
+If we assume that all distributions which we are working are Gaussian, the posterior distribution has closed form. To do that, we make use of the closure under linear transformations, or \textit{affine transformations}, for the Gaussian. For that, we will make use of the corollary below, which theorems are proven in the \autoref{subsec:app-par-gau}.
 
 \iffalse
 \begin{corollary}
@@ -345,7 +345,7 @@ Thus we need to move from the finite training data $\mathcal{D}$ to a function $
 
 Until now we have made the inference in the \textit{feature space}, the space where the parameters $\mathbf{w}$ are. In other words, the strategy was to train our model, obtaining the parameters probability distribution, by Bayesian inference, and then evaluating the predictive distribution with the posterior of the inference. Now, we'll assume a prior distribution of functions. By example, if there's a function $y(\mathbf{x})$, the value of $y$ at each real-valued point $\mathbf{x}$ is a random variable.
 
-With these assumptions, if we take a collection of $y$ in arbitrary points $\mathbf{x}$ and this collection has a Gaussian distribution, we may say that a \textit{Gaussian process} occurs \cite{Rasmussen:2005:GPM:1162254}.
+With these assumptions, if we take a collection of $y$ in arbitrary points $\mathbf{x}$ and this collection has a Gaussian distribution, we may say that a \textit{Gaussian process} occurs \cite{Rasmussen:2005:GPM:1162254}. Finally, our Bayesian inference can be done in a similar way to find the posterior distribution of functions.
 
 We define a Gaussian process (GP) as a collection of random variables, such that any finite number of which is normal jointly distributed. In other words, it can be thought  of as a generalization of a Gaussian distribution over a finite vector space to a function space of infinite dimension \cite{mackay1998introduction}. As the normal distribution, the GP is completely defined by its mean function $m(\mathbf{x})$ and covariance function $k(\mathbf{x},\mathbf{x'})$ of a real process $y(\mathbf{x})$, these in turn are defined as
 

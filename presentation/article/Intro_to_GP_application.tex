@@ -6,8 +6,14 @@ There's several applications using GP and here we'll resume an example for disea
      \begin{empheq}[left={\empheqlbrace\,}]{align}
       y_1, y_2, \dots, y_n &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
       f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left( m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
-      \theta &\sim p(\gamma)
+      \theta &\sim \text{half-t}(\nu,A)\text{\footnotemark}
      \end{empheq}
- \end{subequations}
+ \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
 
-In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process which mean in each region is given by the increasing rate of deaths. At this point we have defined $e$ as the standardized expected number of deaths \cite{Vanhatalo2010Vehtari}, what combined with $\mu$ in a product, reveals the 
+In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process which mean in each region is given by the increasing rate of deaths. At this point we have defined $e$ as the standardized expected number of deaths \cite{Vanhatalo2010Vehtari}, what multiplied by $\mu$ reveals, in mean, the rate of deaths in that region. For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
+%
+\begin{equation}
+    p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
+\end{equation}
+
+This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
