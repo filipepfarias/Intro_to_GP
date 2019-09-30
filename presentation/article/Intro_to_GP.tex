@@ -2,7 +2,7 @@
 \documentclass[11pt]{article} % For LaTeX2e
 \usepackage{Intro_to_GP}
 
-\title{Introduction to Gaussian Processes \textcolor{red}{ - RAW}}
+\title{Introduction to Gaussian Processes}% \textcolor{red}{ - RAW}}
 
 \IntroGPfinaltrue
 
@@ -35,7 +35,7 @@ Federal University of Ceará\\
 \section{Introduction}
 \nocite{hennig2013gaussian}
 
-First, we`ll overview some initial concepts that will set the background for the GP framework. Let's suppose a data set $\mathcal{D} = \left\{ \left( x_i,t_i \right) \right\}_{i=0}^{N-1}$ which we denote the input as $x$, the output (or target) as $t$ and $N$ as the number of observations. The first step in our workflow is define a \textit{training} set, i.e. some data that is given to make our first assumptions of the \textit{model}. The model $y$ can be defined as a guess of the law that rules the phenomenon of which our data was observed. \textcolor{red}{This law can be, by example a senoid function as represented in Figure 1}. Given this training data we wish to make \textit{predictions} for new inputs $x_*$ that we have not observed in the training set.
+First, we`ll overview some initial concepts that will set the background for the GP framework. Let's suppose a data set $\mathcal{D} = \left\{ \left( x_i,t_i \right) \right\}_{i=0}^{N-1}$ which we denote the input as $x$, the output (or target) as $t$ and $N$ as the number of observations. The first step in our workflow is define a \textit{training} set, i.e. some data that is given to make our first assumptions of the \textit{model}. The model $y$ can be defined as a guess of the law that rules the phenomenon of which our data was observed. This law can be, by example a senoid function as represented in Figure 1. Given this training data we wish to make \textit{predictions} for new inputs $x_*$ that we have not observed in the training set.
 
 % \begin{equation}
 %    y(\mathbf{x},\mathbf{w}) = \mathbf{x}^\top \mathbf{w}
@@ -136,7 +136,7 @@ for $\mathbf{y} = \mathbf{w}^\top \Phi$. Making use of the optimization notation
       \label{fig:lin-reg-overfit}
 \end{figure}
 
-The linear regression is one of the simplest methods for estimation and bring us an idea to find the law of the phenomenon, but one of its problems is its flexibility and non-robustness. There's a method trying to reduce this \textit{non-flexibility} in the model regularizing the parameters, known as regularization, but we'll be not discussed in this work. By the example of the polynomial model, if we construct the polynomial for the learned parameters, we note that its coefficients will have high values. This is because when learning the targets, if we consider the order of the polynomial the same as the number of data, the model starts to interpolate the noise, i.e. the aspects captured by the model may not be precise with the law of the phenomenon and with this, the derivatives of the polynomial may grow\textcolor{red}{ , as shown in the Figure \ref{fig:lin-reg-overfit}}. Some questions may arise as how know exactly this law, what in fact we may never know. The next step lead us to a probabilistic point of view with some more tools to deal with the problem.
+The linear regression is one of the simplest methods for estimation and bring us an idea to find the law of the phenomenon, but one of its problems is its flexibility and non-robustness. There's a method trying to reduce this \textit{non-flexibility} in the model regularizing the parameters, known as regularization, but we'll be not discussed in this work. By the example of the polynomial model, if we construct the polynomial for the learned parameters, we note that its coefficients will have high values. This is because when learning the targets, if we consider the order of the polynomial the same as the number of data, the model starts to interpolate the noise, i.e. the aspects captured by the model may not be precise with the law of the phenomenon and with this, the derivatives of the polynomial may grow , as shown in the Figure \ref{fig:lin-reg-overfit}. Some questions may arise as how know exactly this law, what in fact we may never know. The next step lead us to a probabilistic point of view with some more tools to deal with the problem.
 
 \section{Bayesian Linear Regression}
 
@@ -151,7 +151,7 @@ Until now, we see the curve fitting problem in terms of the minimization of the 
 
 We can use the Bayes' theorem (\ref{eq:bay-reg-bayes-rule}) to convert a \textit{prior} probability into a \textit{posterior} probability at the light of some evidence. Here, we represented the distribution probability of $\mathbf{w}$ that could be generated the data $\mathcal{D}$ as $p(\mathbf{w}|\mathcal{D})$. We can make prior assumptions about quantities such as the parameters $\mathbf{w}$ in the form of a prior distribution $p(\mathbf{w})$. The observation of the data $\mathcal{D}$ and what its implies in the parameters is expressed as a conditional probability $p(\mathcal{D}|\mathbf{w})$. Then we can evaluate the uncertainty about $\mathbf{w}$ after observed the data $\mathcal{D}$ as a posterior probability $p(\mathbf{w}|\mathcal{D})$.
 
-For a fixed $\mathcal{D}$, the function $l(\mathbf{w};\mathcal{D}) = p(\mathbf{w}|\mathcal{D})$ gives us the plausibility or \textit{likelihood} of each possible value of $\mathbf{w}$\textcolor{red}{, include Ricardo Ehlers citation}. This and the prior distribution are combined leading to the posterior distribution of $\mathbf{w}$. considering $p(\mathcal{D})$ a constant independent of $\mathbf{w}$, the usual for of the Bayes' theorem is
+For a fixed $\mathcal{D}$, the function $l(\mathbf{w};\mathcal{D}) = p(\mathbf{w}|\mathcal{D})$ gives us the plausibility or \textit{likelihood} of each possible value of $\mathbf{w}$ \cite{ehlers}. This and the prior distribution are combined leading to the posterior distribution of $\mathbf{w}$. considering $p(\mathcal{D})$ a constant independent of $\mathbf{w}$, the usual for of the Bayes' theorem is
 
 \begin{equation}
    p(\mathbf{w} | \mathcal{D}) \propto p(\mathcal{D} | \mathbf{w}) p(\mathbf{w})
