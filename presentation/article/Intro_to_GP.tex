@@ -31,7 +31,7 @@ Federal University of Ceará\\
 \begin{abstract}
    The Gaussian processes have proven to be a powerfull framework for robust estimation and a flexible model for non-linear \textit{regression}, case which will be the main object of this work, with some implementations of real situations.% \cite{Rasmussen_2004}
 \end{abstract}
-
+\iffalse
 \section{Introduction}
 \nocite{hennig2013gaussian}
 
@@ -519,13 +519,13 @@ Deriving the conditional distribution corresponding we arrive at the key predict
 % \section{Hyperparameters}
 
 % As in the distributions, the kernels have its parameters to be set before the model training. Such parameters, called hyperparameters can assume a distribution over itself, and with this, we can learn the parameters to the data just as we've been doing for the inference. In general, the posterior distribution for the hyperparameters are intractable, then we cal use MAP to choose at least one value (the most probable one), or evaluate the integral numerically.
-
+\fi
 \input{Intro_to_GP_application}
-
+\iffalse
 \newpage
 \input{Intro_to_GP_appendices}
 
 \newpage
 \bibliography{Intro_to_GP_bibliography}
-
+\fi
 \end{document}

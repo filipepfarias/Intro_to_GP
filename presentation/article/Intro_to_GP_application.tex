@@ -17,3 +17,52 @@ In this case, we used the Poisson distribution for the likelihood because the na
 \end{equation}
 
 This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
+
+
+\begin{figure}  
+    \begin{center}
+        \begin{tikzpicture}
+        
+            % Gaussian field
+            \node[latent, semithick, draw=red]                 (f1) {$f_i$};%
+            \node[const, left=.3 of f1] (fi) {};
+            \node[const, right=.3 of f1] (fj) {};
+            
+            \node[det, draw=red, above=.5 of f1]            (dot) {dot} ;%
+        
+            % Observations
+            \node[obs, above=of dot, semithick, draw=red, fill=red!20!blue!30!white]            (y1)   {$y_i$}; %
+            \node[const, below= of f1]          (x1)   {$\mathbf{x}_i$}; %
+        
+            % Hyperparameters
+            \node[latent, semithick, draw=red, below=.5 of f1, xshift=1.5cm] (theta) {$\theta$};%   
+            \node[const, right=1.5 of theta, yshift=-0.5cm] (A) {$\nu$} ; %
+            \node[const, right=1.5 of theta, yshift=0.5cm]  (nu) {$A$} ; %
+            \factor[right=of theta, fill=red] {theta-factor} {above:$\text{half-t}$} {A,nu} {theta};
+            
+            % Expected number of deaths
+            \node[const, left=.5 of dot] (e1) {$e_i$} ; %
+        
+            % Poisson process
+            \factor[above=of dot, fill=red] {dot-y1} {left:$\text{Poisson}$} {dot} {y1} ; %
+        
+            % Connect e1 to the dot node
+            \edge[-, draw=red] {e1,f1} {dot} ;
+            \edge[draw=red] {x1} {f1};
+            \edge[draw=red] {theta} {f1};
+            \edge[-,line width=2pt, draw=red] {fi} {f1};
+            \edge[-,line width=2pt, draw=red] {fj} {f1};
+            \edge[-,draw=red]{A} {theta-factor};
+            \edge[-,draw=red]{nu} {theta-factor};
+            \edge[->,draw=red] {theta-factor} {theta};
+            \edge[-,draw=red]{nu} {theta-factor};
+            \edge[->,draw=red]{dot} {y1};
+        
+            % Plates
+            \plate[draw=blue, very thick] {gpobs} {(y1) (dot) (e1) (fi) (fj) (x1) (f1) (dot-y1)} {$N$};
+            \plate[draw=blue, very thick] {gpf} {(f1) (fi) (fj)} {$\mathcal{H}$};
+          
+          \end{tikzpicture}
+    \end{center}
+    \caption{Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}
+\end{figure}
