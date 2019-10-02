@@ -1,0 +1,16 @@
+\begin{thebibliography}{}
+
+\bibitem[Vanhatalo, 2010]{jarno2010}
+Vanhatalo, J. (2010).
+\newblock {\em Speeding up the inference in Gaussian process models}.
+\newblock PhD thesis, Aalto University School of Science and Technology,
+  Faculty of Information and Natural Sciences, Department of Biomedical
+  Engineering and Computational Science, Aalto.
+
+\bibitem[Vanhatalo et~al., 2010]{Vanhatalo2010Vehtari}
+Vanhatalo, J., Pietiläinen, V., and Vehtari, A. (2010).
+\newblock Approximate inference for disease mapping with sparse gaussian
+  processes.
+\newblock {\em Statistics in medicine}, 29:1580--607.
+
+\end{thebibliography}
