@@ -50,8 +50,8 @@ This function isn't analytically tractable because of the Poisson process, but i
             \edge[-, draw=red] {e1,f1} {dot} ;
             \edge[draw=red] {x1} {f1};
             \edge[draw=red] {theta} {f1};
-            \edge[-,line width=2pt, draw=red] {fi} {f1};
-            \edge[-,line width=2pt, draw=red] {fj} {f1};
+            \edge[-,line width=3pt, draw=red] {fi} {f1};
+            \edge[-,line width=3pt, draw=red] {fj} {f1};
             \edge[-,draw=red]{A} {theta-factor};
             \edge[-,draw=red]{nu} {theta-factor};
             \edge[->,draw=red] {theta-factor} {theta};
@@ -64,5 +64,5 @@ This function isn't analytically tractable because of the Poisson process, but i
           
           \end{tikzpicture}
     \end{center}
-    \caption{Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}
+    \caption{Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}
 \end{figure}
