@@ -10,7 +10,12 @@ There's several applications using GP and here we'll resume an example for disea
      \end{empheq}
  \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
 
-In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process which mean in each region is given by the increasing rate of deaths. At this point we have defined $e$ as the standardized expected number of deaths \cite{Vanhatalo2010Vehtari}, what multiplied by $\mu$ reveals, in mean, the rate of deaths in that region. For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
+In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process \cite{Vanhatalo2010Vehtari}.
+
+\subsubsection{Poisson process}
+
+
+For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
 %
 \begin{equation}
     p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
@@ -22,47 +27,41 @@ This function isn't analytically tractable because of the Poisson process, but i
 \begin{figure}  
     \begin{center}
         \begin{tikzpicture}
-        
-            % Gaussian field
-            \node[latent, semithick, draw=red]                 (f1) {$f_i$};%
-            \node[const, left=.3 of f1] (fi) {};
-            \node[const, right=.3 of f1] (fj) {};
+            % Defining nodes
+            \node[obs, fill=red!20!blue!30!white, semithick, draw=red]              (yi) {$y_i$};%
+            \node[const, below=.5 of yi, xshift= -.8cm]                        (ei) {$e_i$};
+            \node[latent, semithick, draw=red, below=of yi] (fi) {$f_i$};
             
-            \node[det, draw=red, above=.5 of f1]            (dot) {} ;%
-        
-            % Observations
-            \node[obs, above=of dot, semithick, draw=red, fill=red!20!blue!30!white]            (y1)   {$y_i$}; %
-            \node[latent, draw=white , below= of f1]          (x1)   {$\mathbf{x}_i$}; %
-        
-            % Hyperparameters
-            \node[latent, semithick, draw=red, below=.5 of f1, xshift=1.5cm] (theta) {$\theta$};%   
-            \node[const, right=1.5 of theta, yshift=-0.5cm] (A) {$\nu$} ; %
-            \node[const, right=1.5 of theta, yshift=0.5cm]  (nu) {$A$} ; %
-            \factor[right=of theta, fill=red] {theta-factor} {above:$\text{half-t}$} {A,nu} {theta};
+            \node[latent, semithick, draw=red, right=of fi] (f*) {$f_*$};
+            \node[latent, semithick, draw=red, left=of fi] (f0) {};
+            \node[latent, semithick, draw=red, right=of f*] (f0s) {};
+
+            \node[obs, semithick, above=of f0 ,fill=red!20!blue!30!white, semithick, draw=red]              (y0) {};%
+            \node[obs, semithick, above=of f*, fill=red!20!blue!30!white, semithick, draw=red]              (y*) {$y_*$};%
+            \node[obs, semithick, above=of f0s ,fill=red!20!blue!30!white, semithick, draw=red]              (y0s) {};%
+
+            \node[latent, semithick, draw=red, below=of fi] (th) {$\theta$};
+            \node[const, right= of th, yshift= -.3cm] (A) {$A$};
+            \node[const, right= of th, yshift= .3cm] (nu) {$\nu$};
+
+
+            % Connecting nodes
+            \edge[draw=red, semithick] {ei} {yi}; 
+            \edge[draw=red, semithick] {fi} {yi};
+            \edge[-, draw=red, line width=2pt] {f0} {fi};
+            \edge[-, draw=red, line width=2pt] {f*} {fi};
+            \edge[draw=red, semithick] {f0} {y0};
+            \edge[draw=red, semithick] {f*} {y*};
+            \edge[draw=red, semithick] {th} {f0};
+            \edge[draw=red, semithick] {th} {f*};
+            \edge[draw=red, semithick] {th} {fi};
+            \edge[draw=red, semithick] {nu} {th};
+            \edge[draw=red, semithick] {A} {th};
+
             
-            % Expected number of deaths
-            \node[latent, draw=white , left=.5 of dot] (e1) {$e_i$} ; %
-        
-            % Poisson process
-            \factor[above=of dot, fill=red] {dot-y1} {left:$\text{Poisson}$} {dot} {y1} ; %
-        
-            % Connect e1 to the dot node
-            \edge[-, draw=red] {e1,f1} {dot} ;
-            \edge[draw=red] {x1} {f1};
-            \edge[draw=red] {theta} {f1};
-            \edge[-,line width=3pt, draw=red] {fi} {f1};
-            \edge[-,line width=3pt, draw=red] {fj} {f1};
-            \edge[-,draw=red]{A} {theta-factor};
-            \edge[-,draw=red]{nu} {theta-factor};
-            \edge[->,draw=red] {theta-factor} {theta};
-            \edge[-,draw=red]{nu} {theta-factor};
-            \edge[->,draw=red]{dot} {y1};
-        
-            % Plates
-            \plate[draw=blue, very thick] {gpf} {(f1) (fi) (fj)} {$\mathcal{H}$};
-            \plate[draw=blue, very thick] {gpobs} {(y1) (dot) (e1) (fi) (fj) (x1) (f1) (dot-y1) (gpf)} {$N$};
-          
-          \end{tikzpicture}
+            % Defining plates
+            \plate[draw=blue, very thick] {lkhd} {(ei) (yi) (fi)} {$n$};
+        \end{tikzpicture}
     \end{center}
     \caption{Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}
 \end{figure}

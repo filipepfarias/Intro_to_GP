@@ -1,5 +1,5 @@
 clear; close all;
-mkdir([mfilename,'/']);
+% mkdir([mfilename,'/']);
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
@@ -84,7 +84,7 @@ for f = 1:fr
     drawnow; pause(0.02)
 %     mov(f) = getframe;
     set(gca,'visible','off');
-    print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpng');
+%     print([mfilename,'/',mfilename,'_','prior_','frame_',num2str(f)],'-painters','-dpng');
 end
 %save([mfilename,'prior'],'mov');
 
@@ -126,7 +126,7 @@ for f = 1:fr
     zlim([-2,2]); %mov(f) = getframe;
     drawnow; pause(0.02);
     set(gca,'visible','off');
-    print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpng');
+%     print([mfilename,'/',mfilename,'_','post_','frame_',num2str(f)],'-painters','-dpng');
     
 end
 %save([mfilename,'post'],'mov');
