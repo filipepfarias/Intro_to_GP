@@ -37,13 +37,16 @@ This function isn't analytically tractable because of the Poisson process, but i
             
             \node[latent, semithick, draw=red, right=of fi] (f*) {$f_*$};
             \node[latent, semithick, draw=red, left=of fi] (f0) {};
-            \node[latent, semithick, draw=red, right=of f*] (f0s) {};
+            % \node[latent, semithick, draw=red, right=of f*] (f0s) {};
 
             \node[obs, semithick, above=of f0 ,fill=red!20!blue!30!white, semithick, draw=red]              (y0) {};%
             \node[obs, semithick, above=of f*, fill=red!20!blue!30!white, semithick, draw=red]              (y*) {$y_*$};%
-            \node[obs, semithick, above=of f0s ,fill=red!20!blue!30!white, semithick, draw=red]              (y0s) {};%
+            \node[obs, semithick, below=of f0, fill=red!20!blue!30!white, semithick, draw=red]              (x0) {};%
+            \node[obs, semithick, below=of fi, fill=red!20!blue!30!white, semithick, draw=red]              (xi) {$\mathbf{x}_i$};%
+            \node[obs, semithick, below=of f*, fill=red!20!blue!30!white, semithick, draw=red]              (x*) {$\mathbf{x}_*$};%
+            % \node[obs, semithick, above=of f0s ,fill=red!20!blue!30!white, semithick, draw=red]              (y0s) {};%
 
-            \node[latent, semithick, draw=red, below=of fi] (th) {$\theta$};
+            \node[latent, semithick, draw=red, above=.5 of f*, xshift= 1cm] (th) {$\theta$};
             \node[const, right= of th, yshift= -.3cm] (A) {$A$};
             \node[const, right= of th, yshift= .3cm] (nu) {$\nu$};
 
@@ -51,10 +54,13 @@ This function isn't analytically tractable because of the Poisson process, but i
             % Connecting nodes
             \edge[draw=red, semithick] {ei} {yi}; 
             \edge[draw=red, semithick] {fi} {yi};
-            \edge[-, draw=red, line width=2pt] {f0} {fi};
-            \edge[-, draw=red, line width=2pt] {f*} {fi};
+            \edge[-, draw=red, line width=2.3pt] {f0} {fi};
+            \edge[-, draw=red, line width=2.3pt] {f*} {fi};
             \edge[draw=red, semithick] {f0} {y0};
             \edge[draw=red, semithick] {f*} {y*};
+            \edge[draw=red, semithick] {x*} {f*};
+            \edge[draw=red, semithick] {x0} {f0};
+            \edge[draw=red, semithick] {xi} {fi};
             \edge[draw=red, semithick] {th} {f0};
             \edge[draw=red, semithick] {th} {f*};
             \edge[draw=red, semithick] {th} {fi};
