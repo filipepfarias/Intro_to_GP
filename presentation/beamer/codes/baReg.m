@@ -1,5 +1,5 @@
 clear; close all;
-mkdir([mfilename,'/']);
+% mkdir([mfilename,'/']);
 %% figure colors
 % the standard gauss plot, using the nonlinear dataset
 % Philipp Hennig, 11 Dec 2012
@@ -38,7 +38,7 @@ pbaspect([1 1 1]);
 %f3 = figure;
 
 
-for i=1:length(t)
+for i=length(t)
     clf;
     if i == 1
         x1 = -2:.005:2; x2 = x1;
@@ -60,10 +60,10 @@ for i=1:length(t)
         set(gcf,...
             'PaperPosition',2*[0 0 2 2],...
             'PaperSize',2*[2 2]);
-        print([mfilename,'/',mfilename,'_','frame_',num2str(0)],'-dpdf');
+%         print([mfilename,'/',mfilename,'_','frame_',num2str(0)],'-dpdf');
     end
     
-    if i ~= 1
+    if i == 1
         F = mvnpdf([X1(:) X2(:)],MuPost',inv(SigmaPost));
         F = reshape(F,length(x2),length(x1));
         %figure(f2); clf;
@@ -96,7 +96,7 @@ for i=1:length(t)
     lkhd = [X1(:) X2(:)]*phix(i,:)'; lkhd = (sqrt(2*pi)*beta)\gaussmf(lkhd(:),[1 t(i)]);
     lkhd = reshape(lkhd,length(x2),length(x1));
     subplot(2,2,2); imagesc(x1,x2,lkhd); set(gca,'YDir','normal'); hold on; plot(w1,w2,'w+','LineWidth',1.5);
-    pbaspect([1 1 1]); title('Likelihood'); %pause(0.5);
+    pbaspect([1 1 1]); title('Likelihood'); pause(0.5);
     
     if i == 1
         %pause;
@@ -108,5 +108,5 @@ for i=1:length(t)
     set(gcf,...
         'PaperPosition',2*[0 0 2 2],...
         'PaperSize',2*[2 2]);
-    print([mfilename,'/',mfilename,'_','frame_',num2str(i)],'-dpdf');
+%     print([mfilename,'/',mfilename,'_','frame_',num2str(i)],'-dpdf');
 end

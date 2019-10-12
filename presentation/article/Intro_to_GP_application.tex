@@ -2,7 +2,7 @@
 \section{Applications in disease mapping}
 \subsection{The model}
 % \textcolor{red}{Here we must have defined how the inferencial process occurs.}
-There's several applications using GP and here we'll resume an example for disease mapping presented by \cite{Vanhatalo2010Vehtari}. Then let's assume that our phenomenon is ruled by an function $f$. But, we interested in the distribution of them, considering the approach presented in this work. So, we may say that we evaluated each observation $y_i$ from an unknown function $f_i$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likehood by the product of each one \cite{jarno2010}.
+There's several applications using GP and here we'll resume an example for disease mapping presented by \cite{Vanhatalo2010Vehtari}. Then let's assume that our phenomenon is ruled by an function $f$. But, we interested in the distribution of them, considering the approach presented in this work. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $f_i$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likehood by the product of each one \cite{jarno2010}.
 \begin{subequations}
      \begin{empheq}[left={\empheqlbrace\,}]{align}
       y_1, y_2, \dots, y_n &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
@@ -13,12 +13,7 @@ There's several applications using GP and here we'll resume an example for disea
 
 In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process \cite{Vanhatalo2010Vehtari}.
 
-{\color{red}
-
-\subsubsection{Poisson process}
-
-
-For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
+For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters $\theta$ of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
 %
 \begin{equation}
     p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
@@ -26,7 +21,6 @@ For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncerta
 
 This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
 
-}
 
 \begin{figure}  
     \begin{center}
