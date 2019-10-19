@@ -114,9 +114,74 @@ pages={63–71}
 author = {Vanhatalo, Jarno and Pietiläinen, Ville and Vehtari, Aki},
 year = {2010},
 month = {07},
-pages = {1580-607},
+pages = {1580-1607},
 title = {Approximate inference for disease mapping with sparse Gaussian processes},
 volume = {29},
 journal = {Statistics in medicine},
 doi = {10.1002/sim.3895}
 }
+
+@InProceedings{pmlr-v1-vanhatalo07a,
+  title = 	 {Sparse Log Gaussian Processes via MCMC for Spatial Epidemiology},
+  author = 	 {Jarno Vanhatalo and Aki Vehtari},
+  booktitle = 	 {Gaussian Processes in Practice},
+  pages = 	 {73--89},
+  year = 	 {2007},
+  editor = 	 {Neil D. Lawrence and Anton Schwaighofer and Joaquin Quiñonero Candela},
+  volume = 	 {1},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Bletchley Park, UK},
+  month = 	 {12--13 Jun},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v1/vanhatalo07a/vanhatalo07a.pdf},
+  url = 	 {http://proceedings.mlr.press/v1/vanhatalo07a.html},
+  abstract = 	 {Log Gaussian processes are an attractive manner to construct intensity surfaces for the purposes of spatial epidemiology. The intensity surfaces are naturally smoothed by placing a Gaussian process (GP) prior over the relative log Poisson rate, and the spatial correlations between areas can be included in an explicit and natural way into the model via a correlation function. The drawback with using a Gaussian process is the computational burden of the covariance matrix calculations.  To overcome the computational limitations a number of approximations for Gaussian process have been suggested in the literature. In this work a fully independent training conditional sparse approximation is used to speed up the computations. The posterior inference is conducted using Markov chain Monte Carlo simulations and the sampling of the latent values is sped up by a transformation taking into account their posterior covariance. The sparse approximation is compared to a full GP with two sets of mortality data.}
+}
+
+@article{Best2005,
+author = {Nicky Best and Sylvia Richardson and Andrew Thomson},
+title ={A comparison of Bayesian spatial models for disease mapping},
+journal = {Statistical Methods in Medical Research},
+volume = {14},
+number = {1},
+pages = {35-59},
+year = {2005},
+doi = {10.1191/0962280205sm388oa},
+    note ={PMID: 15690999},
+
+URL = { 
+        https://doi.org/10.1191/0962280205sm388oa
+    
+},
+eprint = { 
+        https://doi.org/10.1191/0962280205sm388oa
+    
+}
+,
+    abstract = { With the advent of routine health data indexed at a fine geographical resolution, small area disease mapping studies have become an established technique in geographical epidemiology. The specific issues posed by the sparseness of the data and possibility for local spatial dependence belong to a generic class of statistical problems involving an underlying (latent) spatial process of interest corrupted by observational noise. These are naturally formulated within the framework of hierarchical models, and over the past decade, a variety of spatial models have been proposed for the latent level(s) of the hierarchy. In this article, we provide a comprehensive review of the main classes of such models that have been used for disease mapping within a Bayesian estimation paradigm, and report a performance comparison between representative models in these classes, using a set of simulated data to help illustrate their respective properties. We also consider recent extensions to model the joint spatial distribution of multiple disease or health indicators. The aim is to help the reader choose an appropriate structural prior for the second level of the hierarchical model and to discuss issues of sensitivity to this choice. }
+}
+
+@article{Samat2012,
+author = { N.   A.   Samat  and  D.   F.   Percy },
+title = {Vector-borne infectious disease mapping with stochastic difference equations: an analysis of dengue disease in Malaysia},
+journal = {Journal of Applied Statistics},
+volume = {39},
+number = {9},
+pages = {2029-2046},
+year  = {2012},
+publisher = {Taylor & Francis},
+doi = {10.1080/02664763.2012.700450},
+URL = {https://doi.org/10.1080/02664763.2012.700450},
+eprint = {https://doi.org/10.1080/02664763.2012.700450}
+}
+
+@book{lawson2013statistical,
+  title={Statistical Methods in Spatial Epidemiology},
+  author={Lawson, A.B.},
+  isbn={9781118723173},
+  series={Wiley Series in Probability and Statistics},
+  url={https://books.google.com.br/books?id=YUwSAAAAQBAJ},
+  year={2013},
+  publisher={Wiley}
+}
+

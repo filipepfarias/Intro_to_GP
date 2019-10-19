@@ -1,5 +1,22 @@
 \begin{thebibliography}{}
 
+\bibitem[Best et~al., 2005]{Best2005}
+Best, N., Richardson, S., and Thomson, A. (2005).
+\newblock A comparison of bayesian spatial models for disease mapping.
+\newblock {\em Statistical Methods in Medical Research}, 14(1):35--59.
+\newblock PMID: 15690999.
+
+\bibitem[Lawson, 2013]{lawson2013statistical}
+Lawson, A. (2013).
+\newblock {\em Statistical Methods in Spatial Epidemiology}.
+\newblock Wiley Series in Probability and Statistics. Wiley.
+
+\bibitem[Samat and Percy, 2012]{Samat2012}
+Samat, N.~A. and Percy, D.~F. (2012).
+\newblock Vector-borne infectious disease mapping with stochastic difference
+  equations: an analysis of dengue disease in malaysia.
+\newblock {\em Journal of Applied Statistics}, 39(9):2029--2046.
+
 \bibitem[Vanhatalo, 2010]{jarno2010}
 Vanhatalo, J. (2010).
 \newblock {\em Speeding up the inference in Gaussian process models}.
@@ -11,6 +28,6 @@ Vanhatalo, J. (2010).
 Vanhatalo, J., Pietiläinen, V., and Vehtari, A. (2010).
 \newblock Approximate inference for disease mapping with sparse gaussian
   processes.
-\newblock {\em Statistics in medicine}, 29:1580--607.
+\newblock {\em Statistics in medicine}, 29:1580--1607.
 
 \end{thebibliography}

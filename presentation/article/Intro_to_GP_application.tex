@@ -1,8 +1,23 @@
 % !TEX root = Intro_to_GP.tex
 \section{Applications in disease mapping}
-\subsection{The model}
 % \textcolor{red}{Here we must have defined how the inferencial process occurs.}
-There's several applications using GP and here we'll resume an example for disease mapping presented by \cite{Vanhatalo2010Vehtari}. Then let's assume that our phenomenon is ruled by an function $f$. But, we interested in the distribution of them, considering the approach presented in this work. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $f_i$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likehood by the product of each one \cite{jarno2010}.
+There's several applications using GP and here we'll resume an application for disease mapping. By \cite{Vanhatalo2010Vehtari} the problem concerns to use the latent Gaussian field and observe it indirectly from the data, aiming to infer a function for the phenomenon. For this scenario, the data are counts of mortality or morbidity occurrence per area and the pursued function is the relative risk for that area, what is modeled by a Poisson process discussed by \cite{Best2005}.
+
+\subsection{The model}
+
+The Poisson process is defined if the occurrence, this is the count of deaths $y$, in a given area $i$ is a Poisson variable and if the counting in one area does not affect the counting in another. The Poisson variable \ref{eq:observation-model} in each area is defined by its rate of the process $e_i\mu_i$ \cite{Best2005,Samat2012}, being $e$ {\color{red}(insert the definition of e depending of y and p)} the standardized expected number of deaths and $\mu$ the relative risk of the area. In this work, the objective is to infer the relative risk given the data \cite{lawson2013statistical}. 
+%
+\begin{equation}
+    y_i \sim Poisson(e_i\mu_i)
+    \label{eq:observation-model}
+\end{equation}
+%
+Then let's assume that our phenomenon according with $f=\log (\mu)$ \cite{Best2005}. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $e_i e^{f_i}$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likelihood by the product of each one \cite{jarno2010}.
+
+We'll model the log of the risk as a Gaussian process, then latent variables $f_i$ are realizations of the latent function $f$ at the inputs $\mathbf{x}_i$. The GP wll be defined by a covariance function $k(\mathbf{x},\mathbf{x}')$ and a mean function $m(\mathbf{x})$. For disease mapping, we can assume the mean being $\mathbf{m}=\mathbf{0}$, what implies that for a zero function, the risk will be one if there's no spatial variations. The covariance function has a collection of hyperparameters $\theta$.
+
+We can represent with a graphical model the dependency of the variables, as in the \autoref{fig:graphical-model-disease}. Then, we can write the model as follows:
+%
 \begin{subequations}
      \begin{empheq}[left={\empheqlbrace\,}]{align}
       y_1, y_2, \dots, y_n &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
@@ -10,19 +25,8 @@ There's several applications using GP and here we'll resume an example for disea
       \theta &\sim \text{half-t}(\nu,A)\text{\footnotemark}
      \end{empheq}
  \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
-
-In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process \cite{Vanhatalo2010Vehtari}.
-
-For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters $\theta$ of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
-%
-\begin{equation}
-    p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
-\end{equation}
-
-This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
-
-
-\begin{figure}[htpb]
+% 
+\begin{figure}[tpb]
     \begin{center}
         \begin{tikzpicture}
             % Defining nodes
@@ -104,4 +108,29 @@ This function isn't analytically tractable because of the Poisson process, but i
         \end{tikzpicture}
     \end{center}
     \caption{Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}
+    \label{fig:graphical-model-disease}
 \end{figure}
+
+\subsection{Inference and prediction}
+
+We're interested in evaluate the conditional posterior of the latent variables $\mathbf{f}$, this is to express the uncertainty about the risk, given the knowledge about the number of deaths. We can write by the model in the \autoref{fig:graphical-model-disease}
+
+\begin{equation}
+    p(\mathbf{f}|\mathcal{D},\theta) = \frac{p(\mathbf{f},\mathcal{D},\theta)}{p(\mathcal{D},\theta)},
+\end{equation}
+
+being $\mathcal{D}=\left\{ \mathbf{X},\mathbf{y}, \mathbf{p} \right\}$
+
+{\color{red}
+
+In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process \cite{Vanhatalo2010Vehtari}.
+
+For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters $\theta$ of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
+%
+\begin{equation}
+    p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
+\end{equation}
+
+This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
+
+}
