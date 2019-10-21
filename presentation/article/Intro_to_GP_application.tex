@@ -9,6 +9,7 @@ The Poisson process is defined if the occurrence, this is the count of deaths $y
 
 \begin{equation}
     e_{i}=\sum_{r=1}^{R}\left(\frac{\sum_{i=1}^{n} y_{i, r}}{\sum_{i=1}^{n} p_{i, r}}\right) p_{i, r}
+    \label{eq:standized-num-death}
 \end{equation}
 
 the standardized expected number of deaths and $\mu$ the relative risk of the area. In this work, the objective is to infer the relative risk given the data \cite{lawson2013statistical}. 
@@ -120,20 +121,29 @@ We can represent with a graphical model the dependency of the variables, as in t
 \subsection{Inference and prediction}
 
 We're interested in evaluate the conditional posterior of the latent variables $\mathbf{f}$, this is to express the uncertainty about the risk, given the knowledge about the number of deaths. We can write by the model in the \autoref{fig:graphical-model-disease} as
-
+%
 \begin{equation}
     p(\mathbf{f}|\mathcal{D},\theta) = \frac{p(\mathbf{f},\mathcal{D},\theta)}{p(\mathcal{D},\theta)},
+    \label{eq:posterior-theta}
 \end{equation}
-
+%
 being $\mathcal{D}=\left\{ \mathbf{X},\mathbf{y}, \mathbf{p} \right\}$. We can express $p(\mathcal{D},\theta)$ as $\int p(\mathbf{f},\mathcal{D},\theta)d\mathbf{f}$. By the graphical model we have that
-
+%
 \begin{equation}
     p(\mathbf{f},\mathcal{D},\theta) = p(\mathbf{y}|\mathbf{f},\mathbf{e})p(\mathbf{f}|\mathbf{X},\theta)p(\theta).
 \end{equation}
-
-The constant $\mathbf{e}$ is evaluated in {\color{red}\ref{?}}, then its dependency is on $\mathbf{y}$ and $\mathbf{p}$.
-
+%
+The constant $\mathbf{e}$ is evaluated in \ref{eq:standized-num-death}, then its dependency is on $\mathbf{y}$ and $\mathbf{p}$. For the case of the expected number of deaths, we'll not consider $y$ being a random variable, just for the evaluation of $e$, then it's a constant. Finally we obtain the posterior for the latent values by marginalizing it, then from \ref{eq:posterior-theta} we have
 {\color{red}
+%
+\begin{equation}
+    p(\mathbf{f}|\mathcal{D})=\frac{\int p(\mathbf{y}|\mathbf{f})p(\mathbf{f}|\mathbf{X},\theta)p(\theta) d\theta}{\int \int p(\mathbf{y}|\mathbf{f})p(\mathbf{f}|\mathbf{X},\theta)p(\theta) d\theta d\mathbf{f}},
+\end{equation}
+%
+}
+omitting $\mathbf{e}$ for brevity.
+{\color{red}
+%
 
 In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process \cite{Vanhatalo2010Vehtari}.
 
