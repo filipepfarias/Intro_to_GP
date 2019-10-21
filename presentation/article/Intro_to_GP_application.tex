@@ -21,7 +21,7 @@ The Poisson variable \eqref{eq:observation-model} in each area is defined by its
 %
 the standardized expected number of deaths and $\mu$ the relative risk of the area. In this work, the objective is to infer the relative risk given the data \cite{lawson2013statistical}. 
 
-Then let's assume that our phenomenon according with $f=\log (\mu)$ \cite{Best2005}. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $e_i \exp(f_i)$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likelihood by the product of each one \cite{jarno2010}.
+Then let's assume that our phenomenon according with $f=\log (\mu)$ \cite{Best2005}. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $e_i \exp(f_i)$. With this we assume that our observations of the functions are independent and then we can evaluate the joint distribution for likelihood by the product of each one \cite{jarno2010}.
 
 We'll model the log of the risk as a Gaussian process, then latent variables $f_i$ are realizations of the latent function $f$ at the inputs $\mathbf{x}_i$. The GP wll be defined by a covariance function $k(\mathbf{x},\mathbf{x}')$ and a mean function $m(\mathbf{x})$. For disease mapping, we can assume the mean being $\mathbf{m}=\mathbf{0}$, what implies that for a zero function, the risk will be one if there's no spatial variations. The covariance function has a collection of hyperparameters $\theta$.
 
