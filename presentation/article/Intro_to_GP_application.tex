@@ -37,10 +37,10 @@ We can represent with a graphical model the dependency of the variables, as in t
     \begin{center}
         \begin{tikzpicture}
             % Defining nodes
-            \node[obs, fill=red!20!blue!30!white, semithick, draw=red]              (yn) {$y_n$};%
-            \node[obs, left=of yn, fill=red!20!blue!30!white, semithick, draw=red]              (y3) {$y_3$};%
-            \node[obs, left=of y3, fill=red!20!blue!30!white, semithick, draw=red]              (y2) {$y_2$};%
-            \node[obs, left=of y2, fill=red!20!blue!30!white, semithick, draw=red]              (y1) {$y_1$};%
+            \node[obs, fill=red!20!white, semithick, draw=red]              (yn) {$y_n$};%
+            \node[obs, left=of yn, fill=red!20!white, semithick, draw=red]              (y3) {$y_3$};%
+            \node[obs, left=of y3, fill=red!20!white, semithick, draw=red]              (y2) {$y_2$};%
+            \node[obs, left=of y2, fill=red!20!white, semithick, draw=red]              (y1) {$y_1$};%
             \node[const, below=.5 of yn, xshift= -.8cm]                        (en) {$e_n$};
             \node[const, below=.5 of y3, xshift= -.8cm]                        (e3) {$e_3$};
             \node[const, below=.5 of y2, xshift= -.8cm]                        (e2) {$e_2$};
@@ -141,7 +141,7 @@ The constant $\mathbf{e}$ is evaluated in \ref{eq:standized-num-death}, then its
 \end{equation}
 %
 }
-omitting $\mathbf{e}$ for brevity.
+omitting the constant $\mathbf{e}$ for brevity.
 {\color{red}
 %
 

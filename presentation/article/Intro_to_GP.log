@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  20 OCT 2019 23:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.9.21)  20 OCT 2019 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1019,10 +1019,10 @@ Package rerunfilecheck Info: File `Intro_to_GP.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 532.
  ) 
 Here is how much of TeX's memory you used:
- 42614 strings out of 492609
- 976166 string characters out of 6129048
- 1423050 words of memory out of 5000000
- 45882 multiletter control sequences out of 15000+600000
+ 42613 strings out of 492609
+ 976135 string characters out of 6129048
+ 1424050 words of memory out of 5000000
+ 45881 multiletter control sequences out of 15000+600000
  550197 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,18n,138p,1141b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
