@@ -5,21 +5,23 @@ There's several applications using GP and here we'll resume an application for d
 
 \subsection{The model}
 
-The Poisson process is defined if the occurrence, this is the count of deaths $y$, in a given area $i$ is a Poisson variable and if the counting in one area does not affect the counting in another. The Poisson variable \ref{eq:observation-model} in each area is defined by its rate of the process $e_i\mu_i$ \cite{Best2005,Samat2012}, being 
-
-\begin{equation}
-    e_{i}=\sum_{r=1}^{R}\left(\frac{\sum_{i=1}^{n} y_{i, r}}{\sum_{i=1}^{n} p_{i, r}}\right) p_{i, r}
-    \label{eq:standized-num-death}
-\end{equation}
-
-the standardized expected number of deaths and $\mu$ the relative risk of the area. In this work, the objective is to infer the relative risk given the data \cite{lawson2013statistical}. 
+The Poisson process is defined if the occurrence, this is the count of deaths $y$, in a given area $i$ is a Poisson variable and if the counting in one area does not affect the counting in another. 
 %
 \begin{equation}
     y_i \sim Poisson(e_i\mu_i)
     \label{eq:observation-model}
 \end{equation}
 %
-Then let's assume that our phenomenon according with $f=\log (\mu)$ \cite{Best2005}. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $e_i e^{f_i}$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likelihood by the product of each one \cite{jarno2010}.
+The Poisson variable \eqref{eq:observation-model} in each area is defined by its rate of the process $e_i\mu_i$ \cite{Best2005,Samat2012}, being 
+%
+\begin{equation}
+    e_{i}=\sum_{r=1}^{R}\left(\frac{\sum_{i=1}^{n} y_{i, r}}{\sum_{i=1}^{n} p_{i, r}}\right) p_{i, r}
+    \label{eq:standized-num-death}
+\end{equation}
+%
+the standardized expected number of deaths and $\mu$ the relative risk of the area. In this work, the objective is to infer the relative risk given the data \cite{lawson2013statistical}. 
+
+Then let's assume that our phenomenon according with $f=\log (\mu)$ \cite{Best2005}. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $e_i \exp(f_i)$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likelihood by the product of each one \cite{jarno2010}.
 
 We'll model the log of the risk as a Gaussian process, then latent variables $f_i$ are realizations of the latent function $f$ at the inputs $\mathbf{x}_i$. The GP wll be defined by a covariance function $k(\mathbf{x},\mathbf{x}')$ and a mean function $m(\mathbf{x})$. For disease mapping, we can assume the mean being $\mathbf{m}=\mathbf{0}$, what implies that for a zero function, the risk will be one if there's no spatial variations. The covariance function has a collection of hyperparameters $\theta$.
 
@@ -29,7 +31,7 @@ We can represent with a graphical model the dependency of the variables, as in t
      \begin{empheq}[left={\empheqlbrace\,}]{align}
       y_1, y_2, \dots, y_n &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
       f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left( m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
-      \theta &\sim \text{half-t}(\nu,A)\text{\footnotemark}
+      \theta &\sim \text{half-Student-t}(\nu,A)\text{\footnotemark}
      \end{empheq}
  \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
 % 
@@ -120,7 +122,7 @@ We can represent with a graphical model the dependency of the variables, as in t
 
 \subsection{Inference and prediction}
 
-We're interested in evaluate the conditional posterior of the latent variables $\mathbf{f}$, this is to express the uncertainty about the risk, given the knowledge about the number of deaths. We can write by the model in the \autoref{fig:graphical-model-disease} as
+We're interested in evaluate the conditional posterior of the latent variables $\mathbf{f}$, this is to express the uncertainty about the risk given the knowledge about the number of deaths. We can write by the model in the \autoref{fig:graphical-model-disease}, the following conditional
 %
 \begin{equation}
     p(\mathbf{f}|\mathcal{D},\theta) = \frac{p(\mathbf{f},\mathcal{D},\theta)}{p(\mathcal{D},\theta)},
@@ -133,7 +135,7 @@ being $\mathcal{D}=\left\{ \mathbf{X},\mathbf{y}, \mathbf{p} \right\}$. We can e
     p(\mathbf{f},\mathcal{D},\theta) = p(\mathbf{y}|\mathbf{f},\mathbf{e})p(\mathbf{f}|\mathbf{X},\theta)p(\theta).
 \end{equation}
 %
-The constant $\mathbf{e}$ is evaluated in \ref{eq:standized-num-death}, then its dependency is on $\mathbf{y}$ and $\mathbf{p}$. For the case of the expected number of deaths, we'll not consider $y$ being a random variable, just for the evaluation of $e$, then it's a constant. Finally we obtain the posterior for the latent values by marginalizing it, then from \ref{eq:posterior-theta} we have
+The constant $\mathbf{e}$ evaluated in \eqref{eq:standized-num-death} depends of $\mathbf{y}$ and $\mathbf{p}$, then we can omit from the probability function. For the case of the expected number of deaths, we'll not consider $y$ being a random variable, just for the evaluation of $e$, then it's a constant. Finally we obtain the posterior for the latent values by marginalizing it, then from \eqref{eq:posterior-theta} we have
 {\color{red}
 %
 \begin{equation}
