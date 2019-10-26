@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex Intro_to_GP"] 1571662494 "Intro_to_GP.aux" "Intro_to_GP.bbl" "Intro_to_GP" 1572111016
+["bibtex Intro_to_GP"] 1572117134 "Intro_to_GP.aux" "Intro_to_GP.bbl" "Intro_to_GP" 1572117211
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "Intro_to_GP.aux" 1572111015 2108 88ca51c397b1eb36c0eee97a67a1484d "pdflatex"
+  "Intro_to_GP.aux" 1572117136 2112 17669f202c5a8ebe8d280be8d3b8834e "pdflatex"
   "Intro_to_GP_bibliography.bib" 1571493533 7866 df5d9686aaf58208a2c8fb778030aae5 ""
   (generated)
   "Intro_to_GP.blg"
   "Intro_to_GP.bbl"
-["pdflatex"] 1572111013 "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.tex" "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf" "Intro_to_GP" 1572111016
-  "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux" 1572111015 2108 88ca51c397b1eb36c0eee97a67a1484d ""
+["pdflatex"] 1572117134 "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.tex" "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf" "Intro_to_GP" 1572117211
+  "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux" 1572117136 2112 17669f202c5a8ebe8d280be8d3b8834e ""
   "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.tex" 1571437601 43567 bf699054dd97d7f1f7455f5582cc6a88 ""
-  "/dev/null" 1572110936 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1572117176 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -277,16 +277,18 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1561653966 4549464 e70ecd5fc6036afaca0d65061215f2ef ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1569062422 4264881 db2f7cb7798cc1b5beb3529469e31538 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "Intro_to_GP.aux" 1572111015 2108 88ca51c397b1eb36c0eee97a67a1484d "pdflatex"
-  "Intro_to_GP.bbl" 1571662494 1351 572046b8a960c6d560ba9f152f5a64a5 "bibtex Intro_to_GP"
-  "Intro_to_GP.out" 1572111015 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Intro_to_GP.sty" 1571491647 10394 98a6146a5df4de90c2616212e732043e ""
+  "Intro_to_GP.aux" 1572117136 2112 17669f202c5a8ebe8d280be8d3b8834e "pdflatex"
+  "Intro_to_GP.bbl" 1572117134 1351 572046b8a960c6d560ba9f152f5a64a5 "bibtex Intro_to_GP"
+  "Intro_to_GP.out" 1572117136 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Intro_to_GP.sty" 1572117098 10394 98a6146a5df4de90c2616212e732043e ""
   "Intro_to_GP.tex" 1571437601 43567 bf699054dd97d7f1f7455f5582cc6a88 ""
-  "Intro_to_GP_application.tex" 1572111012 10884 ad727abcf87a2510e4d6f9ee132e8e71 ""
+  "Intro_to_GP_application.tex" 1572117211 6661 7f677a655f22683d9cfee4d33af2110e ""
+  "graphics/GraphicalModel.tex" 1572115766 4666 f1ec1ce36c205447972b6f44c57eaa67 ""
+  "graphics/GraphicalModel2.tex" 1572116525 1050 bb34a59817dcd939bd7a6e3fb46207d3 ""
   (generated)
-  "Intro_to_GP.out"
-  "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf"
-  "Intro_to_GP.pdf"
   "Intro_to_GP.aux"
+  "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf"
   "/Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.log"
   "Intro_to_GP.log"
+  "Intro_to_GP.pdf"
+  "Intro_to_GP.out"
