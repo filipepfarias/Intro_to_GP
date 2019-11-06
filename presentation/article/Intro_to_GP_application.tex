@@ -40,12 +40,10 @@ We can represent with a graphical model the dependency of the variables, as in t
         \input{graphics/GraphicalModel.tex} \\
         \input{graphics/GraphicalModel2.tex}
     \end{center}
-    \caption{Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}
+    \caption{{\color{red}Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}}
     \label{fig:graphical-model-disease}
 \end{figure}
-
-\subsection{Inference and prediction}
-
+%
 We're interested in evaluate the conditional posterior of the latent variable $\mathbf{f}$, i.e. to express the uncertainty about the risk given the knowledge about the number of deaths and the hyperparameters. We can write by the model in the \autoref{fig:graphical-model-disease}, the following conditional
 %
 \begin{equation}
@@ -53,26 +51,28 @@ We're interested in evaluate the conditional posterior of the latent variable $\
     \label{eq:model-total-density}
 \end{equation}
 %
-being $\mathcal{D}=\left\{ \mathbf{X},\mathbf{y}, \mathbf{p} \right\}$. The constant $\mathbf{e}$ evaluated in \eqref{eq:standized-num-death} depends of $\mathbf{y}$ and $\mathbf{p}$, then we can omit from the probability function. Note that it isn't considered as a random variable even $y$ being a random. This occurs because the evaluation of $e_i$ needs some information about $y$ as in which social group $r$ the death was counted \eqref{eq:standized-num-death}, what can't be modeled if $y$ was treated as random without rise the complexity of the model. This would lead to a second inference that would be the classification of $y$. Finally we obtain the posterior for the latent values by marginalizing it, then we have
+being $\mathcal{D}=\left\{ \mathbf{X},\mathbf{y}, \mathbf{p} \right\}$. The constant $\mathbf{e}$ evaluated in \eqref{eq:standized-num-death} depends of $\mathbf{y}$ and $\mathbf{p}$, then we can omit from the probability function. Note that it isn't considered as a random variable even $y$ being a random. This occurs because the evaluation of $e_i$ needs some information about $y$ as in which social group $r$ the death was counted \eqref{eq:standized-num-death}, what can't be modeled if $y$ was treated as random without rise the complexity of the model. This would lead to a second inference that would be the classification of $y$.
+%
+Finally we obtain the posterior for the latent values by marginalizing it, then we have
 %
 \begin{equation}
-    p(\mathbf{f}|\mathcal{D})={\color{red}
-    \frac{p(\mathbf{f},\mathcal{D})}{p(\mathcal{D})}=}
+    p(\mathbf{f}|\mathcal{D})=
+    \frac{p(\mathbf{f},\mathcal{D})}{p(\mathcal{D})}=
     \frac{\int p(\mathbf{y}|\mathbf{f})p(\mathbf{f}|\mathbf{X},\theta)p(\theta) d\theta}{\int \int p(\mathbf{y}|\mathbf{f})p(\mathbf{f}|\mathbf{X},\theta)p(\theta) d\mathbf{f} d\theta},
+ \label{eq:model-posterior-density}
 \end{equation}
 %
 omitting the constant $\mathbf{e}$ for brevity. The quantity $p(\mathcal{D})$ can be represented by the marginalization of $p(\mathbf{f},\mathcal{D})$ with respect to $\mathbf{f}$, i.e. $\int p(\mathbf{f},\mathcal{D}) d\mathbf{f}$. This integral can't be evaluated analytically, then we use approximation methods to do this.
-{\color{red}
 %
 
-In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process \cite{Vanhatalo2010Vehtari}.
+\subsection{Conducting the inference}
 
-For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters $\theta$ of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
+In the last part, we defined the model for the the observations $f$ assuming a Bayesian approach of it. Now we have to obtain the posterior distribution $p(\mathbf{f}|\mathcal{D})$ and conduct the prediction applying the concepts presented in the {\color{red} Section 4} by finding $\mathbf{f}_*$. Differently of the general Bayesian models, in this application we are not interested in predict the values of $y$, but the risk $e=\exp(f)$ after observed the deaths $y$, then we do not derive the predictive distribution.
+%  This can be done by
+% %
+% \begin{equation}
+% p({y_i}_*|{\mathbf{x}_i}_*,\mathcal{D},\theta) = \int p({y_i}_*|{f_i}_*)p({f_i}_*|{\mathbf{x}_i}_*,\mathcal{D},\theta)d{f_i}_*
+% \end{equation}
 %
-\begin{equation}
-    p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
-\end{equation}
+First we have to simulate the distributions of the \eqref{eq:model-posterior-density}.
 
-This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
-
-}

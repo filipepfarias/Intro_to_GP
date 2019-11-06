@@ -1,17 +1,17 @@
-PWD /Users/filipepfarias/Documents/Intro_to_GP/presentation/article
+PWD /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article
 INPUT /usr/local/texlive/2019/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.tex
-OUTPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.log
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.tex
+OUTPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.log
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size11.clo
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/size11.clo
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.sty
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.sty
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.sty
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/atbegshi.sty
@@ -139,7 +139,6 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.r
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfint.code.tex
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
@@ -352,9 +351,9 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/adobe/helvetic/phvb.tfm
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux
-OUTPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.aux
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.aux
+OUTPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.aux
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -362,14 +361,14 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-OUTPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-OUTPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.pdf
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+OUTPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+OUTPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.pdf
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -391,8 +390,8 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_application.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP_application.tex
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP_application.tex
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP_application.tex
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
@@ -419,15 +418,15 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/GraphicalModel.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/GraphicalModel.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/GraphicalModel2.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/graphics/GraphicalModel2.tex
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.bbl
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.aux
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
-INPUT /Users/filipepfarias/Documents/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/graphics/GraphicalModel.tex
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/graphics/GraphicalModel.tex
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/graphics/GraphicalModel2.tex
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/graphics/GraphicalModel2.tex
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.bbl
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.bbl
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.aux
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
+INPUT /Volumes/GoogleDrive/My Drive/git/Intro_to_GP/presentation/article/Intro_to_GP.out
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
