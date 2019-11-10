@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+            % Defining nodes
+            \node[obs, fill=red!20!white, semithick, draw=red]              (y) {$\mathbf{y}$};%
+            \node[latent, right=of y, semithick, draw=red]              (f) {$\mathbf{f}$};%
+            \node[latent, right=of f, semithick, draw=red]              (th) {$\theta$};%
+            \node[const, above=.5 of y, xshift= 2.5em]                        (e) {$\mathbf{e}$};
+            \node[const, above=.5 of f, xshift= 2.5em]                        (x) {$\mathbf{X}$};
+
+            % Hyperparameters
+            \node[const, above=.5 of th, xshift= 2.5em]                        (muA) {$\mu,A$};
+
+            % Connecting nodes
+            \edge[draw=red, semithick] {f} {y}; 
+            \edge[draw=red, semithick] {th} {f};
+
+            \path (muA) edge [draw=red, line width=.5pt, bend left=30,->]  (th) ;
+            \path (x) edge [draw=red, line width=.5pt, bend right=30,->]  (f) ;
+            \path (e) edge [draw=red, line width=.5pt, bend right=30,->]  (y) ;
+        \end{tikzpicture}

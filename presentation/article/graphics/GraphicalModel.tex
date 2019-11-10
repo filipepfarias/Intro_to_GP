@@ -1,0 +1,78 @@
+\begin{tikzpicture}
+            % Defining nodes
+            \node[obs, fill=red!20!white, semithick, draw=red]              (yn) {$y_n$};%
+            \node[obs, left=of yn, fill=red!20!white, semithick, draw=red]              (y3) {$y_3$};%
+            \node[obs, left=of y3, fill=red!20!white, semithick, draw=red]              (y2) {$y_2$};%
+            \node[obs, left=of y2, fill=red!20!white, semithick, draw=red]              (y1) {$y_1$};%
+            \node[const, below=.5 of yn, xshift= -.8cm]                        (en) {$e_n$};
+            \node[const, below=.5 of y3, xshift= -.8cm]                        (e3) {$e_3$};
+            \node[const, below=.5 of y2, xshift= -.8cm]                        (e2) {$e_2$};
+            \node[const, below=.5 of y1, xshift= -.8cm]                        (e1) {$e_1$};
+            \node[latent, semithick, draw=red, below=of yn] (fn) {$f_n$};
+            \node[latent, semithick, draw=red, below=of y3] (f3) {$f_3$};
+            \node[latent, semithick, draw=red, below=of y2] (f2) {$f_2$};
+            \node[latent, semithick, draw=red, below=of y1] (f1) {$f_1$};
+            
+            \node[latent, semithick, draw=red, right=of fn] (f*) {$f_*$};
+            \node[const, semithick, left=.5 of f1] (f0) {};
+            \node[const, semithick, right=.5 of f*] (f0s) {};
+
+            % \node[obs, semithick, above=of f0 ,fill=red!20!blue!30!white, semithick, draw=red]              (y0) {};%
+            % \node[obs, semithick, above=of f*, fill=red!20!blue!30!white, semithick, draw=red]              (y*) {$y_*$};%
+            % \node[obs, semithick, below=of f0, fill=red!20!blue!30!white, semithick, draw=red]              (x0) {};%
+            \node[obs, semithick, below=of fn, fill=white, semithick, draw=white]              (xn) {$\mathbf{x}_n$};%
+            \node[obs, semithick, below=of f3, fill=white, semithick, draw=white]              (x3) {$\mathbf{x}_3$};%
+            \node[obs, semithick, below=of f2, fill=white, semithick, draw=white]              (x2) {$\mathbf{x}_2$};%
+            \node[obs, semithick, below=of f1, fill=white, semithick, draw=white]              (x1) {$\mathbf{x}_1$};%
+            \node[obs, semithick, below=of f*, fill=white, semithick, draw=white]              (x*) {$\mathbf{x}_*$};%
+            % \node[obs, semithick, above=of f0s ,fill=red!20!blue!30!white, semithick, draw=red]              (y0s) {};%
+
+            % Hyperparameters
+
+            \node[latent, semithick, draw=red, below= .5 of f0s, xshift= .3cm] (th) {$\theta$};
+            \node[obs, draw=white, fill=white, below=.75 of th, xshift= -.5cm] (A) {$A$};
+            \node[obs, draw=white, fill=white, below=.75 of th, xshift= .5cm] (nu) {$\nu$};
+
+
+            % Connecting nodes
+            \edge[draw=red, semithick] {en} {yn}; 
+            \edge[draw=red, semithick] {e3} {y3}; 
+            \edge[draw=red, semithick] {e2} {y2}; 
+            \edge[draw=red, semithick] {e1} {y1}; 
+            \edge[draw=red, semithick] {fn} {yn};
+            \edge[draw=red, semithick] {f3} {y3};
+            \edge[draw=red, semithick] {f2} {y2};
+            \edge[draw=red, semithick] {f1} {y1};
+            \edge[-, draw=red, line width=2.3pt] {f0} {f1};
+            \edge[-, draw=red, line width=2.3pt] {f*} {fn};
+            \edge[-, draw=red, line width=2.3pt] {f3} {f2};
+            \edge[-, draw=red, line width=2.3pt] {f2} {f1};
+            \edge[-, draw=red, dashed, line width=2.3pt] {f3} {fn};
+            \edge[-, draw=red, line width=2.3pt] {f*} {f0s};
+            % \edge[draw=red, semithick] {f0} {y0};
+            % \edge[draw=red, semithick] {f*} {y*};
+            \edge[draw=red, semithick] {x*} {f*};
+            % \edge[draw=red, semithick] {x0} {f0};
+            \edge[draw=red, semithick] {xn} {fn};
+            \edge[draw=red, semithick] {x3} {f3};
+            \edge[draw=red, semithick] {x2} {f2};
+            \edge[draw=red, semithick] {x1} {f1};
+            % \edge[draw=red, semithick] {th} {f0};
+            \iffalse
+            \edge[draw=red, semithick] {th} {f*};
+            \edge[draw=red, semithick] {th} {f3};
+            \edge[draw=red, semithick] {th} {f2};
+            \edge[draw=red, semithick] {th} {f1};
+            \edge[draw=red, semithick] {th} {fn};
+            \fi
+            
+            \foreach \x in {f1,f2,f3,fn,f*}
+	        \path (th) edge [draw=red, line width=.5pt, bend left=15,->]  (\x) ;
+            
+            \edge[draw=red, semithick] {nu} {th};
+            \edge[draw=red, semithick] {A} {th};
+
+            
+            % Defining plates
+            % \plate[draw=blue, very thick] {lkhd} {(en) (yn) (fn) (xn)} {$n$};
+        \end{tikzpicture}

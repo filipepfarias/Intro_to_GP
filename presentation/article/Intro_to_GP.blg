@@ -3,47 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Intro_to_GP.aux
 The style file: apalike.bst
 Database file #1: Intro_to_GP_bibliography.bib
-Warning--entry type for "ehlers" isn't style-file defined
---line 105 of file Intro_to_GP_bibliography.bib
-You've used 10 entries,
+You've used 5 entries,
             1935 wiz_defined-function locations,
-            530 strings with 5237 characters,
-and the built_in function-call counts, 3043 in all, are:
-= -- 300
-> -- 99
-< -- 9
-+ -- 30
-- -- 30
-* -- 219
-:= -- 574
-add.period$ -- 30
-call.type$ -- 10
-change.case$ -- 61
-chr.to.int$ -- 10
-cite$ -- 10
-duplicate$ -- 126
-empty$ -- 216
-format.name$ -- 46
-if$ -- 583
+            509 strings with 4685 characters,
+and the built_in function-call counts, 1829 in all, are:
+= -- 180
+> -- 63
+< -- 3
++ -- 22
+- -- 20
+* -- 152
+:= -- 332
+add.period$ -- 17
+call.type$ -- 5
+change.case$ -- 33
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 68
+empty$ -- 132
+format.name$ -- 27
+if$ -- 356
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 10
-newline$ -- 52
-num.names$ -- 30
-pop$ -- 54
+missing$ -- 5
+newline$ -- 29
+num.names$ -- 15
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 65
+purify$ -- 35
 quote$ -- 0
-skip$ -- 99
+skip$ -- 52
 stack$ -- 0
-substring$ -- 169
-swap$ -- 7
+substring$ -- 131
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
+type$ -- 28
 warning$ -- 0
-while$ -- 23
+while$ -- 13
 width$ -- 0
-write$ -- 127
-(There was 1 warning)
+write$ -- 70

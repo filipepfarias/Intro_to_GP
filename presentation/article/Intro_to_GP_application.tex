@@ -1,19 +1,82 @@
+% !TEX root = Intro_to_GP.tex
 \section{Applications in disease mapping}
-\subsection{The model}
 % \textcolor{red}{Here we must have defined how the inferencial process occurs.}
-There's several applications using GP and here we'll resume an example for disease mapping presented by \cite{Vanhatalo2010Vehtari}. Then let's assume that our phenomenon is ruled by an function $f$. But, we interested in the distribution of them, considering the approach presented in this work. So, we may say that we evaluated each observation $y_i$ from an unknown function $f_i$. With this we assume that our observations and our functions are independent and then we can evaluate our joint distribution for the likehood by the product of each one \cite{jarno2010}.
-\begin{subequations}
-     \begin{empheq}[left={\empheqlbrace\,}]{align}
-      y_1, y_2, \dots, y_n &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
-      f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left( m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
-      \theta &\sim \text{half-t}(\nu,A)\text{\footnotemark}
-     \end{empheq}
- \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
+There's several applications using GP and here we'll resume an application for disease mapping. By \cite{Vanhatalo2010Vehtari} the problem concerns to use the latent Gaussian field and observe it indirectly from the data, aiming to infer a function for the phenomenon. For this scenario, the data are counts of mortality or morbidity occurrence per area and the pursued function is the relative risk for that area, what is modeled by a Poisson process discussed by \cite{Best2005}.
 
-In this case, we used the Poisson distribution for the likelihood because the nature of the process. The phenomenon here is the relative risk of death $\mu$ in a region of the country. So, if we consider $y$ the counting of deaths on this region, we can model the phenomenon with a Poisson process which mean in each region is given by the increasing rate of deaths. At this point we have defined $e$ as the standardized expected number of deaths \cite{Vanhatalo2010Vehtari}, what multiplied by $\mu$ reveals, in mean, the rate of deaths in that region. For numerical reasons, we transform $f=\log(\mu)$. Finally, we assume an uncertainty over the parameters of the kernel functions too, then, our hierarchical model stays for the posterior distribution as 
+\subsection{The model}
+
+The Poisson process is defined if the occurrence, this is the count of deaths $y$, in a given area $i$ is a Poisson variable and if the counting in one area does not affect the counting in another. 
 %
 \begin{equation}
-    p(\mathbf{f}|\mathbf{y},\mathbf{x}) \propto \int p(\mathbf{y}|\mathbf{f})\mathcal{GP}\left(\mathbf{f} | m(\mathbf{x}),k(\mathbf{x},\mathbf{x}'|\theta) \right)p(\theta) d\theta.
+    y_i \sim Poisson(e_i\mu_i)
+    \label{eq:observation-model}
 \end{equation}
+%
+The Poisson variable $y_i$ in each area is defined by its process rate $e_i\mu_i$ \cite{Best2005,Samat2012}, being 
+%
+\begin{equation}
+    e_{i}=\sum_{r=1}^{R}\left(\frac{\sum_{i=1}^{n} y_{i, r}}{\sum_{i=1}^{n} p_{i, r}}\right) p_{i, r}
+    \label{eq:standized-num-death}
+\end{equation}
+%
+the standardized expected number of deaths and $\mu_i$ the relative risk of the area. The sum is weighted by social factors, dividing the population $p$ in groups $r$.  In this work, the objective is to infer this relative risk given the data \cite{lawson2013statistical}. 
 
-This function isn't analytically tractable because of the Poisson process, but it is possible its evaluation with approximation methods.
+Then let's assume $f=\log (\mu)$ \cite{Best2005}. So, we may say that we evaluated each observation $y_i$ is Poisson distributed and its mean is given by an unknown function $e_i \exp(f_i)$. With this we assume that our observations of the functions are independent and then we can evaluate the joint distribution for likelihood by the product of each one \cite{jarno2010}.
+
+We'll model the log risk as a Gaussian process, then latent variables $f_i$ are realizations of the latent function $f$ at the inputs $\mathbf{x}_i$. The GP will be defined by a covariance function $k(\mathbf{x},\mathbf{x}')$ and a mean function $m(\mathbf{x})$. For disease mapping, we can assume the mean being $m(\mathbf{x})=\mathbf{0}$, what implies that for a zero function, the risk will be one if there's no spatial variations. The covariance function has a collection of hyperparameters $\theta$.
+
+We can represent with a graphical model the dependency of the variables, as in the \autoref{fig:graphical-model-disease}. Then, we can write the model as follows:
+%
+\begin{subequations}
+     \begin{empheq}[left={\empheqlbrace\,}]{align}
+      y_1, y_2, \dots, y_n | \mathbf{f} &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
+      f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left(\mathbf{0},k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
+      \theta &\sim \text{half-Student-t}(\nu,A)\text{\footnotemark}
+     \end{empheq}
+ \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
+% 
+\begin{figure}[tpb]
+    \begin{center}
+        \input{graphics/GraphicalModel.tex} \\
+        \input{graphics/GraphicalModel2.tex}
+    \end{center}
+    \caption{{\color{red}Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}}
+    \label{fig:graphical-model-disease}
+\end{figure}
+%
+We're interested in evaluate the conditional posterior of the latent variable $\mathbf{f}$, i.e. to express the uncertainty about the risk given the knowledge about the number of deaths and the hyperparameters. We can write by the model in the \autoref{fig:graphical-model-disease}, the following conditional
+%
+\begin{equation}
+    p(\mathbf{f},\mathcal{D},\theta) = p(\mathbf{y}|\mathbf{f},\mathbf{e})p(\mathbf{f}|\mathbf{X},\theta)p(\theta).
+    \label{eq:model-total-density}
+\end{equation}
+%
+being $\mathcal{D}=\left\{ \mathbf{X},\mathbf{y}, \mathbf{p} \right\}$. The constant $\mathbf{e}$ evaluated in \eqref{eq:standized-num-death} depends of $\mathbf{y}$ and $\mathbf{p}$, then we can omit from the probability function. Note that it isn't considered as a random variable even $y$ being a random. This occurs because the evaluation of $e_i$ needs some information about $y$ as in which social group $r$ the death was counted \eqref{eq:standized-num-death}, what can't be modeled if $y$ was treated as random without rise the complexity of the model. This would lead to a second inference that would be the classification of $y$.
+%
+Finally we obtain the posterior for the latent values by marginalizing it, then we have
+%
+\begin{equation}
+    p(\mathbf{f}|\mathcal{D})=
+    \frac{p(\mathbf{f},\mathcal{D})}{p(\mathcal{D})}=
+    \frac{\int p(\mathbf{y}|\mathbf{f})p(\mathbf{f}|\mathbf{X},\theta)p(\theta) d\theta}{\int \int p(\mathbf{y}|\mathbf{f})p(\mathbf{f}|\mathbf{X},\theta)p(\theta) d\mathbf{f} d\theta},
+ \label{eq:model-posterior-density}
+\end{equation}
+%
+omitting the constant $\mathbf{e}$ for brevity. The quantity $p(\mathcal{D})$ can be represented by the marginalization of $p(\mathbf{f},\mathcal{D})$ with respect to $\mathbf{f}$, i.e. $\int p(\mathbf{f},\mathcal{D}) d\mathbf{f}$. This integral can't be evaluated analytically, then we use approximation methods to do this.
+%
+
+\subsection{Conducting the inference}
+
+In the last part, we defined the model for the the observations $f$ assuming a Bayesian approach of it. Now we have to obtain the posterior distribution $p(\mathbf{f}|\mathcal{D})$ and conduct the prediction applying the concepts presented in the {\color{red} Section 4} by finding $\mathbf{f}_*$. Differently of the general Bayesian models, in this application we are not interested in predict the values of $y$, but the risk $e=\exp(f)$ after observed the deaths $y$, then we do not derive the predictive distribution.
+%  This can be done by
+% %
+% \begin{equation}
+% p({y_i}_*|{\mathbf{x}_i}_*,\mathcal{D},\theta) = \int p({y_i}_*|{f_i}_*)p({f_i}_*|{\mathbf{x}_i}_*,\mathcal{D},\theta)d{f_i}_*
+% \end{equation}
+%
+First we have to simulate the distributions of the \eqref{eq:model-posterior-density}.
+
+{\color{red}
+In the Article, the work focuses in evaluate the maxima for the hyperparameters, avoiding simulate the joint distribution for a large datasets.
+}
+

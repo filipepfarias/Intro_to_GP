@@ -2,9 +2,9 @@
 \documentclass[11pt]{article} % For LaTeX2e
 \usepackage{Intro_to_GP}
 
-\title{Introduction to Gaussian Processes}% \textcolor{red}{ - RAW}}
+\IntroGPfinalfalse
 
-\IntroGPfinaltrue
+\title{Introduction to Gaussian Processes\ifIntroGPfinal \else \ \textcolor{red}{- RAW} \fi}
 
 \author{
 Filipe P.~Farias \\
@@ -31,7 +31,7 @@ Federal University of Ceará\\
 \begin{abstract}
    The Gaussian processes have proven to be a powerfull framework for robust estimation and a flexible model for non-linear \textit{regression}, case which will be the main object of this work, with some implementations of real situations.% \cite{Rasmussen_2004}
 \end{abstract}
-
+\ifIntroGPfinal
 \section{Introduction}
 \nocite{hennig2013gaussian}
 
@@ -376,10 +376,10 @@ This is important to obtain our Bayesian linear regression as a GP. Being our mo
 
 The last sections give us an insight about the construction of the learning process for the GP. Analogous to the Bayes' theorem for the Gaussian, we use the idea of the GP as a multidimensional Gaussian distribution and we can make inference with its partitions. 
 
-First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{t}$ and the prediction $\mathbf{t_*}$, as
+First, to take the concept, we will consider the case where the observations are noise free. We will substitute the covariance matrices from the partitioned Gaussian distributions by the covariance function applied at the points of the observations $\mathbf{y}$ and of the prediction $\mathbf{y_*}$, as
 
 \begin{equation}
-   \left( \begin{array}{l}{\mathbf{t}}  \\ {\mathbf{t}_*} \end{array} \right) 
+   \left( \begin{array}{l}{\mathbf{y}}  \\ {\mathbf{y}_*} \end{array} \right) 
    \sim
    \mathcal{N} \left( \mathbf{0}, \left[ \begin{array}{ll}{\mathbf{K}(\mathbf{x},\mathbf{x})} & {\mathbf{K}(\mathbf{x},\mathbf{x_*})} \\ {\mathbf{K}(\mathbf{x_*},\mathbf{x})} & {\mathbf{K}(\mathbf{x_*},\mathbf{x_*})}\end{array} \right] \right)
 \end{equation}
@@ -519,11 +519,12 @@ Deriving the conditional distribution corresponding we arrive at the key predict
 % \section{Hyperparameters}
 
 % As in the distributions, the kernels have its parameters to be set before the model training. Such parameters, called hyperparameters can assume a distribution over itself, and with this, we can learn the parameters to the data just as we've been doing for the inference. In general, the posterior distribution for the hyperparameters are intractable, then we cal use MAP to choose at least one value (the most probable one), or evaluate the integral numerically.
-
+\fi
 \input{Intro_to_GP_application}
-
-\newpage
+\ifIntroGPfinal
+\clearpage
 \input{Intro_to_GP_appendices}
+\fi
 
 \newpage
 \bibliography{Intro_to_GP_bibliography}
