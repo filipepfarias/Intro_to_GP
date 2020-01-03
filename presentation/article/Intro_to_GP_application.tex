@@ -30,17 +30,17 @@ We can represent with a graphical model the dependency of the variables, as in t
 \begin{subequations}
      \begin{empheq}[left={\empheqlbrace\,}]{align}
       y_1, y_2, \dots, y_n | \mathbf{f} &\sim \prod_{i=1}^{n} Poisson\left( e_i \exp (f_i) \right) \\
-      f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left(\mathbf{0},k(\mathbf{x},\mathbf{x}'|\theta) \right) \\
+      f(\mathbf{x}) | \theta &\sim \mathcal{GP}\left(\mathbf{0},k(\mathbf{x},\mathbf{x}'|\theta) \right) \label{eq:gp-prior}\\
       \theta &\sim \text{half-Student-t}(\nu,A)\text{\footnotemark}
      \end{empheq}
  \end{subequations}\footnotetext{The values $\nu$ and $A$ are not arbitrary, but deterministic \cite{Vanhatalo2010Vehtari}.}
 % 
 \begin{figure}[tpb]
     \begin{center}
-        \input{graphics/GraphicalModel.tex} \\
+        %\input{graphics/GraphicalModel.tex} \\
         \input{graphics/GraphicalModel2.tex}
     \end{center}
-    \caption{{\color{red}Graphical model for the GP for regression. Colored circles represent observed variables and whited ones represent the unknowns. The thick horizontal bar in $f_i$ node represents a set of fully connected nodes of the Gaussian field. Note that an observation $y_i$ is conditionally independent of all other nodes given the corresponding latent variable, $f_i$. Because of the marginalization property of GPs addition of further inputs, $\mathbf{x}$, latent variables, $f$, and unobserved targets, $y_*$, does not change the distribution of any other variables.}}
+    \caption{{\color{red}Graphical model for the GP for inference. Filled circles represent observed variables and whited ones represent the unknowns. The nodes without circles represent constants.}}
     \label{fig:graphical-model-disease}
 \end{figure}
 %
@@ -67,15 +67,15 @@ omitting the constant $\mathbf{e}$ for brevity. The quantity $p(\mathcal{D})$ ca
 
 \subsection{Conducting the inference}
 
-In the last part, we defined the model for the the observations $f$ assuming a Bayesian approach of it. Now we have to obtain the posterior distribution $p(\mathbf{f}|\mathcal{D})$ and conduct the prediction applying the concepts presented in the {\color{red} Section 4} by finding $\mathbf{f}_*$. Differently of the general Bayesian models, in this application we are not interested in predict the values of $y$, but the risk $e=\exp(f)$ after observed the deaths $y$, then we do not derive the predictive distribution.
-%  This can be done by
-% %
-% \begin{equation}
-% p({y_i}_*|{\mathbf{x}_i}_*,\mathcal{D},\theta) = \int p({y_i}_*|{f_i}_*)p({f_i}_*|{\mathbf{x}_i}_*,\mathcal{D},\theta)d{f_i}_*
-% \end{equation}
+In the last part, we defined the model for the the observations $f$. Now we have to obtain the posterior distribution $p(\mathbf{f}|\mathcal{D})$, considering the value of $\theta$ that maximizes our posterior distribution and conduct the inference. This maximization can be done analytically with approximations of $p(\theta|\mathcal{D})$ or by simulations considering the whole distribution, what is much slower \cite{Vanhatalo2010Vehtari}. Then by the first alternative we have $p(\mathbf{f}|\mathcal{D},\hat{\theta})$ being $\hat{\theta}$ the one that maximizes the posterior. For it, we do
 %
-First we have to simulate the distributions of the \eqref{eq:model-posterior-density}.
-
-{\color{red}
-In the Article, the work focuses in evaluate the maxima for the hyperparameters, avoiding simulate the joint distribution for a large datasets.
-}
+\begin{equation}
+\hat{\theta} = \underset{\theta}{\operatorname{arg \ max}} \ p(\theta|\mathcal{D}).
+\end{equation}
+%
+It's important to note that the distribution $p(\theta|\mathcal{D})$ is justified by the fact that the distribution of $\theta$ rules the kernel of the GP, then there is a relation between the variables, as  \eqref{eq:gp-prior} shows, that was not described in the Figure \ref{fig:graphical-model-disease}. By \eqref{eq:model-total-density} we obtain
+%
+\begin{equation}
+p(\mathcal{D}|\theta)=\int \frac{p(\mathbf{f},\mathcal{D},\theta)}{p(\theta)}d\mathbf{f}= \int p(\mathbf{y}|\mathbf{f},\mathbf{e})p(\mathbf{f}|\mathbf{X},\theta) d\mathbf{f}
+\end{equation}
+%
